@@ -9,7 +9,7 @@ const Services = () => {
               className="grid grid-cols-2 gap-[30px]
           "
             >
-              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/hero.png')] relative mb-[273px]">
+              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/offer-4.png')] relative mb-[273px]">
                 <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px] ">
                   <p className="text-center card-title">01</p>
                   <p className="text-center card-title">Teaching & Training</p>
@@ -19,7 +19,7 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/hero.png')] relative">
+              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/offer-3.png')] relative">
                 <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
                   <p className="text-center card-title">01</p>
                   <p className="text-center card-title">Teaching & Training</p>
@@ -29,7 +29,7 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/hero.png')] relative">
+              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/offer-2.png')] relative">
                 <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
                   <p className="text-center card-title">01</p>
                   <p className="text-center card-title">Teaching & Training</p>
@@ -39,7 +39,7 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/hero.png')] relative">
+              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/offer-1.png')] relative">
                 <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
                   <p className="text-center card-title">01</p>
                   <p className="text-center card-title">Teaching & Training</p>
@@ -93,7 +93,7 @@ const Services = () => {
           <div className="w-[400px] h-[1516px] bg-[#EFF1FB] pt-[50px] px-[20px]">
             <p className="title text-center mb-[50px]">Upcoming Events</p>
             <div className="relative post-card w-[360px] h-[362px] flex flex-col pt-[20px] px-[20px] gap-[20px] mb-[30px]">
-              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/hero.png')] rounded-[5px]">
+              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/event-1.png')] rounded-[5px]">
                 <div className="price-tag flex items-center justify-center">
                   <p className="price">$12.00</p>
                 </div>
@@ -121,9 +121,9 @@ const Services = () => {
               </div>
             </div>
             <div className="relative post-card w-[360px] h-[362px] flex flex-col pt-[20px] px-[20px] gap-[20px] mb-[30px]">
-              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/hero.png')] rounded-[5px]">
+              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/event-2.png')] rounded-[5px]">
                 <div className="price-tag flex items-center justify-center">
-                  <p className="price">$12.00</p>
+                  <p className="price">$10.00</p>
                 </div>
                 <div className="absolute top-[20px] left-[204px] rounded-full w-[50px] h-[50px] bg-[#fcfcfc] flex items-center justify-center ">
                   <img src="images/icons/Share.svg" alt="" srcset="" />
@@ -136,7 +136,7 @@ const Services = () => {
                 <div className="flex gap-[23px]">
                   <div className="flex flex-col">
                     <p className="month-text">SEP</p>
-                    <p className="title">20</p>
+                    <p className="title">22</p>
                   </div>
                   <div>
                     <p className="text-blue ">Black History Month</p>
@@ -149,9 +149,9 @@ const Services = () => {
               </div>
             </div>
             <div className="relative post-card w-[360px] h-[362px] flex flex-col pt-[20px] px-[20px] gap-[20px] mb-[30px]">
-              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/hero.png')] rounded-[5px]">
+              <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/event-3.png')] rounded-[5px]">
                 <div className="price-tag flex items-center justify-center">
-                  <p className="price">$12.00</p>
+                  <p className="price">$14.00</p>
                 </div>
                 <div className="absolute top-[20px] left-[204px] rounded-full w-[50px] h-[50px] bg-[#fcfcfc] flex items-center justify-center ">
                   <img src="images/icons/Share.svg" alt="" srcset="" />
@@ -164,7 +164,7 @@ const Services = () => {
                 <div className="flex gap-[23px]">
                   <div className="flex flex-col">
                     <p className="month-text">SEP</p>
-                    <p className="title">20</p>
+                    <p className="title">24</p>
                   </div>
                   <div>
                     <p className="text-blue ">Black History Month</p>

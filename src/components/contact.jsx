@@ -53,7 +53,7 @@ const ContactUs=()=>{
                 </div>
                 <div className="flex flex-col gap-[10px]">
                 <label className="form-label">Leave a message</label>
-                <textarea type="text" className="form-input h-[150px] w-[610px]" placeholder="LinkedIn" ></textarea>
+                <textarea type="text" className="form-input h-[150px] w-[610px]" placeholder="Type your message here..." ></textarea>
                 </div>
                 <div className="flex  gap-[10px]">
                <input type="checkbox"/>
