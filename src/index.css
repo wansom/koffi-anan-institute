@@ -383,3 +383,24 @@ body {
   order: 0;
   flex-grow: 0;
 }
+.nav-active {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #de4404;
+}
+.nav-link{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+color: #FCFCFC;
+}
