@@ -328,3 +328,58 @@ body {
 
   color: #fcfcfc;
 }
+
+.hero-sub-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+
+  text-align: center;
+
+  color: #fcfcfc;
+}
+.hero-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  /* or 150% */
+
+  text-align: center;
+
+  color: #fcfcfc;
+}
+.hero-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 8px;
+
+  width: 384px;
+  height: 50px;
+
+  background: #fcfcfc;
+  border-radius: 5px;
+}
+.hero-btn-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  color: #25518c;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
