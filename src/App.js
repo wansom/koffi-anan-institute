@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Hero from './components/hero';
 import Services from "./components/services";
 import ThinkTanks from './components/think-tanks';
+import ContactUs from './components/contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero/>
       <Services/>
       <ThinkTanks/>
+      <ContactUs/> 
     </div>
   );
 }
