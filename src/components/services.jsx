@@ -1,9 +1,9 @@
 import { services, researchProjects } from "../Data/home";
 const Services = () => {
   return (
-    <section className="container  mx-auto relative bg-[#FCFCFC]  py-[50px]  px-[30px]">
-      <div className="flex flex-col md:flex-row  justify-between">
-        <div className="flex flex-col gap-[50px]">
+    <section className="container  mx-auto relative bg-[#FCFCFC]  py-[50px] px-0 lg:px-[30px]">
+      <div className="flex flex-col md:flex-row  justify-between gap-[50px]">
+        <div className="flex flex-col gap-[50px] px-[30px]">
           <p className="title text-center mt-[50px] md:mt-[100px] mb-[50px]">
             What We Offer
           </p>
@@ -26,7 +26,7 @@ const Services = () => {
             ))}
           </div>
           <div className="pt-[50px]">
-            <p className="title text-center mb-[50px]">Research Projects</p>
+            <p className="section-title text-center mb-[50px]">Research Projects</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
               {researchProjects.map((project) => (
                 <div className="w-[335px] h-[838px] flex flex-col gap-[20px] border-[#E0E2F1] border-solid border-[1px] rounded-[5px]">
@@ -41,10 +41,10 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-[50px]">
-          <div className="w-[400px] h-[1516px] bg-[#EFF1FB] pt-[50px] px-[20px]">
-            <p className="title text-center mb-[50px]">Upcoming Events</p>
-            <div className="relative post-card w-[360px] h-[362px] flex flex-col pt-[20px] px-[20px] gap-[20px] mb-[30px]">
+        <div className="flex flex-col items-center justify-center ">
+          <div className="bg-[#EFF1FB] py-[50px] justify-items-center px-[30px] mb-[20px]">
+            <p className="section-title text-center mb-[50px]">Upcoming Events</p>
+            <div className="relative post-card w-[360px] h-[362px] flex flex-col pt-[20px] mb-[30px] items-center justify-center">
               <div className="relative w-[320px] h-[240px] bg-[url('/public/images/home/event-1.png')] rounded-[5px]">
                 <div className="price-tag flex items-center justify-center">
                   <p className="price">$12.00</p>
@@ -132,9 +132,9 @@ const Services = () => {
               <p className="events-btn-text ">Events</p>
             </div>
           </div>
-          <div className="w-[400px] h-[864px] bg-[#EFF1FB] pt-[50px] px-[20px]">
-            <p className="title text-center mb-[50px]">News & Announcements</p>
-            <img src="images/home/post-thumbnail.svg"></img>
+          <div className="bg-[#EFF1FB] py-[50px] px-[30px] flex flex-col items-center justify-center w-[427px] container">
+            <p className="section-title text-center mb-[50px]">News & <br /> Announcements</p>
+            <img src="images/home/post-thumbnail.svg" className="w-[360px]"></img>
             <div className="flex gap-0 mt-[20px]">
               <button className="post-blue-btn post-btn-text text-[#FCFCFC]">
                 Weekly updates

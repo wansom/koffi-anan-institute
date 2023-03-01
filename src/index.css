@@ -420,6 +420,19 @@ body {
 
   color: #25518c;
 }
+.section-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #1c1b1f;
+  white-space: nowrap;
+}
 
 @media only screen and (max-width: 640px) {
  .hero-title{
@@ -434,4 +447,17 @@ text-align: center;
 color: #FCFCFC;
 
  }
+ .section-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #1c1b1f;
+  white-space: nowrap;
+}
 }
