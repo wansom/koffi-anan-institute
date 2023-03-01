@@ -1,7 +1,7 @@
 const ContactUs=()=>{
     return(
         <section className="container-fluid mx-auto relative py-[100px] bg-[#FCFCFC]">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-[80px] px-[30px]">
+            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[80px] px-[30px]">
             <div className="flex flex-col gap-[20px] items-start">
                 <p className="title">Contact Us</p>
                 <p className="form-sub-title md:w-[610px]">

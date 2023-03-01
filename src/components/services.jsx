@@ -2,7 +2,7 @@ import { services, researchProjects } from "../Data/home";
 const Services = () => {
   return (
     <section className="container  mx-auto relative bg-[#FCFCFC]  py-[50px] px-0 lg:px-[30px]">
-      <div className="flex flex-col md:flex-row  justify-between gap-[50px]">
+      <div className="flex flex-col lg:flex-row  justify-between gap-[50px]">
         <div className="flex flex-col gap-[50px] px-[30px]">
           <p className="title text-center mt-[50px] md:mt-[100px] mb-[50px]">
             What We Offer
