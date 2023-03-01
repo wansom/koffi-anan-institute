@@ -44,8 +44,9 @@ const Navbar = () => {
         <a className="nav-link" href="#">
           Outreach Programs
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link flex"  href="#">
           Think Tanks
+          <img src="images/icons/expand_more.svg" alt="" loading="lazy" className="ml-[16px]"/>
         </a>
         <a className="nav-link" href="#">
           Publications
