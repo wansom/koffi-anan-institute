@@ -7,7 +7,7 @@ const Navbar = () => {
             <img src="images/home/logo.png" alt="" className="hidden md:block"/>
            
             
-            <div className="hidden lg:flex gap-[30px]">
+            <div className="hidden lg:flex gap-[30px] py-[13px]">
               <span className="flex gap-2">
                 <img src="images/icons/phone.svg" alt="" />
                 <p className="top-nav-text">
