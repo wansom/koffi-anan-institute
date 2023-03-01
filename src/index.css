@@ -345,7 +345,6 @@ body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 60px;
   line-height: 90px;
   /* or 150% */
 
@@ -360,8 +359,6 @@ body {
   align-items: center;
   padding: 16px 24px;
   gap: 8px;
-
-  width: 384px;
   height: 50px;
 
   background: #fcfcfc;
@@ -421,4 +418,19 @@ body {
   /* identical to box height, or 150% */
 
   color: #25518c;
+}
+
+@media only screen and (max-width: 640px) {
+ .hero-title{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+line-height: 68px;
+/* or 150% */
+
+text-align: center;
+
+color: #FCFCFC;
+
+ }
 }

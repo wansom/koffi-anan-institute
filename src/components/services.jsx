@@ -1,7 +1,7 @@
 const Services = () => {
   return (
     <section className="container  mx-auto h-[2664px] relative bg-[#FCFCFC] pt-[50px] px-0">
-      <div className="grid grid-cols-2 gap-[250px]">
+      <div className="flex flex-row  justify-between">
         <div className="flex flex-col gap-[50px]">
           <div className="h-[1406px] w-[800px] pt-[100px] px-[50px]">
             <p className="title text-center mb-[50px]">What We Offer</p>
