@@ -1,56 +1,30 @@
+import { services } from "../Data/home";
 const Services = () => {
   return (
-    <section className="container  mx-auto h-[2664px] relative bg-[#FCFCFC] pt-[50px] px-0">
-      <div className="flex flex-row  justify-between">
+    <section className="container  mx-auto relative bg-[#FCFCFC]  pt-[50px]  px-[30px]">
+      <div className="flex flex-col md:flex-row  justify-between">
         <div className="flex flex-col gap-[50px]">
-          <div className="h-[1406px] w-[800px] pt-[100px] px-[50px]">
-            <p className="title text-center mb-[50px]">What We Offer</p>
-            <div
-              className="grid grid-cols-2 gap-[30px]
+          <p className="title text-center mt-[50px] md:mt-[100px] mb-[50px]">
+            What We Offer
+          </p>
+
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-[30px]
           "
-            >
-              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/offer-4.png')] relative mb-[273px]">
+          >
+            {services.map((service) => (
+              <div className="h-[300px] w-[335px] rounded-[5px] relative mb-[273px]" style={{backgroundImage: `url(${service.image_url})`}}>
                 <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px] ">
                   <p className="text-center card-title">01</p>
-                  <p className="text-center card-title">Teaching & Training</p>
+                  <p className="text-center card-title">{service.title}</p>
                   <p className="subtitle">
-                    We also launched the Mary Antoinette Brown Sherman Think
-                    Tank...
+                   {service.subtitle}
                   </p>
                 </div>
               </div>
-              <div className="h-[300px] w-[335px] rounded-[5px] bg-[url('/public/images/home/offer-3.png')] relative">
-                <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
-                  <p className="text-center card-title">01</p>
-                  <p className="text-center card-title">Teaching & Training</p>
-                  <p className="subtitle">
-                    We also launched the Mary Antoinette Brown Sherman Think
-                    Tank...
-                  </p>
-                </div>
-              </div>
-              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/offer-2.png')] relative">
-                <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
-                  <p className="text-center card-title">01</p>
-                  <p className="text-center card-title">Teaching & Training</p>
-                  <p className="subtitle">
-                    We also launched the Mary Antoinette Brown Sherman Think
-                    Tank...
-                  </p>
-                </div>
-              </div>
-              <div className="h-[300px] w-[335px]  rounded-[5px] bg-[url('/public/images/home/offer-1.png')] relative">
-                <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px]">
-                  <p className="text-center card-title">01</p>
-                  <p className="text-center card-title">Teaching & Training</p>
-                  <p className="subtitle">
-                    We also launched the Mary Antoinette Brown Sherman Think
-                    Tank...
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+
           <div className=" w-[800px] h-[1158px] pt-[100px] px-[50px]">
             <p className="title text-center mb-[50px]">Research Projects</p>
             <div className="grid grid-cols-2">
