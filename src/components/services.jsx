@@ -17,10 +17,14 @@ const Services = () => {
                 className="h-[300px] w-[335px] rounded-[5px] relative mb-[230px] lg:mb-[273px]"
                 style={{ backgroundImage: `url(${service.image_url})` }}
               >
-                <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px] ">
+                <div className="service-card absolute top-[235px] left-[20px] w-[295px] h-[263px] space-y-[21px] justify-center items-center">
                   <p className="text-center card-title">{index}</p>
                   <p className="text-center card-title">{service.title}</p>
                   <p className="subtitle">{service.subtitle}</p>
+                 
+                </div>
+                <div className="rounded-full absolute top-[467px] left-[137px] w-[50px] h-[50px] bg-[#25518C]  flex justify-center text-center items-center">
+                  <img src="images/icons/arrow_forward.svg" alt="learn more" />
                 </div>
               </div>
             ))}
