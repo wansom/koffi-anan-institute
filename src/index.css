@@ -556,6 +556,7 @@ section.banner {
 .offer-card img {
   position: relative;
   z-index: 0;
+  width: 280px;
 }
 
 .offer-info {
