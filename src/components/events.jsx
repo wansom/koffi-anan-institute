@@ -1,17 +1,17 @@
 const EventSection=()=>{
     return(
-        <section class="upcoming-events">
-        <div class="upcoming-container container">
-            <div class="up-left">
-                <div class="top">
+        <section className="upcoming-events">
+        <div className="upcoming-container container">
+            <div className="up-left">
+                <div className="top">
                     <h1>Upcoming Events</h1>
                 </div>
-                <div class="bottom">
-                    <div class="up-card">
-                        <div class="floating-card">
-                            <span class="price">$10.00</span>
-                            <div class="hold">
-                                <span class="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                <div className="bottom">
+                    <div className="up-card">
+                        <div className="floating-card">
+                            <span className="price">$10.00</span>
+                            <div className="hold">
+                                <span className="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12.0659 6.00239C13.134 6.00239 13.9998 5.10642 13.9998 4.00119C13.9998 2.89597 13.134 2 12.0659 2C10.9978 2 10.132 2.89597 10.132 4.00119C10.132 5.10642 10.9978 6.00239 12.0659 6.00239Z"
@@ -33,7 +33,7 @@ const EventSection=()=>{
                                             stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span class="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span className="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.17 2C9.77533 2 8.56934 2.85302 8.0034 4.07662C7.43746 2.85302 6.2382 2 4.83682 2C2.90319 2 1.33337 3.62913 1.33337 5.63583C1.33337 8.50954 5.36234 12.1943 7.15449 13.6906C7.65305 14.1031 8.35374 14.1031 8.84557 13.6906C10.6445 12.1873 14.6667 8.50255 14.6667 5.63583C14.6734 3.62913 13.1036 2 11.17 2Z"
@@ -44,12 +44,12 @@ const EventSection=()=>{
                         </div>
                         <img src="images/home/event-1.png"
                             alt="Kofi Annan Institute for Conflict Transformation Events"></img>
-                        <div class="up-card-info">
-                            <div class="left">
+                        <div className="up-card-info">
+                            <div className="left">
                                 <span>SEP</span> <br></br>
                                 <span>23</span>
                             </div>
-                            <div class="right">
+                            <div className="right">
                                 <a href="">Black History Month</a> <br></br>
                                 <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -65,11 +65,11 @@ const EventSection=()=>{
                             </div>
                         </div>
                     </div>
-                    <div class="up-card">
-                        <div class="floating-card">
-                            <span class="price">$10.00</span>
-                            <div class="hold">
-                                <span class="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    <div className="up-card">
+                        <div className="floating-card">
+                            <span className="price">$10.00</span>
+                            <div className="hold">
+                                <span className="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12.0659 6.00239C13.134 6.00239 13.9998 5.10642 13.9998 4.00119C13.9998 2.89597 13.134 2 12.0659 2C10.9978 2 10.132 2.89597 10.132 4.00119C10.132 5.10642 10.9978 6.00239 12.0659 6.00239Z"
@@ -91,7 +91,7 @@ const EventSection=()=>{
                                             stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span class="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span className="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.17 2C9.77533 2 8.56934 2.85302 8.0034 4.07662C7.43746 2.85302 6.2382 2 4.83682 2C2.90319 2 1.33337 3.62913 1.33337 5.63583C1.33337 8.50954 5.36234 12.1943 7.15449 13.6906C7.65305 14.1031 8.35374 14.1031 8.84557 13.6906C10.6445 12.1873 14.6667 8.50255 14.6667 5.63583C14.6734 3.62913 13.1036 2 11.17 2Z"
@@ -102,12 +102,12 @@ const EventSection=()=>{
                         </div>
                         <img src="images/home/event-2.png"
                             alt="Kofi Annan Institute for Conflict Transformation Events"></img>
-                        <div class="up-card-info">
-                            <div class="left">
+                        <div className="up-card-info">
+                            <div className="left">
                                 <span>SEP</span> <br></br>
                                 <span>23</span>
                             </div>
-                            <div class="right">
+                            <div className="right">
                                 <a href="">Black History Month</a> <br></br>
                                 <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -124,44 +124,44 @@ const EventSection=()=>{
                         </div>
                     </div>
                 </div>
-                <div class="bottom-more">
+                <div className="bottom-more">
                     <button>All Events</button>
                 </div>
             </div>
-            <div class="up-right">
-                <div class="top">
+            <div className="up-right">
+                <div className="top">
                     <span>News | </span>
                     <a href="#">All News</a>
                 </div>
-                <div class="bottom">
-                    <div class="news">
-                        <div class="top">
-                            <div class="left"><span>Weekly updates</span></div>
-                            <div class="right"><span>AUGUST 13, 2021 </span></div>
+                <div className="bottom">
+                    <div className="news">
+                        <div className="top">
+                            <div className="left"><span>Weekly updates</span></div>
+                            <div className="right"><span>AUGUST 13, 2021 </span></div>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h4>International Women’s Day</h4>
                             <p>The students of the third cohort of the Kofi Annan Living Memorial (KALM)
                                 celebrate...</p>
                         </div>
                     </div>
-                    <div class="news">
-                        <div class="top">
-                            <div class="left"><span>Weekly updates</span></div>
-                            <div class="right"><span>AUGUST 13, 2021 </span></div>
+                    <div className="news">
+                        <div className="top">
+                            <div className="left"><span>Weekly updates</span></div>
+                            <div className="right"><span>AUGUST 13, 2021 </span></div>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h4>International Women’s Day</h4>
                             <p>The students of the third cohort of the Kofi Annan Living Memorial (KALM)
                                 celebrate...</p>
                         </div>
                     </div>
-                    <div class="news">
-                        <div class="top">
-                            <div class="left"><span>Weekly updates</span></div>
-                            <div class="right"><span>AUGUST 13, 2021 </span></div>
+                    <div className="news">
+                        <div className="top">
+                            <div className="left"><span>Weekly updates</span></div>
+                            <div className="right"><span>AUGUST 13, 2021 </span></div>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h4>International Women’s Day</h4>
                             <p>The students of the third cohort of the Kofi Annan Living Memorial (KALM)
                                 celebrate...</p>

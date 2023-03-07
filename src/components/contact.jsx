@@ -1,14 +1,14 @@
 const ContactUs=()=>{
     return(
-        <section class="contact">
-        <div class="contact-container container">
-            <div class="contact-details">
-                <div class="title">
+        <section className="contact">
+        <div className="contact-container container">
+            <div className="contact-details">
+                <div className="title">
                     <h1>Contact Us</h1>
                     <p>Share your idea. Introduce your company. Reach out to partner.</p>
                 </div>
-                <div class="details">
-                    <div class="detail">
+                <div className="details">
+                    <div className="detail">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -18,7 +18,7 @@ const ContactUs=()=>{
                         </svg>
                         <span>+231 794 342 159</span>
                     </div>
-                    <div class="detail">
+                    <div className="detail">
                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -31,7 +31,7 @@ const ContactUs=()=>{
                         </svg>
                         <span>kaict@gmail.com</span>
                     </div>
-                    <div class="detail">
+                    <div className="detail">
                         <svg width="16" height="21" viewBox="0 0 16 21" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -51,41 +51,41 @@ const ContactUs=()=>{
                     style={{border:0}} allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="contact-form">
+            <div className="contact-form">
                 <form action="">
-                    <div class="names">
-                        <div class="control-group name">
+                    <div className="names">
+                        <div className="control-group name">
                             <label for="name">First Name</label><br></br>
                             <input type="text" placeholder="John"/>
                         </div>
-                        <div class="control-group name">
+                        <div className="control-group name">
                             <label for="name">Last Name</label><br></br>
                             <input type="text" name="email" placeholder="Kamana"/>
                         </div>
                     </div>
-                    <div class="control-group">
+                    <div className="control-group">
                         <label for="email">Email Address</label><br></br>
                         <input type="email" name="email" placeholder="johnkamara@gmail.com"/>
                     </div>
-                    <div class="control-group">
+                    <div className="control-group">
                         <label for="company">Company Name</label><br></br>
                         <input type="text" name="company" placeholder="Adanian Labs Limited"/>
                     </div>
-                    <div class="control-group">
+                    <div className="control-group">
                         <label for="how">How Did You Hear About Us?</label><br></br>
                         <input type="text" name="how" placeholder="Linkedin"/>
                     </div>
-                    <div class="control-group">
+                    <div className="control-group">
                         <label for="">Leave a Message?</label><br></br>
                         <textarea name="message" id="" cols="30" rows="10"
                             placeholder="Type Your Message Here..."></textarea>
                     </div>
-                    <div class="control-group checkbox">
+                    <div className="control-group checkbox">
                         <input type="checkbox" id="checkboxed"/>
                         <label for="">By clicking on “Send Message” you agree to our Terms & Conditions and Privacy
                             Statement.</label>
                     </div>
-                    <div class="control-group">
+                    <div className="control-group">
                         <button type="submit">Send Message</button>
                     </div>
                 </form>
