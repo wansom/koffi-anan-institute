@@ -5,6 +5,7 @@ import Services from "./components/services";
 import ThinkTanks from './components/think-tanks';
 import ContactUs from './components/contact';
 import Footer from './components/utils/footer';
+import EventSection from './components/events';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar/>
       </header>
       <Hero/>
+      <EventSection/>
       <Services/>
       <ThinkTanks/>
       <ContactUs/>
