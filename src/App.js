@@ -6,6 +6,7 @@ import ThinkTanks from './components/think-tanks';
 import ContactUs from './components/contact';
 import Footer from './components/utils/footer';
 import EventSection from './components/events';
+import ResearchProjects from './components/ResearchProjects';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Hero/>
       <EventSection/>
       <Services/>
+      <ResearchProjects/>
       <ThinkTanks/>
       <ContactUs/>
       <Footer/>
