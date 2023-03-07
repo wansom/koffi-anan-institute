@@ -66,7 +66,7 @@ const handleClick=()=>{
                     <span className={isOpen?'cancel-btn active':'cancel-btn hide'}  onClick={()=>setOpen(false)}><i className="fas fa-times"></i></span>
                 </div>
                 <a href="index.html" className="active">Home</a>
-                <a href="#">About Us</a>
+                <a href="about-us">About Us</a>
                 <a href="#">Research</a>
                 <a href="#">Teaching & Training</a>
                 <a href="#">Outreach Programs</a>

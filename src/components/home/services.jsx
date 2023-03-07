@@ -1,4 +1,4 @@
-import { services, researchProjects } from "../Data/home";
+import { services, researchProjects } from "../../Data/home";
 const Services = () => {
   return (
     <section className="offers">

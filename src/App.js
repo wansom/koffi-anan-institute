@@ -1,12 +1,12 @@
 import './App.css';
-import Navbar from "./components/navbar";
-import Hero from './components/hero';
-import Services from "./components/services";
-import ThinkTanks from './components/think-tanks';
-import ContactUs from './components/contact';
+import Navbar from "./components/utils/navbar";
+import Hero from './components/home/hero';
+import Services from "./components/home/services";
+import ThinkTanks from './components/home/think-tanks';
+import ContactUs from './components/home/contact';
 import Footer from './components/utils/footer';
-import EventSection from './components/events';
-import ResearchProjects from './components/ResearchProjects';
+import EventSection from './components/home/events';
+import ResearchProjects from './components/home/ResearchProjects';
 
 
 function App() {
