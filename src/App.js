@@ -12,9 +12,7 @@ import ResearchProjects from './components/ResearchProjects';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
       <Navbar/>
-      </header>
       <main>
       <Hero/>
       <EventSection/>

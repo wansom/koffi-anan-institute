@@ -1,4 +1,10 @@
+import { useState } from "react";
 const Navbar = () => {
+const [isOpen,setOpen] = useState(false);
+const handleClick=()=>{
+    setOpen(!isOpen)
+    console.log("i vwas clicked")
+}
   return (
     <section>
         <header>
@@ -55,9 +61,9 @@ const Navbar = () => {
                 <a href="index.html" className="nav-logo"><img src="images/home/logo.png"
                         alt="Kofi Annan  Annan Institute for Conflict Transformation Logo" width="80px"></img> K.A.I.C.T</a>
             </div>
-            <div className="links" id="links">
+            <div className={isOpen?'active links':'hide links'} id="links">
                 <div className="cancel">
-                    <span className="cancel-btn"><i className="fas fa-times"></i></span>
+                    <span className={isOpen?'cancel-btn active':'cancel-btn hide'}  onClick={()=>setOpen(false)}><i className="fas fa-times"></i></span>
                 </div>
                 <a href="index.html" className="active">Home</a>
                 <a href="#">About Us</a>
@@ -69,7 +75,7 @@ const Navbar = () => {
                 <a href="#">Library</a>
             </div>
             <div className="menu-bar">
-                <span className="menu-btn"><i className="fas fa-bars"></i></span>
+                <span className={isOpen?'menu-btn hide':'menu-btn active'} onClick={()=>setOpen(true)}><i className="fas fa-bars"></i></span>
             </div>
         </div>
     </nav>
