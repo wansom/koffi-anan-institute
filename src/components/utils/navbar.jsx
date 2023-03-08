@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getData } from '../../services';
 const Navbar = () => {
+    const [navitems, setNavItems] = useState([]);
 const [isOpen,setOpen] = useState(false);
 const handleClick=()=>{
     setOpen(!isOpen)
-    console.log("i vwas clicked")
 }
+useEffect(() => {
+  getData('https://kacit.twafwane.com/wp-json/menus/v1/menus/main-menu').then((data)=>{
+    setNavItems(data.items)
+  })
+}, []);
   return (
     <section>
         <header>
@@ -65,14 +71,17 @@ const handleClick=()=>{
                 <div className="cancel">
                     <span className={isOpen?'cancel-btn active':'cancel-btn hide'}  onClick={()=>setOpen(false)}><i className="fas fa-times"></i></span>
                 </div>
-                <a href="/" className="active">Home</a>
-                <a href="about-us">About Us</a>
+                {navitems.map((item)=>(
+                    <a href={item.url} className="active">{item.title}</a>
+                ))}
+                
+                {/* <a href="about-us">About Us</a>
                 <a href="#">Research</a>
                 <a href="#">Teaching & Training</a>
                 <a href="#">Outreach Programs</a>
                 <a href="#">Think Tanks <i className="fa-solid fa-angle-down"></i></a>
                 <a href="#">Publications</a>
-                <a href="#">Library</a>
+                <a href="#">Library</a> */}
             </div>
             <div className="menu-bar">
                 <span className={isOpen?'menu-btn hide':'menu-btn active'} onClick={()=>setOpen(true)}><i className="fas fa-bars"></i></span>
