@@ -7,10 +7,6 @@ import ContactUs from './components/home/contact';
 import Footer from './components/utils/footer';
 import EventSection from './components/home/events';
 import ResearchProjects from './components/home/ResearchProjects';
-import { useState, useEffect } from "react";
-import { getData } from './services';
-
-
 function App() {
 
   return (
