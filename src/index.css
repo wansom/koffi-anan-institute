@@ -1465,7 +1465,7 @@ section.contact.about .contact-form textarea
 {
   background-color: #ffffff !important;
 }
-section.contact.about .detail
+
 /* == || ABOUT == */
 
 
@@ -1689,4 +1689,8 @@ section.contact.about .detail
   .think-tank-card:nth-child(even) {
     flex-direction: column;
    }
+   .header-container {
+    padding: 10px 0px;
+    display: hidden;
+  }
 }
