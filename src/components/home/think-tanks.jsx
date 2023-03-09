@@ -15,7 +15,7 @@ const ThinkTanks = () => {
         </div>
         <div className="think-tank-content">
             {posts.map((post)=>(
-            <div className="think-tank-card">
+            <div className="think-tank-card flex flex-col md:flex-row justify-evenly ">
             <img src={post._embedded['wp:featuredmedia'][0].source_url}
                 alt="Kofi Annan Institute for Conflict Transformation Think Tanks"></img>
             <div className="think-tank-info">
