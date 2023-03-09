@@ -1,4 +1,4 @@
-import { researchProjects } from "../../Data/home";
+
 import { useState, useEffect } from "react"
 import { getData } from '../../services';
 const Services = () => {

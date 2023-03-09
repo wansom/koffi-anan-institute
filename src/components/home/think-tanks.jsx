@@ -1,4 +1,12 @@
+import { useState, useEffect } from "react"
+import { getData } from '../../services';
 const ThinkTanks = () => {
+    const [posts,setPosts]= useState([]);
+    useEffect(() => {
+      getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=10&_embed').then((data)=>{
+        setPosts(data)
+      })
+    }, []);
   return (
     <section className="think-tanks">
     <div className="think-tanks-container container">
@@ -6,28 +14,17 @@ const ThinkTanks = () => {
             <h1>Think Tanks</h1>
         </div>
         <div className="think-tank-content">
+            {posts.map((post)=>(
             <div className="think-tank-card">
-                <img src="images/home/think-tanks.svg"
-                    alt="Kofi Annan Institute for Conflict Transformation Think Tanks"></img>
-                <div className="think-tank-info">
-                    <h2>Mary Antoinette Brown Sherman Think Tank</h2>
-                    <p>We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the
-                        position of girls and women in society through leadership and governance training
-                        programs, by providing a platform for discussion and through research.</p>
-                    <button>Learn More</button>
-                </div>
+            <img src={post._embedded['wp:featuredmedia'][0].source_url}
+                alt="Kofi Annan Institute for Conflict Transformation Think Tanks"></img>
+            <div className="think-tank-info">
+                <h2  dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h2>
+                <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
+                <button>Learn More</button>
             </div>
-            <div className="think-tank-card">
-                <div className="think-tank-info">
-                    <h2>Mary Antoinette Brown Sherman Think Tank</h2>
-                    <p>We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the
-                        position of girls and women in society through leadership and governance training
-                        programs, by providing a platform for discussion and through research.</p>
-                    <button>Learn More</button>
-                </div>
-                <img src="images/home/think-tanks.svg"
-                    alt="Kofi Annan Institute for Conflict Transformation Think Tanks"></img>
-            </div>
+        </div>
+            ))}
         </div>
     </div>
 </section>
