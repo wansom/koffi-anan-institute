@@ -10,7 +10,7 @@ const EventSection=()=>{
           setNews(data)
         })
         getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events').then((data)=>{
-          setEvents(data.events)
+          setEvents(data.events.slice(-2))
         })
       }, []);
     return(
