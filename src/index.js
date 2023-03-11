@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutRoute from "./pages/about";
 import ContactUsRoute from "./pages/contact-us";
+import AllNews from "./pages/all-news";
+import SingleNews from "./pages/Single-news";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +16,8 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/about-us" element={<AboutRoute/>}/>
       <Route path="/contact-us" element={<ContactUsRoute/>}/>
+      <Route path="/all-news" element={<AllNews/>}/>
+      <Route path="/single-news" element={<SingleNews/>}/>
     </Routes>
   </BrowserRouter>
 );

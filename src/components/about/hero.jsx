@@ -1,9 +1,9 @@
 const AboutHero = ({title,subtitle,background}) => {
   return (
-    <section class="about" style={{ backgroundImage: `url(${background})`,backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'center' }}>
-    <div class="banner-mask">
-        <div class="banner-container container">
-            <div class="banner-text">
+    <section className="about" style={{ backgroundImage: `url(${background})`,backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'center' }}>
+    <div className="banner-mask">
+        <div className="banner-container container">
+            <div className="banner-text">
                 <p>{subtitle}</p>
                 <h1>{title}</h1>
             </div>
