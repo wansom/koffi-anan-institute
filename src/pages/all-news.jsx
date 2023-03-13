@@ -68,7 +68,7 @@ const AllNews = () => {
                     </div>
                   </div>
                   <div className="card">
-                    <img src="images/news/speaker.png" alt="" />
+                    <img src="images/news/single-news.png" alt="" />
                     <div className="news-card-info">
                       <h3>
                         Impact Showcase highlights institute's many research
@@ -109,7 +109,7 @@ const AllNews = () => {
                     </div>
                   </div>
                   <div className="card">
-                    <img src="images/news/speaker.png" alt="" />
+                    <img src="images/news/news-4.png" alt="" />
                     <div className="news-card-info">
                       <h3>
                         Impact Showcase highlights institute's many research
@@ -150,7 +150,7 @@ const AllNews = () => {
                     </div>
                   </div>
                   <div className="card">
-                    <img src="images/news/speaker.png" alt="" />
+                    <img src="images/news/news-4.png" alt="" />
                     <div className="news-card-info">
                       <h3>
                         Impact Showcase highlights institute's many research

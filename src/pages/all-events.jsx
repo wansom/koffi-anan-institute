@@ -1,6 +1,6 @@
 import AboutHero from "../components/about/hero"
 import Navbar from "../components/utils/navbar";
-import backgound from "../hero/about.png";
+import backgound from "../hero/events-banner.png";
 
 const AllEvents=()=>{
     return (
