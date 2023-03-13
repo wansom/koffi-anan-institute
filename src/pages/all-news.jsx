@@ -78,7 +78,7 @@ const AllNews = () => {
                         and the Morrison Institute for Public Policy, as well as
                         the university...
                       </p>
-                      <a href="#">
+                      <a href="single-news">
                         Read More{" "}
                         <svg
                           width="16"
@@ -119,7 +119,7 @@ const AllNews = () => {
                         and the Morrison Institute for Public Policy, as well as
                         the university...
                       </p>
-                      <a href="#">
+                      <a href="single-news">
                         Read More{" "}
                         <svg
                           width="16"
@@ -160,7 +160,7 @@ const AllNews = () => {
                         and the Morrison Institute for Public Policy, as well as
                         the university...
                       </p>
-                      <a href="#">
+                      <a href="single-news">
                         Read More{" "}
                         <svg
                           width="16"

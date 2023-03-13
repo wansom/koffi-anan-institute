@@ -85,13 +85,13 @@ const EventSection=()=>{
                    
                 </div>
                 <div className="bottom-more">
-                    <button>All Events</button>
+                   <a href="all-events"> <button>All Events</button></a>
                 </div>
             </div>
             <div className="up-right">
                 <div className="top">
                     <span>News | </span>
-                    <a href="#">All News</a>
+                    <a href="all-news">All News</a>
                 </div>
                 <div className="bottom">
                     {news.map((i)=>(
