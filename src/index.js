@@ -8,6 +8,7 @@ import AboutRoute from "./pages/about";
 import ContactUsRoute from "./pages/contact-us";
 import AllNews from "./pages/all-news";
 import SingleNews from "./pages/Single-news";
+import AllEvents from "./pages/all-events";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
       <Route path="/contact-us" element={<ContactUsRoute/>}/>
       <Route path="/all-news" element={<AllNews/>}/>
       <Route path="/single-news" element={<SingleNews/>}/>
+      <Route path="/all-events" element={<AllEvents/>}/>
     </Routes>
   </BrowserRouter>
 );
