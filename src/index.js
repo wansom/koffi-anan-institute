@@ -11,6 +11,8 @@ import SingleNews from "./pages/single-news";
 import AllEvents from "./pages/all-events";
 import SingleEvent from "./pages/single-event";
 import SingleService from "./pages/single-service";
+import ProgramDetails from "./pages/program-details";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +26,7 @@ root.render(
       <Route path="/all-events" element={<AllEvents/>}/>
       <Route path="/event" element={<SingleEvent/>}/>
       <Route path="/service" element={<SingleService/>}/>
+      <Route path="/program-details" element={<ProgramDetails/>}/>
     </Routes>
   </BrowserRouter>
 );
