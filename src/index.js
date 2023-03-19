@@ -10,6 +10,7 @@ import AllNews from "./pages/all-news";
 import SingleNews from "./pages/single-news";
 import AllEvents from "./pages/all-events";
 import SingleEvent from "./pages/single-event";
+import SingleService from "./pages/single-service";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
       <Route path="/articles" element={<SingleNews/>}/>
       <Route path="/all-events" element={<AllEvents/>}/>
       <Route path="/event" element={<SingleEvent/>}/>
+      <Route path="/service" element={<SingleService/>}/>
     </Routes>
   </BrowserRouter>
 );

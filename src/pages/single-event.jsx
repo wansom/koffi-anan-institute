@@ -262,7 +262,7 @@ const SingleEvent=()=>{
                                     <div class="top">
                                         <span class="speech-time">08:00 - 10:00 AM</span>
                                         <div class="event-blk-speaker">
-                                            <img src="css/img/blk speaker.png" alt=""/>
+                                            <img src="images/events/blk-speaker.png" alt=""/>
                                             <div class="speaker-info">
                                                 <h5>08:00 - 10:00 AM</h5>
                                                 <p>Co-Founder of Adanian Labs & Afya Rekod</p>
@@ -278,7 +278,7 @@ const SingleEvent=()=>{
                                     <div class="top">
                                         <span class="speech-time">08:00 - 10:00 AM</span>
                                         <div class="event-blk-speaker">
-                                            <img src="css/img/blk speaker.png" alt=""/>
+                                            <img src="images/events/blk-speaker.png" alt=""/>
                                             <div class="speaker-info">
                                                 <h5>08:00 - 10:00 AM</h5>
                                                 <p>Co-Founder of Adanian Labs & Afya Rekod</p>
@@ -294,7 +294,7 @@ const SingleEvent=()=>{
                                     <div class="top">
                                         <span class="speech-time">08:00 - 10:00 AM</span>
                                         <div class="event-blk-speaker">
-                                            <img src="css/img/blk speaker.png" alt=""/>
+                                            <img src="images/events/blk-speaker.png" alt=""/>
                                             <div class="speaker-info">
                                                 <h5>08:00 - 10:00 AM</h5>
                                                 <p>Co-Founder of Adanian Labs & Afya Rekod</p>
@@ -310,7 +310,7 @@ const SingleEvent=()=>{
                                     <div class="top">
                                         <span class="speech-time">08:00 - 10:00 AM</span>
                                         <div class="event-blk-speaker">
-                                            <img src="css/img/blk speaker.png" alt=""/>
+                                            <img src="images/events/blk-speaker.png" alt=""/>
                                             <div class="speaker-info">
                                                 <h5>08:00 - 10:00 AM</h5>
                                                 <p>Co-Founder of Adanian Labs & Afya Rekod</p>
