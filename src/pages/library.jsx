@@ -43,7 +43,7 @@ const Library=()=>{
                         <h2>All Categories</h2>
                         <ul>
                             <li>
-                                <a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                <a href="#" className="flex items-center"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_598_334" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse"
                                             x="0" y="0" width="14" height="14">
@@ -59,7 +59,7 @@ const Library=()=>{
                                 <span>(156)</span>
                             </li>
                             <li>
-                                <a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                <a href="#" className="flex items-center"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_598_334" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse"
                                             x="0" y="0" width="14" height="14">
@@ -75,7 +75,7 @@ const Library=()=>{
                                 <span>(156)</span>
                             </li>
                             <li>
-                                <a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                <a href="#" className="flex items-center"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_598_334" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse"
                                             x="0" y="0" width="14" height="14">
@@ -91,7 +91,7 @@ const Library=()=>{
                                 <span>(156)</span>
                             </li>
                             <li>
-                                <a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                <a href="#" className="flex items-center"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_598_334" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse"
                                             x="0" y="0" width="14" height="14">
@@ -107,7 +107,7 @@ const Library=()=>{
                                 <span>(156)</span>
                             </li>
                             <li>
-                                <a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                <a href="#" className="flex items-center"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_598_334" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse"
                                             x="0" y="0" width="14" height="14">
