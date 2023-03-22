@@ -5,6 +5,7 @@ const Navbar = () => {
   const [navitems, setNavItems] = useState([]);
   const [isOpen, setOpen] = useState(false);
   const [click, setClick] = useState(true);
+  const [loading, setLoading] = useState(true);
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
@@ -16,6 +17,7 @@ const Navbar = () => {
     getData("https://kacit.twafwane.com/wp-json/menus/v1/menus/main-menu").then(
       (data) => {
         setNavItems(data.items);
+        setLoading(false);
         console.log(navitems[5]['child_items'])
       }
     );
@@ -140,8 +142,9 @@ const Navbar = () => {
         <div
           className={classNames(click ? "hidden" : "block dropdown")}
           onMouseLeave={handleNavClick}
-        >
-          {navitems[5]['child_items'].map((i) => (
+        >    
+         <div> {loading?<p>Loading...</p>:<div className="flex flex-col gap-5">
+            {navitems[5]['child_items'].map((i) => (
             <NavLink
               exact
               to="#"
@@ -149,7 +152,7 @@ const Navbar = () => {
             >
              {i.title}
             </NavLink>
-          ))}
+          ))}</div>}</div>
         </div>
       </nav>
     </section>
