@@ -127,14 +127,6 @@ const Navbar = () => {
                 )}
               </a>
             ))}
-
-            {/* <a href="about-us">About Us</a>
-                <a href="#">Research</a>
-                <a href="#">Teaching & Training</a>
-                <a href="#">Outreach Programs</a>
-                <a href="#">Think Tanks <i className="fa-solid fa-angle-down"></i></a>
-                <a href="#">Publications</a>
-                <a href="#">Library</a> */}
           </div>
           <div className="menu-bar">
             <span
