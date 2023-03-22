@@ -1570,6 +1570,7 @@ section.news .news-container .right {
   max-width: 700px;
   min-width: 280px;
   position: relative;
+  
 }
 
 .feed img {
@@ -1577,6 +1578,8 @@ section.news .news-container .right {
   position: relative;
   z-index: 0;
   vertical-align: middle;
+  height: 350px;
+  object-fit: cover;
 }
 
 .feed .text {

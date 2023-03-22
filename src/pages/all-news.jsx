@@ -4,8 +4,18 @@ import NewsSidebar from "../components/news/sidebar";
 import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
 import backgound from "../hero/about.png";
+import { useState, useEffect } from "react";
+import { getData } from '../services';
 
 const AllNews = () => {
+  const [news,setNews]=useState([])
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed').then((data)=>{
+      setNews(data)
+      setLoading(false)
+    })
+  }, []);
   return (
     <div>
       <Navbar />
@@ -21,7 +31,7 @@ const AllNews = () => {
               <div className="head">
                 <h1>Latest Announcements</h1>
               </div>
-              <LatestAnnouncement />
+              {loading?<p>Loading..</p>:<LatestAnnouncement news={news} />}
               <div className="head">
                 <h1>Latest News</h1>
               </div>

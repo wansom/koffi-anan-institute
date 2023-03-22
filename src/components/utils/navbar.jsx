@@ -119,7 +119,7 @@ const Navbar = () => {
               </span>
             </div>
             {navitems.map((item, index) => (
-              <a href={item.url} className="active">
+              <a href={item.url} className="active" key={index}>
                 {item.title}{" "}
                 {index == 5 && (
                   <i
@@ -144,11 +144,12 @@ const Navbar = () => {
           onMouseLeave={handleNavClick}
         >    
          <div> {loading?<p>Loading...</p>:<div className="flex flex-col gap-5">
-            {navitems[5]['child_items'].map((i) => (
+            {navitems[5]['child_items'].map((i,index) => (
             <NavLink
               exact
               to="#"
               className=" transition-colors duration-300 transform rounded-md lg:mt-0  dropdown-link"
+              key={index}
             >
              {i.title}
             </NavLink>
