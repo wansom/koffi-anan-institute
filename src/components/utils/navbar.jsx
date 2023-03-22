@@ -122,7 +122,7 @@ const Navbar = () => {
               </span>
             </div>
             {navitems.map((item, index) => (
-              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(index)}} onMouseLeave={()=>{handleClick(index)}}>
+              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(index)}}>
                 {item.title}{" "}
                 {index == 5 && (
                   <i
