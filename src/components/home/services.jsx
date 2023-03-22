@@ -1,14 +1,15 @@
 
 import { useState, useEffect } from "react"
 import { getData } from '../../services';
+import {services} from "../../Data/home"
 const Services = () => {
   const utl='http://kacit.twafwane.com/wp-json/wp/v2/media/52'
-  const [services,setServices]= useState([]);
-  useEffect(() => {
-    getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=8&_embed').then((data)=>{
-      setServices(data)
-    })
-  }, []);
+  // const [services,setServices]= useState([]);
+  // useEffect(() => {
+  //   getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=8&_embed').then((data)=>{
+  //     setServices(data)
+  //   })
+  // }, []);
   return (
     <section className="offers">
     <div className="offers-container container">
@@ -18,11 +19,13 @@ const Services = () => {
         <div className="offer-content">
           {services.map((service,index)=>(
             <div className="offer-card">
-             <img src={service._embedded['wp:featuredmedia'][0].source_url}/>
+             <img src={service.image_url}/>
             <div className="offer-info">
-                <span>0{index}</span>
-                <h3 dangerouslySetInnerHTML={{ __html: service.title.rendered }}></h3>
-                <p dangerouslySetInnerHTML={{ __html: service.content.rendered }}></p>
+               <div className="flex justify-center items-center">
+               <img src={service.icon} alt="icon"  className="icon"/>
+               </div>
+                <h3>{service.title}</h3>
+                <p>{service.subtitle}</p>
                 <button>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

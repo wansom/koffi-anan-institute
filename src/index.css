@@ -582,7 +582,7 @@ section.banner {
 
 .offer-info {
   width: 250px;
-  height: 313px;
+  height: 333px;
   background: #FCFCFC;
   border: 1px solid #E0E2F1;
   border-radius: 5px;
@@ -602,6 +602,14 @@ section.banner {
   text-align: center;
   color: #1C1B1F;
   margin: 10px auto;
+}
+.offer-info .icon{
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  object-fit: contain;
+  align-self: center;
+  justify-self: center;
 }
 
 .offer-info h3 {
