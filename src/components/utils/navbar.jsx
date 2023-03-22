@@ -10,8 +10,11 @@ const Navbar = () => {
     return classes.filter(Boolean).join(" ");
   }
   const handleNavClick = () => setClick(!click);
-  const handleClick = () => {
-    setOpen(!isOpen);
+  const handleClick = (index) => {
+    
+    if(index==5){
+        setClick(!click)   
+    }
   };
   useEffect(() => {
     getData("https://kacit.twafwane.com/wp-json/menus/v1/menus/main-menu").then(
@@ -119,7 +122,7 @@ const Navbar = () => {
               </span>
             </div>
             {navitems.map((item, index) => (
-              <a href={item.url} className="active" key={index}>
+              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(index)}}>
                 {item.title}{" "}
                 {index == 5 && (
                   <i
