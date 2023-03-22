@@ -11,7 +11,7 @@ const AllEvents=()=>{
         <section class="filter">
             <div class="filter-container container">
                 <div class="filter-top">
-                    <div class="head">
+                    {/* <div class="head">
                         <h2>Filters</h2>
                     </div>
                     <div class="filter-form">
@@ -67,7 +67,7 @@ const AllEvents=()=>{
                                <button type="submit">Filter</button>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                     <div class="tab-btns">
                         <button class="tab"><span>All</span></button>
                         <button class="tab active"><span>Upcoming Events</span></button>
