@@ -4,7 +4,9 @@ import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
 import backgound from "../hero/contact.png"
 
+
 const ContactUsRoute=()=>{
+
     return (
         <div>
             <Navbar/>

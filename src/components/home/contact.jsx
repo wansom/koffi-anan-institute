@@ -1,4 +1,56 @@
+
+import { useState } from "react"
+import { submitForm } from "../../services";
 const ContactUs=()=>{
+    const [firstName, setfirstName] = useState("");
+    const [lastName, setlastName] = useState("");
+    const [email, setemail] = useState("");
+    const [companyName, setcompanyName] = useState("");
+    const [aboutUs, setaboutUs] = useState("");
+    const [message, setmessage] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const payload = {
+          "First Name": firstName,
+          "Last Name": lastName,
+          "Company Name?": companyName,
+          "How did you hear about us?":
+            aboutUs,
+          "Message":
+            message,
+        };
+        const personalDetails =JSON.parse(window.localStorage.getItem('details'));
+    
+        const tableRows = Object.entries(payload).map(([question, answer]) => `
+        <tr>
+          <td>${question}</td>
+          <td>${answer}</td>
+        </tr>
+      `);
+      
+      const table = `
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tableRows.join('')}
+          </tbody>
+        </table>
+      `;
+        submitForm({
+          title:payload.email,
+          categories:[4],
+          status:'publish',
+          content:table
+        }).then((res)=>{
+          console.log(res)
+        })
+      };
     return(
         <section className="contact">
         <div className="contact-container container">
@@ -52,36 +104,54 @@ const ContactUs=()=>{
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className="contact-form">
-                <form action="">
+                <form action="" onSubmit={handleSubmit}>
                     <div className="names">
                         <div className="control-group name">
                             <label for="name">First Name</label><br></br>
-                            <input type="text" placeholder="John"/>
+                            <input type="text" placeholder="John" value={firstName}
+              onChange={(e) => {
+                setfirstName(e.target.value);
+              }}/>
                         </div>
                         <div className="control-group name">
                             <label for="name">Last Name</label><br></br>
-                            <input type="text" name="email" placeholder="Kamana"/>
+                            <input type="text" name="email" placeholder="Kamara" value={lastName}
+              onChange={(e) => {
+                setlastName(e.target.value);
+              }}/>
                         </div>
                     </div>
                     <div className="control-group">
                         <label for="email">Email Address</label><br></br>
-                        <input type="email" name="email" placeholder="johnkamara@gmail.com"/>
+                        <input type="email" name="email" placeholder="johnkamara@gmail.com" value={email}
+              onChange={(e) => {
+                setemail(e.target.value);
+              }}/>
                     </div>
                     <div className="control-group">
                         <label for="company">Company Name</label><br></br>
-                        <input type="text" name="company" placeholder="Adanian Labs Limited"/>
+                        <input type="text" name="company" placeholder="Adanian Labs Limited" value={companyName}
+              onChange={(e) => {
+                setcompanyName(e.target.value);
+              }}/>
                     </div>
                     <div className="control-group">
                         <label for="how">How Did You Hear About Us?</label><br></br>
-                        <input type="text" name="how" placeholder="Linkedin"/>
+                        <input type="text" name="how" placeholder="Linkedin" value={aboutUs}
+              onChange={(e) => {
+                setaboutUs(e.target.value);
+              }}/>
                     </div>
                     <div className="control-group">
                         <label for="">Leave a Message?</label><br></br>
                         <textarea name="message" id="" cols="30" rows="10"
-                            placeholder="Type Your Message Here..."></textarea>
+                            placeholder="Type Your Message Here..." value={message}
+                            onChange={(e) => {
+                              setmessage(e.target.value);
+                            }}></textarea>
                     </div>
                     <div className="control-group checkbox">
-                        <input type="checkbox" id="checkboxed"/>
+                        <input type="checkbox" id="checkboxed" checked/>
                         <label for="">By clicking on “Send Message” you agree to our Terms & Conditions and Privacy
                             Statement.</label>
                     </div>
