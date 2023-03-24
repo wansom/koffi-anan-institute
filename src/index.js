@@ -31,6 +31,8 @@ root.render(
       <Route path="/programdetails" element={<ProgramDetails/>}/>
       <Route path="/library" element={<Library/>}/>
       <Route path="/comingsoon" element={<ComingSoon/>}/>
+      <Route path="*" element={<ComingSoon/>} />
+
     </Routes>
   </BrowserRouter>
 );

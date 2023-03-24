@@ -1,10 +1,9 @@
 import ComingSoonFooter from "../components/utils/coming-soon-footer";
-import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
 
 const ComingSoon = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <div className="coming-soon relative flex items-center justify-center">
         <a href="/">
@@ -40,7 +39,7 @@ const ComingSoon = () => {
         <ComingSoonFooter/>
       </div>
       
-    </>
+    </div>
   );
 };
 export default ComingSoon;
