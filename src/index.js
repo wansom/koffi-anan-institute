@@ -13,6 +13,7 @@ import SingleEvent from "./pages/single-event";
 import SingleService from "./pages/single-service";
 import ProgramDetails from "./pages/program-details";
 import Library from "./pages/library";
+import ComingSoon from "./pages/coming-soon";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -29,6 +30,7 @@ root.render(
       <Route path="/teachingandtraining" element={<SingleService/>}/>
       <Route path="/programdetails" element={<ProgramDetails/>}/>
       <Route path="/library" element={<Library/>}/>
+      <Route path="/comingsoon" element={<ComingSoon/>}/>
     </Routes>
   </BrowserRouter>
 );

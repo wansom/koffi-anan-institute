@@ -1578,7 +1578,6 @@ section.news .news-container .right {
   max-width: 700px;
   min-width: 280px;
   position: relative;
-  
 }
 
 .feed img {
@@ -3778,6 +3777,33 @@ section.filter {
 }
 
 /* == || EVENTS == */
+
+/* == || COMING SOON == */
+.coming-soon {
+  background-image: url(../public//images/coming-soon.png);
+  background-position: center center;
+  height: calc(100vh - 290px);
+  background-size: cover;
+}
+.coming-soon button {
+  display: flex;
+  align-items: flex-start;
+  padding: 13px 221px;
+  gap: 10px;
+  width: 620px;
+  height: 50px;
+
+  background: #25518c;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  color: #fcfcfc;
+}
+/* == || COMING SOON == */
 
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
