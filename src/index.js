@@ -20,14 +20,14 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/about-us" element={<AboutRoute/>}/>
-      <Route path="/contact-us" element={<ContactUsRoute/>}/>
-      <Route path="/all-news" element={<AllNews/>}/>
+      <Route path="/aboutus" element={<AboutRoute/>}/>
+      <Route path="/contactus" element={<ContactUsRoute/>}/>
+      <Route path="/allnews" element={<AllNews/>}/>
       {/* <Route path="/articles" element={<SingleNews/>}/> */}
-      <Route path="/all-events" element={<AllEvents/>}/>
+      <Route path="/allevents" element={<AllEvents/>}/>
       <Route path="/event" element={<SingleEvent/>}/>
-      <Route path="/teaching-and-training" element={<SingleService/>}/>
-      <Route path="/program-details" element={<ProgramDetails/>}/>
+      <Route path="/teachingandtraining" element={<SingleService/>}/>
+      <Route path="/programdetails" element={<ProgramDetails/>}/>
       <Route path="/library" element={<Library/>}/>
     </Routes>
   </BrowserRouter>

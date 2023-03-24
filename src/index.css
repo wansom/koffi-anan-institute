@@ -142,8 +142,8 @@ nav {
 }
 .dropdown {
   position: absolute;
-  width: 408px;
-  height: 108px;
+  width: fit-content;
+  height: fit-content;
   top: 240px;
 
   /* K.A.I.C.T. - Light Blue */
@@ -168,6 +168,14 @@ nav {
   font-size: 16px;
   line-height: 150%;
   color: #1c1b1f;
+}
+.dropdown-link:hover {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: red;
 }
 
 .nav-logo {
