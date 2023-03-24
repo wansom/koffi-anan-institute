@@ -3782,7 +3782,7 @@ section.filter {
 .coming-soon {
   background-image: url(../public//images/coming-soon.png);
   background-position: center center;
-  height: calc(100vh - 290px);
+  height: calc(100vh - 220px);
   background-size: cover;
 }
 .coming-soon button {
@@ -3802,6 +3802,20 @@ section.filter {
   /* identical to box height, or 133% */
 
   color: #fcfcfc;
+}
+.coming-soon-footer{
+background: #25518C;
+}
+.coming-soon-footer p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height, or 150% */
+
+
+color: #FCFCFC;
 }
 /* == || COMING SOON == */
 
