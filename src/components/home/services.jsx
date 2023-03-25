@@ -1,15 +1,7 @@
 
-import { useState, useEffect } from "react"
-import { getData } from '../../services';
 import {services} from "../../Data/home"
 const Services = () => {
   const utl='http://kacit.twafwane.com/wp-json/wp/v2/media/52'
-  // const [services,setServices]= useState([]);
-  // useEffect(() => {
-  //   getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=8&_embed').then((data)=>{
-  //     setServices(data)
-  //   })
-  // }, []);
   return (
     <section className="offers">
     <div className="offers-container container">
@@ -18,7 +10,7 @@ const Services = () => {
         </div>
         <div className="offer-content">
           {services.map((service,index)=>(
-            <div className="offer-card">
+            <div className="offer-card" key={index}>
              <img src={service.image_url}/>
             <div className="offer-info">
                <div className="flex justify-center items-center">

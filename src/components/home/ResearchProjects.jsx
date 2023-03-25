@@ -14,8 +14,8 @@ const ResearchProjects =()=>{
                 <h1>Research Projects</h1>
             </div>
             <div className="projects-content">
-                {projects.map((project)=>(
-                <div className="project">
+                {projects.map((project,index)=>(
+                <div className="project" key={index}>
                 <img src={project._embedded['wp:featuredmedia'][0].source_url}></img>
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>

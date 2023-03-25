@@ -22,7 +22,7 @@ const EventSection=()=>{
                 </div>
                 <div className="bottom">
                     {events.map((event)=>(
-                        <a href={`event/${event.id}`}>
+                        <a href={`event`}>
                         <div className="up-card">
                         <div className="floating-card">
                             <span className="price">{event.cost}</span>
