@@ -4,8 +4,8 @@ import axios from "axios";
 
 
 const generateToken = async () => {
-  const username = "admin";
-  const password = "w5JuGaDmaXa@D$KFQ8";
+  const username = "webuser";
+  const password = ")DJFeh8EmY5QrXHV38j*GEPp";
 
   try {
     const response = await axios.post(
