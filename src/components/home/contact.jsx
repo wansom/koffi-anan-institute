@@ -15,12 +15,12 @@ const ContactUs=()=>{
           "First Name": firstName,
           "Last Name": lastName,
           "Company Name?": companyName,
+          "email":email,
           "How did you hear about us?":
             aboutUs,
           "Message":
             message,
         };
-        const personalDetails =JSON.parse(window.localStorage.getItem('details'));
     
         const tableRows = Object.entries(payload).map(([question, answer]) => `
         <tr>
@@ -43,7 +43,7 @@ const ContactUs=()=>{
         </table>
       `;
         submitForm({
-          title:payload.email,
+          title:email,
           categories:[4],
           status:'publish',
           content:table
