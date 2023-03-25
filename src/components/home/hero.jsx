@@ -8,9 +8,9 @@ const Hero = () => {
       })
     }, []);
   return (
-    <section class="banner">
-    <div class="banner-mask">
-        <div class="banner-container container">
+    <section className="banner">
+    <div className="banner-mask">
+        <div className="banner-container container">
             {posts.length>0&&(<div class="banner-text">
                 <h1 dangerouslySetInnerHTML={{ __html: posts[0].title.rendered }}></h1>
                 <p dangerouslySetInnerHTML={{ __html: posts[0].content.rendered }}></p>

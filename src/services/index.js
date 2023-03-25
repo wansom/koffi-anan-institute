@@ -4,8 +4,8 @@ import axios from "axios";
 
 
 const generateToken = async () => {
-  const username = "webuser";
-  const password = ")DJFeh8EmY5QrXHV38j*GEPp";
+  const username = "admin";
+  const password = "w5JuGaDmaXa@D$KFQ8";
 
   try {
     const response = await axios.post(
@@ -16,7 +16,6 @@ const generateToken = async () => {
       }
     );
     const token = response.data.data.token;
-    console.log(token)
     localStorage.setItem("jwtToken", token);
     return token;
   } catch (error) {

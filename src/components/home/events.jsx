@@ -22,8 +22,9 @@ const EventSection=()=>{
                 </div>
                 <div className="bottom">
                     {events.map((event)=>(
-                        <a href={`event`}>
+                      
                         <div className="up-card">
+                              <a href={`event`}>
                         <div className="floating-card">
                             <span className="price">{event.cost}</span>
                             <div className="hold">
@@ -80,7 +81,8 @@ const EventSection=()=>{
                                     </svg> {event.venue.city}, {event.venue.country}</span>
                             </div>
                         </div>
-                    </div></a>
+                        </a>
+                    </div>
                     ))}
                     
                    
