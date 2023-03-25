@@ -14,6 +14,7 @@ import SingleService from "./pages/single-service";
 import ProgramDetails from "./pages/program-details";
 import Library from "./pages/library";
 import ComingSoon from "./pages/coming-soon";
+import SinglePost from "./pages/post";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,7 +25,7 @@ root.render(
       <Route path="/aboutus" element={<AboutRoute/>}/>
       <Route path="/contactus" element={<ContactUsRoute/>}/>
       <Route path="/allnews" element={<AllNews/>}/>
-      {/* <Route path="/articles" element={<SingleNews/>}/> */}
+      <Route path="/post" element={<SinglePost/>}/>
       <Route path="/allevents" element={<AllEvents/>}/>
       <Route path="/event" element={<SingleEvent/>}/>
       <Route path="/teachingandtraining" element={<SingleService/>}/>

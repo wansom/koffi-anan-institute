@@ -67,7 +67,7 @@ const EventSection=()=>{
                                 <span>{new Date(event.start_date).getDay()}</span>
                             </div>
                             <div className="right">
-                                <a href="">{event.title}</a> <br></br>
+                                <a href="event">{event.title}</a> <br></br>
                                 <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -94,10 +94,11 @@ const EventSection=()=>{
             <div className="up-right">
                 <div className="top">
                     <span>News | </span>
-                    <a href="all-news">All News</a>
+                    <a href="allnews">All News</a>
                 </div>
                 <div className="bottom">
                     {news.map((i)=>(
+                        <a href="post">
                         <div className="news">
                         <div className="top">
                             <div className="left"><span>Weekly updates</span></div>
@@ -108,7 +109,7 @@ const EventSection=()=>{
                             <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}></p>
                             
                         </div>
-                    </div>
+                    </div></a>
                     ))}
                 </div>
             </div>

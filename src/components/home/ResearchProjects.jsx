@@ -20,7 +20,7 @@ const ResearchProjects =()=>{
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>
                     <p dangerouslySetInnerHTML={{ __html: project.content.rendered }}></p>
-                    <button>Learn More</button>
+                    <a href="researchProjects"><button>Learn More</button></a>
                 </div>
             </div>
                 ))}

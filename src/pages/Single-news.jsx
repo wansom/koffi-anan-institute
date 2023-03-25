@@ -15,14 +15,14 @@ const SingleNews = () => {
           subtitle={"ASU students win $10K prize in 30-hour hackathon - Event looked at tackling terrorist threats to homeland security"}
           background={backgound}
         />
-       <section class="news">
-            <div class="news-container container">
-                <div class="left">
-                    <div class="single-news">
-                        <div class="news-thumbnail">
+       <section className="news">
+            <div className="news-container container">
+                <div className="left">
+                    <div className="single-news">
+                        <div className="news-thumbnail">
                             <img src="images/news/single-news.png" alt=""/>
-                            <div class="news-thumbnail-info">
-                                <div class="sub-items">
+                            <div className="news-thumbnail-info">
+                                <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_477_217" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse"
@@ -37,7 +37,7 @@ const SingleNews = () => {
                                     </svg>
                                     <a href="#">Sanjeev Khagram</a>
                                 </div>
-                                <div class="sub-items">
+                                <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_477_220" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse"
@@ -52,7 +52,7 @@ const SingleNews = () => {
                                     </svg>
                                     <span>March 5, 2023</span>
                                 </div>
-                                <div class="sub-items">
+                                <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_477_223" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse"
@@ -71,7 +71,7 @@ const SingleNews = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="single-news-content">
+                        <div className="single-news-content">
                             <h1>ASU students win $10K prize in 30-hour hackathon - Event looked at tackling terrorist
                                 threats to homeland security</h1>
                             <p>There was pure joy, followed by lots of hugs and high-fives on Sunday afternoon when a
@@ -106,9 +106,9 @@ const SingleNews = () => {
                             <p>The winning team, called Malindo, was made up of five computer science students from the
                                 Fulton Schools: Nathan McAvoy, Fawwaz Firdaus, Kalyanam Priyam Dewri, Camelia Ariana
                                 Binti Ahmad Nasri and Rui Heng Foo.</p>
-                            <div class="news-caption">
+                            <div className="news-caption">
                                 <img src="images/news/post-image.png" alt=""/>
-                                <div class="news-caption-info">
+                                <div className="news-caption-info">
                                     <p>The image of an armed terrorist was part of a winning design created by the ASU
                                         team Malindo during a design challenge for the Homeland Security Department.
                                         Photo by Dolores Tropiano</p>
@@ -117,7 +117,7 @@ const SingleNews = () => {
                             <p>The team spent 30 hours in the Engineering Center working on the project — which turned
                                 out to be time well spent.</p>
 
-                            <p>“We can learn more here than we can learn in a classroom,” said team member Firdaus, a
+                            <p>“We can learn more here than we can learn in a classNameroom,” said team member Firdaus, a
                                 second-year student. “I feel more passionate about doing this than I would doing
                                 homework. … I would never stay up all night doing homework.”</p>
 
@@ -137,15 +137,15 @@ const SingleNews = () => {
                             <p>Most attacks occur in public access areas, 71% involve firearms, 90% are male with a
                                 criminal history, and the suspect typically has extreme ideologically and hateful views,
                                 he said.</p>
-                            <div class="posts">
-                                <div class="posts-tags">
+                            <div className="posts">
+                                <div className="posts-tags">
                                     <span>Tags: </span>
                                     <a href="#">Admission</a>,
                                     <a href="#">Events</a>,
                                     <a href="#">Students</a>
                                 </div>
-                                <div class="posts-slider">
-                                    <div class="arrow">
+                                <div className="posts-slider">
+                                    <div className="arrow">
                                         <button>
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -161,26 +161,26 @@ const SingleNews = () => {
                                             </svg>
                                         </button>
                                     </div>
-                                    <div class="post-slides">
-                                        <div class="post-slide">
-                                            <div class="slide-top">
+                                    <div className="post-slides">
+                                        <div className="post-slide">
+                                            <div className="slide-top">
                                                 <span>Previous Post</span>
                                                 <span>Next Post</span>
                                             </div>
-                                            <div class="slide-content">
-                                                <div class="post text-left">
-                                                    <a href="#" class="one text-left">Impact Showcase
+                                            <div className="slide-content">
+                                                <div className="post text-left">
+                                                    <a href="#" className="one text-left">Impact Showcase
                                                         highlights institute's many research, education activities</a>
                                                 </div>
-                                                <div class="post text-right">
-                                                    <a href="#" class="two text-right">Shark-saving
+                                                <div className="post text-right">
+                                                    <a href="#" className="two text-right">Shark-saving
                                                         technology makes waves - ASU professor uses tracking
                                                         technology</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="arrow">
+                                    <div className="arrow">
                                         <button>
                                             <svg style={{transform: 'rotate(-180deg)'}} width="30" height="30"
                                                 viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,55 +198,55 @@ const SingleNews = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="commenting">
-                                <div class="comments-head">
+                            <div className="commenting">
+                                <div className="comments-head">
                                     <h1>Leave a Reply</h1>
                                 </div>
-                                <div class="comment-form">
+                                <div className="comment-form">
                                     <form action="">
-                                        <div class="control-group">
+                                        <div className="control-group">
                                             <label for="name">Name</label><br></br>
-                                            <input class="comment-input" type="text" placeholder="Sanjeev Khagram"></input>
+                                            <input className="comment-input" type="text" placeholder="Sanjeev Khagram"></input>
                                         </div>
-                                        <div class="control-group">
+                                        <div className="control-group">
                                             <label for="email">Email Address</label><br/>
-                                            <input class="comment-input" type="email" name="email"
+                                            <input className="comment-input" type="email" name="email"
                                                 placeholder="sanjeevk@gmail.com"/>
                                         </div>
-                                        <div class="control-group">
+                                        <div className="control-group">
                                             <label for="">Comment?</label><br/>
                                             <textarea name="message" id="" cols="30" rows="10"
                                                 placeholder="Type your comment here..."></textarea>
                                         </div>
-                                        <div class="control-group checkbox">
+                                        <div className="control-group checkbox">
                                             <input type="checkbox" id="checkboxed"/>
                                             <label for="">By clicking on “Send Message” you agree to our Terms &
                                                 Conditions and Privacy
                                                 Statement.</label>
                                         </div>
-                                        <div class="control-group">
+                                        <div className="control-group">
                                             <button type="submit">Comment</button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="comments">
-                                    <div class="comments-head">
+                                <div className="comments">
+                                    <div className="comments-head">
                                         <span>Comments</span>
                                         <span>4 Comments</span>
                                     </div>
-                                    <div class="persons-comments">
-                                        <div class="comment">
-                                            <div class="top-comment">
+                                    <div className="persons-comments">
+                                        <div className="comment">
+                                            <div className="top-comment">
                                                 <span>Sanjeev Khagram</span>
                                                 <span>May 12 2022</span>
                                             </div>
-                                            <div class="comment-msg">
+                                            <div className="comment-msg">
                                                 <p>Do you want to become a UI/UX designer but you don’t know where to
                                                     start? This course will allow you to develop your user interface
                                                     design skills and you can add UI designer.</p>
                                             </div>
-                                            <div class="commented-reply">
-                                                <div class="arrow">
+                                            <div className="commented-reply">
+                                                <div className="arrow">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <mask id="mask0_477_336" style={{ maskType: "alpha" }}
@@ -261,25 +261,25 @@ const SingleNews = () => {
                                                         </g>
                                                     </svg>
                                                 </div>
-                                                <div class="reply-msgs">
-                                                    <div class="comment">
-                                                        <div class="top-comment">
+                                                <div className="reply-msgs">
+                                                    <div className="comment">
+                                                        <div className="top-comment">
                                                             <span>Sanjeev Khagram</span>
                                                             <span>May 12 2022</span>
                                                         </div>
-                                                        <div class="comment-msg">
+                                                        <div className="comment-msg">
                                                             <p>Do you want to become a UI/UX designer but you don’t know
                                                                 where to start? This course will allow you to develop
                                                                 your user interface design skills and you can add UI
                                                                 designer.</p>
                                                         </div>
                                                     </div>
-                                                    <div class="comment">
-                                                        <div class="top-comment">
+                                                    <div className="comment">
+                                                        <div className="top-comment">
                                                             <span>Sanjeev Khagram</span>
                                                             <span>May 12 2022</span>
                                                         </div>
-                                                        <div class="comment-msg">
+                                                        <div className="comment-msg">
                                                             <p>Do you want to become a UI/UX designer but you don’t know
                                                                 where to start? This course will allow you to develop
                                                                 your user interface design skills and you can add UI
@@ -289,23 +289,23 @@ const SingleNews = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="comment">
-                                            <div class="top-comment">
+                                        <div className="comment">
+                                            <div className="top-comment">
                                                 <span>Sanjeev Khagram</span>
                                                 <span>May 12 2022</span>
                                             </div>
-                                            <div class="comment-msg">
+                                            <div className="comment-msg">
                                                 <p>Do you want to become a UI/UX designer but you don’t know where to
                                                     start? This course will allow you to develop your user interface
                                                     design skills and you can add UI designer.</p>
                                             </div>
                                         </div>
-                                        <div class="comment">
-                                            <div class="top-comment">
+                                        <div className="comment">
+                                            <div className="top-comment">
                                                 <span>Sanjeev Khagram</span>
                                                 <span>May 12 2022</span>
                                             </div>
-                                            <div class="comment-msg">
+                                            <div className="comment-msg">
                                                 <p>Do you want to become a UI/UX designer but you don’t know where to
                                                     start? This course will allow you to develop your user interface
                                                     design skills and you can add UI designer.</p>

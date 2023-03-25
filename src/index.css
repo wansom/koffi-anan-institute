@@ -134,11 +134,11 @@ nav {
 }
 
 .links .active-link {
-  color: red;
+  color: #DE4404;
 }
 
 .links a:hover {
-  color: red;
+  color: #DE4404;
 }
 .dropdown {
   position: absolute;
