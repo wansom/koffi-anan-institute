@@ -150,7 +150,7 @@ const Navbar = () => {
             {navitems[5]['child_items'].map((i,index) => (
             <NavLink
               exact
-              to="#"
+              to="comingsoon"
               className=" transition-colors duration-300 transform rounded-md lg:mt-0  dropdown-link"
               key={index}
             >

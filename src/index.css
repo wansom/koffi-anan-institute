@@ -145,9 +145,7 @@ nav {
   width: fit-content;
   height: fit-content;
   top: 240px;
-
   /* K.A.I.C.T. - Light Blue */
-
   background: #eff1fb;
   display: flex;
   flex-direction: column;
@@ -175,7 +173,7 @@ nav {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
-  color: red;
+  color: #DE4404;
 }
 
 .nav-logo {

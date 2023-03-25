@@ -14,7 +14,7 @@ const Hero = () => {
             {posts.length>0&&(<div class="banner-text">
                 <h1 dangerouslySetInnerHTML={{ __html: posts[0].title.rendered }}></h1>
                 <p dangerouslySetInnerHTML={{ __html: posts[0].content.rendered }}></p>
-                <button>Learn More</button>
+                <a href="aboutus"><button >Learn More</button></a>
             </div>)}
             
         </div>

@@ -88,7 +88,7 @@ const EventSection=()=>{
                    
                 </div>
                 <div className="bottom-more">
-                   <a href="all-events"> <button>All Events</button></a>
+                   <a href="allevents"> <button>All Events</button></a>
                 </div>
             </div>
             <div className="up-right">

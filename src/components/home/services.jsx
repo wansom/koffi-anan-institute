@@ -18,6 +18,7 @@ const Services = () => {
                </div>
                 <h3>{service.title}</h3>
                 <p>{service.subtitle}</p>
+                <a href={service.link}>
                 <button>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -31,6 +32,8 @@ const Services = () => {
                         </g>
                     </svg>
                 </button>
+                </a>
+
             </div>
         </div>
           ))}
