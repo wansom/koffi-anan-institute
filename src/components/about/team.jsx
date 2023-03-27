@@ -11,9 +11,9 @@ const Team = ({loading,staff})=>{
                          <div class="member">
                          <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
                          <div class="member-info">
-                             <span >Chancellor & Lecturer</span>
-                             <h3 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h3>
-                             <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}></p>
+                             <span >{i.acf.position}</span>
+                             <h3 >{i.acf.fullname}</h3>
+                             <p>{i.acf.description}</p>
                              <a href="comingsoon">Read More <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M1.4 12L0 10.6L4.6 6L0 1.4L1.4 0L7.4 6L1.4 12Z" fill="#25518C"/>
                                  </svg>
