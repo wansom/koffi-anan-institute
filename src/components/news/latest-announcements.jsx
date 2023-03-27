@@ -20,11 +20,13 @@ const LatestAnnouncement = ({ news }) => {
         >
           <div className="slider-feeds">
             <div className="feed">
-              <img src={i.featured_image_url}  alt="" />
+              <img src={i.featured_image_url} alt="" />
               <div className="feed-mask">
                 <div className="text">
-                  <h3 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h3>
-                  <a href="#">
+                  <h3
+                    dangerouslySetInnerHTML={{ __html: i.title.rendered }}
+                  ></h3>
+                  <a href={`/post/${i.slug}`} className="flex">
                     Read More
                     <svg
                       width="12"
@@ -43,15 +45,13 @@ const LatestAnnouncement = ({ news }) => {
               </div>
             </div>
           </div>
-          <div className="dots">
-            <div className="dot active"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
         </div>
       ))}
+      <div className="dots">
+        {news.map((i, index) => (
+          <div className={index===activeIndex?"dot active":"dot"}></div>
+        ))}
+      </div>
     </div>
   );
 };
