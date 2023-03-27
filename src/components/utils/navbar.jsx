@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="header-container container">
           <div className="logo">
             <img
-              src="images/home/logo.png"
+              src="/images/home/logo.png"
               alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
             ></img>
           </div>

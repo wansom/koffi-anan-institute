@@ -4,6 +4,7 @@ const EventsCard=({event})=>{
     return (
         <div class="tab-card">
         <div class="floating-card">
+        <a href={`event/${event.slug}`}>
             <span></span>
             <div class="hold">
                 <span class="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -36,6 +37,7 @@ const EventsCard=({event})=>{
                     </svg>
                 </span>
             </div>
+            </a>
         </div>
         <img src={event.image.url}
             alt="Kofi Annan Institute for Conflict Transformation Events"/>
@@ -45,7 +47,7 @@ const EventsCard=({event})=>{
                 <span>{new Date(event.start_date).getDay()}</span>
             </div>
             <div class="right">
-                <a href="">{event.title}</a> <br/>
+                <a href={`event/${event.slug}`}>{event.title}</a> <br/>
                 <span className="flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
