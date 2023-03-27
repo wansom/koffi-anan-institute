@@ -46,7 +46,7 @@ const EventsCard=({event})=>{
             </div>
             <div class="right">
                 <a href="">{event.title}</a> <br/>
-                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                <span className="flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12.2597 6.66002C12.2597 9.42669 9.55975 12.7534 8.45975 13.9934C8.21308 14.2667 7.78641 14.2667 7.53975 13.9934C6.43975 12.7534 3.73975 9.42669 3.73975 6.66002C3.73975 4.30669 5.64641 2.40002 7.99975 2.40002C10.3531 2.40002 12.2597 4.30669 12.2597 6.66002Z"
