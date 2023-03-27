@@ -9,7 +9,8 @@ import { getData } from "../services";
 import { useParams } from "react-router-dom";
 
 const SingleEvent = () => {
-  const [event, setevent] = useState("");
+  const [event, setevent] = useState(null);
+  const [events, setEvents] = useState([]);
   const [loading, setloading] = useState(true);
   const id = useParams();
   const monthNames = [
@@ -29,10 +30,11 @@ const SingleEvent = () => {
   useEffect(() => {
     getData(`https://kacit.twafwane.com/wp-json/tribe/events/v1/events`).then(
       (data) => {
+        setEvents(data.events)
         const myevent = data.events.find((i) => i.slug == id.id);
+
         setevent(myevent);
         setloading(false)
-        console.log(myevent)
       }
     );
   }, []);
@@ -40,7 +42,7 @@ const SingleEvent = () => {
     <>
       <Navbar />
       <AboutHero
-        title={event.title}
+        title={loading?"":event.title}
         subtitle={"Events"}
         background={backgound}
       />
@@ -677,7 +679,8 @@ const SingleEvent = () => {
             </div>
           </div>}
         </section>
-        <RelatedEvents />
+        
+        {loading?<p>Loaing...</p>:<RelatedEvents events={events} loading={loading} />}
       </main>
       <Footer />
     </>
