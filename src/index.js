@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutRoute from "./pages/about";
 import ContactUsRoute from "./pages/contact-us";
 import AllNews from "./pages/all-news";
-// import SingleNews from "./pages/single-news";
 import AllEvents from "./pages/all-events";
 import SingleEvent from "./pages/single-event";
 import SingleService from "./pages/single-service";
@@ -25,7 +24,7 @@ root.render(
       <Route path="/aboutus" element={<AboutRoute/>}/>
       <Route path="/contactus" element={<ContactUsRoute/>}/>
       <Route path="/allnews" element={<AllNews/>}/>
-      <Route path="/post" element={<SinglePost/>}/>
+      <Route path="/post/:id" element={<SinglePost/>}/>
       <Route path="/allevents" element={<AllEvents/>}/>
       <Route path="/event/:id" element={<SingleEvent/>}/>
       <Route path="/teachingandtraining" element={<SingleService/>}/>

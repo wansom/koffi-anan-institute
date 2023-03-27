@@ -165,6 +165,7 @@ const NewsSidebar =({news,loading})=>{
             <div>
               {loading?<p>Loading....</p>:
                         <div className="news">
+                           <a href={`/post/${i.slug}`}>
                         <div className="top">
                           <div className="left-tag">
                             <span>Weekly updates</span>
@@ -178,6 +179,7 @@ const NewsSidebar =({news,loading})=>{
                           <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>
                           </p>
                         </div>
+                        </a>
                       </div>
               }
             </div>

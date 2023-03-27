@@ -3,23 +3,41 @@ import NewsSidebar from "../components/news/sidebar";
 import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
 import backgound from "../hero/single-news.png";
+import { useState, useEffect } from "react";
+import { getData } from "../services";
+import { useParams } from "react-router-dom";
 
 const SinglePost=()=>{
+    const [news, setNews] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [post, setpost] = useState(null);
+    const id=useParams()
+    useEffect(() => {
+      getData(
+        "https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed"
+      ).then((data) => {
+        setNews(data);
+        const newsArticle=data.find((i)=>i.slug===id.id)
+        setpost(newsArticle)
+        setLoading(false);
+        console.log(newsArticle)
+      });
+    }, []);
     return (
         <div>
             <Navbar/>
             <main>
                 <AboutHero
                  title={"News & Announcements"}
-                 subtitle={"ASU students win $10K prize in 30-hour hackathon - Event looked at tackling terrorist threats to homeland security"}
+                 subtitle={loading?"":id.id}
                  background={backgound}
                 />
                 <section className="news">
             <div className="news-container container">
-                <div className="left">
+               {loading?<p>Loading...</p>: <div className="left">
                     <div className="single-news">
                         <div className="news-thumbnail">
-                            <img src="images/news/single-news.png" alt=""/>
+                            <img src={post._embedded['wp:featuredmedia'][0].source_url} alt=""/>
                             <div className="news-thumbnail-info">
                                 <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -49,7 +67,7 @@ const SinglePost=()=>{
                                                 fill="#1C1B1F" />
                                         </g>
                                     </svg>
-                                    <span>March 5, 2023</span>
+                                    <span>{new Date(post.date).toDateString()}</span>
                                 </div>
                                 <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -71,8 +89,7 @@ const SinglePost=()=>{
                             </div>
                         </div>
                         <div className="single-news-content">
-                            <h1>ASU students win $10K prize in 30-hour hackathon - Event looked at tackling terrorist
-                                threats to homeland security</h1>
+                            <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h1>
                             <p>There was pure joy, followed by lots of hugs and high-fives on Sunday afternoon when a
                                 team of five Arizona State University students won a $10,000 prize for creating a design
                                 to divert a domestic terrorist attack.</p>
@@ -315,8 +332,8 @@ const SinglePost=()=>{
                             </div>
                         </div>
                     </div>
-                </div>
-                <NewsSidebar/>
+                </div>}
+                <NewsSidebar news={news} loading={loading}/>
             </div>
         </section>
             </main>

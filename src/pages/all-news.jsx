@@ -50,7 +50,7 @@ const AllNews = () => {
                       <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>
                        
                       </p>
-                      <a href="#">
+                      <a href={`/post/${i.slug}`}>
                         Read More{" "}
                         <svg
                           width="16"

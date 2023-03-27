@@ -4,7 +4,7 @@ const EventsCard=({event})=>{
     return (
         <div class="tab-card">
         <div class="floating-card">
-        <a href={`event/${event.slug}`}>
+        <a href={`/event/${event.slug}`}>
             <span></span>
             <div class="hold">
                 <span class="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
