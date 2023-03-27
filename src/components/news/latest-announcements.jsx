@@ -26,7 +26,7 @@ const LatestAnnouncement = ({ news }) => {
                   <h3
                     dangerouslySetInnerHTML={{ __html: i.title.rendered }}
                   ></h3>
-                  <a href={`/post/${i.slug}`} className="flex">
+                  <a href={`/post/${i.slug}`} className="flex items-center gap-1">
                     Read More
                     <svg
                       width="12"

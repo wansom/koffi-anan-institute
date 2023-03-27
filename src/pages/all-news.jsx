@@ -5,18 +5,13 @@ import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
 import backgound from "../hero/about.png";
 import { useState, useEffect } from "react";
-import { getData } from "../services";
+import { getPosts } from "../services";
 
 const AllNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+ 
   useEffect(() => {
-    // getData(
-    //   "https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed"
-    // ).then((data) => {
-    //   setNews(data);
-    //   setLoading(false);
-    // });
     fetch('https://kacit.twafwane.com/wp-json/wp/v2/news')
     .then(response => response.json())
     .then(posts => {

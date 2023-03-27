@@ -51,3 +51,21 @@ export const submitForm = async (data) => {
       return err;
     });
 };
+
+
+export const getPosts=async(url)=>{
+  fetch(url)
+  .then(response => response.json())
+  .then(posts => {
+    const promises = posts.map(post => {
+      return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
+        .then(response => response.json())
+        .then(media => {
+          post.featured_image_url = media.source_url;
+          return post;
+        });
+    });
+    return Promise.all(promises);
+  })
+
+}

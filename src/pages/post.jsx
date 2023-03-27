@@ -13,23 +13,34 @@ const SinglePost=()=>{
     const [post, setpost] = useState(null);
     const id=useParams()
     useEffect(() => {
-      getData(
-        "https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed"
-      ).then((data) => {
-        setNews(data);
-        const newsArticle=data.find((i)=>i.slug===id.id)
-        setpost(newsArticle)
-        setLoading(false);
-        console.log(newsArticle)
-      });
+        fetch('https://kacit.twafwane.com/wp-json/wp/v2/news')
+        .then(response => response.json())
+        .then(posts => {
+          const promises = posts.map(post => {
+            return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
+              .then(response => response.json())
+              .then(media => {
+                post.featured_image_url = media.source_url;
+                return post;
+              });
+          });
+          return Promise.all(promises);
+        })
+        .then(posts => {
+            setNews(posts);
+            const newsArticle=posts.find((i)=>i.slug===id.id)
+            setpost(newsArticle)
+            setLoading(false);
+        })
+        .catch(error => console.error(error));
     }, []);
     return (
         <div>
             <Navbar/>
             <main>
                 <AboutHero
-                 title={"News & Announcements"}
-                 subtitle={loading?"":id.id}
+                 title={loading?"":id.id}
+                 subtitle={"News & Announcements"}
                  background={backgound}
                 />
                 <section className="news">
@@ -37,7 +48,7 @@ const SinglePost=()=>{
                {loading?<p>Loading...</p>: <div className="left">
                     <div className="single-news">
                         <div className="news-thumbnail">
-                            <img src={post._embedded['wp:featuredmedia'][0].source_url} alt=""/>
+                            <img src={post.featured_image_url} alt=""/>
                             <div className="news-thumbnail-info">
                                 <div className="sub-items">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
