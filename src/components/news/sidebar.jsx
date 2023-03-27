@@ -1,4 +1,4 @@
-const NewsSidebar =()=>{
+const NewsSidebar =({news,loading})=>{
     return (
         <div className="right">
         <div className="news-list">
@@ -161,57 +161,29 @@ const NewsSidebar =()=>{
           </div>
         </div>
         <div className="news-list">
-          <div className="news">
-            <div className="top">
-              <div className="left-tag">
-                <span>Weekly updates</span>
-              </div>
-              <div className="right-tag">
-                <span>AUGUST 13, 2021 </span>
-              </div>
+          {news.map((i)=>(
+            <div>
+              {loading?<p>Loading....</p>:
+                        <div className="news">
+                        <div className="top">
+                          <div className="left-tag">
+                            <span>Weekly updates</span>
+                          </div>
+                          <div className="right-tag">
+                            <span>{new Date(i.date).toDateString()}</span>
+                          </div>
+                        </div>
+                        <div className="bottom">
+                          <h4 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h4>
+                          <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>
+                          </p>
+                        </div>
+                      </div>
+              }
             </div>
-            <div className="bottom">
-              <h4>International Women’s Day</h4>
-              <p>
-                The students of the third cohort of the Kofi Annan Living
-                Memorial (KALM) celebrate...
-              </p>
-            </div>
-          </div>
-          <div className="news">
-            <div className="top">
-              <div className="left-tag">
-                <span>Weekly updates</span>
-              </div>
-              <div className="right-tag">
-                <span>AUGUST 13, 2021 </span>
-              </div>
-            </div>
-            <div className="bottom">
-              <h4>International Women’s Day</h4>
-              <p>
-                The students of the third cohort of the Kofi Annan Living
-                Memorial (KALM) celebrate...
-              </p>
-            </div>
-          </div>
-          <div className="news">
-            <div className="top">
-              <div className="left-tag">
-                <span>Weekly updates</span>
-              </div>
-              <div className="right-tag">
-                <span>AUGUST 13, 2021 </span>
-              </div>
-            </div>
-            <div className="bottom">
-              <h4>International Women’s Day</h4>
-              <p>
-                The students of the third cohort of the Kofi Annan Living
-                Memorial (KALM) celebrate...
-              </p>
-            </div>
-          </div>
+
+          ))}
+
         </div>
         <div className="side-socials">
           <img src="images/news/side-social.png" alt="" />

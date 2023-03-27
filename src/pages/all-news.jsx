@@ -159,7 +159,7 @@ const AllNews = () => {
                 </div>
               </div>
             </div>
-            <NewsSidebar />
+            <NewsSidebar news={news} loading={loading}/>
           </div>
         </section>
       </main>
