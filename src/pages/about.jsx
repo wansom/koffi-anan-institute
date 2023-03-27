@@ -28,7 +28,6 @@ const AboutRoute=()=>{
     return Promise.all(promises);
   })
   .then(posts => {
-    console.log(posts)
     setstaff(posts)
   })
   .catch(error => console.error(error));

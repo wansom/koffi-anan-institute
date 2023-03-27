@@ -20,7 +20,7 @@ const LatestAnnouncement = ({ news }) => {
         >
           <div className="slider-feeds">
             <div className="feed">
-              <img src={i._embedded['wp:featuredmedia'][0].source_url} alt="" />
+              <img src={i.featured_image_url}  alt="" />
               <div className="feed-mask">
                 <div className="text">
                   <h3 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h3>

@@ -20,7 +20,7 @@ const SingleService=()=>{
                             <h2>Master’s Program</h2>
                             <p>The program is designed to equip students with the skills and knowledge necessary to
                                 address conflict and promote peace in their communities and beyond.</p>
-                            <a href="program.html">Course Details
+                            <a href="/programdetails">Course Details
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_591_387" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0"
@@ -43,7 +43,7 @@ const SingleService=()=>{
                             <h2>Diploma Program</h2>
                             <p>The program is designed to equip students with the skills and knowledge necessary to
                                 address conflict and promote peace in their communities and beyond.</p>
-                            <a href="program.html">Course Details
+                            <a href="/programdetails">Course Details
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_591_387" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0"
@@ -72,7 +72,7 @@ const SingleService=()=>{
                             <h2>Certificate Program</h2>
                             <p>The program is designed to equip students with the skills and knowledge necessary to
                                 address conflict and promote peace in their communities and beyond.</p>
-                            <a href="program.html">Course Details
+                            <a href="/programdetails">Course Details
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_591_387" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0"
@@ -84,6 +84,7 @@ const SingleService=()=>{
                                             d="M7.83268 15L6.66602 13.8333L10.4993 10L6.66602 6.16667L7.83268 5L12.8327 10L7.83268 15Z"
                                             fill="#FCFCFC" />
                                     </g>
+                                    
                                 </svg>
                             </a>
                         </div>

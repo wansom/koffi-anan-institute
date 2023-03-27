@@ -11,12 +11,31 @@ const AllNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    getData(
-      "https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed"
-    ).then((data) => {
-      setNews(data);
-      setLoading(false);
-    });
+    // getData(
+    //   "https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6&_embed"
+    // ).then((data) => {
+    //   setNews(data);
+    //   setLoading(false);
+    // });
+    fetch('https://kacit.twafwane.com/wp-json/wp/v2/news')
+    .then(response => response.json())
+    .then(posts => {
+      const promises = posts.map(post => {
+        return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
+          .then(response => response.json())
+          .then(media => {
+            post.featured_image_url = media.source_url;
+            return post;
+          });
+      });
+      return Promise.all(promises);
+    })
+    .then(posts => {
+      setNews(posts)
+      setLoading(false)
+      console.log(posts)
+    })
+    .catch(error => console.error(error));
   }, []);
   return (
     <div>
@@ -38,17 +57,17 @@ const AllNews = () => {
                 <h1>Latest News</h1>
               </div>
               <div className="news-card-slides">
-                <div className="news-cards slide">
+                <div className="news-cards grid grid-cols-1 md:grid-cols-2 slide gap-[40px] ">
                   {news.map((i) => (
                     <div>
                       {loading?<p>Loading..</p>: <div className="card">
-                    <img src={i._embedded['wp:featuredmedia'][0].source_url} alt="" />
+                        <img src={i.featured_image_url}  alt="" />
+                        
+                    
                     <div className="news-card-info">
                       <h3 dangerouslySetInnerHTML={{ __html: i.title.rendered }}>
-                       
                       </h3>
-                      <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>
-                       
+                      <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>               
                       </p>
                       <a href={`/post/${i.slug}`}>
                         Read More{" "}

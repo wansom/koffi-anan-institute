@@ -1658,26 +1658,16 @@ section.news .news-container .right {
 
 .news-card-slides {
   width: 100%;
-  max-width: 700px;
-  min-width: 280px;
   padding: 36px 0px;
 }
 
 .news-cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
-  max-width: 700px;
-  min-width: 280px;
 }
 
 .news-cards .card {
-  height: fit-content;
+  height: 417px;
   width: 100%;
-  max-width: 330px;
-  min-width: 280px;
   margin: 14px 0px;
   background: #fcfcfc;
   box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
@@ -1685,6 +1675,8 @@ section.news .news-container .right {
 
 .news-cards .card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .news-card-info {
@@ -1707,7 +1699,13 @@ section.news .news-container .right {
   font-size: 16px;
   line-height: 20px;
   color: #1c1b1f;
-  margin: 20px 0px 16px;
+  margin: 10px 0px 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .news-card-info a {
@@ -3630,6 +3628,8 @@ section.filter {
 
 .tab-card img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .tab-card .floating-card {
