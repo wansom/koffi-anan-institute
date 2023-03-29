@@ -71,7 +71,7 @@ const AllNews = () => {
                             ></h3>
                             <p
                               dangerouslySetInnerHTML={{
-                                __html: i.content.rendered,
+                                __html: i.content.rendered.slice(0,100),
                               }}
                             ></p>
                             <a href={`/post/${i.slug}`}>

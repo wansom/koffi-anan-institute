@@ -106,69 +106,17 @@ const SinglePost=()=>{
                         </div>
                         <div className="single-news-content">
                             <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h1>
-                            <p>There was pure joy, followed by lots of hugs and high-fives on Sunday afternoon when a
-                                team of five Arizona State University students won a $10,000 prize for creating a design
-                                to divert a domestic terrorist attack.</p>
+                            <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
 
-                            <p>It was all part of a Devils Invent event, which took place Feb. 24–26 in the Engineering
-                                Center on the Tempe campus and via Zoom. Devils Invent is a series of design challenges
-                                put on by ASU’s Ira A. Fulton Schools of Engineering.</p>
-
-                            <p>The event's theme was “Protecting America’s Public Access Areas” and featured the U.S.
-                                Department of Homeland Security.</p>
-
-                            <p>The hackathon brought together 23 teams from 11 colleges across the country, including
-                                Northeastern University, San Diego State University, the University of the District of
-                                Columbia and California State University, Los Angeles.</p>
-
-                            <p>“Essentially, it is a way for students to design, innovate and build their teamwork and
-                                hands-on technical skills,” said Melissa Stine, coordinator senior for student success
-                                and engagement at the Fulton Schools.<br></br>
-                            The goal of the challenge was to design effective responses to Department of Homeland
-                            Security threats in what are described as soft locations — churches, museums, schools,
-                            stadiums and other public places. Organizers paired students with academic and industry
-                            mentors to solve problem scenarios.</p>
-
-                            <p>Participants were tasked with designing responses to one of the following prompts:
-                                How do we guide crowds to good decisions during an attack?
-                                How do we enable effective and timely communication among stakeholders and responders to
-                                allow for oversight and response to an attack?
-                                How can we inform and enable civilians to prepare for a drone attack?</p>
-
-                            <p>The winning team, called Malindo, was made up of five computer science students from the
-                                Fulton Schools: Nathan McAvoy, Fawwaz Firdaus, Kalyanam Priyam Dewri, Camelia Ariana
-                                Binti Ahmad Nasri and Rui Heng Foo.</p>
-                            <div className="news-caption">
+                          
+                            {/* <div className="news-caption">
                                 <img src={post.featured_image_url} alt=""/>
                                 <div className="news-caption-info">
                                     <p>The image of an armed terrorist was part of a winning design created by the ASU
                                         team Malindo during a design challenge for the Homeland Security Department.
                                         Photo by Dolores Tropiano</p>
                                 </div>
-                            </div>
-                            <p>The team spent 30 hours in the Engineering Center working on the project — which turned
-                                out to be time well spent.</p>
-
-                            <p>“We can learn more here than we can learn in a classNameroom,” said team member Firdaus, a
-                                second-year student. “I feel more passionate about doing this than I would doing
-                                homework. … I would never stay up all night doing homework.”</p>
-
-                            <p>There was more than passion that kept them going.</p>
-
-                            <p>“We had good snacks and a lot of Red Bulls,” said McAvoy, a first-year student on the
-                                team.</p>
-
-                            <p>The weekend-long event kicked off with a keynote speaker, George Naccara, a retired
-                                admiral in the U.S.</p>
-
-                            <p>Coast Guard and former senior official at the Department of Homeland Security.</p>
-
-                            <p>Naccara described the profile of a domestic terrorist based on multiple government
-                                studies.</p>
-
-                            <p>Most attacks occur in public access areas, 71% involve firearms, 90% are male with a
-                                criminal history, and the suspect typically has extreme ideologically and hateful views,
-                                he said.</p>
+                            </div> */}
                             <div className="posts">
                                 <div className="posts-tags">
                                     <span>Tags: </span>
