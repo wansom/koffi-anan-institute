@@ -120,7 +120,8 @@ const AllEvents = () => {
                   ))}
                 </div>
               </div>
-              <div class="pagination">
+              {events.length>=6&&(
+                <div class="pagination">
                 <div class="page">
                   <svg
                     width="20"
@@ -194,6 +195,7 @@ const AllEvents = () => {
                   <span>More</span>
                 </div>
               </div>
+              )}
             </div>
           </div>
         </section>
