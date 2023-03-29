@@ -4083,6 +4083,18 @@ section.filter {
 
   color: #000000;
 }
+.all-research .card-inner span{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #25518C;
+}
 /* == || RESEARCH PROGRAMS== */
 
 /* == RESPONSIVE == */
