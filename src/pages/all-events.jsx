@@ -7,6 +7,7 @@ import { getData } from "../services";
 
 const AllEvents = () => {
   const [events, setEvents] = useState([]);
+  const [activetab, setactivetab] = useState(0);
   const monthNames = [
     "Jan",
     "Feb",
@@ -21,6 +22,14 @@ const AllEvents = () => {
     "Nov",
     "Dec",
   ];
+  const switchTab=(index)=>{
+    setactivetab(index)
+  }
+  const tabs=[
+"All",
+"Upcoming Events",
+"Past Events"
+  ]
   useEffect(() => {
     getData("https://kacit.twafwane.com/wp-json/tribe/events/v1/events").then(
       (data) => {
@@ -98,15 +107,11 @@ const AllEvents = () => {
                         </form>
                     </div> */}
               <div class="tab-btns">
-                <button class="tab">
-                  <span>All</span>
-                </button>
-                <button class="tab active">
-                  <span>Upcoming Events</span>
-                </button>
-                <button class="tab">
-                  <span>Past Events</span>
-                </button>
+                {tabs.map((i,index)=>(
+                <button class={index==activetab?"tab active":"tab"} onClick={()=>{setactivetab(index)}}>
+                <span>{i}</span>
+              </button>
+                ))}
               </div>
               <div class="tab-slider">
                 <div class="tab-slide">
