@@ -115,7 +115,7 @@ const ContactUs=()=>{
                         </div>
                         <div className="control-group name">
                             <label for="name">Last Name</label><br></br>
-                            <input type="text" name="email" placeholder="Kamara" value={lastName}
+                            <input type="text" name="email" placeholder="Doe" value={lastName}
               onChange={(e) => {
                 setlastName(e.target.value);
               }}/>
@@ -123,14 +123,14 @@ const ContactUs=()=>{
                     </div>
                     <div className="control-group">
                         <label for="email">Email Address</label><br></br>
-                        <input type="email" name="email" placeholder="johnkamara@gmail.com" value={email}
+                        <input type="email" name="email" placeholder="johndoe@gmail.com" value={email}
               onChange={(e) => {
                 setemail(e.target.value);
               }}/>
                     </div>
                     <div className="control-group">
                         <label for="company">Company Name</label><br></br>
-                        <input type="text" name="company" placeholder="Adanian Labs Limited" value={companyName}
+                        <input type="text" name="company" placeholder="EXample Limited " value={companyName}
               onChange={(e) => {
                 setcompanyName(e.target.value);
               }}/>
