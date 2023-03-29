@@ -139,7 +139,7 @@ const SinglePost=()=>{
                                 Fulton Schools: Nathan McAvoy, Fawwaz Firdaus, Kalyanam Priyam Dewri, Camelia Ariana
                                 Binti Ahmad Nasri and Rui Heng Foo.</p>
                             <div className="news-caption">
-                                <img src="images/news/post-image.png" alt=""/>
+                                <img src={post.featured_image_url} alt=""/>
                                 <div className="news-caption-info">
                                     <p>The image of an armed terrorist was part of a winning design created by the ASU
                                         team Malindo during a design challenge for the Homeland Security Department.
