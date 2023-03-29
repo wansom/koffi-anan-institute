@@ -26,7 +26,6 @@ const EventSection=()=>{
         .then((posts) => {
           setNews(posts.slice(-2));
           setloading(false);
-          console.log(posts);
         })
         .catch((error) => console.error(error));
         getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events').then((data)=>{
