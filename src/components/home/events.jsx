@@ -8,10 +8,27 @@ const EventSection=()=>{
     const [loading, setloading] = useState(true);
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     useEffect(() => {
-        getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=6').then((data)=>{
-          setNews(data)
-          setloading(false)
+        fetch("https://kacit.twafwane.com/wp-json/wp/v2/news")
+        .then((response) => response.json())
+        .then((posts) => {
+          const promises = posts.map((post) => {
+            return fetch(
+              `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+            )
+              .then((response) => response.json())
+              .then((media) => {
+                post.featured_image_url = media.source_url;
+                return post;
+              });
+          });
+          return Promise.all(promises);
         })
+        .then((posts) => {
+          setNews(posts.slice(-2));
+          setloading(false);
+          console.log(posts);
+        })
+        .catch((error) => console.error(error));
         getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events').then((data)=>{
           setEvents(data.events.slice(-2))
           setloading(false)

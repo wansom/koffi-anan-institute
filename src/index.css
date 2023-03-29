@@ -562,6 +562,14 @@ section.banner {
   line-height: 24px;
   color: #1c1b1f;
   margin: 10px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+
 }
 
 /* == || UPCOMING EVENTS == */
