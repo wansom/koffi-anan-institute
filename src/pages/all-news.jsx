@@ -10,27 +10,29 @@ import { getPosts } from "../services";
 const AllNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
- 
+
   useEffect(() => {
-    fetch('https://kacit.twafwane.com/wp-json/wp/v2/news')
-    .then(response => response.json())
-    .then(posts => {
-      const promises = posts.map(post => {
-        return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
-          .then(response => response.json())
-          .then(media => {
-            post.featured_image_url = media.source_url;
-            return post;
-          });
-      });
-      return Promise.all(promises);
-    })
-    .then(posts => {
-      setNews(posts)
-      setLoading(false)
-      console.log(posts)
-    })
-    .catch(error => console.error(error));
+    fetch("https://kacit.twafwane.com/wp-json/wp/v2/news")
+      .then((response) => response.json())
+      .then((posts) => {
+        const promises = posts.map((post) => {
+          return fetch(
+            `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+          )
+            .then((response) => response.json())
+            .then((media) => {
+              post.featured_image_url = media.source_url;
+              return post;
+            });
+        });
+        return Promise.all(promises);
+      })
+      .then((posts) => {
+        setNews(posts);
+        setLoading(false);
+        console.log(posts);
+      })
+      .catch((error) => console.error(error));
   }, []);
   return (
     <div>
@@ -55,125 +57,136 @@ const AllNews = () => {
                 <div className="news-cards grid grid-cols-1 md:grid-cols-2 slide gap-[40px] ">
                   {news.map((i) => (
                     <div>
-                      {loading?<p>Loading..</p>: <div className="card">
-                        <img src={i.featured_image_url}  alt="" />
-                        
-                    
-                    <div className="news-card-info">
-                      <h3 dangerouslySetInnerHTML={{ __html: i.title.rendered }}>
-                      </h3>
-                      <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}>               
-                      </p>
-                      <a href={`/post/${i.slug}`}>
-                        Read More{" "}
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <mask
-                            id="mask0_477_133"
-                            style={{ maskType: "alpha" }}
-                            maskUnits="userSpaceOnUse"
-                            x="0"
-                            y="0"
-                            width="16"
-                            height="16"
-                          >
-                            <rect width="16" height="16" fill="#D9D9D9" />
-                          </mask>
-                          <g mask="url(#mask0_477_133)">
-                            <path
-                              d="M8.00033 13.3334L7.05033 12.4001L10.7837 8.66675H2.66699V7.33342H10.7837L7.05033 3.60008L8.00033 2.66675L13.3337 8.00008L8.00033 13.3334Z"
-                              fill="#25518C"
-                            />
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>}
+                      {loading ? (
+                        <p>Loading..</p>
+                      ) : (
+                        <div className="card">
+                          <img src={i.featured_image_url} alt="" />
+
+                          <div className="news-card-info">
+                            <h3
+                              dangerouslySetInnerHTML={{
+                                __html: i.title.rendered,
+                              }}
+                            ></h3>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: i.content.rendered,
+                              }}
+                            ></p>
+                            <a href={`/post/${i.slug}`}>
+                              Read More{" "}
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_477_133"
+                                  style={{ maskType: "alpha" }}
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="16"
+                                  height="16"
+                                >
+                                  <rect width="16" height="16" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_477_133)">
+                                  <path
+                                    d="M8.00033 13.3334L7.05033 12.4001L10.7837 8.66675H2.66699V7.33342H10.7837L7.05033 3.60008L8.00033 2.66675L13.3337 8.00008L8.00033 13.3334Z"
+                                    fill="#25518C"
+                                  />
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="pagination">
-                <div className="page">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask
-                      id="mask0_477_39"
-                      style={{ maskType: "alpha" }}
-                      maskUnits="userSpaceOnUse"
-                      x="0"
-                      y="0"
+              {news.length >= 6 && (
+                <div className="pagination">
+                  <div className="page">
+                    <svg
                       width="20"
                       height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect width="20" height="20" fill="#D9D9D9" />
-                    </mask>
-                    <g mask="url(#mask0_477_39)">
-                      <path
-                        d="M13.3333 18.3333L5 9.99996L13.3333 1.66663L14.8125 3.14579L7.95833 9.99996L14.8125 16.8541L13.3333 18.3333Z"
-                        fill="#1C1B1F"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                <div className="page">
-                  <span>1</span>
-                </div>
-                <div className="page">
-                  <span>2</span>
-                </div>
-                <div className="page">
-                  <span>3</span>
-                </div>
-                <div className="page">
-                  <span>4</span>
-                </div>
-                <div className="page">
-                  <span>5</span>
-                </div>
-                <div className="page">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask
-                      id="mask0_477_34"
-                      style={{ maskType: "alpha" }}
-                      maskUnits="userSpaceOnUse"
-                      x="0"
-                      y="0"
+                      <mask
+                        id="mask0_477_39"
+                        style={{ maskType: "alpha" }}
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_477_39)">
+                        <path
+                          d="M13.3333 18.3333L5 9.99996L13.3333 1.66663L14.8125 3.14579L7.95833 9.99996L14.8125 16.8541L13.3333 18.3333Z"
+                          fill="#1C1B1F"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="page">
+                    <span>1</span>
+                  </div>
+                  <div className="page">
+                    <span>2</span>
+                  </div>
+                  <div className="page">
+                    <span>3</span>
+                  </div>
+                  <div className="page">
+                    <span>4</span>
+                  </div>
+                  <div className="page">
+                    <span>5</span>
+                  </div>
+                  <div className="page">
+                    <svg
                       width="20"
                       height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect width="20" height="20" fill="#D9D9D9" />
-                    </mask>
-                    <g mask="url(#mask0_477_34)">
-                      <path
-                        d="M6.68717 18.3333L5.20801 16.8541L12.0622 9.99996L5.20801 3.14579L6.68717 1.66663L15.0205 9.99996L6.68717 18.3333Z"
-                        fill="#1C1B1F"
-                      />
-                    </g>
-                  </svg>
+                      <mask
+                        id="mask0_477_34"
+                        style={{ maskType: "alpha" }}
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_477_34)">
+                        <path
+                          d="M6.68717 18.3333L5.20801 16.8541L12.0622 9.99996L5.20801 3.14579L6.68717 1.66663L15.0205 9.99996L6.68717 18.3333Z"
+                          fill="#1C1B1F"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="page more">
+                    <span>More</span>
+                  </div>
                 </div>
-                <div className="page more">
-                  <span>More</span>
-                </div>
-              </div>
+              )}
             </div>
-            <NewsSidebar news={news} loading={loading}/>
+            <NewsSidebar news={news} loading={loading} />
           </div>
         </section>
       </main>

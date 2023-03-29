@@ -5,7 +5,8 @@ const ComingSoon = () => {
   return (
     <div>
       <Navbar />
-      <div className="coming-soon relative flex items-center justify-center">
+      <main>
+      <div className="coming-soon flex items-center justify-center">
         <a href="/">
           <button>
             <svg
@@ -38,7 +39,7 @@ const ComingSoon = () => {
         </a>
         <ComingSoonFooter/>
       </div>
-      
+      </main>
     </div>
   );
 };
