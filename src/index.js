@@ -15,6 +15,9 @@ import Library from "./pages/library";
 import ComingSoon from "./pages/coming-soon";
 import SinglePost from "./pages/post";
 import OutreachProgram from "./pages/outreach-program";
+import SingleOutreachProgram from "./pages/single-outreach-program";
+import ResearchProjects from "./pages/research";
+import SingleResearchProject from "./pages/single-research-projects";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -33,6 +36,9 @@ root.render(
       <Route path="/library" element={<Library/>}/>
       <Route path="/comingsoon" element={<ComingSoon/>}/>
       <Route path="/outreachprograms" element={<OutreachProgram/>}/>
+      <Route path="/singleoutreachprogram" element={<SingleOutreachProgram/>}/>
+      <Route path="/research" element={<ResearchProjects/>}/>
+      <Route path="/singleresearchproject" element={<SingleResearchProject/>}/>     
       <Route path="*" element={<ComingSoon/>} />
     </Routes>
   </BrowserRouter>
