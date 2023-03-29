@@ -62,7 +62,7 @@ const ResearchOne = () => {
           </div>
         </div>
         <ProgramAppForm />
-        <div className="space-y-6">
+        <div className="space-y-6 my-8">
           <h1>Outreach Programs</h1>
           <ProgramsGrid />
         </div>
