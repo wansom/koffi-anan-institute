@@ -38,11 +38,16 @@ const SinglePost=()=>{
         <div>
             <Navbar/>
             <main>
-                <AboutHero
-                 title={loading?"":id.id}
-                 subtitle={"News & Announcements"}
-                 background={backgound}
-                />
+    <section className="about" style={{ backgroundImage: `url('../images/news/single-banner.png')`,backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'center' }}>
+    <div className="banner-mask">
+        <div className="banner-container container">
+            <div className="banner-text">
+                <p>News & Announcements</p>
+                {loading?<h1></h1>:<h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} className="uppercase"></h1>}
+            </div>
+        </div>
+    </div>
+</section>
                 <section className="news">
             <div className="news-container container">
                {loading?<p>Loading...</p>: <div className="left">
