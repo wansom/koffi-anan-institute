@@ -1,4 +1,5 @@
 import AboutHero from "../components/about/hero"
+import ResearchOne from "../components/research-projects/research-projects"
 import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
 import background from '../hero/research-program.png'
@@ -9,6 +10,7 @@ const ResearchProjects=()=>{
             <Navbar/>
             <main>
                 <AboutHero title={'Research Projects'} subtitle='Advancing Peace and Stability through Innovative Research' background={background}/>
+                <ResearchOne/>
             </main>
             <Footer/>
         </div>
