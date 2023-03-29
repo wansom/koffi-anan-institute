@@ -2836,6 +2836,7 @@ section.program-info.bottom {
   line-height: 24px;
   color: #1c1b1f;
   margin: 20px 0px;
+  text-align: justify;
 }
 
 .curriculum {
@@ -2861,6 +2862,7 @@ section.program-info.bottom {
   line-height: 24px;
   color: #1c1b1f;
   margin: 4px 0px;
+  text-align: justify;
 }
 
 button.btn-brochure {

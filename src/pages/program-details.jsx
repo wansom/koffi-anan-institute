@@ -191,7 +191,7 @@ const ProgramDetails = () => {
                   can attest to their academic and/or professional abilities.
                 </li>
               </ol>
-              <p class="elective">
+              <p class="elective text-justify">
                 The admissions process for the Master's Degree program is
                 competitive, and meeting the above requirements does not
                 guarantee admission. Admissions decisions are based on a
