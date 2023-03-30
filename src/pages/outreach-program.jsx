@@ -10,7 +10,75 @@ const OutreachProgram=()=>{
             <Navbar/>
             <main>
                 <AboutHero title={'Outreach Programs'} subtitle='Building Peaceful Communities Together.' background={background}/>
-                <Programs/>
+                <section class="outreach-card-sec">
+            <div class="outreach-card-container container">
+                <div class="outreach-card">
+                    <img src="/images/outreach-program/p-3.png" alt=""/>
+                    <div class="outreach-info">
+                        <h2>Community Engagement</h2>
+                        <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
+                        <button>Explore Program</button>
+                    </div>
+                </div>
+                <div class="outreach-card">
+                    <img src="/images/outreach-program/p-1.png" alt=""/>
+                    <div class="outreach-info">
+                        <h2>Community Engagement</h2>
+                        <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
+                        <button>Explore Program</button>
+                    </div>
+                </div>
+                <div class="outreach-card">
+                    <img src="/images/outreach-program/p-2.png" alt=""/>
+                    <div class="outreach-info">
+                        <h2>Community Engagement</h2>
+                        <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
+                        <button>Explore Program</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="outreach-card-sec">
+            <div class="outreach-card-container form container">
+                <div class="outreach-card">
+                    <img src="/images/outreach-program/p-4.png" alt=""/>
+                    <div class="outreach-info">
+                        <h2>Community Engagement</h2>
+                        <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
+                        <button>Explore Program</button>
+                    </div>
+                </div>
+                <div class="outreach-form">
+                    <form  class="outreach" action="">
+                        <h2 class="out-title">Support our programs</h2>
+                        <div class="control-group">
+                            <label for="intake">Outreach Programs</label><br/>
+                            <select id="intake" name="intake">
+                                <option value="intake1">Community Engagement</option>
+                                <option value="intake2">September 2023</option>
+                                <option value="intake3">Intake 3</option>
+                                <option value="intake4">Intake 4</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="company">Amount</label><br/>
+                            <input type="number" name="company" placeholder="USD 5.00"/>
+                        </div>
+                        <div class="control-group checkbox">
+                            <label class="container-check">
+                                <input type="checkbox"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="">By clicking on “Send Message” you agree to our Terms & Conditions and Privacy
+                                Statement.</label>
+                        </div>
+                        <div class="control-group">
+                            <button type="submit">Attend Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
             </main>
             <Footer/>
         </div>

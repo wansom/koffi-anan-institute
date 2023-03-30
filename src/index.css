@@ -135,10 +135,12 @@ nav {
 
 .links .active-link {
   color: #de4404;
+  border-bottom: 4px solid #ffffff;
 }
 
 .links a:hover {
   color: #de4404;
+  border-bottom: 4px solid #de4404;
 }
 .dropdown {
   position: absolute;
