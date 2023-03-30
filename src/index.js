@@ -28,7 +28,7 @@ root.render(
       <Route path="/aboutus" element={<AboutRoute/>}/>
       <Route path="/contactus" element={<ContactUsRoute/>}/>
       <Route path="/allnews" element={<AllNews/>}/>
-      <Route path="/post/:id" element={<SinglePost/>}/>
+      <Route path="/news/:id" element={<SinglePost/>}/>
       <Route path="/allevents" element={<AllEvents/>}/>
       <Route path="/event/:id" element={<SingleEvent/>}/>
       <Route path="/teachingandtraining" element={<SingleService/>}/>

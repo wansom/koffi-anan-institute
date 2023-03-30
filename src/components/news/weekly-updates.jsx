@@ -5,7 +5,7 @@ const WeeklyUpdates=({news,loading})=>{
       <div>
         {loading?<p>Loading....</p>:
                   <div className="news">
-                     <a href={`/post/${i.slug}`}>
+                     <a href={`/news/${i.slug}`}>
                   <div className="top">
                     <div className="left-tag">
                       <span>Weekly updates</span>

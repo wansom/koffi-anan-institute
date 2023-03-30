@@ -74,7 +74,7 @@ const AllNews = () => {
                                 __html: i.content.rendered.slice(0,100),
                               }}
                             ></p>
-                            <a href={`/post/${i.slug}`}>
+                            <a href={`/news/${i.slug}`}>
                               Read More{" "}
                               <svg
                                 width="16"

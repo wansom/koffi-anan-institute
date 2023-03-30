@@ -61,7 +61,7 @@ const EventSection=()=>{
                 </div>
                 <div className="bottom">
                     {news.map((i)=>(
-                        <a href={`post/${i.slug}`}>
+                        <a href={`news/${i.slug}`}>
                         <div className="news">
                         <div className="top">
                             <div className="left"><span>Weekly updates</span></div>
