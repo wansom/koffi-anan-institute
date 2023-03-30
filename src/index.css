@@ -3073,7 +3073,7 @@ table.bottom tbody tr:nth-child(7) {
 
 section.prog-application {
   padding: 80px 0px;
-  background-image: url(../public/images/prog\ apply.png);
+  /* background-image: url(../public/images/prog\ apply.png); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4096,6 +4096,1189 @@ text-align: center;
 color: #25518C;
 }
 /* == || RESEARCH PROGRAMS== */
+
+/* == OUTREACH == */
+/* section.outreach-banner {
+  background-image: url('img/outreach\ banner.png') !important;
+} */
+
+.outreach-card-sec {
+  padding: 60px 0px;
+  background: #FCFCFC;
+}
+
+.outreach-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.outreach-card-container.form {
+  justify-content: space-between;
+}
+
+.outreach-card {
+  height: fit-content;
+  width: 100%;
+  max-width: 380px;
+  min-width: 280px;
+  background: #FCFCFC;
+  border: 1px solid rgba(28, 27, 31, 0.05);
+  box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
+}
+
+.outreach-card img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.outreach-info {
+  padding: 20px 30px;
+}
+
+.outreach-info h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #000000;
+  margin: 0px 0px 10px;
+}
+
+.outreach-info p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #000000;
+  margin: 10px;
+}
+
+.outreach-info button {
+  outline: none;
+  border: 0px;
+  margin: 10px 0px 0px;
+  width: 100%;
+  max-width: 340px;
+  height: 40px;
+  background: #25518C;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FCFCFC;
+}
+
+.outreach-form {
+  min-height: 560px;
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  max-width: 812px;
+  background: rgba(37, 81, 140, 0.9);
+  box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
+}
+
+.outreach-form form {
+  padding: 40px;
+  height: 100%;
+  width: 100%;
+}
+
+h2.out-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0px 0px 30px;
+  color: #FCFCFC;
+}
+
+form.outreach label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FCFCFC;
+}
+
+form.outreach select,
+form.outreach option,
+form.outreach input {
+  max-width: 731px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #E0E2F1;
+  padding: 12px 20px;
+  background-color: rgba(37, 81, 140, 0.9);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FCFCFC;
+  border-radius: 0;
+}
+
+form.outreach button {
+  width: 100%;
+  height: 50px;
+  background: #FCFCFC;
+  outline: none;
+  border: 0px;
+  border-radius: 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #25518C;
+}
+
+form.outreach .control-group {
+  width: 100% !important;
+  max-width: 800px;
+  padding: 10px 0px !important;
+}
+
+form.outreach .control-group input::placeholder,
+form.outreach .control-group select {
+  color: #D9D9D9;
+}
+
+form.outreach .control-group.checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10px 10px 10px 35px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+form.outreach .control-group.checkbox label {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0px 0px 0px 20px;
+  color: #ffffff !important;
+}
+
+
+/* Hide the browser's default checkbox */
+form.outreach .control-group.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+form.outreach .control-group.checkbox .checkmark {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+  background: rgba(37, 82, 140, 0);
+  border: 2px solid #ffffff;
+}
+
+/* On mouse-over, add a grey background color */
+form.outreach .control-group.checkbox .container-check:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+form.outreach .control-group.checkbox .container-check input:checked~.checkmark {
+  background: rgba(37, 82, 140, 0);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+form.outreach .control-group.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+form.outreach .control-group.checkbox .container-check input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+form.outreach .control-group.checkbox .container-check .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* == OUTREACH == */
+
+/* == SINGLE OUTREACH == */
+/* section.outreach-single-banner {
+  background-image: url('img/single\ outreach\ banner.png') !important;
+} */
+
+section.single {
+  padding: 60px 0px;
+}
+
+.single-outreach-container p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  margin: 20px 0px;
+}
+
+.single-outreach-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.singe-out-card {
+  margin: 20px;
+  height: fit-content;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  min-width: 260px;
+}
+
+.singe-out-card span:nth-child(1) {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #25518C;
+}
+
+.singe-out-card span:nth-child(3) {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #25518C;
+}
+
+.outreach-card-container.title {
+  text-align: center !important;
+}
+
+.single-gallery-slider {
+  padding: 20px 0px;
+}
+
+.top-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-gallery button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  padding: 10px;
+  background-color: #00000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.top-gallery button svg {
+  pointer-events: none;
+}
+
+.top-gallery .slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-out-slide {
+  margin: 0px 6px;
+}
+
+.single-out-slide img {
+  height: 250px;
+  width: 375px;
+}
+
+.bottom-gallery {
+  padding: 20px 0px;
+}
+
+.bottom-gallery .dots {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-gallery .dots .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #9A9A9A;
+  margin: 5px;
+}
+
+.bottom-gallery .dots .dot.active {
+  background-color: #25518C;
+}
+
+/* section.single-support {
+  background-image: url('img/support\ image.png') !important;
+} */
+
+.banner-mask.support {
+  padding: 80px;
+}
+
+.support-form {
+  padding: 40px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 530px;
+  min-height: 387px;
+  background: rgba(37, 81, 140, 0.9);
+  box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
+}
+
+.support-form form {
+  height: 100%;
+  width: 100%;
+}
+
+h3.support-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0px 0px 30px;
+  color: #FCFCFC;
+}
+
+form.support label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FCFCFC;
+}
+
+form.support input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #E0E2F1;
+  padding: 12px 20px;
+  background-color: rgba(37, 82, 140, 0);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FCFCFC;
+  border-radius: 0;
+}
+
+form.support button {
+  width: 100%;
+  height: 50px;
+  background: #FCFCFC;
+  outline: none;
+  border: 0px;
+  border-radius: 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #25518C;
+}
+
+form.support .control-group {
+  width: 100% !important;
+  max-width: 800px;
+  padding: 10px 0px !important;
+}
+
+form.support .control-group input::placeholder,
+form.support .control-group select {
+  color: #D9D9D9;
+}
+
+form.support .control-group.checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10px 10px 10px 35px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+form.support .control-group.checkbox label {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0px 0px 0px 20px;
+  color: #ffffff !important;
+}
+
+
+/* Hide the browser's default checkbox */
+form.support .control-group.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+form.support .control-group.checkbox .checkmark {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+  background: rgba(37, 82, 140, 0);
+  border: 2px solid #ffffff;
+}
+
+/* On mouse-over, add a grey background color */
+form.support .control-group.checkbox .container-check:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+form.support .control-group.checkbox .container-check input:checked~.checkmark {
+  background: rgba(37, 82, 140, 0);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+form.support .control-group.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+form.support .control-group.checkbox .container-check input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+form.support .control-group.checkbox .container-check .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.single-support-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2.outreach-single-title {
+  margin: 20px 0px 35px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center !important;
+  color: #000000;
+  width: 100%;
+}
+
+
+/* == || SINGLE OUTREACH == */
+
+
+
+/* == RESEARCH == */
+/* section.research-banner {
+  background-image: url('img/research.png') !important;
+} */
+
+.research-content {
+  padding: 60px 0px;
+}
+
+.research-head {
+  padding: 20px 0px;
+  border-bottom: 1px solid #9A9A9A;
+}
+
+.research-head h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  color: #1C1B1F;
+}
+
+.research-information {
+  margin: 40px 0px;
+  min-height: 620px;
+  max-width: 1240px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.research-information.one {
+  background-image: url(../public//images/outreach-program/r-3.png);
+}
+
+.research-information.two {
+  background-image: url(../public//images/outreach-program/r-2.png);
+}
+
+.research-information.three {
+  background-image: url(../public//images/outreach-program/r-1.png);
+}
+
+.research-card {
+  max-width: 620px;
+  min-width: 280px;
+  min-height: 310px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #EFF1FB;
+  padding: 40px;
+}
+
+.research-status {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 179px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25518C;
+}
+
+.research-status p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #FCFCFC;
+
+}
+
+.research-card h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.research-card p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  margin: 20px 0px;
+}
+
+.research-card a {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #25518C;
+}
+/* == || RESEARCH == */
+
+/* == SINGLE RESEARCH == */
+/* section.single-research-banner {
+  background-image: url('img/single\ research.png') !important;
+} */
+
+h1.small-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px !important;
+  line-height: 49px !important;
+  color: #FCFCFC;
+}
+
+section.single-research {
+  padding: 60px 0px;
+  background: #EFF1FB;
+}
+
+.single-research-head {
+  padding: 20px 0px 0px;
+}
+.team-content.research{
+  justify-content: space-between !important;
+}
+.single-research-head h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #25518C;
+}
+
+.single-research-text {
+  padding: 0px 0px 40px;
+}
+
+.single-research-text p {
+  margin: 20px 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1B1F;
+}
+
+.single-research-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.single-research-card {
+  width: 100%;
+  max-width: 390px;
+  min-width: 280px;
+  min-height: 340px;
+  margin: 10px;
+  padding: 40px;
+  background-color: #25518C;
+}
+
+.single-research-card h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FCFCFC;
+}
+
+.single-research-card p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FCFCFC;
+  margin: 20px 0px 10px;
+}
+
+.method-cards {
+  padding: 20px 0px;
+}
+
+.methods {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.method-card {
+  width: 50%;
+  min-width: 280px;
+  height: fit-content;
+  padding: 20px;
+  background: #FCFCFC;
+}
+
+.method-card h4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1C1B1F;
+
+}
+
+.method-card p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1C1B1F;
+  margin: 20px 0px 0px;
+}
+
+.method-height {
+  height: 147px;
+  width: 50%;
+  min-width: 280px;
+}
+.black-events.events{
+  justify-content: space-between !important;
+}
+.single-outcome{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 0px;
+}
+.single-research-text.listing{
+  max-width: 620px;
+  min-width: 280px;
+  width: 100%;
+}
+.single-outcome .right{
+  max-width: 580px;
+  min-width: 280px;
+  width: 100%;
+}
+.single-outcome .right img{
+  width: 100%;
+}
+.single-listing{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0px;
+}
+.single-listing p.listing{
+  margin: 0px 0px 0px 20px;
+}
+.publications-research{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+.publications-research .content-info {
+  background-color: #ffffff !important;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  min-width: 280px;
+  margin: 10px;
+}
+
+.publications-research .content-info .year {
+  position: absolute;
+  width: 77px;
+  height: 44px;
+  right: 20px;
+  top: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25518C;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #FCFCFC;
+}
+
+.publications-research .content-info .top {
+  padding: 0px 0px 10px;
+}
+
+.publications-research .content-info .bottom {
+  padding: 10px 0px 0px;
+}
+
+.publications-research .content-info .top span.no-margin {
+  margin: 0px !important;
+}
+
+.publications-research .content-info .top span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  margin: 0px 4px 0px 0px;
+}
+
+.publications-research .content-info .top span:nth-child(1),
+.publications-research .content-info .top span:nth-child(5) {
+  color: #1C1B1F;
+}
+
+.publications-research .content-info .top span:nth-child(2) {
+  color: #25518C;
+}
+
+.publications-research .content-info .top span:nth-child(4) {
+  color: #25518C;
+}
+
+.publications-research .content-info .top span:nth-child(6) {
+  color: #25518C;
+}
+
+.publications-research .content-info .bottom h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1C1B1F;
+}
+
+.publications-research .content-info .more-info,
+.publications-research .content-info .more-info span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  color: #1C1B1F;
+  margin: 0px 10px 0px 0px;
+}
+
+.publications-research .content-info .more-info span svg {
+  margin: 0px 1.25px;
+}
+/* == || SINGLE RESEARCH == */
+
+/* == EVENTS == */
+section.filter {
+  padding: 80px 0px;
+  background: #FCFCFC;
+}
+
+.filter-top .head {
+  padding: 10px 0px;
+}
+
+.filter-top .head h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1C1B1F;
+}
+
+.filter-form,
+.filter-form form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filter-form form select,
+.filter-form form input {
+  width: 190px;
+  height: 40px;
+  border: 1px solid #E0E2F1;
+  background-color: #ffffff;
+  margin: 10px 20px 10px 0px;
+  padding: 5px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9A9A9A;
+}
+
+.filter-form form select option {
+  width: 190px;
+  height: 40px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-form form button {
+  border: 0;
+  outline: none;
+  width: 190px;
+  height: 40px;
+  background: #25518C;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FCFCFC;
+}
+
+.tab-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 0px 20px;
+}
+
+.tab-btns button {
+  background-color: #ffffff;
+  padding: 18px 30px;
+  outline: none;
+  height: 60px;
+  width: fit-content;
+  border: 2px solid #25518C;
+  margin: 10px 40px 10px 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #25518C;
+  cursor: pointer;
+}
+
+.tab-btns button:hover,
+.tab-btns button.active {
+  border: 2px solid #DE4404 !important;
+  color: #DE4404 !important;
+  transition: all 100ms !important;
+}
+
+.tab-slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tab-card {
+  background: #ffffff;
+  /* shadow */
+  box-shadow: 10px 32px 72px rgba(51, 51, 51, 0.04);
+  border-radius: 5px;
+  height: 100%;
+  max-height: 382px;
+  min-height: 278px;
+  width: fit-content;
+  max-width: 384px;
+  min-width: 260px;
+  padding: 20px;
+  position: relative;
+  margin: 10px 5px;
+}
+
+.tab-card img {
+  width: 100%;
+}
+
+.tab-card .floating-card {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  height: fit-content;
+  width: 80%;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.floating-card .hold {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.floating-card span.price {
+  height: 40px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #25518C;
+}
+
+.floating-card span.share,
+.floating-card span.love {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0px 8px;
+  color: #1C1B1F;
+}
+
+.floating-card span i {
+  font-size: 20px;
+  color: #1C1B1F;
+}
+
+.tab-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 0px;
+}
+
+.tab-card-info .left {
+  padding: 10px 0px 0px;
+}
+
+.tab-card-info .left span:nth-child(1) {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1C1B1F;
+}
+
+.tab-card-info .left span:nth-child(3) {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #1C1B1F;
+}
+
+.tab-card-info .right {
+  padding: 0px 0px 0px 20px;
+}
+
+.tab-card-info .right a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #25518C;
+}
+
+.tab-card-info .right span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1B1F;
+}
+
+.filter-top .pagination {
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 0px 20px;
+}
+
+.filter-top .pagination .page {
+  width: 40px;
+  height: 40px;
+  background: #EFF1FB;
+  margin: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filter-top .pagination .page span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1C1B1F;
+  cursor: pointer;
+}
+
+.filter-top .pagination .page.more {
+  width: 82px;
+}
 
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
