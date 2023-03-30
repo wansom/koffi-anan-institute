@@ -17,7 +17,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <button>Explore Program</button>
+                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-card">
@@ -25,7 +25,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <button>Explore Program</button>
+                        <a href="singleoutreachprogram"> <button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-card">
@@ -33,7 +33,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <button>Explore Program</button>
+                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <button>Explore Program</button>
+                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-form">
