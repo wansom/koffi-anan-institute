@@ -46,7 +46,7 @@ const EventsCard=({event})=>{
                 <span>{monthNames[new Date(event.start_date).getMonth()]}</span> <br/>
                 <span>{new Date(event.start_date).getDay()}</span>
             </div>
-            <div class="right">
+            <div class="right flex flex-col justify-between items-start">
                 <a href={`/event/${event.slug}`}>{event.title}</a> <br/>
                 <span className="flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
