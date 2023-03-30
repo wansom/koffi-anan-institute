@@ -209,7 +209,7 @@ const SinglePost=()=>{
                                         </div>
                                     </form>
                                 </div>
-                                <div className="comments">
+                                {/* <div className="comments">
                                     <div className="comments-head">
                                         <span>Comments</span>
                                         <span>4 Comments</span>
@@ -292,7 +292,7 @@ const SinglePost=()=>{
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
