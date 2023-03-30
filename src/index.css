@@ -4085,17 +4085,17 @@ section.filter {
 
   color: #000000;
 }
-.all-research .card-inner span{
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
+.all-research .card-inner span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
 
-text-align: center;
+  text-align: center;
 
-color: #25518C;
+  color: #25518c;
 }
 /* == || RESEARCH PROGRAMS== */
 
@@ -4106,7 +4106,7 @@ color: #25518C;
 
 .outreach-card-sec {
   padding: 60px 0px;
-  background: #FCFCFC;
+  background: #fcfcfc;
 }
 
 .outreach-card-container {
@@ -4125,7 +4125,7 @@ color: #25518C;
   width: 100%;
   max-width: 380px;
   min-width: 280px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   border: 1px solid rgba(28, 27, 31, 0.05);
   box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
 }
@@ -4140,7 +4140,7 @@ color: #25518C;
 }
 
 .outreach-info h2 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -4151,7 +4151,7 @@ color: #25518C;
 }
 
 .outreach-info p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4168,14 +4168,14 @@ color: #25518C;
   width: 100%;
   max-width: 340px;
   height: 40px;
-  background: #25518C;
-  font-family: 'Montserrat';
+  background: #25518c;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .outreach-form {
@@ -4195,22 +4195,22 @@ color: #25518C;
 }
 
 h2.out-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
   margin: 0px 0px 30px;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 form.outreach label {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 form.outreach select,
@@ -4219,31 +4219,31 @@ form.outreach input {
   max-width: 731px;
   width: 100%;
   height: 50px;
-  border: 1px solid #E0E2F1;
+  border: 1px solid #e0e2f1;
   padding: 12px 20px;
   background-color: rgba(37, 81, 140, 0.9);
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   border-radius: 0;
 }
 
 form.outreach button {
   width: 100%;
   height: 50px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   outline: none;
   border: 0px;
   border-radius: 0px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
-  color: #25518C;
+  color: #25518c;
 }
 
 form.outreach .control-group {
@@ -4254,7 +4254,7 @@ form.outreach .control-group {
 
 form.outreach .control-group input::placeholder,
 form.outreach .control-group select {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 form.outreach .control-group.checkbox {
@@ -4278,7 +4278,6 @@ form.outreach .control-group.checkbox label {
   color: #ffffff !important;
 }
 
-
 /* Hide the browser's default checkbox */
 form.outreach .control-group.checkbox input {
   position: absolute;
@@ -4300,12 +4299,20 @@ form.outreach .control-group.checkbox .checkmark {
 }
 
 /* On mouse-over, add a grey background color */
-form.outreach .control-group.checkbox .container-check:hover input~.checkmark {
+form.outreach
+  .control-group.checkbox
+  .container-check:hover
+  input
+  ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-form.outreach .control-group.checkbox .container-check input:checked~.checkmark {
+form.outreach
+  .control-group.checkbox
+  .container-check
+  input:checked
+  ~ .checkmark {
   background: rgba(37, 82, 140, 0);
 }
 
@@ -4317,7 +4324,11 @@ form.outreach .control-group.checkbox .checkmark:after {
 }
 
 /* Show the checkmark when checked */
-form.outreach .control-group.checkbox .container-check input:checked~.checkmark:after {
+form.outreach
+  .control-group.checkbox
+  .container-check
+  input:checked
+  ~ .checkmark:after {
   display: block;
 }
 
@@ -4346,7 +4357,7 @@ section.single {
 }
 
 .single-outreach-container p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4373,23 +4384,23 @@ section.single {
 }
 
 .singe-out-card span:nth-child(1) {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
   text-align: center;
-  color: #25518C;
+  color: #25518c;
 }
 
 .singe-out-card span:nth-child(3) {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
   text-align: center;
-  color: #25518C;
+  color: #25518c;
 }
 
 .outreach-card-container.title {
@@ -4453,12 +4464,12 @@ section.single {
   height: 10px;
   width: 10px;
   border-radius: 5px;
-  background-color: #9A9A9A;
+  background-color: #9a9a9a;
   margin: 5px;
 }
 
 .bottom-gallery .dots .dot.active {
-  background-color: #25518C;
+  background-color: #25518c;
 }
 
 /* section.single-support {
@@ -4485,52 +4496,52 @@ section.single {
 }
 
 h3.support-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
   margin: 0px 0px 30px;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 form.support label {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 form.support input {
   width: 100%;
   height: 50px;
-  border: 1px solid #E0E2F1;
+  border: 1px solid #e0e2f1;
   padding: 12px 20px;
   background-color: rgba(37, 82, 140, 0);
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   border-radius: 0;
 }
 
 form.support button {
   width: 100%;
   height: 50px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   outline: none;
   border: 0px;
   border-radius: 0px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
-  color: #25518C;
+  color: #25518c;
 }
 
 form.support .control-group {
@@ -4541,7 +4552,7 @@ form.support .control-group {
 
 form.support .control-group input::placeholder,
 form.support .control-group select {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 form.support .control-group.checkbox {
@@ -4565,7 +4576,6 @@ form.support .control-group.checkbox label {
   color: #ffffff !important;
 }
 
-
 /* Hide the browser's default checkbox */
 form.support .control-group.checkbox input {
   position: absolute;
@@ -4587,12 +4597,16 @@ form.support .control-group.checkbox .checkmark {
 }
 
 /* On mouse-over, add a grey background color */
-form.support .control-group.checkbox .container-check:hover input~.checkmark {
+form.support .control-group.checkbox .container-check:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-form.support .control-group.checkbox .container-check input:checked~.checkmark {
+form.support
+  .control-group.checkbox
+  .container-check
+  input:checked
+  ~ .checkmark {
   background: rgba(37, 82, 140, 0);
 }
 
@@ -4604,7 +4618,11 @@ form.support .control-group.checkbox .checkmark:after {
 }
 
 /* Show the checkmark when checked */
-form.support .control-group.checkbox .container-check input:checked~.checkmark:after {
+form.support
+  .control-group.checkbox
+  .container-check
+  input:checked
+  ~ .checkmark:after {
   display: block;
 }
 
@@ -4629,7 +4647,7 @@ form.support .control-group.checkbox .container-check .checkmark:after {
 
 h2.outreach-single-title {
   margin: 20px 0px 35px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -4639,10 +4657,7 @@ h2.outreach-single-title {
   width: 100%;
 }
 
-
 /* == || SINGLE OUTREACH == */
-
-
 
 /* == RESEARCH == */
 /* section.research-banner {
@@ -4655,16 +4670,16 @@ h2.outreach-single-title {
 
 .research-head {
   padding: 20px 0px;
-  border-bottom: 1px solid #9A9A9A;
+  border-bottom: 1px solid #9a9a9a;
 }
 
 .research-head h1 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 49px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .research-information {
@@ -4696,7 +4711,7 @@ h2.outreach-single-title {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background: #EFF1FB;
+  background: #eff1fb;
   padding: 40px;
 }
 
@@ -4709,22 +4724,21 @@ h2.outreach-single-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #25518C;
+  background: #25518c;
 }
 
 .research-status p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  color: #FCFCFC;
-
+  color: #fcfcfc;
 }
 
 .research-card h3 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -4733,7 +4747,7 @@ h2.outreach-single-title {
 }
 
 .research-card p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4743,13 +4757,13 @@ h2.outreach-single-title {
 }
 
 .research-card a {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #25518C;
+  color: #25518c;
 }
 /* == || RESEARCH == */
 
@@ -4759,32 +4773,32 @@ h2.outreach-single-title {
 } */
 
 h1.small-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 40px !important;
   line-height: 49px !important;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 section.single-research {
   padding: 60px 0px;
-  background: #EFF1FB;
+  background: #eff1fb;
 }
 
 .single-research-head {
   padding: 20px 0px 0px;
 }
-.team-content.research{
+.team-content.research {
   justify-content: space-between !important;
 }
 .single-research-head h3 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
-  color: #25518C;
+  color: #25518c;
 }
 
 .single-research-text {
@@ -4793,12 +4807,12 @@ section.single-research {
 
 .single-research-text p {
   margin: 20px 0px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .single-research-cards {
@@ -4815,25 +4829,25 @@ section.single-research {
   min-height: 340px;
   margin: 10px;
   padding: 40px;
-  background-color: #25518C;
+  background-color: #25518c;
 }
 
 .single-research-card h1 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .single-research-card p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FCFCFC;
+  color: #fcfcfc;
   margin: 20px 0px 10px;
 }
 
@@ -4853,26 +4867,25 @@ section.single-research {
   min-width: 280px;
   height: fit-content;
   padding: 20px;
-  background: #FCFCFC;
+  background: #fcfcfc;
 }
 
 .method-card h4 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #1C1B1F;
-
+  color: #1c1b1f;
 }
 
 .method-card p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: #1C1B1F;
+  color: #1c1b1f;
   margin: 20px 0px 0px;
 }
 
@@ -4881,38 +4894,38 @@ section.single-research {
   width: 50%;
   min-width: 280px;
 }
-.black-events.events{
+.black-events.events {
   justify-content: space-between !important;
 }
-.single-outcome{
+.single-outcome {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 60px 0px;
 }
-.single-research-text.listing{
+.single-research-text.listing {
   max-width: 620px;
   min-width: 280px;
   width: 100%;
 }
-.single-outcome .right{
+.single-outcome .right {
   max-width: 580px;
   min-width: 280px;
   width: 100%;
 }
-.single-outcome .right img{
+.single-outcome .right img {
   width: 100%;
 }
-.single-listing{
+.single-listing {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 10px 0px;
 }
-.single-listing p.listing{
+.single-listing p.listing {
   margin: 0px 0px 0px 20px;
 }
-.publications-research{
+.publications-research {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -4938,14 +4951,14 @@ section.single-research {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #25518C;
-  font-family: 'Montserrat';
+  background: #25518c;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .publications-research .content-info .top {
@@ -4961,7 +4974,7 @@ section.single-research {
 }
 
 .publications-research .content-info .top span {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
@@ -4971,28 +4984,28 @@ section.single-research {
 
 .publications-research .content-info .top span:nth-child(1),
 .publications-research .content-info .top span:nth-child(5) {
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .publications-research .content-info .top span:nth-child(2) {
-  color: #25518C;
+  color: #25518c;
 }
 
 .publications-research .content-info .top span:nth-child(4) {
-  color: #25518C;
+  color: #25518c;
 }
 
 .publications-research .content-info .top span:nth-child(6) {
-  color: #25518C;
+  color: #25518c;
 }
 
 .publications-research .content-info .bottom h2 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .publications-research .content-info .more-info,
@@ -5000,12 +5013,12 @@ section.single-research {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
   line-height: 150%;
-  color: #1C1B1F;
+  color: #1c1b1f;
   margin: 0px 10px 0px 0px;
 }
 
@@ -5017,7 +5030,7 @@ section.single-research {
 /* == EVENTS == */
 section.filter {
   padding: 80px 0px;
-  background: #FCFCFC;
+  background: #fcfcfc;
 }
 
 .filter-top .head {
@@ -5025,12 +5038,12 @@ section.filter {
 }
 
 .filter-top .head h2 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .filter-form,
@@ -5046,16 +5059,16 @@ section.filter {
 .filter-form form input {
   width: 190px;
   height: 40px;
-  border: 1px solid #E0E2F1;
+  border: 1px solid #e0e2f1;
   background-color: #ffffff;
   margin: 10px 20px 10px 0px;
   padding: 5px 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #9A9A9A;
+  color: #9a9a9a;
 }
 
 .filter-form form select option {
@@ -5072,14 +5085,14 @@ section.filter {
   outline: none;
   width: 190px;
   height: 40px;
-  background: #25518C;
-  font-family: 'Montserrat';
+  background: #25518c;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .tab-btns {
@@ -5096,21 +5109,21 @@ section.filter {
   outline: none;
   height: 60px;
   width: fit-content;
-  border: 2px solid #25518C;
+  border: 2px solid #25518c;
   margin: 10px 40px 10px 0px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #25518C;
+  color: #25518c;
   cursor: pointer;
 }
 
 .tab-btns button:hover,
 .tab-btns button.active {
-  border: 2px solid #DE4404 !important;
-  color: #DE4404 !important;
+  border: 2px solid #de4404 !important;
+  color: #de4404 !important;
   transition: all 100ms !important;
 }
 
@@ -5164,14 +5177,14 @@ section.filter {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #25518C;
+  color: #25518c;
 }
 
 .floating-card span.share,
@@ -5185,12 +5198,12 @@ section.filter {
   justify-content: center;
   font-size: 20px;
   margin: 0px 8px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .floating-card span i {
   font-size: 20px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .tab-card-info {
@@ -5205,46 +5218,45 @@ section.filter {
 }
 
 .tab-card-info .left span:nth-child(1) {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .tab-card-info .left span:nth-child(3) {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .tab-card-info .right {
   padding: 0px 0px 0px 20px;
-
 }
 
 .tab-card-info .right a {
   text-decoration: none;
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  color: #25518C;
+  color: #25518c;
 }
 
 .tab-card-info .right span {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #1C1B1F;
+  color: #1c1b1f;
 }
 
 .filter-top .pagination {
@@ -5260,7 +5272,7 @@ section.filter {
 .filter-top .pagination .page {
   width: 40px;
   height: 40px;
-  background: #EFF1FB;
+  background: #eff1fb;
   margin: 0px 5px;
   display: flex;
   align-items: center;
@@ -5269,19 +5281,40 @@ section.filter {
 }
 
 .filter-top .pagination .page span {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #1C1B1F;
+  color: #1c1b1f;
   cursor: pointer;
 }
 
 .filter-top .pagination .page.more {
   width: 82px;
 }
+.team-modal h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  /* identical to box height */
 
+  text-align: center;
+
+  color: #fcfcfc;
+}
+.team-modal p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  color: #1c1b1f;
+}
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 994px) {
