@@ -36,7 +36,7 @@ const ResearchProjects = () => {
                       strategies for building collaborative resilience in the
                       face of the many challenges that youth in Liberia face.
                     </p>
-                    <a href="" className="flex items-center gap-1">
+                    <a href="singleresearchproject" className="flex items-center gap-1">
                       Read More{" "}
                       <svg
                         width="16"
@@ -86,7 +86,7 @@ const ResearchProjects = () => {
                       strategies for building collaborative resilience in the
                       face of the many challenges that youth in Liberia face.
                     </p>
-                    <a href="" className="flex items-center gap-1">
+                    <a href="singleresearchproject" className="flex items-center gap-1">
                       Read More{" "}
                       <svg
                         width="16"
@@ -136,7 +136,7 @@ const ResearchProjects = () => {
                       strategies for building collaborative resilience in the
                       face of the many challenges that youth in Liberia face.
                     </p>
-                    <a href="" className="flex items-center gap-1">
+                    <a href="singleresearchproject" className="flex items-center gap-1">
                       Read More{" "}
                       <svg
                         width="16"
