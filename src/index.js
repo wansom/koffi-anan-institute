@@ -38,7 +38,7 @@ root.render(
       <Route path="/outreachprograms" element={<OutreachProgram/>}/>
       <Route path="/singleoutreachprogram" element={<SingleOutreachProgram/>}/>
       <Route path="/research" element={<ResearchProjects/>}/>
-      <Route path="/singleresearchproject" element={<SingleResearchProject/>}/>     
+      <Route path="/researchproject/:id" element={<SingleResearchProject/>}/>     
       <Route path="*" element={<ComingSoon/>} />
     </Routes>
   </BrowserRouter>
