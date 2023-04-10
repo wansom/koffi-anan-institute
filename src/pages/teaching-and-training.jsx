@@ -50,7 +50,7 @@ const Teachingandtraining = () => {
                 <p>
                   {course.acf.course_details.slice(0,320)}...
                 </p>
-                <a href="/programdetails">
+                <a href={`/programdetails/${course.slug}`}>
                   Course Details
                   <svg
                     width="20"
