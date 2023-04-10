@@ -5315,6 +5315,31 @@ section.filter {
 
   color: #1c1b1f;
 }
+.modal-member h3{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+text-align: center;
+
+color: #25518C;
+}
+.modal-member span{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+text-align: center;
+
+color: #1C1B1F;
+}
+
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 994px) {
