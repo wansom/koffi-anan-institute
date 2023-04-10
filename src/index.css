@@ -2704,13 +2704,6 @@ section.courses {
   padding: 60px 0px;
 }
 
-.train-course {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 20px 0px;
-}
 
 .train-course .left {
   position: relative;
@@ -2726,8 +2719,8 @@ section.courses {
   max-width: 700px;
   min-width: 280px;
   position: relative;
-  z-index: -1;
 }
+
 
 .train-course-card {
   width: 640px;
