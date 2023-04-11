@@ -8,6 +8,8 @@ import { getData } from "../services";
 const AllEvents = () => {
   const [events, setEvents] = useState([]);
   const [activetab, setactivetab] = useState(0);
+  const [filteredEvents, setFilteredEvents] = useState([]);
+  const [filter, setFilter] = useState('all');
   const monthNames = [
     "Jan",
     "Feb",
@@ -34,9 +36,28 @@ const AllEvents = () => {
     getData("https://kacit.twafwane.com/wp-json/tribe/events/v1/events").then(
       (data) => {
         setEvents(data.events);
+        setFilteredEvents(data.events);
+        console.log("daily events",data.events)
       }
     );
   }, []);
+  const handleFilter= (filter,tab) => {
+    setFilter(filter);
+    setactivetab(tab);
+    // Filter events based on filter value
+    switch (filter) {
+      case 'Upcoming Events':
+
+        setFilteredEvents(events.filter(event => event.date > new Date()));
+        break;
+      case 'Past Events':
+        setFilteredEvents(events.filter(event => event.date < new Date()));
+        break;
+      default:
+        setFilteredEvents(events);
+        break;
+    }
+  };
   return (
     <div>
       <Navbar />
@@ -108,14 +129,14 @@ const AllEvents = () => {
                     </div> */}
               <div class="tab-btns">
                 {tabs.map((i,index)=>(
-                <button class={index==activetab?"tab active":"tab"} onClick={()=>{setactivetab(index)}}>
+                <button class={index==activetab?"tab active":"tab"} onClick={() => handleFilter(i,index)}>
                 <span>{i}</span>
               </button>
                 ))}
               </div>
               <div class="tab-slider">
-                <div class="tab-slide">
-                  {events.map((i) => (
+                <div class="flex items-center justify-start">
+                  {filteredEvents.map((i) => (
                     <EventsCard  event={i}/>
                   ))}
                 </div>
