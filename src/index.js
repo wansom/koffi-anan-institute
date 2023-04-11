@@ -18,6 +18,7 @@ import SingleOutreachProgram from "./pages/single-outreach-program";
 import ResearchProjects from "./pages/research";
 import SingleResearchProject from "./pages/single-research-projects";
 import Teachingandtraining from "./pages/teaching-and-training";
+import SecurityReforms from "./pages/security-sector-reform";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -38,6 +39,7 @@ root.render(
       <Route path="/outreachprograms" element={<OutreachProgram/>}/>
       <Route path="/singleoutreachprogram" element={<SingleOutreachProgram/>}/>
       <Route path="/research" element={<ResearchProjects/>}/>
+      <Route path="/securitySectorReforms" element={<SecurityReforms/>}/>
       <Route path="/researchproject/:id" element={<SingleResearchProject/>}/>     
       <Route path="*" element={<ComingSoon/>} />
     </Routes>

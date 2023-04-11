@@ -21,7 +21,7 @@ const Navbar = () => {
       (data) => {
         setNavItems(data.items);
         setLoading(false);
-        console.log(navitems[5]['child_items'])
+        console.log(navitems[5])
       }
     );
   }, []);
@@ -147,10 +147,10 @@ const Navbar = () => {
           onMouseLeave={handleNavClick}
         >    
          <div> {loading?<p>Loading...</p>:<div className="flex flex-col gap-5">
-            {navitems[5]['child_items'].map((i,index) => (
+            {navitems[5]['child_items']?.map((i,index) => (
             <NavLink
               exact
-              to="comingsoon"
+              to={i.url}
               className=" transition-colors duration-300 transform rounded-md lg:mt-0  dropdown-link"
               key={index}
             >

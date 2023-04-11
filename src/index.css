@@ -5334,229 +5334,409 @@ text-align: center;
 color: #1C1B1F;
 }
 
+/* == THINK TANK SINGLE == */
+.think-single {
+  padding: 80px 0px;
+}
+
+h2.think-head {
+  margin: 10px 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #25518C;
+
+}
+
+p.think-p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1B1F;
+  margin: 10px 0px;
+}
+
+.takeaway-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.takeaway-card {
+  height: 380px;
+  width: 380px;
+  border-radius: 50% !important;
+  background: #EFF1FB;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 60px;
+  margin: 15px 10px;
+}
+
+.card-center h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #1C1B1F;
+  margin: 20px 0px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.card-center p {
+  width: 100%;
+  max-width: 280px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #00000A;
+}
+
+.comm-engage {
+  padding: 10px 0px;
+}
+
+.comm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+}
+
+.comm-card {
+  width: 100%;
+  min-width: 280px;
+  max-width: 600px;
+  min-height: 147px;
+  background: #EFF1FB;
+  padding: 20px;
+}
+
+.comm-card h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1C1B1F;
+  margin: 0px 0px 20px;
+}
+
+.comm-card p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1C1B1F;
+}
+
+.lecture-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+}
+
+.lecture-card {
+  width: 100%;
+  min-width: 280px;
+  max-width: 390px;
+  position: relative;
+}
+
+.lecture-card img {
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.lecture-card button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00000000;
+  cursor: pointer;
+}
+
+.lecture-card button svg {
+  pointer-events: none;
+}
+
+p.title-list {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1B1F;
+}
+
+ul.think-list {
+  list-style-type: disc !important;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1B1F;
+  padding: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 10px;
+}
+ul.think-list li{
+  list-style-type: disc !important;
+}
+
+/* == || THINK TANK SINGLE == */
+
+
+
+
+
+
+
+
+
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 994px) {
+
   header {
-    display: none;
+      display: none;
   }
 
   nav {
-    height: 120px;
+      height: 120px;
   }
 
   .nav.logo {
-    display: block;
-    background: #ffffff;
+      display: block;
+      background: #ffffff;
   }
 
   .menu-btn {
-    color: #1c1b1f;
+      color: #1C1B1F;
   }
 
   .links {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: -100%;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: -100%;
 
-    display: block;
-    padding: 80px 0px 0px;
-    text-align: centers;
-    transition: all ease 0.5s;
+      display: block;
+      padding: 80px 0px 0px;
+      text-align: centers;
+      transition: all ease 0.5s;
 
-    z-index: 5;
-    background-color: #ffffff;
-    overflow: auto;
+      z-index: 5;
+      background-color: #ffffff;
+      overflow: auto;
   }
 
   .links a {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 100% !important;
-    height: 50px;
-    color: #1c1b1f;
-    padding: 0px 50px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100% !important;
+      height: 50px;
+      color: #1C1B1F;
+      padding: 0px 50px 0px;
   }
 
   .links a:hover {
-    background-color: #de4404;
-    color: #ffffff;
+      background-color: #DE4404;
+      color: #ffffff;
   }
 
   .links span {
-    cursor: pointer;
+      cursor: pointer;
   }
 
   .links.active {
-    right: 0%;
+      right: 0%;
   }
 
   .cancel-btn {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 12px #0e315533;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1c1b1f;
-    font-size: 18px;
-    position: absolute;
-    top: 12px;
-    right: 20px;
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 12px #0e315533;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1C1B1F;
+      font-size: 18px;
+      position: absolute;
+      top: 12px;
+      right: 20px;
   }
 
   .banner-text h1 {
-    font-size: 40px;
-    line-height: 50px;
+      font-size: 40px;
+      line-height: 50px;
   }
 
   .banner-text p {
-    font-size: 20px;
-    line-height: 30px;
+      font-size: 20px;
+      line-height: 30px;
   }
 
   .banner-text button {
-    width: 90%;
-    max-width: 320px;
+      width: 90%;
+      max-width: 320px;
   }
 
   .upcoming-container {
-    justify-content: space-evenly;
+      justify-content: space-evenly;
   }
 
   .up-left .top h1 {
-    font-size: 25px;
-    line-height: 45px;
+      font-size: 25px;
+      line-height: 45px;
   }
 
   .up-left .bottom {
-    justify-content: space-evenly;
+      justify-content: space-evenly;
   }
 
   .bottom-more button {
-    width: 100%;
-    max-width: 384px;
-    min-width: 280px;
+      width: 100%;
+      max-width: 384px;
+      min-width: 280px;
   }
 
   .tab-slide {
-    justify-content: space-evenly;
+      justify-content: space-evenly;
   }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 400px) {
   .banner-text h1 {
-    font-size: 30px;
-    line-height: 35px;
+      font-size: 30px;
+      line-height: 35px;
   }
 
   .banner-text p {
-    font-size: 16px;
-    line-height: 33px;
+      font-size: 16px;
+      line-height: 33px;
   }
 
   .banner-text button {
-    width: 100%;
-    max-width: 384px;
+      width: 100%;
+      max-width: 384px;
   }
 
   .up-left .top h1 {
-    font-size: 30px;
-    line-height: 35px;
+      font-size: 30px;
+      line-height: 35px;
   }
 
   .bottom .up-card {
-    max-width: 320px;
+      max-width: 320px;
   }
 
   .bottom-more button {
-    width: 90%;
-    max-width: 320px;
-    min-width: 250px;
+      width: 90%;
+      max-width: 320px;
+      min-width: 250px;
   }
 
   .tab-slide {
-    justify-content: space-evenly !important;
+      justify-content: space-evenly !important;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .links {
-    padding: 0px 20px;
-    display: block;
-    display: flex;
-    align-items: center !important;
-    justify-content: space-between;
+      padding: 0px 20px;
+      display: block;
+      display: flex;
+      align-items: center !important;
+      justify-content: space-between;
   }
 
   nav {
-    height: 50px;
-    background: #25518c;
+      height: 50px;
+      background: #25518C;
   }
 
   .menu-btn {
-    color: #ffffff;
+      color: #ffffff;
   }
 
   .nav.logo {
-    display: none;
+      display: none;
   }
 
   .menu-bar {
-    display: none !important;
+      display: none !important;
   }
 
   .cancel {
-    display: none;
+      display: none;
   }
 
   .banner-text h1 {
-    font-size: 60px;
-    line-height: 90px;
+      font-size: 60px;
+      line-height: 90px;
   }
 
   .banner-text p {
-    font-size: 24px;
-    line-height: 36px;
+      font-size: 24px;
+      line-height: 36px;
   }
 
   .banner-text button {
-    width: 100%;
-    max-width: 384px;
+      width: 100%;
+      max-width: 384px;
   }
 
   .up-left .top h1 {
-    font-size: 40px;
-    line-height: 60px;
+      font-size: 40px;
+      line-height: 60px;
   }
 
   .bottom-more button {
-    width: 100%;
-    max-width: 384px;
-    min-width: 280px;
+      width: 100%;
+      max-width: 384px;
+      min-width: 280px;
   }
 
   form .control-group.name {
-    width: 100%;
-    max-width: 280px;
+      width: 100%;
+      max-width: 280px;
   }
 
   .upcoming-container {
-    justify-content: space-between;
+      justify-content: space-between;
   }
 
   .up-left .bottom {
-    justify-content: space-between;
+      justify-content: space-between;
   }
 
   .tab-slide {
-    justify-content: space-evenly;
+      justify-content: space-evenly;
   }
 }
 
