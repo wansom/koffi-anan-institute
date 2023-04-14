@@ -48,10 +48,10 @@ const AllEvents = () => {
     switch (filter) {
       case 'Upcoming Events':
 
-        setFilteredEvents(events.filter(event => new Date(event.date) > new Date()));
+        setFilteredEvents(events.filter(event => new Date(event.start_date) > new Date()));
         break;
       case 'Past Events':
-        setFilteredEvents(events.filter(event => new Date(event.date) < new Date()));
+        setFilteredEvents(events.filter(event => new Date(event.start_date) < new Date()));
         break;
       default:
         setFilteredEvents(events);
