@@ -33,11 +33,11 @@ const AllEvents = () => {
 "Past Events"
   ]
   useEffect(() => {
-    getData("https://kacit.twafwane.com/wp-json/tribe/events/v1/events").then(
+    getData("https://kacit.twafwane.com/wp-json/tribe/events/v1/events/?start_date=2023-02-01").then(
       (data) => {
         setEvents(data.events);
         setFilteredEvents(data.events);
-        console.log("daily events",data.events)
+        console.log("daily events",data)
       }
     );
   }, []);
@@ -48,10 +48,10 @@ const AllEvents = () => {
     switch (filter) {
       case 'Upcoming Events':
 
-        setFilteredEvents(events.filter(event => event.date > new Date()));
+        setFilteredEvents(events.filter(event => new Date(event.date) > new Date()));
         break;
       case 'Past Events':
-        setFilteredEvents(events.filter(event => event.date < new Date()));
+        setFilteredEvents(events.filter(event => new Date(event.date) < new Date()));
         break;
       default:
         setFilteredEvents(events);
