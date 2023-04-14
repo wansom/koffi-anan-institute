@@ -28,7 +28,7 @@ const SingleEvent = () => {
     "Dec",
   ];
   useEffect(() => {
-    getData(`https://kacit.twafwane.com/wp-json/tribe/events/v1/events`).then(
+    getData(`https://kacit.twafwane.com/wp-json/tribe/events/v1/events/?start_date=2023-02-01`).then(
       (data) => {
         setEvents(data.events)
         const myevent = data.events.find((i) => i.slug == id.id);
@@ -37,6 +37,7 @@ const SingleEvent = () => {
         setloading(false)
       }
     );
+
   }, []);
   return (
     <>
