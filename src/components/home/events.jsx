@@ -28,7 +28,7 @@ const EventSection=()=>{
           setloading(false);
         })
         .catch((error) => console.error(error));
-        getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events').then((data)=>{
+        getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events/?start_date=2023-02-01').then((data)=>{
           setEvents(data.events.slice(-2))
           setloading(false)
         })
