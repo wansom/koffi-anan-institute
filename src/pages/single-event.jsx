@@ -528,7 +528,7 @@ const SingleEvent = () => {
                       leading center of excellence in this field.
                     </p>
                   </div>
-                  <div class="black-head">
+                  {/* <div class="black-head">
                     <h2>Schedule</h2>
                   </div>
                   <div class="black-event-schedule">
@@ -616,7 +616,7 @@ const SingleEvent = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div class="black-head">
                     <h2>Book a Ticket</h2>
                   </div>
@@ -670,7 +670,7 @@ const SingleEvent = () => {
                           </label>
                         </div>
                         <div class="control-group">
-                          <button type="submit">Attend Event</button>
+                          <button type="submit" disabled={event.start_date>=new Date()}>Attend Event</button>
                         </div>
                       </form>
                     </div>
