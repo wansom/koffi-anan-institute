@@ -619,7 +619,7 @@ const SingleEvent = () => {
                       </div>
                     </div>
                   </div> */}
-                  <div class="black-head">
+                  {/* <div class="black-head">
                     <h2>Book a Ticket</h2>
                   </div>
                   <div class="single-news-content">
@@ -676,7 +676,7 @@ const SingleEvent = () => {
                         </div>
                       </form>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
