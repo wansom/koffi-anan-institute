@@ -25,7 +25,6 @@ const generateToken = async () => {
 export const getData = async (url) => {
   generateToken()
   const token = localStorage.getItem("jwtToken");
-console.log(token)
   return fetch(url,  {
     headers: {
       Authorization: `Bearer ${token}`,
