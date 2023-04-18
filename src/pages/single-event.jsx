@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 const SingleEvent = () => {
   const [event, setevent] = useState(null);
   const [events, setEvents] = useState([]);
+  const [upcomingevents, setupcomingevents] = useState([]);
   const [loading, setloading] = useState(true);
   const id = useParams();
   const monthNames = [
@@ -32,7 +33,8 @@ const SingleEvent = () => {
       (data) => {
         setEvents(data.events)
         const myevent = data.events.find((i) => i.slug == id.id);
-
+        const upcomingevents=data.events.filter((event)=> new Date(event.start_date)>new Date())
+        setupcomingevents(upcomingevents)
         setevent(myevent);
         setloading(false)
       }
@@ -681,7 +683,7 @@ const SingleEvent = () => {
           </div>}
         </section>
         
-        {loading?<p>Loaing...</p>:<RelatedEvents events={events} loading={loading} />}
+        {loading?<p>Loaing...</p>:<RelatedEvents events={upcomingevents} loading={loading} />}
       </main>
       <Footer />
     </>
