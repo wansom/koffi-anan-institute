@@ -54,7 +54,7 @@ const Navbar = () => {
               </div>
               <div className="right pad">
                 <p>Call Us:</p>
-                <p>+231 973 677 333 | +231 974 606 044</p>
+                <p>+231 77 627 7932 |+231 88 617 1990</p>
               </div>
             </div>
             <div className="contact contact-one">
@@ -74,7 +74,7 @@ const Navbar = () => {
               </div>
               <div className="right pad">
                 <p>Email Us:</p>
-                <p>kaict@gmail.com</p>
+                <p>kofiannaninstitute@ul.edu.lr</p>
               </div>
             </div>
             <div className="contact contact-one">

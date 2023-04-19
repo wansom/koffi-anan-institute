@@ -68,7 +68,7 @@ const ContactUs=()=>{
                                 stroke="#25518C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <span>+231 794 342 159</span>
+                        <span>+231 77 627 7932</span>
                     </div>
                     <div className="detail">
                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none"
@@ -81,7 +81,7 @@ const ContactUs=()=>{
                                 stroke="#25518C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <span>kaict@gmail.com</span>
+                        <span>kofiannaninstitute@ul.edu.lr</span>
                     </div>
                     <div className="detail">
                         <svg width="16" height="21" viewBox="0 0 16 21" fill="none"
