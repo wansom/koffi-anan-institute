@@ -345,10 +345,10 @@ const SingleEvent = () => {
                           </svg>
                           Phone Number
                         </span>
-                        <span>+231 973 677 333</span>
+                        <span>+231 77 627 7932</span>
                       </li>
                     </ul>
-                    <button class="btn-attend">Attend Event</button>
+                    <button class="btn-attend">{new Date(event.start_date)>new Date()?'Attend Event':'Past Event'}</button>
                     <button class="btn-download">Download Brochure</button>
                   </div>
                 </div>
@@ -385,7 +385,7 @@ const SingleEvent = () => {
                       </div>
                       <div class="text">
                         <h5>Call Us</h5>
-                        <p>+254 020 315-8538</p>
+                        <p>+231 77 627 7932</p>
                       </div>
                     </div>
                     <div class="side-contact">
@@ -417,8 +417,8 @@ const SingleEvent = () => {
                         </svg>
                       </div>
                       <div class="text">
-                        <h5>Call Us</h5>
-                        <p>+254 020 315-8538</p>
+                        <h5>Email Us</h5>
+                        <p>kofiannaninstitute@ul.edu.lr</p>
                       </div>
                     </div>
                   </div>
