@@ -43,10 +43,10 @@ const ResearchProjects = () => {
           research.filter((i) => i.acf.project_status == "consultancy")
         );
         setloading(false);
-        console.log(courses);
+        console.log(courses,ongoing);
       })
       .catch((error) => console.error(error));
-  });
+  },[]);
   return (
     <div>
       <Navbar />
@@ -64,7 +64,7 @@ const ResearchProjects = () => {
                   <h1>Ongoing Projects</h1>
                 </div>
                 {ongoing.map((i) => (
-                <div class="research-information one">
+                <div class="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
                   <div class="research-status">
                     <p>{i?.acf.project_status} Project</p>
                   </div>
@@ -112,7 +112,7 @@ const ResearchProjects = () => {
                   <h1>Completed Projects</h1>
                 </div>
                 {completed.map((i) => (
-                  <div class="research-information two">
+                  <div class="research-information"  style={{backgroundImage:`url(${i.featured_image_url})`}}>
                     <div class="research-status">
                       <p>{i.acf.project_status} Project</p>
                     </div>
@@ -161,7 +161,7 @@ const ResearchProjects = () => {
                   <h1>Consultancies</h1>
                 </div>
                 {consultancy.map((i) => (
-                  <div class="research-information three">
+                  <div class="research-information "  style={{backgroundImage:`url(${i.featured_image_url})`}}>
                     <div class="research-status">
                       <p>{i.acf.project_status} Project</p>
                     </div>

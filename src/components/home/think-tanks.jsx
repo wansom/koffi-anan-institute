@@ -21,7 +21,7 @@ const ThinkTanks = () => {
             <div className="think-tank-info">
                 <h2  dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h2>
                 <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
-               <a href="thinktanks"> <button>Learn More</button></a>
+               <a href="securitySectorReforms"> <button>Learn More</button></a>
             </div>
         </div>
             ))}

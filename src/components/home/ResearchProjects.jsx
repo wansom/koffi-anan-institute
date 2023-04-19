@@ -24,8 +24,6 @@ const ResearchProjects =()=>{
                 </div>
             </div>
                 ))}
-
-
             </div>
         </div>
     </section>

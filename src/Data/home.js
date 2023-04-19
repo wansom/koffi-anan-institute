@@ -14,14 +14,14 @@ export const services=[
         subtitle:"We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the position of girls & women.",
         image_url:"images/home/offer-6.png",
         icon:'images/home/lab_research.svg',
-        link:"comingsoon"
+        link:"research"
     },
     {
-        title:"Outreach Program",
+        title:"Outreach Programs",
         subtitle:"We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the position of girls & women.",
         image_url:"images/home/offer-2.png",
         icon:'images/home/sos.svg',
-        link:"comingsoon"
+        link:"outreachprograms"
 
     },
     {

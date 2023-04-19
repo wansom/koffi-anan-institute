@@ -4686,17 +4686,17 @@ h2.outreach-single-title {
   position: relative;
 }
 
-.research-information.one {
+/* .research-information.one {
   background-image: url(../public//images/outreach-program/r-1.png);
-}
-
+} */
+/* 
 .research-information.two {
   background-image: url(../public//images/outreach-program/r-2.png);
 }
 
 .research-information.three {
   background-image: url(../public//images/outreach-program/r-3.png);
-}
+} */
 
 .research-card {
   max-width: 620px;
