@@ -2,10 +2,30 @@ import { useState, useEffect } from "react"
 import { getData } from '../../services';
 const ResearchProjects =()=>{
     const [projects,setProjects]= useState([]);
+    const [loading, setloading] = useState(false);
     useEffect(() => {
-      getData('https://kacit.twafwane.com/wp-json/wp/v2/posts/?categories=9&_embed').then((data)=>{
-        setProjects(data)
-      })
+        fetch(
+            "https://kacit.twafwane.com/wp-json/wp/v2/research?orderby=date&order=asc"
+          )
+            .then((response) => response.json())
+            .then((posts) => {
+              const promises = posts.map((post) => {
+                return fetch(
+                  `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+                )
+                  .then((response) => response.json())
+                  .then((media) => {
+                    post.featured_image_url = media.source_url;
+                    return post;
+                  });
+              });
+              return Promise.all(promises);
+            })
+            .then((courses) => {
+              setProjects(courses);    
+              setloading(false);
+            })
+            .catch((error) => console.error(error));
     }, []);
     return (
         <section className="projects">
@@ -13,14 +33,17 @@ const ResearchProjects =()=>{
             <div className="projects-head">
                 <h1>Research Projects</h1>
             </div>
+            {loading&&(
+                <p>Loading...</p>
+            )}
             <div className="projects-content">
-                {projects.map((project,index)=>(
+                {projects.slice(-2).map((project,index)=>(
                 <div className="project" key={index}>
-                <img src={project._embedded['wp:featuredmedia'][0].source_url}></img>
+                <img src={project.featured_image_url}></img>
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>
-                    <p dangerouslySetInnerHTML={{ __html: project.content.rendered }}></p>
-                    <a href="researchProjects"><button>Learn More</button></a>
+                    <p>{project.acf.overview.slice(0,280)}...</p>
+                    <a href={`/researchProject/${project.slug}`}><button>Learn More</button></a>
                 </div>
             </div>
                 ))}
@@ -29,5 +52,6 @@ const ResearchProjects =()=>{
     </section>
     )
 }
+
 
 export default ResearchProjects
