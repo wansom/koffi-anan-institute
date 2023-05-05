@@ -12,40 +12,33 @@ const ResearchProjects = () => {
   const [completed, setcompleted] = useState([]);
   const [consultancy, setconsultancy] = useState([]);
 
+ const fetchCompleted=()=>{
+  fetch(
+    "https://kacit.twafwane.com/wp-json/wp/v2/research?orderby=date&order=asc&acf_project_status=completed"
+  )
+    .then((response) => response.json())
+    .then((posts) => {
+      const promises = posts.map(async (post) => {
+        const response = await fetch(
+          `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+        );
+        const media = await response.json();
+        post.featured_image_url = media.source_url;
+        return post;
+      });
+      return Promise.all(promises);
+    })
+    .then((courses) => {
+      setResearch(courses);
+      setloading(false);
+      console.log(courses)
+     
+    })
+    .catch((error) => console.error(error));
+  }
+
   useEffect(() => {
-    fetch(
-      "https://kacit.twafwane.com/wp-json/wp/v2/research?orderby=date&order=asc"
-    )
-      .then((response) => response.json())
-      .then((posts) => {
-        const promises = posts.map((post) => {
-          return fetch(
-            `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
-          )
-            .then((response) => response.json())
-            .then((media) => {
-              post.featured_image_url = media.source_url;
-              return post;
-            });
-        });
-        return Promise.all(promises);
-      })
-      .then((courses) => {
-        setResearch(courses);
-        const ongoing = research.filter(
-          (i) => i.acf.project_status == "Ongoing"
-        );
-        setongoing(ongoing ?? []);
-        setcompleted(
-          research.filter((i) => i.acf.project_status == "Completed")
-        );
-        setconsultancy(
-          research.filter((i) => i.acf.project_status == "consultancy")
-        );
-        setloading(false);
-        console.log(courses,ongoing);
-      })
-      .catch((error) => console.error(error));
+fetchCompleted()
   },[]);
   return (
     <div>
@@ -63,7 +56,7 @@ const ResearchProjects = () => {
                 <div class="research-head">
                   <h1>Ongoing Projects</h1>
                 </div>
-                {ongoing.map((i) => (
+                {research.map((i) => (
                 <div class="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
                   <div class="research-status">
                     <p>{i?.acf.project_status} Project</p>
