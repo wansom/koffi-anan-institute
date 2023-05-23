@@ -1239,6 +1239,15 @@ section.about .banner-text p {
 .why-container .right {
   padding: 0px 10px;
 }
+ .desc span{
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  color: #FCFCFC;
+}
 .tab{
   font-family: 'Montserrat';
 font-style: normal;
@@ -1258,6 +1267,7 @@ text-align: end;
 
 color: #1C1B1F;
 }
+
 
 .organogram h3{
   font-family: 'Montserrat';

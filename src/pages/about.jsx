@@ -45,8 +45,36 @@ const ValuesContent = () => {
             </div>
           ))}
         </div>
-        <div className="bg-[#25518C] p-10 text-[#FCFCFC]">
-          <p>{tabs[active].desc}</p>
+        <div className="bg-[#25518C] p-10 text-[#FCFCFC] desc">
+          {active === 0 && <p>{tabs[active].desc}</p>}
+          {active == 1 && (
+            <p>
+              The <span>Kofi Annan Institute for Conflict Transformation</span>{" "}
+              envisions a future where public policy dialogue and rigorous
+              research and analysis are intrinsic to policy making and
+              implementation in Liberia. It is a future in which a new
+              generation of Liberians, endowed with abilities for critical and
+              innovative thinking, take the lead in the definition,
+              reconstruction, and administration of the Liberian state.
+            </p>
+          )}
+          {active == 2 && (
+            <ol className="list-decimal list-inside space-y-2">
+              <li>
+               <span> Diversity:</span> Cognizant of the multi-ethnic, multi-religious, and
+                politically plural Liberian context the KAICT is committed not
+                only to respect for difference but to cultivate the unique
+                values of each difference so as to enrich learning and at the
+                same time eliminate vices such as prejudice and stereotypes from
+                the learning environment and, by extension, Liberian society.
+              </li>
+              <li><span>Excellence & Merit:</span> The KAICT values excellence in all its endeavors. Students and researchers receive awards based on their abilities and performance.</li>
+              <li><span>Objectivity & Critical Thinking:</span> The KAICT values objectivity and critical thinking. The Institute shall ensure that policy research and conclusions are backed by rigorous analysis and not colored by any political, religious, or ethnic interests.</li>
+              <li><span>Local Knowledge & Ownership:</span> While cross fertilization of knowledge in today’s globalizing world is inevitable and necessary the KAICT believes that durable solutions to local problems are those that have as their basis local knowledge and experience and are supported by external knowledge and resources.</li>
+              <li><span>Innovation & Creativity:</span> In view of the fact that the KAICT represents an innovative and creative response to Liberia’s current needs, this approach will be part of the “modus vivendi” of the operation of the institution.</li>
+              <li><span>Collaboration & Collegiality:</span> The KAICT values distinctiveness and interdependence of knowledge, expertise, and experience. The Institute shall therefore promote mutual respect and partnership in all learning activities.</li>
+            </ol>
+          )}
         </div>
       </div>
     </div>
