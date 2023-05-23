@@ -1239,6 +1239,38 @@ section.about .banner-text p {
 .why-container .right {
   padding: 0px 10px;
 }
+.tab{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 150%;
+}
+.organogram span{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+text-align: end;
+
+color: #1C1B1F;
+}
+
+.organogram h3{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #1C1B1F;
+}
 
 .why-container .right img {
   width: 100%;
