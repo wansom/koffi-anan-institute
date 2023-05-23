@@ -1255,36 +1255,57 @@ font-weight: 700;
 font-size: 20px;
 line-height: 150%;
 }
-.organogram span{
+
+.team-container .card{
+  width: 380px;
+height: 110px;
+/* K.A.I.C.T. White */
+background: #FCFCFC;
+
+}
+.team-container .card h5{
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
-line-height: 30px;
-/* identical to box height, or 150% */
-
-text-align: end;
-
-color: #1C1B1F;
-}
-
-
-.organogram h3{
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 60px;
-/* identical to box height, or 150% */
+line-height: 150%;
+/* identical to box height, or 30px */
 
 text-align: center;
 
-color: #1C1B1F;
+color: #25518C;
 }
 
 .why-container .right img {
   width: 100%;
   min-width: 280px;
+}
+.team-container .card p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 30px */
+
+text-align: center;
+
+/* K.A.I.C.T. Black */
+
+color: #1C1B1F;
+}
+.horizontal-hr{
+  width: 50px;
+height: 0px;
+
+/* K.A.I.C.T. Blue */
+
+border: 2px solid #25518C;
+}
+.vertical-hr{
+  width: 0px;
+  height: 50px;
+  border: 2px solid #25518C;
 }
 
 .missions {
