@@ -9,6 +9,14 @@ import Navbar from "../components/utils/navbar"
 import backgound from "../hero/about.png"
 import { useState, useEffect } from "react";
 import { getData } from "../services";
+
+const BottomContent=()=>{
+  return (
+    <div>
+      
+    </div>
+  )
+}
 const AboutRoute=()=>{
    const [staff, setstaff] = useState([]);
     const [loading, setLoading] = useState(true);
