@@ -105,95 +105,7 @@ const Team = ({ loading, staff }) => {
           <p>Staff</p>
           <h1>Our Team</h1>
         </div>
-        {/* <div className="flex items-center flex-col justify-center psace-y-10">
-          <div className="card py-6">
-            <h5>Director</h5>
-            <p>Prof. T. Debey Sayndee</p>
-          </div>
-          <hr className="vertical-hr" />
-        </div>
-        <div className="flex items-center justify-center gap-0">
-          <div className="card py-6">
-            <h5>Record Officer</h5>
-            <p>Ms. Josephine W. Capehart</p>
-          </div>
-          <hr className="horizontal-hr" />
-          <div className="card py-6">
-            <h5>Administrative Assistant</h5>
-            <p>Mr. Felesu F. Swaray</p>
-          </div>
-          <hr className="horizontal-hr" />
-          <div className="card py-6">
-            <h5>Secretary</h5>
-            <p>Mr. Arthur K. Johnson</p>
-          </div>
-        </div>
-        <div className="flex items-center flex-col justify-center psace-y-10">
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Finance Administrator</h5>
-            <p>Vacant</p>
-          </div>
-          <hr className="vertical-hr" />
-        </div>
-        <div className="flex items-center justify-center gap-0">
-        <div className="flex">
-          <div className="flex flex-col items-center justify-center">
-          <div className="card py-4">
-            <h5>Deputy Director for Policy Dialoguue & Special Projects</h5>
-            <p>Dr. Anthony L. Hena</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Deputy Director for Research</h5>
-            <p>Dr. Raphaela T. Kormoll</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Deputy Director for Teaching</h5>
-            <p>Vacant</p>
-          </div> 
-          </div>
-          <hr className="horizontal-hr mt-12" />
-          </div>
-          <div className="flex">
-          <div className="flex flex-col items-center justify-center">
-          <div className="card py-4">
-            <h5>Deputy Director for Research</h5>
-            <p>Dr. Raphaela T. Kormoll</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Research Faculty</h5>
-            <p>Permanent & Visiting</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Research Assistants</h5>
-            <p>Temporary</p>
-          </div> 
-          </div>
-          <hr className="horizontal-hr mt-12" />
-          </div>
-        
 
-          <div className="flex flex-col items-center justify-center">
-          <div className="card py-4">
-            <h5>Deputy Director for Teaching</h5>
-            <p>Vacant</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Part- Time Faculty</h5>
-            <p>Vacant</p>
-          </div> 
-          <hr className="vertical-hr" />
-          <div className="card py-6">
-            <h5>Librarian</h5>
-            <p>Vacant</p>
-          </div> 
-          </div>
-        </div> */}
         <div class="team-content">
           {staff.map((i) => (
             <div class="member">
@@ -229,7 +141,9 @@ const Team = ({ loading, staff }) => {
           ))}
 
           <div class="member"></div>
+
         </div>
+        <a href="/organogram" className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white">View Organogram</a>
       </div>
     </section>
   );
