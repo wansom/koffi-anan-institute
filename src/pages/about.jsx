@@ -126,9 +126,10 @@ const AboutRoute = () => {
         title={"About Us"}
         background={backgound}
       />
-      <WhyUs />
-      <ValuesContent />
+      <WhyUs /> 
       <Choices />
+      <ValuesContent />
+     
       <Team loading={loading} staff={staff} />
       <ContactUs />
       <Footer />

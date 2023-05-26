@@ -105,7 +105,7 @@ const Team = ({ loading, staff }) => {
           <p>Staff</p>
           <h1>Our Team</h1>
         </div>
-        <div className="flex items-center flex-col justify-center psace-y-10">
+        {/* <div className="flex items-center flex-col justify-center psace-y-10">
           <div className="card py-6">
             <h5>Director</h5>
             <p>Prof. T. Debey Sayndee</p>
@@ -193,7 +193,7 @@ const Team = ({ loading, staff }) => {
             <p>Vacant</p>
           </div> 
           </div>
-        </div>
+        </div> */}
         <div class="team-content">
           {staff.map((i) => (
             <div class="member">
