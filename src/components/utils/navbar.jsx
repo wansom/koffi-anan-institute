@@ -74,7 +74,7 @@ const Navbar = () => {
               </div>
               <div className="right pad">
                 <p>Email Us:</p>
-                <p>kofiannaninstitute@ul.edu.lr</p>
+                <p>kofiannaninstitute.ul@gmail.com</p>
               </div>
             </div>
             <div className="contact contact-one">
@@ -94,7 +94,7 @@ const Navbar = () => {
               </div>
               <div className="right pad">
                 <p>Time:</p>
-                <p>Monday to Friday: 08:00 - 16:30</p>
+                <p>Monday to Friday: 08:00 - 20:00</p>
               </div>
             </div>
           </div>

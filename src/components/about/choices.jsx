@@ -5,7 +5,7 @@ const Choices=()=>{
         <div class="choices-container container">
             <div class="choice-head">
                 <p>Why Choose Us</p>
-                <h1>Focal Points</h1>
+                <h1>Areas of Engagement</h1>
             </div>
             <div class="choice-content">
                 <div class="row">

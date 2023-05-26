@@ -4,12 +4,12 @@ const WhyUs = () => {
       <div class="why-container container mx-auto">
         <div class="left">
           <p>About Us</p>
-          <h1>Why the Kofi Annan Institute for Conflict Resolution</h1>
+          <h1>Why the Kofi Annan Institute for Conflict Transformation</h1>
           <p>
             The Kofi Annan Institute for Conflict Transformation (KAICT) was set
             up in 2006, and named after Kofi Atta Annan to honor the
             contributions to peace and security in Liberia by the former
-            Ghanaian secretary general of the United Nations (1997-2006). Under
+            Ghanaian Secretary General of the United Nations (1997-2006). Under
             Annan’s leadership, the UN Security Council set up the United
             Nations Mission in Liberia (UNMIL) in 2003, which supported the
             implementation of the ceasefire agreement and the Liberian peace
