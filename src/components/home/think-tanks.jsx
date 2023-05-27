@@ -11,7 +11,7 @@ const ThinkTanks = () => {
     <section className="think-tanks">
     <div className="think-tanks-container container">
         <div className="think-head">
-            <h1>Think Tanks</h1>
+            <h1>Policy Engagement</h1>
         </div>
         <div className="think-tank-content">
             {posts.map((post,index)=>(
