@@ -26,7 +26,6 @@ const Teachingandtraining = () => {
       .then((courses) => {
         setcourses(courses);
         setloading(false);
-        console.log(courses)
       })
       .catch((error) => console.error(error));
   }, []);
