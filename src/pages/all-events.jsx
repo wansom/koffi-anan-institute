@@ -4,6 +4,7 @@ import Navbar from "../components/utils/navbar";
 import backgound from "../hero/events-banner.png";
 import { useState, useEffect } from "react";
 import { getData } from "../services";
+import Footer from "../components/utils/footer";
 
 const AllEvents = () => {
   const [events, setEvents] = useState([]);
@@ -221,6 +222,7 @@ const AllEvents = () => {
           </div>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 };
