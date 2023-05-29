@@ -14,7 +14,7 @@ const ResearchProjects = () => {
 
  const fetchCompleted=()=>{
   fetch(
-    "https://kacit.twafwane.com/wp-json/wp/v2/research?orderby=date&order=asc&acf_project_status=completed"
+    "https://kacit.twafwane.com/wp-json/wp/v2/research?orderby=date&order=asc&acf_project_status=Completed"
   )
     .then((response) => response.json())
     .then((posts) => {
@@ -30,6 +30,12 @@ const ResearchProjects = () => {
     })
     .then((courses) => {
       setResearch(courses);
+      let completed = courses.filter((course)=>course.acf.project_status==='Completed')
+      let ongoing = courses.filter((course)=>course.acf.project_status==='Ongoing')
+      let consultancy = courses.filter((course)=>course.acf.project_status==='consultancy')
+      setcompleted(completed)
+      setongoing(ongoing)
+      setconsultancy(consultancy)
       setloading(false);
       console.log(courses)
      
@@ -56,7 +62,7 @@ fetchCompleted()
                 <div class="research-head">
                   <h1>Ongoing Projects</h1>
                 </div>
-                {research.map((i) => (
+                {ongoing.map((i) => (
                 <div class="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
                   <div class="research-status">
                     <p>{i?.acf.project_status} Project</p>
