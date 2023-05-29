@@ -29,7 +29,7 @@ const Teachingandtraining = () => {
         console.log(courses)
       })
       .catch((error) => console.error(error));
-  });
+  }, []);
 
   return (
     <>
