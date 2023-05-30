@@ -20,6 +20,7 @@ import SingleResearchProject from "./pages/single-research-projects";
 import Teachingandtraining from "./pages/teaching-and-training";
 import SecurityReforms from "./pages/security-sector-reform";
 import Organogram from "./pages/organogram";
+import Publications from "./pages/publications";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -37,6 +38,7 @@ root.render(
       <Route path="/teachingandtraining" element={<Teachingandtraining/>}/>
       <Route path="/programdetails/:id" element={<ProgramDetails/>}/>
       <Route path="/library" element={<Library/>}/>
+      <Route path="/publications" element={<Publications/>}/>
       <Route path="/comingsoon" element={<ComingSoon/>}/>
       <Route path="/outreachprograms" element={<OutreachProgram/>}/>
       <Route path="/singleoutreachprogram" element={<SingleOutreachProgram/>}/>
