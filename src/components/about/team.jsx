@@ -71,6 +71,31 @@ const Team = ({ loading, staff }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeMember, setactiveMember] = useState(null);
 
+  // Declare state variables for filtering startups
+  const [currentPage, setCurrentPage] = useState(1);
+    // Number of posts to display per page
+    const [postsPerPage] = useState(4);
+
+    // Calculate the index of the first and last post to display
+    const lastIndex = currentPage * postsPerPage;
+    const firstIndex = lastIndex - postsPerPage;
+  
+    // Get the posts to display on the current page
+    const currentPosts = staff.slice(firstIndex, lastIndex);
+      // Logic to determine if there is a next or previous page
+      const hasPreviousPage = currentPage > 1;
+      const hasNextPage = lastIndex < staff.length;
+  
+    // Handle navigation to the next page
+    const handleNextPage = () => {
+      setCurrentPage((prevPage) => prevPage + 1);
+    };
+  
+    // Handle navigation to the previous page
+    const handlePrevPage = () => {
+      setCurrentPage((prevPage) => prevPage - 1);
+    };
+
   const handleOpenModal = (member) => {
     setactiveMember(member);
     setModalIsOpen(true);
@@ -100,13 +125,13 @@ const Team = ({ loading, staff }) => {
           </div>
         </div>
       </Modal>
-      <div class="team-container container">
+      <div class="team-container container mx-auto overflow-x-hidden">
         <div class="team-head">
           <p>Staff</p>
           <h1>Our Team</h1>
         </div>
 
-        <div class="team-content">
+        <div class="team-content flex items-center gap-10">
           {staff.map((i) => (
             <div class="member">
               <img
@@ -144,7 +169,7 @@ const Team = ({ loading, staff }) => {
           <div class="member"></div>
 
         </div>
-        <a href="/organogram" className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white">View Organogram</a>
+        <a href="/organogram" className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white cursor-pointer">View Organogram</a>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 const LatestAnnouncement = ({ news }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((activeIndex + 1) % news.length);

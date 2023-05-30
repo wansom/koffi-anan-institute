@@ -1522,10 +1522,6 @@ section.team {
 
 .team-content {
   padding: 20px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .team-content .member {
