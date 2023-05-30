@@ -64,7 +64,7 @@ fetchCompleted()
                 </div>
                 {ongoing.map((i) => (
                 <div class="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                  <div class="research-status">
+                  <div class="research-status px-3">
                     <p>{i?.acf.project_status} Project</p>
                   </div>
                  
@@ -112,7 +112,7 @@ fetchCompleted()
                 </div>
                 {completed.map((i) => (
                   <div class="research-information"  style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                    <div class="research-status">
+                    <div class="research-status px-3">
                       <p>{i.acf.project_status} Project</p>
                     </div>
                     <div class="research-card">
@@ -161,8 +161,8 @@ fetchCompleted()
                 </div>
                 {consultancy.map((i) => (
                   <div class="research-information "  style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                    <div class="research-status">
-                      <p>{i.acf.project_status} Project</p>
+                    <div class="research-status px-3">
+                      <p className=" capitalize whitespace-nowrap">{i.acf.project_status} Project</p>
                     </div>
                     <div class="research-card">
                       <h3>

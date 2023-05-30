@@ -121,6 +121,7 @@ const Team = ({ loading, staff }) => {
                   onClick={() => {
                     handleOpenModal(i);
                   }}
+                  className="cursor-pointer"
                 >
                   Read More{" "}
                   <svg

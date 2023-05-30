@@ -4776,7 +4776,7 @@ h2.outreach-single-title {
   position: absolute;
   top: 40px;
   right: 40px;
-  width: 179px;
+  width: fit-content;
   height: 40px;
   display: flex;
   align-items: center;
