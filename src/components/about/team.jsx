@@ -73,28 +73,28 @@ const Team = ({ loading, staff }) => {
 
   // Declare state variables for filtering startups
   const [currentPage, setCurrentPage] = useState(1);
-    // Number of posts to display per page
-    const [postsPerPage] = useState(4);
+  // Number of posts to display per page
+  const [postsPerPage] = useState(4);
 
-    // Calculate the index of the first and last post to display
-    const lastIndex = currentPage * postsPerPage;
-    const firstIndex = lastIndex - postsPerPage;
-  
-    // Get the posts to display on the current page
-    const currentPosts = staff.slice(firstIndex, lastIndex);
-      // Logic to determine if there is a next or previous page
-      const hasPreviousPage = currentPage > 1;
-      const hasNextPage = lastIndex < staff.length;
-  
-    // Handle navigation to the next page
-    const handleNextPage = () => {
-      setCurrentPage((prevPage) => prevPage + 1);
-    };
-  
-    // Handle navigation to the previous page
-    const handlePrevPage = () => {
-      setCurrentPage((prevPage) => prevPage - 1);
-    };
+  // Calculate the index of the first and last post to display
+  const lastIndex = currentPage * postsPerPage;
+  const firstIndex = lastIndex - postsPerPage;
+
+  // Get the posts to display on the current page
+  const currentPosts = staff.slice(firstIndex, lastIndex);
+  // Logic to determine if there is a next or previous page
+  const hasPreviousPage = currentPage > 1;
+  const hasNextPage = lastIndex < staff.length;
+
+  // Handle navigation to the next page
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  // Handle navigation to the previous page
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
 
   const handleOpenModal = (member) => {
     setactiveMember(member);
@@ -125,51 +125,90 @@ const Team = ({ loading, staff }) => {
           </div>
         </div>
       </Modal>
+
       <div class="team-container container mx-auto overflow-x-hidden">
         <div class="team-head">
           <p>Staff</p>
           <h1>Our Team</h1>
         </div>
-
-        <div class="team-content flex items-center gap-10">
-          {staff.map((i) => (
-            <div class="member">
-              <img
-                src={i.featured_image_url}
-                alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
-              />
-              <div class="member-info">
-                <span>{i.acf.position}</span>
-                <h3>{i.acf.fullname}</h3>
-                <p>{i.acf.description.slice(0, 100)}...</p>
-                <a
-                  onClick={() => {
-                    handleOpenModal(i);
-                  }}
-                  className="cursor-pointer"
-                >
-                  Read More{" "}
-                  <svg
-                    width="8"
-                    height="12"
-                    viewBox="0 0 8 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.4 12L0 10.6L4.6 6L0 1.4L1.4 0L7.4 6L1.4 12Z"
-                      fill="#25518C"
-                    />
-                  </svg>
-                </a>
-              </div>
+        <div className="flex items-center w-full">
+          <div class="team-content flex items-center gap-10">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
             </div>
-          ))}
-
-          <div class="member"></div>
-
+          <div className=" flex gap-10 overflow-x-hidden" style={{width:'50%'}}>
+          {staff.map((i) => (
+              <div class="member">
+                <img
+                  src={i.featured_image_url}
+                  alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
+                />
+                <div class="member-info">
+                  <span>{i.acf.position}</span>
+                  <h3>{i.acf.fullname}</h3>
+                  <p>{i.acf.description.slice(0, 100)}...</p>
+                  <a
+                    onClick={() => {
+                      handleOpenModal(i);
+                    }}
+                    className="cursor-pointer"
+                  >
+                    Read More{" "}
+                    <svg
+                      width="8"
+                      height="12"
+                      viewBox="0 0 8 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.4 12L0 10.6L4.6 6L0 1.4L1.4 0L7.4 6L1.4 12Z"
+                        fill="#25518C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
-        <a href="/organogram" className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white cursor-pointer">View Organogram</a>
+
+        <a
+          href="/organogram"
+          className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white cursor-pointer"
+        >
+          View Organogram
+        </a>
       </div>
     </section>
   );
