@@ -74,7 +74,7 @@ const Team = ({ loading, staff }) => {
   // Declare state variables for filtering startups
   const [currentPage, setCurrentPage] = useState(1);
   // Number of posts to display per page
-  const [postsPerPage] = useState(4);
+  const [postsPerPage] = useState(5);
 
   // Calculate the index of the first and last post to display
   const lastIndex = currentPage * postsPerPage;
@@ -132,7 +132,7 @@ const Team = ({ loading, staff }) => {
           <h1>Our Team</h1>
         </div>
         <div className="flex items-center w-full">
-          <div class="team-content flex items-center gap-10">
+          <div class="team-content flex items-center gap-3">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,6 +141,8 @@ const Team = ({ loading, staff }) => {
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                className={`${!hasPreviousPage && 'hidden'} mb-3  h-6 w-6 `}
+                onClick={handlePrevPage}
               >
                 <path
                   stroke-linecap="round"
@@ -149,9 +151,9 @@ const Team = ({ loading, staff }) => {
                 />
               </svg>
             </div>
-          <div className=" flex gap-10 overflow-x-hidden" style={{width:'50%'}}>
-          {staff.map((i) => (
-              <div class="member">
+          <div className={hasNextPage?'flex gap-10 overflow-x-hidden mb-3 w-3/4':'flex gap-10 overflow-x-hidden mb-3 w-full'}>
+          {currentPosts.map((i,index) => (
+              <div class="member" key={index}>
                 <img
                   src={i.featured_image_url}
                   alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
@@ -184,14 +186,15 @@ const Team = ({ loading, staff }) => {
               </div>
             ))}
           </div>
-          <div>
+          <div >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+              className={`${!hasNextPage && 'hidden'} mb-3  h-6 w-6 `}
+                onClick={handleNextPage}
               >
                 <path
                   stroke-linecap="round"
