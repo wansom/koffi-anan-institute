@@ -3,12 +3,14 @@ import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
 import  background from '../hero/single-program.png'
 import ResearchOne from "../components/research-projects/research-projects"
+import { useParams } from 'react-router-dom';
 const SingleOutreachProgram=()=>{
+    const { id } = useParams();
     return (
         <div>
             <Navbar/>
             <main>
-                <AboutHero title={'Community Engagement'} subtitle='Outreach Programs' background={background}/>
+                <AboutHero title={id} subtitle='Outreach Programs' background={background}/>
                 <section class="single">
             <div class="single-outreach-container container">
                 <p>The Kofi Annan Institute for Conflict Transformation at the University of Liberia is committed to

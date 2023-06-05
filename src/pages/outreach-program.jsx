@@ -17,7 +17,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
+                        <a href="singleoutreachprogram/Community Engagement"><button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-card">
@@ -25,7 +25,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Capacity Building</h2>
                         <p>Through its capacity building program, the institute provides training, resources, and support to individuals and organizations working in the field of conflict transformation and peacebuilding.</p>
-                        <a href="singleoutreachprogram"> <button>Explore Program</button></a>
+                        <a href="singleoutreachprogram/Capacity Building"> <button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-card">
@@ -33,7 +33,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>Field Trips</h2>
                         <p>These field trips are designed to complement the academic curriculum and provide opportunities for students to learn from real-world examples of conflict and peacebuilding initiatives.</p>
-                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
+                        <a href="singleoutreachprogram/Field Trips"><button>Explore Program</button></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const OutreachProgram=()=>{
                     <div class="outreach-info">
                         <h2>The Kofi Annan Dialogues</h2>
                         <p>The program aims to foster dialogue and exchange of ideas among individuals and groups with diverse perspectives and experiences on issues related to conflict transformation and peacebuilding.</p>
-                        <a href="singleoutreachprogram"><button>Explore Program</button></a>
+                        <a href="singleoutreachprogram/The Kofi Annan Dialogues"><button>Explore Program</button></a>
                     </div>
                 </div>
                 <div class="outreach-form">
