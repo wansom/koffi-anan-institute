@@ -21,6 +21,7 @@ import Teachingandtraining from "./pages/teaching-and-training";
 import SecurityReforms from "./pages/security-sector-reform";
 import Organogram from "./pages/organogram";
 import Publications from "./pages/publications";
+import MaryAntoinnette from "./pages/mary-antionnete";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -44,9 +45,11 @@ root.render(
       <Route path="/singleoutreachprogram/:id" element={<SingleOutreachProgram/>}/>
       <Route path="/research" element={<ResearchProjects/>}/>
       <Route path="/securitySectorReforms" element={<SecurityReforms/>}/>
+      <Route path="/maryAntoinette" element={<MaryAntoinnette/>}/>
       <Route path="/researchproject/:id" element={<SingleResearchProject/>}/>     
       <Route path="*" element={<ComingSoon/>} />
     </Routes>
   </BrowserRouter>
 );
+
 reportWebVitals();

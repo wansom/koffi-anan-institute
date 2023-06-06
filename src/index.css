@@ -843,6 +843,13 @@ section.banner {
   line-height: 24px;
   color: #1c1b1f;
   margin: 10px 0px;
+  line-height: 1.2em; /* Adjust the line height as needed */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+
 }
 
 .think-tank-info button {
