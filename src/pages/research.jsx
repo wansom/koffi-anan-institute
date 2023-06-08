@@ -121,7 +121,7 @@ fetchCompleted()
                       </h3>
                       <p>{i?.acf.overview.slice(0, 280)}...</p>
                       <a
-                        href="singleresearchproject"
+                        href={`/researchProject/${i.slug}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
@@ -172,7 +172,7 @@ fetchCompleted()
                       {i?.acf.overview.slice(0, 280)}...
                       </p>
                       <a
-                        href="singleresearchproject"
+                        href={`/researchProject/${i.slug}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
