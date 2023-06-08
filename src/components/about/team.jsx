@@ -159,8 +159,13 @@ const Team = ({ loading, staff }) => {
                   alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
                 />
                 <div class="member-info">
+                  <div className="h-[50px] overflow-hidden">
                   <span>{i.acf.position}</span>
+                  </div>
+                  <div className="h-[55px] overflow-hidden">
                   <h3>{i.acf.fullname}</h3>
+                  </div>
+                  
                   <p>{i.acf.description.slice(0, 100)}...</p>
                   <a
                     onClick={() => {
