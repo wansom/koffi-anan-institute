@@ -49,7 +49,7 @@ const SingleResearchProject=()=>{
                     <h3>Collaborators</h3>
                 </div>
                 <div class="team-container container">
-                    <div class="team-content research">
+                    <div class="team-content research flex">
                         <div class="member">
                             <img src="/images/about/member-one.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
                             <div class="member-info">
