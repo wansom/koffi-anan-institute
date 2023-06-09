@@ -40,11 +40,21 @@ const ProgramDetails = () => {
   return (
     <>
       <Navbar />
+     
       <AboutHero
-        title={id}
-        subtitle={"Learning & Teaching"}
-        background={background}
-      />
+      title={course?.acf.course_name??""}
+      subtitle={"Learning & Teaching"}
+      background={background}
+    />
+      
+      {/* {!course&&(
+      <AboutHero
+      title={course.acf.course_name??""}
+      subtitle={"Learning & Teaching"}
+      background={background}
+    />
+      )} */}
+
       <main>
         <section class="program-info top">
           <div class="prog-info-container container">
