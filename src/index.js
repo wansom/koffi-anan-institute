@@ -42,7 +42,7 @@ root.render(
       <Route path="/publications" element={<Publications/>}/>
       <Route path="/comingsoon" element={<ComingSoon/>}/>
       <Route path="/outreachprograms" element={<OutreachProgram/>}/>
-      <Route path="/singleoutreachprogram/:id" element={<SingleOutreachProgram/>}/>
+      <Route path="/outreachprogram/:id" element={<SingleOutreachProgram/>}/>
       <Route path="/research" element={<ResearchProjects/>}/>
       <Route path="/securitySectorReforms" element={<SecurityReforms/>}/>
       <Route path="/maryAntoinette" element={<MaryAntoinnette/>}/>
