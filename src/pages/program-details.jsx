@@ -1,15 +1,47 @@
+import { useState, useEffect } from "react";
 import AboutHero from "../components/about/hero";
 import ProgramAppForm from "../components/outreachprograms/program-app-form";
 import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
 import background from "../hero/master-banner.png";
+import { useParams } from 'react-router-dom';
+
 
 const ProgramDetails = () => {
+  const { id } = useParams();
+  const label="hrello"
+  const [course, setcourses] = useState(null);
+  const [loading, setloading] = useState(false);
+
+  useEffect(() => {
+    fetch(`https://kacit.twafwane.com/wp-json/wp/v2/teaching`)
+      .then((response) => response.json())
+      .then((posts) => {
+        const promises = posts.map((post) => {
+          return fetch(
+            `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+          )
+            .then((response) => response.json())
+            .then((media) => {
+              post.featured_image_url = media.source_url;
+              return post;
+            });
+        });
+        return Promise.all(promises);
+      })
+      .then((courses) => {
+        const mycourse =courses.find((c)=>c.slug===id)
+        console.log(mycourse)
+        setcourses(mycourse);
+        setloading(false);
+      })
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <>
       <Navbar />
       <AboutHero
-        title={"Master’s Program"}
+        title={id}
         subtitle={"Learning & Teaching"}
         background={background}
       />
@@ -27,14 +59,13 @@ const ProgramDetails = () => {
               <h2>Course Details</h2>
             </div>
             <div class="prog-txt">
-              <p>
-                The Kofi Annan Institute for Conflict Transformation at the
-                University of Liberia offers a Master's Degree program focused
-                on conflict transformation and peacebuilding. The program is
-                designed to equip students with the skills and knowledge
-                necessary to address conflict and promote peace in their
-                communities and beyond.
+            {course&&(
+              <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
+                
+              
               </p>
+            )}
+              
 
               <p>
                 The program includes a range of courses such as conflict
