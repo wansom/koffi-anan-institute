@@ -48,7 +48,7 @@ const Organogram=()=>{
         <div className="flex">
           <div className="flex flex-col items-center justify-center">
           <div className="card py-4">
-            <h5>Deputy Director for Policy Dialoguue & Special Projects</h5>
+            <h5>Deputy Director for Policy Dialogue & Special Projects</h5>
             <p>Dr. Anthony L. Hena</p>
           </div> 
           <hr className="vertical-hr" />
