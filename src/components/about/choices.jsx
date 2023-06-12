@@ -10,7 +10,7 @@ const Choices = () => {
           <div class="choice-content">
             <div class="row">
               <div class="column choice">
-                <h3>Education & Training</h3>
+                <h3>Teaching & Training</h3>
                 <p>
                   The Institute's primary focus is on providing high-quality
                   education and training in conflict resolution and
