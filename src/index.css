@@ -5574,6 +5574,363 @@ ul.think-list li{
 
 
 
+/* == PUBLICATIONS == */
+.filter-top .head.publication{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter-top span{
+  font-family: Montserrat;
+font-style: Regular;
+font-size: 16px;
+line-height: 20px;
+}
+.filter-top .pagination-numbers{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 35px 0px;
+}
+.filter-top button{
+  background-color: #00000000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.published-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 40px;
+}
+
+.published-card {
+  height: fit-content;
+  min-height: 324px;
+  width: 100%;
+  max-width: 390px;
+  min-width: 280px;
+}
+
+.published-card img {
+  width: 100%;
+}
+
+.pub-info {
+  padding: 20px;
+}
+
+.pub-info h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1C1B1F;
+}
+
+.pub-info span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: #1C1B1F;
+}
+
+.pub-info span u {
+  color: #25518C;
+}
+
+section.pub-pagination {
+  padding: 10px 0px 10px;
+}
+
+.pub-pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 30px;
+}
+
+.pub-pagination .pagination-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pub-pagination .pagination-boxes .pagination {
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 0px 60px;
+}
+
+.pub-pagination .pagination-boxes .pagination .page {
+  width: 40px;
+  height: 40px;
+  background: #EFF1FB;
+  margin: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pub-pagination .pagination-boxes .pagination .page span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1C1B1F;
+  cursor: pointer;
+}
+
+.pub-pagination .pagination-boxes .pagination .page.more {
+  width: 82px;
+}
+
+/* == PUBLICATIONS == */
+
+
+
+
+
+/* == RESPONSIVE == */
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 994px) {
+
+  header {
+      display: none;
+  }
+
+  nav {
+      height: 120px;
+  }
+
+  .nav.logo {
+      display: block;
+      background: #ffffff;
+  }
+
+  .menu-btn {
+      color: #1C1B1F;
+  }
+
+  .links {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: -100%;
+
+      display: block;
+      padding: 80px 0px 0px;
+      text-align: centers;
+      transition: all ease 0.5s;
+
+      z-index: 5;
+      background-color: #ffffff;
+      overflow: auto;
+  }
+
+  .links a {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100% !important;
+      height: 50px;
+      color: #1C1B1F;
+      padding: 0px 50px 0px;
+  }
+
+  .links a:hover {
+      background-color: #DE4404;
+      color: #ffffff;
+  }
+
+  .links span {
+      cursor: pointer;
+  }
+
+  .links.active {
+      right: 0%;
+  }
+
+  .cancel-btn {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 12px #0e315533;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1C1B1F;
+      font-size: 18px;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+  }
+
+  .banner-text h1 {
+      font-size: 40px;
+      line-height: 50px;
+  }
+
+  .banner-text p {
+      font-size: 20px;
+      line-height: 30px;
+  }
+
+  .banner-text button {
+      width: 90%;
+      max-width: 320px;
+  }
+
+  .upcoming-container {
+      justify-content: space-evenly;
+  }
+
+  .up-left .top h1 {
+      font-size: 25px;
+      line-height: 45px;
+  }
+
+  .up-left .bottom {
+      justify-content: space-evenly;
+  }
+
+  .bottom-more button {
+      width: 100%;
+      max-width: 384px;
+      min-width: 280px;
+  }
+
+  .tab-slide {
+      justify-content: space-evenly;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 400px) {
+  .banner-text h1 {
+      font-size: 30px;
+      line-height: 35px;
+  }
+
+  .banner-text p {
+      font-size: 16px;
+      line-height: 33px;
+  }
+
+  .banner-text button {
+      width: 100%;
+      max-width: 384px;
+  }
+
+  .up-left .top h1 {
+      font-size: 30px;
+      line-height: 35px;
+  }
+
+  .bottom .up-card {
+      max-width: 320px;
+  }
+
+  .bottom-more button {
+      width: 90%;
+      max-width: 320px;
+      min-width: 250px;
+  }
+
+  .tab-slide {
+      justify-content: space-evenly !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .links {
+      padding: 0px 20px;
+      display: block;
+      display: flex;
+      align-items: center !important;
+      justify-content: space-between;
+  }
+
+  nav {
+      height: 50px;
+      background: #25518C;
+  }
+
+  .menu-btn {
+      color: #ffffff;
+  }
+
+  .nav.logo {
+      display: none;
+  }
+
+  .menu-bar {
+      display: none !important;
+  }
+
+  .cancel {
+      display: none;
+  }
+
+  .banner-text h1 {
+      font-size: 60px;
+      line-height: 90px;
+  }
+
+  .banner-text p {
+      font-size: 24px;
+      line-height: 36px;
+  }
+
+  .banner-text button {
+      width: 100%;
+      max-width: 384px;
+  }
+
+  .up-left .top h1 {
+      font-size: 40px;
+      line-height: 60px;
+  }
+
+  .bottom-more button {
+      width: 100%;
+      max-width: 384px;
+      min-width: 280px;
+  }
+
+  form .control-group.name {
+      width: 100%;
+      max-width: 280px;
+  }
+
+  .upcoming-container {
+      justify-content: space-between;
+  }
+
+  .up-left .bottom {
+      justify-content: space-between;
+  }
+
+  .tab-slide {
+      justify-content: space-evenly;
+  }
+}
+
+/* == || RESPONSIVE == */
 
 
 
