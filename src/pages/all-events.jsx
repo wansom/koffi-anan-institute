@@ -136,7 +136,7 @@ const AllEvents = () => {
                 ))}
               </div>
               <div class="tab-slider">
-                <div class="flex items-center justify-start">
+                <div class="flex items-center justify-start flex-wrap">
                   {filteredEvents.map((i) => (
                     <EventsCard  event={i}/>
                   ))}
