@@ -57,7 +57,7 @@ const ContactUs = () => {
           <div className="title">
             <h1>Contact Us</h1>
             <p>
-              Share your idea. Introduce your company. Reach out to partner.
+              Share your idea. Introduce your Organization. Reach out to partner.
             </p>
           </div>
           <div className="details">
@@ -187,19 +187,19 @@ const ContactUs = () => {
               />
             </div>
             <div className="control-group">
-              <label for="company">Company Name</label>
+              <label for="company"> Name of Organization</label>
               <br></br>
               <input
                 type="text"
-                name="company"
-                placeholder="EXample Limited "
+                name=" Name of Organization"
+                placeholder=" Name of Organization "
                 value={companyName}
                 onChange={(e) => {
                   setcompanyName(e.target.value);
                 }}
               />
             </div>
-            <div className="control-group">
+            {/* <div className="control-group">
               <label for="how">How Did You Hear About Us?</label>
               <br></br>
               <input
@@ -211,7 +211,7 @@ const ContactUs = () => {
                   setaboutUs(e.target.value);
                 }}
               />
-            </div>
+            </div> */}
             <div className="control-group">
               <label for="">Leave a Message?</label>
               <br></br>
