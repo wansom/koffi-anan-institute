@@ -1,15 +1,15 @@
 const Choices = () => {
   return (
-    <section class="choices">
-      <div class="choices-mask">
-        <div class="choices-container container">
-          <div class="choice-head">
+    <section className="choices">
+      <div className="choices-mask">
+        <div className="choices-container container">
+          <div className="choice-head">
             <p>Why Choose Us</p>
             <h1>Areas of Engagement</h1>
           </div>
-          <div class="choice-content">
-            <div class="row">
-              <div class="column choice">
+          <div className="choice-content">
+            <div className="row">
+              <div className="column choice">
                 <h3>Teaching & Training</h3>
                 <p>
                   The Institute's primary focus is on providing high-quality
@@ -20,7 +20,7 @@ const Choices = () => {
                   address conflicts effectively.
                 </p>
               </div>
-              <div class="column choice">
+              <div className="column choice">
                 <h3>Research</h3>
                 <p>
                   The Institute conducts research and scholarship in the field
@@ -31,7 +31,7 @@ const Choices = () => {
                   conflict issues.
                 </p>
               </div>
-              <div class="column choice">
+              <div className="column choice">
                 <h3>Policy Engagement</h3>
                 <p>
                   The Institute advocates for policies and practices that
@@ -41,7 +41,7 @@ const Choices = () => {
                   decisions.
                 </p>
               </div>
-              <div class="column choice">
+              <div className="column choice">
                 <h3>Partnerships and Collaboration</h3>
                 <p>
                   The Institute values partnerships and collaboration with
@@ -51,7 +51,7 @@ const Choices = () => {
                   resolution and peacebuilding more broadly.
                 </p>
               </div>
-              <div class="column choice">
+              <div className="column choice">
                 <h3>Outreach Programs</h3>
                 <p>
                   The Institute is committed to engaging with communities
@@ -61,7 +61,7 @@ const Choices = () => {
                   issues and build sustainable peace.
                 </p>
               </div>
-              <div class="column"></div>
+              <div className="column"></div>
             </div>
           </div>
         </div>

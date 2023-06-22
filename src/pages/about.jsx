@@ -114,7 +114,6 @@ const AboutRoute = () => {
       })
       .then((posts) => {
         setstaff(posts);
-        console.log(posts);
       })
       .catch((error) => console.error(error));
   }, []);

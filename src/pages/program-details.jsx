@@ -31,7 +31,6 @@ const ProgramDetails = () => {
       })
       .then((courses) => {
         const mycourse =courses.find((c)=>c.slug===id)
-        console.log(mycourse)
         setcourses(mycourse);
         setloading(false);
       })
@@ -56,19 +55,19 @@ const ProgramDetails = () => {
       )} */}
 
       <main>
-        <section class="program-info top">
-          <div class="prog-info-container container">
-            <div class="prog-btn">
+        <section className="program-info top">
+          <div className="prog-info-container container">
+            <div className="prog-btn">
               <button>Course Details</button>
               <button>Curriculum</button>
               <button>Entry Requirements</button>
               <button>Fees & Funding</button>
               <button>How to Apply</button>
             </div>
-            <div class="prog-head">
+            <div className="prog-head">
               <h2>Course Details</h2>
             </div>
-            <div class="prog-txt">
+            <div className="prog-txt">
             {course&&(
               <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
                 
@@ -97,13 +96,13 @@ const ProgramDetails = () => {
                 prepared to pursue further education in related fields, such as
                 law, international relations, or public policy.
               </p>
-              <button class="btn-brochure">Download Brochure</button>
+              <button className="btn-brochure">Download Brochure</button>
             </div>
-            <div class="prog-head">
+            <div className="prog-head">
               <h2>Curriculum</h2>
             </div>
-            <div class="curriculum">
-              <div class="left prog-txt">
+            <div className="curriculum">
+              <div className="left prog-txt">
                 <p>
                   Throughout the program, students may also have the opportunity
                   to participate in internships, research projects, and
@@ -120,7 +119,7 @@ const ProgramDetails = () => {
                   including government, non-governmental organizations, and
                   international organizations.
                 </p>
-                <p class="elective">
+                <p className="elective">
                   Elective courses that may be offered include:
                 </p>
                 <ul>
@@ -131,7 +130,7 @@ const ProgramDetails = () => {
                   <li>Mediation and Negotiation</li>
                 </ul>
               </div>
-              <div class="right prog-txt">
+              <div className="right prog-txt">
                 <p>
                   The Master's Degree program in Conflict Transformation and
                   Peacebuilding at the Kofi Annan Institute for Conflict
@@ -188,11 +187,11 @@ const ProgramDetails = () => {
                 </table>
               </div>
             </div>
-            <div class="prog-required">
-              <div class="prog-head">
+            <div className="prog-required">
+              <div className="prog-head">
                 <h2>Entry Requirements</h2>
               </div>
-              <p class="elective">
+              <p className="elective">
                 To be eligible for the Master's Degree program in Conflict
                 Transformation and Peacebuilding at the Kofi Annan Institute for
                 Conflict Transformation University of Liberia, candidates must
@@ -233,7 +232,7 @@ const ProgramDetails = () => {
                   can attest to their academic and/or professional abilities.
                 </li>
               </ol>
-              <p class="elective text-justify">
+              <p className="elective text-justify">
                 The admissions process for the Master's Degree program is
                 competitive, and meeting the above requirements does not
                 guarantee admission. Admissions decisions are based on a
@@ -244,35 +243,35 @@ const ProgramDetails = () => {
             </div>
           </div>
         </section>
-        <section class="prog-carding">
-          <div class="prog-carding-container container">
-            <div class="prog-card">
-              <div class="card-cont">
+        <section className="prog-carding">
+          <div className="prog-carding-container container">
+            <div className="prog-card">
+              <div className="card-cont">
                 <span>96%</span> <br />
                 <span>Internship Rate</span>
               </div>
             </div>
-            <div class="prog-card">
-              <div class="card-cont">
+            <div className="prog-card">
+              <div className="card-cont">
                 <span>$ 25,000</span> <br />
                 <span>Program Cost</span>
               </div>
             </div>
-            <div class="prog-card">
-              <div class="card-cont">
+            <div className="prog-card">
+              <div className="card-cont">
                 <span>85%</span> <br />
                 <span>Employment Rate</span>
               </div>
             </div>
           </div>
         </section>
-        <section class="program-info bottom">
-          <div class="prog-info-container next container">
-            <div class="prog-head">
+        <section className="program-info bottom">
+          <div className="prog-info-container next container">
+            <div className="prog-head">
               <h2>Fees & Funding</h2>
             </div>
-            <div class="curriculum">
-              <div class="left prog-txt">
+            <div className="curriculum">
+              <div className="left prog-txt">
                 <p>
                   The fees for the Master's Degree program in Conflict
                   Transformation and Peacebuilding at the Kofi Annan Institute
@@ -308,12 +307,12 @@ const ProgramDetails = () => {
                   the Master's Degree program in Conflict Transformation and
                   Peacebuilding.
                 </p>
-                <div class="btn-curri">
+                <div className="btn-curri">
                   <button>Explore Scholarships</button>
                   <button>Explore Financial Aid</button>
                 </div>
               </div>
-              <div class="right prog-txt">
+              <div className="right prog-txt">
                 <table>
                   <tbody>
                     <tr>
@@ -341,13 +340,13 @@ const ProgramDetails = () => {
               </div>
             </div>
           </div>
-          <div class="prog-info-container next-to container">
-            <div class="prog-head">
-              <h2 class="right-text">Application Deadlines</h2>
+          <div className="prog-info-container next-to container">
+            <div className="prog-head">
+              <h2 className="right-text">Application Deadlines</h2>
             </div>
-            <div class="curriculum">
-              <div class="right prog-txt">
-                <table class="bottom">
+            <div className="curriculum">
+              <div className="right prog-txt">
+                <table className="bottom">
                   <tbody>
                     <tr>
                       <td>Deadlines</td>
@@ -380,8 +379,8 @@ const ProgramDetails = () => {
                   </tbody>
                 </table>
               </div>
-              <div class="left prog-txt">
-                <p class="right-text">
+              <div className="left prog-txt">
+                <p className="right-text">
                   Prospective students are advised to visit the official website
                   of the Kofi Annan Institute for Conflict Transformation
                   University of Liberia for the most up-to-date information on
@@ -391,7 +390,7 @@ const ProgramDetails = () => {
                   applications are complete and given full consideration by the
                   admissions committee.
                 </p>
-                <p class="right-text">
+                <p className="right-text">
                   Apply as soon as possible for priority admissions and
                   financial aid consideration.
                 </p>

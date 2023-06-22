@@ -16,7 +16,7 @@ const WeeklyUpdates=({news,loading})=>{
                   </div>
                   <div className="bottom">
                     <h4 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h4>
-                    <p dangerouslySetInnerHTML={{ __html: i.content.rendered.slice(0,200) }}>
+                    <p dangerouslySetInnerHTML={{ __html: i.content.rendered?.slice(0,200) }}>
                     </p>
                   </div>
                   </a>

@@ -35,123 +35,123 @@ const SingleResearchProject=()=>{
             <Navbar/>
             <main>
             <AboutHero title={'Hope for a Better Future: Building Collaborative Resilience for Youth in Liberia'} subtitle='Research Projects' background={background}/>
-            <section class="single-research">
-            <div class="single-research-container container">
-                <div class="single-research-head">
+            <section className="single-research">
+            <div className="single-research-container container">
+                <div className="single-research-head">
                     <h3>Overview</h3>
                 </div>
-                <div class="single-research-text">
+                <div className="single-research-text">
                     <p>The research project involves a comprehensive study of the experiences and perspectives of young people in Liberia, including their social, economic, political, and cultural contexts. The project uses a participatory approach, involving young people in all aspects of the research process, from design to implementation to analysis.</p>
                     <p>Through this project, the Kofi Annan Institute for Conflict Transformation seeks to contribute to the development of evidence-based policy and programming on youth resilience in Liberia. The project will also provide opportunities for young people to share their experiences and perspectives, promoting their participation and engagement in decision-making processes.</p>
                     <p>The research project is expected to generate new insights into the factors that contribute to the resilience of young people in Liberia, as well as the strategies that can be used to build collaborative resilience. The project is also expected to contribute to the development of a more comprehensive and integrated approach to youth programming in Liberia, addressing the complex challenges that young people face in a holistic and collaborative way.</p>
                 </div>
-                <div class="single-research-head">
+                <div className="single-research-head">
                     <h3>Collaborators</h3>
                 </div>
-                <div class="team-container container">
-                    <div class="team-content research flex">
-                        <div class="member">
+                <div className="team-container container">
+                    <div className="team-content research flex">
+                        <div className="member">
                             <img src="/images/about/member-one.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div class="member-info">
+                            <div className="member-info">
                                 <span>Chancellor & Lecturer</span>
                                 <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
                             </div>
                         </div>
-                        <div class="member">
+                        <div className="member">
                             <img src="/images/about/member-two.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div class="member-info">
+                            <div className="member-info">
                                 <span>Chancellor & Lecturer</span>
                                 <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
                             </div>
                         </div>
-                        <div class="member">
+                        <div className="member">
                             <img src="/images/about/member-one.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div class="member-info">
+                            <div className="member-info">
                                 <span>Chancellor & Lecturer</span>
                                 <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
                             </div>
                         </div>
-                        <div class="member">
+                        <div className="member">
                             <img src="/images/about/member-two.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div class="member-info">
+                            <div className="member-info">
                                 <span>Chancellor & Lecturer</span>
                                 <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="single-research-head">
+                <div className="single-research-head">
                     <h3>Project Goals</h3>
                 </div>
-                <div class="single-research-text">
+                <div className="single-research-text">
                     <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p>
                 </div>
-                <div class="single-research-cards">
-                    <div class="single-research-card">
+                <div className="single-research-cards">
+                    <div className="single-research-card">
                         <h1>1.</h1>
                         <p>Examine the impact of conflict and violence on the lives of Liberian youth, including their physical and emotional well-being, social relationships, and access to education and employment opportunities.</p>
                     </div>
-                    <div class="single-research-card">
+                    <div className="single-research-card">
                         <h1>2.</h1>
                         <p>Identify the factors that contribute to the resilience of Liberian youth in the face of conflict and violence, including individual coping strategies, community support systems, and access to resources and services.</p>
                     </div>
-                    <div class="single-research-card">
+                    <div className="single-research-card">
                         <h1>3.</h1>
                         <p>Develop recommendations for policymakers, practitioners, and community leaders on strategies for building collaborative resilience among Liberian youth and promoting their participation in peacebuilding and development initiatives.</p>
                     </div>
                 </div>
-                <div class="single-research-head">
+                <div className="single-research-head">
                     <h3>Research Meethods</h3>
                 </div>
-                <div class="single-research-text">
+                <div className="single-research-text">
                     <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
                 </div>
-                <div class="method-cards">
-                    <div class="methods">
-                        <div class="method-card">
+                <div className="method-cards">
+                    <div className="methods">
+                        <div className="method-card">
                             <h4>Literature Review</h4>
                             <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
                         </div>
-                        <div class="method-height"></div>
+                        <div className="method-height"></div>
                     </div>
-                    <div class="methods">
-                        <div class="method-height"></div>
-                        <div class="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                    </div>
-                    <div class="methods">
-                        <div class="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                        <div class="method-height"></div>
-                    </div>
-                    <div class="methods">
-                        <div class="method-height"></div>
-                        <div class="method-card">
+                    <div className="methods">
+                        <div className="method-height"></div>
+                        <div className="method-card">
                             <h4>Literature Review</h4>
                             <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
                         </div>
                     </div>
-                    <div class="methods">
-                        <div class="method-card">
+                    <div className="methods">
+                        <div className="method-card">
                             <h4>Literature Review</h4>
                             <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
                         </div>
-                        <div class="method-height"></div>
+                        <div className="method-height"></div>
+                    </div>
+                    <div className="methods">
+                        <div className="method-height"></div>
+                        <div className="method-card">
+                            <h4>Literature Review</h4>
+                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                        </div>
+                    </div>
+                    <div className="methods">
+                        <div className="method-card">
+                            <h4>Literature Review</h4>
+                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                        </div>
+                        <div className="method-height"></div>
                     </div>
                 </div>
-                <div class="single-outcome">
-                    <div class="left">
-                        <div class="single-research-head">
+                <div className="single-outcome">
+                    <div className="left">
+                        <div className="single-research-head">
                             <h3>Project Outcomes</h3>
                         </div>
-                        <div class="single-research-text listing">
+                        <div className="single-research-text listing">
                             <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
-                            <div class="outcome-listings">
-                                <div class="single-listing">
+                            <div className="outcome-listings">
+                                <div className="single-listing">
                                     <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -161,9 +161,9 @@ const SingleResearchProject=()=>{
                                         </g>
                                         </svg>
                                         </span>
-                                    <p class="listing">Identify the challenges faced by Liberian youth in relation to conflict and violence, as well as their coping strategies and community support systems.</p>
+                                    <p className="listing">Identify the challenges faced by Liberian youth in relation to conflict and violence, as well as their coping strategies and community support systems.</p>
                                 </div>
-                                <div class="single-listing">
+                                <div className="single-listing">
                                     <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -173,9 +173,9 @@ const SingleResearchProject=()=>{
                                         </g>
                                         </svg>
                                         </span>
-                                    <p class="listing">Identify the factors that contribute to the resilience of Liberian youth and their participation in peacebuilding and development initiatives.</p>
+                                    <p className="listing">Identify the factors that contribute to the resilience of Liberian youth and their participation in peacebuilding and development initiatives.</p>
                                 </div>
-                                <div class="single-listing">
+                                <div className="single-listing">
                                     <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -185,9 +185,9 @@ const SingleResearchProject=()=>{
                                         </g>
                                         </svg>
                                         </span>
-                                    <p class="listing">Provide evidence-based recommendations for policymakers and practitioners on strategies for building the resilience of Liberian youth and promoting their active participation in peacebuilding and development initiatives.</p>
+                                    <p className="listing">Provide evidence-based recommendations for policymakers and practitioners on strategies for building the resilience of Liberian youth and promoting their active participation in peacebuilding and development initiatives.</p>
                                 </div>
-                                <div class="single-listing">
+                                <div className="single-listing">
                                     <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -197,9 +197,9 @@ const SingleResearchProject=()=>{
                                         </g>
                                         </svg>
                                         </span>
-                                    <p class="listing">Increase awareness and understanding of the experiences and perspectives of Liberian youth in relation to conflict and violence, as well as the importance of their participation in peacebuilding and development initiatives.</p>
+                                    <p className="listing">Increase awareness and understanding of the experiences and perspectives of Liberian youth in relation to conflict and violence, as well as the importance of their participation in peacebuilding and development initiatives.</p>
                                 </div>
-                                <div class="single-listing">
+                                <div className="single-listing">
                                     <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -209,24 +209,24 @@ const SingleResearchProject=()=>{
                                         </g>
                                         </svg>
                                         </span>
-                                    <p class="listing">Establish partnerships and collaborations with stakeholders in Liberia, including policymakers, practitioners, and community leaders, to implement evidence-based policies and programs that promote the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
+                                    <p className="listing">Establish partnerships and collaborations with stakeholders in Liberia, including policymakers, practitioners, and community leaders, to implement evidence-based policies and programs that promote the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
+                    <div className="right">
                         <img src="/images/outreach-program/program-outcome.png" alt=""/>
                     </div>
                 </div>
-                {/* <div class="single-research-head">
+                {/* <div className="single-research-head">
                     <h3>Publications</h3>
                 </div> */}
-                {/* <div class="publications-research">
-                    <div class="content-info">
-                        <div class="year">
+                {/* <div className="publications-research">
+                    <div className="content-info">
+                        <div className="year">
                             2016
                         </div>
-                        <div class="top flex items-center gap-2">
+                        <div className="top flex items-center gap-2">
                             <span>by</span>
                             <span>Bendon Murgor</span>
                             <span>
@@ -235,13 +235,13 @@ const SingleResearchProject=()=>{
                                     <circle cx="2.5" cy="2.5" r="2.5" fill="#1C1B1F" />
                                 </svg>
                             </span>
-                            <span class="no-margin">Theses</span>
-                            <span class="no-margin">,</span>
+                            <span className="no-margin">Theses</span>
+                            <span className="no-margin">,</span>
                             <span>Journal</span>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h2>Administrative science quarterly.</h2>
-                            <div class="more-info">
+                            <div className="more-info">
                                 <span>
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -299,11 +299,11 @@ const SingleResearchProject=()=>{
                             </div>
                         </div>
                     </div>
-                    <div class="content-info">
-                        <div class="year">
+                    <div className="content-info">
+                        <div className="year">
                             2016
                         </div>
-                        <div class="top flex items-center gap-2">
+                        <div className="top flex items-center gap-2">
                             <span>by</span>
                             <span>Bendon Murgor</span>
                             <span>
@@ -312,13 +312,13 @@ const SingleResearchProject=()=>{
                                     <circle cx="2.5" cy="2.5" r="2.5" fill="#1C1B1F" />
                                 </svg>
                             </span>
-                            <span class="no-margin">Theses</span>
-                            <span class="no-margin">,</span>
+                            <span className="no-margin">Theses</span>
+                            <span className="no-margin">,</span>
                             <span>Journal</span>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h2>Administrative science quarterly.</h2>
-                            <div class="more-info">
+                            <div className="more-info">
                                 <span>
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -376,11 +376,11 @@ const SingleResearchProject=()=>{
                             </div>
                         </div>
                     </div>
-                    <div class="content-info">
-                        <div class="year">
+                    <div className="content-info">
+                        <div className="year">
                             2016
                         </div>
-                        <div class="top flex items-center gap-2">
+                        <div className="top flex items-center gap-2">
                             <span>by</span>
                             <span>Bendon Murgor</span>
                             <span>
@@ -389,13 +389,13 @@ const SingleResearchProject=()=>{
                                     <circle cx="2.5" cy="2.5" r="2.5" fill="#1C1B1F" />
                                 </svg>
                             </span>
-                            <span class="no-margin">Theses</span>
-                            <span class="no-margin">,</span>
+                            <span className="no-margin">Theses</span>
+                            <span className="no-margin">,</span>
                             <span>Journal</span>
                         </div>
-                        <div class="bottom">
+                        <div className="bottom">
                             <h2>Administrative science quarterly.</h2>
-                            <div class="more-info">
+                            <div className="more-info">
                                 <span>
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -454,10 +454,10 @@ const SingleResearchProject=()=>{
                         </div>
                     </div>
                 </div> */}
-                <div class="single-research-head">
+                <div className="single-research-head">
                     <h3>Events</h3>
                 </div>
-                <div class="black-events events">
+                <div className="black-events events">
                     {events.map((i)=>(
                  <EventsCard event={i}></EventsCard>
                     ))}

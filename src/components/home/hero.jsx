@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="banner">
     <div className="banner-mask">
         <div className="banner-container container">
-            {posts.length>0&&(<div class="banner-text">
+            {posts.length>0&&(<div className="banner-text">
                 <h1 dangerouslySetInnerHTML={{ __html: posts[0].title.rendered }}></h1>
                 <p dangerouslySetInnerHTML={{ __html: posts[0].content.rendered }}></p>
                 <a href="aboutus"><button >Learn More</button></a>

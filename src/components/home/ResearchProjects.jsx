@@ -37,12 +37,12 @@ const ResearchProjects =()=>{
                 <p>Loading...</p>
             )}
             <div className="projects-content">
-                {projects.slice(-2).map((project,index)=>(
+                {projects?.slice(-2).map((project,index)=>(
                 <div className="project" key={index}>
                 <img src={project.featured_image_url}></img>
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>
-                    <p>{project.acf.overview.slice(0,280)}...</p>
+                    <p>{project.acf.overview?.slice(0,280)}...</p>
                     <a href={`/researchProject/${project.slug}`}><button>Learn More</button></a>
                 </div>
             </div>

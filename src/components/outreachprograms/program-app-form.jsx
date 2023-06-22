@@ -1,11 +1,11 @@
 const ProgramAppForm=()=>{
     return(
-        <section class="prog-application">
-        <div class="prog-application-container container">
-          <div class="application-form">
-            <form action="" class="apply">
+        <section className="prog-application">
+        <div className="prog-application-container container">
+          <div className="application-form">
+            <form action="" className="apply">
               <h2>Apply to this Program</h2>
-              <div class="control-group">
+              <div className="control-group">
                 <label for="program">Course</label>
                 <br />
                 <select id="program" name="program">
@@ -15,7 +15,7 @@ const ProgramAppForm=()=>{
                   <option value="program4">Program 4</option>
                 </select>
               </div>
-              <div class="control-group">
+              <div className="control-group">
                 <label for="intake">Intake</label>
                 <br />
                 <select id="intake" name="intake">
@@ -25,17 +25,17 @@ const ProgramAppForm=()=>{
                   <option value="intake4">Intake 4</option>
                 </select>
               </div>
-              <div class="control-group checkbox">
-                <label class="container-check">
+              <div className="control-group checkbox">
+                <label className="container-check">
                   <input type="checkbox" />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                 </label>
                 <label for="">
                   By clicking on “Send Message” you agree to our Terms &
                   Conditions and Privacy Statement.
                 </label>
               </div>
-              <div class="control-group">
+              <div className="control-group">
                 <button type="submit">Apply Now</button>
               </div>
             </form>

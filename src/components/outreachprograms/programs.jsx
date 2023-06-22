@@ -10,13 +10,13 @@ const Programs = () => {
       <ProgramsGrid/>
       <div className="flex flex-col lg:flex-row justify-start">
         <div className="basis-1/3 pr-[30px]">
-          <div class="outreach-card overflow-hidden flex flex-col">
+          <div className="outreach-card overflow-hidden flex flex-col">
             <img
               src="/images/outreach-program/p-2.png"
               alt="Image 1"
-              class="w-full object-contain"
+              className="w-full object-contain"
             />
-            <div class="p-4 flex-1 flex flex-col items-center space-y-6">
+            <div className="p-4 flex-1 flex flex-col items-center space-y-6">
               <h2>Field Trips</h2>
               <p>
                 {" "}
@@ -25,8 +25,8 @@ const Programs = () => {
                 real-world examples of conflict and peacebuilding initiatives.
               </p>
             </div>
-            <div class="flex items-end px-6 pb-6">
-              <button class="py-2 px-4">Explore Program</button>
+            <div className="flex items-end px-6 pb-6">
+              <button className="py-2 px-4">Explore Program</button>
             </div>
           </div>
         </div>

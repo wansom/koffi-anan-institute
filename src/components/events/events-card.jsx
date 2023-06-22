@@ -2,12 +2,12 @@ const EventsCard=({event})=>{
      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
     return (
-        <div class="tab-card">
-        <div class="floating-card">
+        <div className="tab-card">
+        <div className="floating-card">
         <a href={`/event/${event.slug}`}>
             <span></span>
-            <div class="hold">
-                <span class="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+            <div className="hold">
+                <span className="share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12.0659 6.00239C13.134 6.00239 13.9998 5.10642 13.9998 4.00119C13.9998 2.89597 13.134 2 12.0659 2C10.9978 2 10.132 2.89597 10.132 4.00119C10.132 5.10642 10.9978 6.00239 12.0659 6.00239Z"
@@ -29,7 +29,7 @@ const EventsCard=({event})=>{
                             stroke-linejoin="round" />
                     </svg>
                 </span>
-                <span class="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                <span className="love"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M11.17 2C9.77533 2 8.56934 2.85302 8.0034 4.07662C7.43746 2.85302 6.2382 2 4.83682 2C2.90319 2 1.33337 3.62913 1.33337 5.63583C1.33337 8.50954 5.36234 12.1943 7.15449 13.6906C7.65305 14.1031 8.35374 14.1031 8.84557 13.6906C10.6445 12.1873 14.6667 8.50255 14.6667 5.63583C14.6734 3.62913 13.1036 2 11.17 2Z"
@@ -41,12 +41,12 @@ const EventsCard=({event})=>{
         </div>
         <img src={event.image.url}
             alt="Kofi Annan Institute for Conflict Transformation Events"/>
-        <div class="tab-card-info">
-            <div class="left">
+        <div className="tab-card-info">
+            <div className="left">
                 <span>{monthNames[new Date(event.start_date).getMonth()]}</span> <br/>
                 <span>{new Date(event.start_date).getDay()}</span>
             </div>
-            <div class="right flex flex-col justify-between items-start">
+            <div className="right flex flex-col justify-between items-start">
                 <a href={`/event/${event.slug}`}>{event.title}</a> <br/>
                 <span className="flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

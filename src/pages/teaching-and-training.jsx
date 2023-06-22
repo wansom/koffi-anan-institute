@@ -39,15 +39,15 @@ const Teachingandtraining = () => {
         background={background}
       />
       <main>
-        <section class="courses">
-          <div class="training-courses-container container">
+        <section className="courses">
+          <div className="training-courses-container container">
             {courses.map((course,index)=>(
-            <div class={index % 2=== 0?'train-course flex items-center justify-evenly relative':' train-course relative flex flex-row-reverse items-center justify-evenly px-0 py-5'} key={index}>
-            <div class="right">
-              <div class={index %2===0?'train-course-card -mr-[80px]':'train-course-card -ml-[80px]'}>
+            <div className={index % 2=== 0?'train-course flex items-center justify-evenly relative':' train-course relative flex flex-row-reverse items-center justify-evenly px-0 py-5'} key={index}>
+            <div className="right">
+              <div className={index %2===0?'train-course-card -mr-[80px]':'train-course-card -ml-[80px]'}>
                 <h2>{course.acf.course_name}</h2>
                 <p>
-                  {course.acf.course_details.slice(0,320)}...
+                  {course.acf.course_details?.slice(0,320)}...
                 </p>
                 <a href={`/programdetails/${course.slug}`}>
                   Course Details
@@ -79,7 +79,7 @@ const Teachingandtraining = () => {
                 </a>
               </div>
             </div>
-            <div class="left">
+            <div className="left">
               <img src={course.featured_image_url} alt="" />
             </div>
           </div>

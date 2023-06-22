@@ -13,10 +13,10 @@ const MaryAntoinnette = () => {
           subtitle={"Think Tank"}
           background={background}
         ></AboutHero>
-        <section class="think-single">
-          <div class="think-single-container container">
-            <h2 class="think-head">Overview</h2>
-            <p class="think-p">
+        <section className="think-single">
+          <div className="think-single-container container">
+            <h2 className="think-head">Overview</h2>
+            <p className="think-p">
               The Mary Antoinette Brown Sherman Think Tank (MABSTT) is the
               flagship program on gender of the Kofi Annan Institute. It
               champions the participation of girls and women in all aspects of
@@ -24,14 +24,14 @@ const MaryAntoinnette = () => {
               The MABS Think Tank involves three areas of activity: a lecture
               series, training, and research.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               We employ a range of research methodologies, including desk
               research, qualitative and quantitative data analysis, and field
               research. Our research is based on a solid understanding of the
               complex security challenges facing Liberia and the region, as well
               as the local context and dynamics.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               Our team of experts includes researchers, practitioners, and
               academics with extensive experience in the field of security
               sector reform. We work closely with local and international
@@ -39,21 +39,21 @@ const MaryAntoinnette = () => {
               organizations, and regional bodies, to ensure that our research is
               relevant, timely, and impactful.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               In addition to our research activities, the SSR Think Tank also
               organizes seminars, workshops, and conferences to promote dialogue
               and knowledge sharing on security sector reform issues. We welcome
               collaboration and partnership with organizations and individuals
               who share our vision and mission.
             </p>
-            <h2 class="think-head">Research</h2>
-            <p class="think-p">
+            <h2 className="think-head">Research</h2>
+            <p className="think-p">
               Our research focuses on a wide range of security sector reform
               topics, including but not limited to:
             </p>
-            <div class="takeaway-cards">
-              <div class="takeaway-card">
-                <div class="card-center">
+            <div className="takeaway-cards">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <h2>Stay Ahead of the Curve</h2>
                   <p>
                     The summit will offer attendees the opportunity to stay
@@ -62,8 +62,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="takeaway-card">
-                <div class="card-center">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <span></span>
                   <h2>Police Reform</h2>
                   <p>
@@ -73,8 +73,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="takeaway-card">
-                <div class="card-center">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <h2>Gender & Security</h2>
                   <p>
                     The study of how gender shapes experiences of insecurity and
@@ -83,8 +83,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="takeaway-card">
-                <div class="card-center">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <h2>Border Security</h2>
                   <p>
                     The measures taken by governments to secure their borders,
@@ -94,8 +94,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="takeaway-card">
-                <div class="card-center">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <h2>Disarmament, Demobilization & Reintegration</h2>
                   <p>
                     The process of disarming, demobilizing and reintegrating
@@ -104,8 +104,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="takeaway-card">
-                <div class="card-center">
+              <div className="takeaway-card">
+                <div className="card-center">
                   <h2>Justice & Security</h2>
                   <p>
                     The intersection between security and justice sectors,
@@ -116,23 +116,23 @@ const MaryAntoinnette = () => {
                 </div>
               </div>
             </div>
-            <h2 class="think-head">Community Engagement</h2>
-            <p class="think-p">
+            <h2 className="think-head">Community Engagement</h2>
+            <p className="think-p">
               At the Security Sector Reform Think Tank, we understand the
               importance of community engagement in promoting security sector
               reform in Liberia. We believe that the security sector should
               serve the interests of the community and the citizens it is meant
               to protect.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               To ensure that our research and policy recommendations are
               informed by the needs and concerns of the community, we engage in
               various community outreach programs. Our community engagement
               efforts include:
             </p>
-            <div class="comm-engage">
-              <div class="comm-row">
-                <div class="comm-card">
+            <div className="comm-engage">
+              <div className="comm-row">
+                <div className="comm-card">
                   <h2>Community Consultations</h2>
                   <p>
                     We organize consultations with various community groups,
@@ -141,7 +141,7 @@ const MaryAntoinnette = () => {
                     recommendations for reform.
                   </p>
                 </div>
-                <div class="comm-card">
+                <div className="comm-card">
                   <h2>Awareness Campaigns</h2>
                   <p>
                     We use various media channels, including radio, television,
@@ -151,8 +151,8 @@ const MaryAntoinnette = () => {
                   </p>
                 </div>
               </div>
-              <div class="comm-row">
-                <div class="comm-card">
+              <div className="comm-row">
+                <div className="comm-card">
                   <h2>Training & Capacity Building</h2>
                   <p>
                     We conduct training and capacity-building workshops for
@@ -162,7 +162,7 @@ const MaryAntoinnette = () => {
                     with the security sector and advocate for reform.
                   </p>
                 </div>
-                <div class="comm-card">
+                <div className="comm-card">
                   <h2>Town Hall Meetings</h2>
                   <p>
                     We hold town hall meetings in different communities to
@@ -174,7 +174,7 @@ const MaryAntoinnette = () => {
                 </div>
               </div>
             </div>
-            <p class="think-p">
+            <p className="think-p">
               Through our community engagement efforts, we seek to promote a
               more inclusive and participatory approach to security sector
               reform in Liberia. We believe that by working together with
@@ -182,8 +182,8 @@ const MaryAntoinnette = () => {
               create a more effective and accountable security sector that
               serves the needs of all Liberians.
             </p>
-            <h2 class="think-head">Public Lectures</h2>
-            <p class="think-p">
+            <h2 className="think-head">Public Lectures</h2>
+            <p className="think-p">
               Our public lectures cover a wide range of security-related topics,
               including security sector reform, peacebuilding, conflict
               prevention, and post-conflict reconstruction. We invite experts,
@@ -193,7 +193,7 @@ const MaryAntoinnette = () => {
               robust discussions and debates, enabling participants to exchange
               ideas and learn from one another.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               Our public lectures are open to the public and are held at various
               locations, including the Kofi Annan Institute for Conflict
               Transformation, University of Liberia, and other partner
@@ -204,7 +204,7 @@ const MaryAntoinnette = () => {
               leading experts in the field of security and learn about the
               latest developments, challenges, and best practices.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               In addition to our public lectures, we also organize workshops,
               seminars, and roundtable discussions on security-related topics.
               These events provide a more focused and interactive platform for
@@ -214,8 +214,8 @@ const MaryAntoinnette = () => {
               their knowledge and understanding of security-related issues and
               explore potential solutions to address them.
             </p>
-            <div class="lecture-cards">
-              <div class="lecture-card">
+            <div className="lecture-cards">
+              <div className="lecture-card">
                 <img src="/images/video.png" alt="Lecuture Thumbnail KAICT" />
                 <button>
                   <svg
@@ -236,7 +236,7 @@ const MaryAntoinnette = () => {
                   </svg>
                 </button>
               </div>
-              <div class="lecture-card">
+              <div className="lecture-card">
                 <img src="/images/video.png" alt="Lecuture Thumbnail KAICT" />
                 <button>
                   <svg
@@ -257,7 +257,7 @@ const MaryAntoinnette = () => {
                   </svg>
                 </button>
               </div>
-              <div class="lecture-card">
+              <div className="lecture-card">
                 <img src="/images/video.png" alt="Lecuture Thumbnail KAICT" />
                 <button>
                   <svg
@@ -279,19 +279,19 @@ const MaryAntoinnette = () => {
                 </button>
               </div>
             </div>
-            <h2 class="think-head"></h2>
-            <p class="think-p">
+            <h2 className="think-head"></h2>
+            <p className="think-p">
               Our training programs are led by experienced SSR practitioners,
               academics, and policymakers, who have a wealth of expertise in the
               field. They provide participants with the opportunity to learn
               from and engage with experts from around the world, while also
               benefiting from the Institute's unique location in Liberia.
             </p>
-            <p class="title-list">
+            <p className="title-list">
               Our training programs cover a range of topics related to SSR,
               including:
             </p>
-            <ul class="think-list">
+            <ul className="think-list">
               <li>
                 Understanding the role of security forces in democratic
                 governance
@@ -302,14 +302,14 @@ const MaryAntoinnette = () => {
               <li>Human rights and SSR</li>
               <li>The role of international actors in SSR</li>
             </ul>
-            <p class="think-p">
+            <p className="think-p">
               Our training programs are designed to be flexible and adaptable,
               and can be tailored to meet the specific needs of individual
               organizations and groups. They can be delivered in-person or
               online, and can be structured as one-day workshops, multi-day
               training sessions, or longer-term courses.
             </p>
-            <p class="think-p">
+            <p className="think-p">
               Whether you are a practitioner seeking to enhance your skills in
               the field of SSR, or an organization looking to build your
               capacity in this area, the SSR Think Tank at the Kofi Annan

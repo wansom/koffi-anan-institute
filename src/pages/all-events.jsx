@@ -38,7 +38,6 @@ const AllEvents = () => {
       (data) => {
         setEvents(data.events);
         setFilteredEvents(data.events);
-        console.log("daily events",data)
       }
     );
   }, []);
@@ -68,18 +67,18 @@ const AllEvents = () => {
           subtitle={"Let’s Network"}
           background={backgound}
         />
-        <section class="filter">
-          <div class="filter-container container">
-            <div class="filter-top">
-              {/* <div class="head">
+        <section className="filter">
+          <div className="filter-container container">
+            <div className="filter-top">
+              {/* <div className="head">
                         <h2>Filters</h2>
                     </div>
-                    <div class="filter-form">
+                    <div className="filter-form">
                         <form action="">
-                            <div class="form-group">
+                            <div className="form-group">
                                 <input type="text" placeholder="Date"  onfocus="(this.type='date')"/>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <select name="location" id="locations">
                                     <option value="location">Location</option>
                                     <option value="sa">South Africa</option>
@@ -90,7 +89,7 @@ const AllEvents = () => {
                                     <option value="egypt">Egypt</option>
                                   </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <select name="location" id="locations">
                                     <option value="location">Price</option>
                                     <option value="sa">South Africa</option>
@@ -101,7 +100,7 @@ const AllEvents = () => {
                                     <option value="egypt">Egypt</option>
                                   </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <select name="location" id="locations">
                                     <option value="location">Category</option>
                                     <option value="sa">South Africa</option>
@@ -112,7 +111,7 @@ const AllEvents = () => {
                                     <option value="egypt">Egypt</option>
                                   </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <select name="location" id="locations">
                                     <option value="location">Format</option>
                                     <option value="sa">South Africa</option>
@@ -123,28 +122,28 @@ const AllEvents = () => {
                                     <option value="egypt">Egypt</option>
                                   </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                <button type="submit">Filter</button>
                             </div>
                         </form>
                     </div> */}
-              <div class="tab-btns">
+              <div className="tab-btns">
                 {tabs.map((i,index)=>(
-                <button class={index==activetab?"tab active":"tab"} onClick={() => handleFilter(i,index)}>
+                <button className={index==activetab?"tab active":"tab"} onClick={() => handleFilter(i,index)}>
                 <span>{i}</span>
               </button>
                 ))}
               </div>
-              <div class="tab-slider">
-                <div class="flex items-center justify-start flex-wrap">
+              <div className="tab-slider">
+                <div className="flex items-center justify-start flex-wrap">
                   {filteredEvents.map((i) => (
                     <EventsCard  event={i}/>
                   ))}
                 </div>
               </div>
               {events.length>=6&&(
-                <div class="pagination">
-                <div class="page">
+                <div className="pagination">
+                <div className="page">
                   <svg
                     width="20"
                     height="20"
@@ -171,22 +170,22 @@ const AllEvents = () => {
                     </g>
                   </svg>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>1</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>2</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>3</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>4</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>5</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <svg
                     width="20"
                     height="20"
@@ -213,7 +212,7 @@ const AllEvents = () => {
                     </g>
                   </svg>
                 </div>
-                <div class="page more">
+                <div className="page more">
                   <span>More</span>
                 </div>
               </div>

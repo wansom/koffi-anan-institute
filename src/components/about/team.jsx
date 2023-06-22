@@ -105,7 +105,7 @@ const Team = ({ loading, staff }) => {
     setModalIsOpen(false);
   };
   return (
-    <section class="team">
+    <section className="team">
       <Modal isOpen={modalIsOpen} onClose={handleCloseModal}>
         <div className="flex items-start modal-member gap-5">
           <div className="flex flex-col justify-center items-center space-y-5 basis-1/3">
@@ -126,13 +126,13 @@ const Team = ({ loading, staff }) => {
         </div>
       </Modal>
 
-      <div class="team-container container mx-auto overflow-x-hidden">
-        <div class="team-head">
+      <div className="team-container container mx-auto overflow-x-hidden">
+        <div className="team-head">
           <p>Staff</p>
           <h1>Our Team</h1>
         </div>
         <div className="flex items-center w-full">
-          <div class="team-content flex items-center gap-3">
+          <div className="team-content flex items-center gap-3">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const Team = ({ loading, staff }) => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+               
                 className={`${!hasPreviousPage && 'hidden'} mb-3  h-6 w-6 `}
                 onClick={handlePrevPage}
               >
@@ -153,12 +153,12 @@ const Team = ({ loading, staff }) => {
             </div>
           <div className={hasNextPage?'flex gap-6 overflow-x-hidden mb-3 w-4/5':'flex gap-10 overflow-x-hidden mb-3 w-full'}>
           {currentPosts.map((i,index) => (
-              <div class="member" key={index}>
+              <div className="member" key={index}>
                 <img
                   src={i.featured_image_url}
                   alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
                 />
-                <div class="member-info">
+                <div className="member-info">
                   <div className="h-[50px] overflow-hidden">
                   <span>{i.acf.position}</span>
                   </div>
@@ -166,7 +166,7 @@ const Team = ({ loading, staff }) => {
                   <h3>{i.acf.fullname}</h3>
                   </div>
                   
-                  <p>{i.acf.description.slice(0, 100)}...</p>
+                  <p>{i.acf.description?.slice(0, 100)}...</p>
                   <a
                     onClick={() => {
                       handleOpenModal(i);

@@ -21,7 +21,6 @@ const Navbar = () => {
       (data) => {
         setNavItems(data.items);
         setLoading(false);
-        console.log(navitems[5])
       }
     );
   }, []);

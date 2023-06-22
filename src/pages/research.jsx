@@ -37,7 +37,6 @@ const ResearchProjects = () => {
       setongoing(ongoing)
       setconsultancy(consultancy)
       setloading(false);
-      console.log(courses)
      
     })
     .catch((error) => console.error(error));
@@ -56,21 +55,21 @@ fetchCompleted()
           background={background}
         />
         <main>
-          <section class="research-content">
-            <div class="research-container container">
-              <div class="research-item">
-                <div class="research-head">
+          <section className="research-content">
+            <div className="research-container container">
+              <div className="research-item">
+                <div className="research-head">
                   <h1>Ongoing Projects</h1>
                 </div>
                 {ongoing.map((i) => (
-                <div class="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                  <div class="research-status px-3">
+                <div className="research-information bg-cover bg-center" style={{backgroundImage:`url(${i.featured_image_url})`}}>
+                  <div className="research-status px-3">
                     <p>{i?.acf.project_status} Project</p>
                   </div>
                  
-                    <div class="research-card">
+                    <div className="research-card">
                       <h3>{i.acf.project_title}</h3>
-                      <p>{i?.acf.overview.slice(0,280)}...</p>
+                      <p>{i?.acf.overview?.slice(0,280)}...</p>
                       <a
                         href={`/researchProject/${i.slug}`}
                         className="flex items-center gap-1"
@@ -106,20 +105,20 @@ fetchCompleted()
               
                 </div>))}
               </div>
-              <div class="research-item">
-                <div class="research-head">
+              <div className="research-item">
+                <div className="research-head">
                   <h1>Completed Projects</h1>
                 </div>
                 {completed.map((i) => (
-                  <div class="research-information"  style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                    <div class="research-status px-3">
+                  <div className="research-information"  style={{backgroundImage:`url(${i.featured_image_url})`}}>
+                    <div className="research-status px-3">
                       <p>{i.acf.project_status} Project</p>
                     </div>
-                    <div class="research-card">
+                    <div className="research-card">
                       <h3>
                    {i.acf.project_title}
                       </h3>
-                      <p>{i?.acf.overview.slice(0, 280)}...</p>
+                      <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
                         href={`/researchProject/${i.slug}`}
                         className="flex items-center gap-1"
@@ -155,21 +154,21 @@ fetchCompleted()
                   </div>
                 ))}
               </div>
-              <div class="research-item">
-                <div class="research-head">
+              <div className="research-item">
+                <div className="research-head">
                   <h1>Consultancies</h1>
                 </div>
                 {consultancy.map((i) => (
-                  <div class="research-information "  style={{backgroundImage:`url(${i.featured_image_url})`}}>
-                    <div class="research-status px-3">
+                  <div className="research-information "  style={{backgroundImage:`url(${i.featured_image_url})`}}>
+                    <div className="research-status px-3">
                       <p className=" capitalize whitespace-nowrap">{i.acf.project_status} Project</p>
                     </div>
-                    <div class="research-card">
+                    <div className="research-card">
                       <h3>
                       {i.acf.project_title}
                       </h3>
                       <p>
-                      {i?.acf.overview.slice(0, 280)}...
+                      {i?.acf.overview?.slice(0, 280)}...
                       </p>
                       <a
                         href={`/researchProject/${i.slug}`}

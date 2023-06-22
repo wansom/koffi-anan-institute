@@ -30,7 +30,7 @@ const EventSection=()=>{
         .catch((error) => console.error(error));
         getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events/?start_date=2023-02-01').then((data)=>{
           const upcomingevents=data.events.filter((e)=>new Date(e.start_date) >new Date())
-          setEvents(upcomingevents.slice(-2))
+          setEvents(data.events?.slice(-2))
           setloading(false)
         })
       }, []);

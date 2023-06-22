@@ -11,8 +11,8 @@ const SingleOutreachProgram=()=>{
             <Navbar/>
             <main>
                 <AboutHero title={id} subtitle='Outreach Programs' background={background}/>
-                <section class="single">
-            <div class="single-outreach-container container">
+                <section className="single">
+            <div className="single-outreach-container container">
                 <p>The Kofi Annan Institute for Conflict Transformation at the University of Liberia is committed to
                     engaging with the community to promote peace and reconciliation. Through its outreach programs, the
                     institute works with local communities to develop sustainable solutions to conflict and build
@@ -21,18 +21,18 @@ const SingleOutreachProgram=()=>{
                     dialogue and understanding among individuals and groups with diverse perspectives and experiences.
                     These include workshops, seminars, and training sessions on conflict resolution, peacebuilding, and
                     related topics.</p>
-                <div class="single-outreach-cards">
-                    <div class="singe-out-card">
+                <div className="single-outreach-cards">
+                    <div className="singe-out-card">
                         <span>60+</span>
                         <br/>
                         <span>Seminars per year</span>
                     </div>
-                    <div class="singe-out-card">
+                    <div className="singe-out-card">
                         <span>711</span>
                         <br/>
                         <span>Desks donated to schools</span>
                     </div>
-                    <div class="singe-out-card">
+                    <div className="singe-out-card">
                         <span>25+</span>
                         <br/>
                         <span>Workshops per year</span>
@@ -47,9 +47,9 @@ const SingleOutreachProgram=()=>{
                     building peace and promoting reconciliation. By working together with local partners and
                     stakeholders, the institute hopes to create a more peaceful and inclusive society in Liberia and
                     beyond.</p>
-                <div class="single-gallery-slider">
-                    <div class="top-gallery">
-                        <div class="left-arrow">
+                <div className="single-gallery-slider">
+                    <div className="top-gallery">
+                        <div className="left-arrow">
                             <button>
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -65,18 +65,18 @@ const SingleOutreachProgram=()=>{
                                 </svg>
                             </button>
                         </div>
-                        <div class="slides">
-                            <div class="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In class"/>
+                        <div className="slides">
+                            <div className="single-out-slide">
+                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
                             </div>
-                            <div class="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In class"/>
+                            <div className="single-out-slide">
+                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
                             </div>
-                            <div class="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In class"/>
+                            <div className="single-out-slide">
+                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
                             </div>
                         </div>
-                        <div class="right-arrow">
+                        <div className="right-arrow">
                             <button>
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -93,66 +93,66 @@ const SingleOutreachProgram=()=>{
                             </button>
                         </div>
                     </div>
-                    <div class="bottom-gallery">
-                        <div class="dots">
-                            <div class="dot active"></div>
-                            <div class="dot"></div>
+                    <div className="bottom-gallery">
+                        <div className="dots">
+                            <div className="dot active"></div>
+                            <div className="dot"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="banner single-support about">
-            <div class="banner-mask support">
-                <div class="single-support-container container">
-                    <div class="support-form">
-                        <form  class="support" action="">
-                            <h3 class="support-title ">Support the program</h3>
-                            <div class="control-group">
+        <section className="banner single-support about">
+            <div className="banner-mask support">
+                <div className="single-support-container container">
+                    <div className="support-form">
+                        <form  className="support" action="">
+                            <h3 className="support-title ">Support the program</h3>
+                            <div className="control-group">
                                 <label for="how">Amount</label><br/>
                                 <input type="text" name="how" placeholder="USD 5.00"/>
                             </div>
-                            <div class="control-group checkbox">
-                                <label class="container-check">
+                            <div className="control-group checkbox">
+                                <label className="container-check">
                                     <input type="checkbox"/>
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                 </label>
                                 <label for="">By clicking on “Send Message” you agree to our Terms & Conditions and Privacy
                                     Statement.</label>
                             </div>
-                            <div class="control-group">
+                            <div className="control-group">
                                 <button type="submit">Attend Event</button>
                             </div>
                         </form>
                     </div>
-                    <div class="empty"></div>
+                    <div className="empty"></div>
                 </div>
             </div>
         </section>
-        <section class="outreach-card-sec">
-            <div class="outreach-card-container title container">
-                <h2 class="outreach-single-title text-center" >Outreach Programs</h2>
+        <section className="outreach-card-sec">
+            <div className="outreach-card-container title container">
+                <h2 className="outreach-single-title text-center" >Outreach Programs</h2>
             </div>
-            <div class="outreach-card-container container">
-            <div class="outreach-card">
+            <div className="outreach-card-container container">
+            <div className="outreach-card">
                     <img src="/images/outreach-program/p-3.png" alt=""/>
-                    <div class="outreach-info">
+                    <div className="outreach-info">
                         <h2>Community Engagement</h2>
                         <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
                         <a href="/outreachprogram/Community Engagement"><button>Explore Program</button></a>
                     </div>
                 </div>
-                <div class="outreach-card">
+                <div className="outreach-card">
                     <img src="/images/outreach-program/p-1.png" alt=""/>
-                    <div class="outreach-info">
+                    <div className="outreach-info">
                         <h2>Capacity Building</h2>
                         <p>Through its capacity building program, the institute provides training, resources, and support to individuals and organizations working in the field of conflict transformation and peacebuilding.</p>
                         <a href="/outreachprogram/Capacity Building"> <button>Explore Program</button></a>
                     </div>
                 </div>
-                <div class="outreach-card">
+                <div className="outreach-card">
                     <img src="/images/outreach-program/p-2.png" alt=""/>
-                    <div class="outreach-info">
+                    <div className="outreach-info">
                         <h2>Field Trips</h2>
                         <p>These field trips are designed to complement the academic curriculum and provide opportunities for students to learn from real-world examples of conflict and peacebuilding initiatives.</p>
                         <a href="/outreachprogram/Field Trips"><button>Explore Program</button></a>

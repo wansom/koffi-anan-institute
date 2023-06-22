@@ -39,7 +39,6 @@ const SingleEvent = () => {
       );
       setupcomingevents(upcomingevents);
       setevent(myevent);
-      console.log(myevent);
       setloading(false);
     });
   }, []);
@@ -52,15 +51,15 @@ const SingleEvent = () => {
         background={backgound}
       />
       <main>
-        <section class="news">
+        <section className="news">
           {loading ? (
             <p>Loading...</p>
           ) : (
-            <div class="news-container container black-history">
-              <div class="right">
-                <div class="at-glance">
-                  <h2 class="glance-title">At a glance</h2>
-                  <div class="glance-content">
+            <div className="news-container container black-history">
+              <div className="right">
+                <div className="at-glance">
+                  <h2 className="glance-title">At a glance</h2>
+                  <div className="glance-content">
                     <ul>
                       <li>
                         <span>
@@ -348,15 +347,15 @@ const SingleEvent = () => {
                         <span>+231 77 627 7932</span>
                       </li>
                     </ul>
-                    <button class="btn-attend">{new Date(event.start_date)>new Date()?'Attend Event':'Past Event'}</button>
-                    <button class="btn-download">Download Brochure</button>
+                    <button className="btn-attend">{new Date(event.start_date)>new Date()?'Attend Event':'Past Event'}</button>
+                    <button className="btn-download">Download Brochure</button>
                   </div>
                 </div>
-                <div class="side-socials">
+                <div className="side-socials">
                   <img src="images/news/side-social.png" alt="" />
-                  <div class="side-info">
-                    <div class="side-contact">
-                      <div class="icon one">
+                  <div className="side-info">
+                    <div className="side-contact">
+                      <div className="icon one">
                         <svg
                           width="25"
                           height="25"
@@ -383,13 +382,13 @@ const SingleEvent = () => {
                           </g>
                         </svg>
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h5>Call Us</h5>
                         <p>+231 77 627 7932</p>
                       </div>
                     </div>
-                    <div class="side-contact">
-                      <div class="icon two">
+                    <div className="side-contact">
+                      <div className="icon two">
                         <svg
                           width="25"
                           height="25"
@@ -416,16 +415,16 @@ const SingleEvent = () => {
                           </g>
                         </svg>
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h5>Email Us</h5>
                         <p>kofiannaninstitute@ul.edu.lr</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="side-socials">
-                  <div class="side-info">
-                    <div class="social-side-icons">
+                <div className="side-socials">
+                  <div className="side-info">
+                    <div className="social-side-icons">
                       <a href="#">
                         <svg
                           width="30"
@@ -522,38 +521,38 @@ const SingleEvent = () => {
                   </div>
                 </div>
               </div>
-              <div class="left">
-                <div class="single-news">
-                  <div class="news-thumbnail black">
+              <div className="left">
+                <div className="single-news">
+                  <div className="news-thumbnail black">
                     <img src={event.image.url} alt="" />
                   </div>
-                  <div class="black-content">
-                    <div class="black-head">
+                  <div className="black-content">
+                    <div className="black-head">
                       <h2>Overview</h2>
                     </div>
-                    <div class="black-text">
+                    <div className="black-text">
                       <p
                         dangerouslySetInnerHTML={{
                           __html: event.description,
                         }}
                       ></p>
                     </div>
-                    {/* <div class="black-head">
+                    {/* <div className="black-head">
                     <h2>Schedule</h2>
                   </div>
-                  <div class="black-event-schedule">
-                    <div class="black-schedule">
-                      <div class="top">
-                        <span class="speech-time">08:00 - 10:00 AM</span>
-                        <div class="event-blk-speaker">
+                  <div className="black-event-schedule">
+                    <div className="black-schedule">
+                      <div className="top">
+                        <span className="speech-time">08:00 - 10:00 AM</span>
+                        <div className="event-blk-speaker">
                           <img src="/images/events/blk-speaker.png" alt="" />
-                          <div class="speaker-info">
+                          <div className="speaker-info">
                             <h5>08:00 - 10:00 AM</h5>
                             <p>Co-Founder of Adanian Labs & Afya Rekod</p>
                           </div>
                         </div>
                       </div>
-                      <div class="bottom">
+                      <div className="bottom">
                         <h3>Introduction WordPress</h3>
                         <p>
                           In this session we will discuss about digital topics
@@ -563,18 +562,18 @@ const SingleEvent = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="black-schedule">
-                      <div class="top">
-                        <span class="speech-time">08:00 - 10:00 AM</span>
-                        <div class="event-blk-speaker">
+                    <div className="black-schedule">
+                      <div className="top">
+                        <span className="speech-time">08:00 - 10:00 AM</span>
+                        <div className="event-blk-speaker">
                           <img src="/images/events/blk-speaker.png" alt="" />
-                          <div class="speaker-info">
+                          <div className="speaker-info">
                             <h5>08:00 - 10:00 AM</h5>
                             <p>Co-Founder of Adanian Labs & Afya Rekod</p>
                           </div>
                         </div>
                       </div>
-                      <div class="bottom">
+                      <div className="bottom">
                         <h3>Introduction WordPress</h3>
                         <p>
                           In this session we will discuss about digital topics
@@ -584,18 +583,18 @@ const SingleEvent = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="black-schedule">
-                      <div class="top">
-                        <span class="speech-time">08:00 - 10:00 AM</span>
-                        <div class="event-blk-speaker">
+                    <div className="black-schedule">
+                      <div className="top">
+                        <span className="speech-time">08:00 - 10:00 AM</span>
+                        <div className="event-blk-speaker">
                           <img src="/images/events/blk-speaker.png" alt="" />
-                          <div class="speaker-info">
+                          <div className="speaker-info">
                             <h5>08:00 - 10:00 AM</h5>
                             <p>Co-Founder of Adanian Labs & Afya Rekod</p>
                           </div>
                         </div>
                       </div>
-                      <div class="bottom">
+                      <div className="bottom">
                         <h3>Introduction WordPress</h3>
                         <p>
                           In this session we will discuss about digital topics
@@ -605,18 +604,18 @@ const SingleEvent = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="black-schedule">
-                      <div class="top">
-                        <span class="speech-time">08:00 - 10:00 AM</span>
-                        <div class="event-blk-speaker">
+                    <div className="black-schedule">
+                      <div className="top">
+                        <span className="speech-time">08:00 - 10:00 AM</span>
+                        <div className="event-blk-speaker">
                           <img src="/images/events/blk-speaker.png" alt="" />
-                          <div class="speaker-info">
+                          <div className="speaker-info">
                             <h5>08:00 - 10:00 AM</h5>
                             <p>Co-Founder of Adanian Labs & Afya Rekod</p>
                           </div>
                         </div>
                       </div>
-                      <div class="bottom">
+                      <div className="bottom">
                         <h3>Introduction WordPress</h3>
                         <p>
                           In this session we will discuss about digital topics
@@ -627,19 +626,19 @@ const SingleEvent = () => {
                       </div>
                     </div>
                   </div> */}
-                    {/* <div class="black-head">
+                    {/* <div className="black-head">
                     <h2>Book a Ticket</h2>
                   </div>
-                  <div class="single-news-content">
-                    <div class="black-form black-event">
-                      <form class="black" action="">
-                        <div class="names">
-                          <div class="control-group name">
+                  <div className="single-news-content">
+                    <div className="black-form black-event">
+                      <form className="black" action="">
+                        <div className="names">
+                          <div className="control-group name">
                             <label for="name">First Name</label>
                             <br />
                             <input type="text" placeholder="John" />
                           </div>
-                          <div class="control-group name">
+                          <div className="control-group name">
                             <label for="name">Last Name</label>
                             <br />
                             <input
@@ -649,7 +648,7 @@ const SingleEvent = () => {
                             />
                           </div>
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                           <label for="email">Email Address</label>
                           <br />
                           <input
@@ -658,7 +657,7 @@ const SingleEvent = () => {
                             placeholder="johnkamara@gmail.com"
                           />
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                           <label for="company">Phone Number</label>
                           <br />
                           <input
@@ -667,19 +666,19 @@ const SingleEvent = () => {
                             placeholder="+254 701 611 450"
                           />
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                           <label for="how">Number of Tickets</label>
                           <br />
                           <input type="text" name="how" placeholder="1" />
                         </div>
-                        <div class="control-group checkbox">
+                        <div className="control-group checkbox">
                           <input type="checkbox" id="checkboxed" />
                           <label for="">
                             By clicking on “Send Message” you agree to our Terms
                             & Conditions and Privacy Statement.
                           </label>
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                           <button type="submit" disabled={event.start_date>=new Date()}>Attend Event</button>
                         </div>
                       </form>

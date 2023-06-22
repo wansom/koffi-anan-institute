@@ -30,7 +30,6 @@ const AllNews = () => {
       .then((posts) => {
         setNews(posts);
         setLoading(false);
-        console.log(posts);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -71,7 +70,7 @@ const AllNews = () => {
                             ></h3>
                             <p
                               dangerouslySetInnerHTML={{
-                                __html: i.content.rendered.slice(0,100),
+                                __html: i.content.rendered?.slice(0,100),
                               }}
                             ></p>
                             <a href={`/news/${i.slug}`}>

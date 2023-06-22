@@ -13,12 +13,12 @@ const Publications = () => {
         background={backgound}
       />
       <main>
-        <section class="filter">
-          <div class="filter-container container">
-            <div class="filter-top">
-              <div class="head publication">
+        <section className="filter">
+          <div className="filter-container container">
+            <div className="filter-top">
+              <div className="head publication">
                 <h2>Filters</h2>
-                <div class="pagination-numbers">
+                <div className="pagination-numbers">
                   <button>
                     <svg
                       width="14"
@@ -76,9 +76,9 @@ const Publications = () => {
                   </button>
                 </div>
               </div>
-              <div class="filter-form">
+              <div className="filter-form">
                 <form action="">
-                  <div class="form-group">
+                  <div className="form-group">
                     <select name="type" id="types">
                       <option value="type">Type</option>
                       <option value="sa">South Africa</option>
@@ -89,7 +89,7 @@ const Publications = () => {
                       <option value="egypt">Egypt</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <select name="author" id="authors">
                       <option value="author">Author</option>
                       <option value="sa">South Africa</option>
@@ -100,14 +100,14 @@ const Publications = () => {
                       <option value="egypt">Egypt</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       type="text"
                       placeholder="Date Published"
                       onfocus="(this.type='date')"
                     />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <select name="issue" id="issues">
                       <option value="issue">Issue</option>
                       <option value="sa">South Africa</option>
@@ -118,7 +118,7 @@ const Publications = () => {
                       <option value="egypt">Egypt</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <select name="region" id="regions">
                       <option value="region">Region</option>
                       <option value="sa">South Africa</option>
@@ -129,7 +129,7 @@ const Publications = () => {
                       <option value="egypt">Egypt</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <button type="submit">Filter</button>
                   </div>
                 </form>
@@ -138,10 +138,10 @@ const Publications = () => {
           </div>
         </section>
         <section>
-          <div class="published-container container">
-            <div class="published-card">
+          <div className="published-container container">
+            <div className="published-card">
               <img src="/images/publications/one.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>
                   Incomplete DDRR: A Prescription for Prolonged Fragility in
                   Liberia, In Bangura, Ibrahim (eds.) Disarmament,
@@ -153,9 +153,9 @@ const Publications = () => {
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/two.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>
                   Spaces of Exclusion: Negotiating Access to the Land Beyond the
                   Border Fence in Indian Punjab,’ In Bissonnette, Andréanne &
@@ -167,9 +167,9 @@ const Publications = () => {
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/four.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>
                   Die Gewaltunternehmener: Wie finanziert sich die somalische
                   Islamistische-Miliz al-Shabaab? [How does the Somali Islamist
@@ -180,9 +180,9 @@ const Publications = () => {
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/three.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>
                   Review of Pippa Virdee’s (2018) book From the Ashes of 1947:
                   Reimagining Punjab, Cambridge: Cambridge University Press,
@@ -194,45 +194,45 @@ const Publications = () => {
               </div>
             </div>
           
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/five.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>Commentary: India-Pakistan: Contextualising the Cancelled Talks Debacle, IPCS</h3>
                 <span>
                   by <u>Kormoll, Raphaela (2015). </u>
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/six.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>A Threat to Life and Property: Domestic Terrorism in India,’ JASON Magazine (Special Edition), 40(4), pp. 60-64.</h3>
                 <span>
                   by <u>Kormoll, Raphaela (2015)</u>
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/seven.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>Is Taiwan struggling for independence?’ JASON Magazine, 39(3), pp. 22-25.</h3>
                 <span>
                   by <u>Kormoll, Raphaela (2014).</u>
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/eight.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>‘Thailand’s Current Crisis: A Democratic Revolution?’ JASON Magazine, 39(2), pp. 36-39.</h3>
                 <span>
                   by <u>Kormoll, Raphaela (2014).</u>
                 </span>
               </div>
             </div>
-            <div class="published-card">
+            <div className="published-card">
               <img src="/images/publications/nine.png" alt="Publication" />
-              <div class="pub-info">
+              <div className="pub-info">
                 <h3>China’s Law of the Sea: The New Rules of Maritime Order</h3>
                 <span>
                   by <u>Kormoll, Raphaela (2014). </u>
@@ -241,12 +241,12 @@ const Publications = () => {
             </div>
           </div>
         </section>
-        <section class="pub-pagination">
-          <div class="pub-pagination-container container">
-            <div class="pagination-boxes">
+        <section className="pub-pagination">
+          <div className="pub-pagination-container container">
+            <div className="pagination-boxes">
               <div></div>
-              <div class="pagination">
-                <div class="page">
+              <div className="pagination">
+                <div className="page">
                   <svg
                     width="20"
                     height="20"
@@ -273,22 +273,22 @@ const Publications = () => {
                     </g>
                   </svg>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>1</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>2</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>3</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>4</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <span>5</span>
                 </div>
-                <div class="page">
+                <div className="page">
                   <svg
                     width="20"
                     height="20"
@@ -315,7 +315,7 @@ const Publications = () => {
                     </g>
                   </svg>
                 </div>
-                <div class="page more">
+                <div className="page more">
                   <span>More</span>
                 </div>
               </div>
