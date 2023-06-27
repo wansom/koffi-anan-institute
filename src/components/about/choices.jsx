@@ -9,6 +9,17 @@ const Choices = () => {
           </div>
           <div className="choice-content">
             <div className="row">
+            <div className="column choice">
+                <h3>Research</h3>
+                <p>
+                  The Institute conducts research and scholarship in the field
+                  of conflict resolution and peacebuilding, with a focus on
+                  practical applications and real-world impact. Its research
+                  informs its teaching and training activities and contributes
+                  to the broader academic and policy discourse on peace and
+                  conflict issues.
+                </p>
+              </div>
               <div className="column choice">
                 <h3>Teaching & Training</h3>
                 <p>
@@ -21,14 +32,13 @@ const Choices = () => {
                 </p>
               </div>
               <div className="column choice">
-                <h3>Research</h3>
+                <h3>Outreach Programs</h3>
                 <p>
-                  The Institute conducts research and scholarship in the field
-                  of conflict resolution and peacebuilding, with a focus on
-                  practical applications and real-world impact. Its research
-                  informs its teaching and training activities and contributes
-                  to the broader academic and policy discourse on peace and
-                  conflict issues.
+                  The Institute is committed to engaging with communities
+                  affected by conflicts and promoting dialogue and
+                  reconciliation. It works closely with local partners to
+                  develop and implement programs that address specific conflict
+                  issues and build sustainable peace.
                 </p>
               </div>
               <div className="column choice">
@@ -51,16 +61,7 @@ const Choices = () => {
                   resolution and peacebuilding more broadly.
                 </p>
               </div>
-              <div className="column choice">
-                <h3>Outreach Programs</h3>
-                <p>
-                  The Institute is committed to engaging with communities
-                  affected by conflicts and promoting dialogue and
-                  reconciliation. It works closely with local partners to
-                  develop and implement programs that address specific conflict
-                  issues and build sustainable peace.
-                </p>
-              </div>
+
               <div className="column"></div>
             </div>
           </div>
