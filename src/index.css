@@ -669,6 +669,12 @@ section.banner {
   color: #1c1b1f;
   margin: 10px auto;
   max-width: 200px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 .offer-info button {
@@ -1191,6 +1197,7 @@ section.about .banner-text p {
   line-height: 30px;
   color: #1c1b1f;
   margin: 0px 0px 5px;
+  text-align: justify;
 }
 
 .why-container .left h1 {
@@ -1211,6 +1218,8 @@ section.about .banner-text p {
   line-height: 24px;
   color: #1c1b1f;
   margin: 10px 0px;
+  text-align: justify;
+  
 }
 
 .why-checked {
@@ -1287,7 +1296,6 @@ color: #25518C;
 
 .why-container .right img {
   width: 100%;
-  min-width: 280px;
 }
 .team-container .card p{
   font-family: 'Montserrat';

@@ -11,7 +11,7 @@ export const services=[
     },
     {
         title:"Research",
-        subtitle:"We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the position of girls & women.",
+        subtitle:"At KAICT we pride ourselves with being the main research institute on peace studies and conflict transformation in Liberia. KAICT’s research – on peace, conflict, security, development and gender – focuses on key issues affecting Liberia today. Our research is locally driven and implemented in collaboration with national and international partners. It adopts interdisciplinary approaches, is based on fieldwork and practice-based. It provides local knowledge and understanding of socio-political, socio-economic and socio-cultural dynamics in Liberia and offers local solutions. ",
         image_url:"images/home/research.jpg",
         icon:'images/home/lab_research.svg',
         link:"research"

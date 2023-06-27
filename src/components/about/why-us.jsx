@@ -16,12 +16,13 @@ const WhyUs = () => {
             process until 2018 with the largest contingent of peacekeepers
             deployed thus far. 
           </p>
+          
         </div>
         <div className="right">
           <img src="images/about/team.png" alt="Why Kofi Annan Institute" />
         </div>
         <div className="my-10 px-10">
-        <p>KAICT is a center of excellence for research,
+        <p className=" text-justify">KAICT is a center of excellence for research,
             teaching, policy dialogue and community engagement on peace,
             conflict, security, gender and development that aims to contribute
             to Liberia’s national recovery, development, peace and gender
