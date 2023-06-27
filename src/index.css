@@ -4103,6 +4103,19 @@ section.filter {
 
   color: #000000;
 }
+.research-header{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  /* identical to box height, or 60px */
+
+  text-align: center;
+
+  color: #000000;
+
+}
 .all-research hr {
   border: 1px solid #9a9a9a;
   height: 0px;
