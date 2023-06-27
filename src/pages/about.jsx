@@ -9,6 +9,7 @@ import Navbar from "../components/utils/navbar";
 import backgound from "../hero/about.png";
 import { useState, useEffect } from "react";
 import { getData } from "../services";
+import KacitOverview from "../components/about/kacit-overview";
 
 const ValuesContent = () => {
   const tabs = [
@@ -130,6 +131,7 @@ const AboutRoute = () => {
       <ValuesContent />
      
       <Team loading={loading} staff={staff} />
+      <KacitOverview/>
       <ContactUs />
       <Footer />
     </div>
