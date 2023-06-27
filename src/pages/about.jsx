@@ -6,7 +6,7 @@ import WhyUs from "../components/about/why-us";
 import ContactUs from "../components/home/contact";
 import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
-import backgound from "../hero/about.png";
+import backgound from "../hero/about.jpg";
 import { useState, useEffect } from "react";
 import { getData } from "../services";
 import KacitOverview from "../components/about/kacit-overview";
