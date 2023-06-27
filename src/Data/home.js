@@ -5,14 +5,14 @@ export const services=[
     {
         title:"Teaching & Training",
         subtitle:"We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the position of girls & women.",
-        image_url:"images/home/offer-4.png",
+        image_url:"images/home/tttc.jpg",
         icon:'images/home/school.svg',
         link:"teachingandtraining"
     },
     {
         title:"Research",
         subtitle:"We also launched the Mary Antoinette Brown Sherman Think Tank, which will strengthen the position of girls & women.",
-        image_url:"images/home/offer-6.png",
+        image_url:"images/home/research.jpg",
         icon:'images/home/lab_research.svg',
         link:"research"
     },
