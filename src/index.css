@@ -816,9 +816,11 @@ section.banner {
   flex-direction: row-reverse;
 }
 
-/* .think-tank-card img {
-  width: 100%;
-} */
+.think-tank-card img {
+  width: 40%;
+  max-height: 80%;
+  object-fit: contain;
+}
 
 .think-tank-info {
   padding: 100px 0px 50px;
