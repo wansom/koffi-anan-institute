@@ -127,8 +127,9 @@ const AboutRoute = () => {
         background={backgound}
       />
       <WhyUs /> 
-      <Choices />
       <ValuesContent />
+      <Choices />
+  
      
       <Team loading={loading} staff={staff} />
       <KacitOverview/>
