@@ -57,7 +57,7 @@ const ContactUs = () => {
           <div className="title">
             <h1>Contact Us</h1>
             <p>
-              Share your idea. Introduce your Organization. Reach out to partner.
+            Share your ideas. Introduce your organization. Join Us.
             </p>
           </div>
           <div className="details">

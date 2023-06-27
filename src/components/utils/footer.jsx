@@ -6,11 +6,7 @@ const Footer = () => {
           <h4>Kofi Annan Institute for Conflict Transformation</h4>
           <p>
             {" "}
-            The Kofi Annan Institute for Conflict Transformation’s aim is to
-            produce a new generation of leaders who are dedicated to building a
-            more peaceful world. By providing the knowledge and skills necessary
-            for effective conflict transformation, the Institute is helping to
-            create a more just and equitable society.
+            The Kofi Annan Institute for Conflict Transformation aims to produce a new generation of leaders who are dedicated to building a more peaceful world. By providing the knowledge and skills necessary for effective conflict transformation, the Institute is helping to create a more just and equitable society.
           </p>
         </div>
         <div className="col two">
@@ -45,7 +41,7 @@ const Footer = () => {
       <div className="bottom-footer container">
         <p>
           Kofi Annan Institute for Conflict Transformation. Rights Reserved.
-          Copyright 2022.
+          Copyright {new Date().getFullYear()}
         </p>
       </div>
     </footer>
