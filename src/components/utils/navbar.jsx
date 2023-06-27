@@ -129,6 +129,12 @@ const Navbar = () => {
                     onClick={handleNavClick}
                   ></i>
                 )}
+                 {index == 4 && (
+                  <i
+                    className="fa-solid fa-angle-down"
+                    onClick={handleNavClick}
+                  ></i>
+                )}
               </a>
             ))}
           </div>

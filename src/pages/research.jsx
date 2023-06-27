@@ -3,7 +3,7 @@ import AboutHero from "../components/about/hero";
 import AllResearch from "../components/research-projects/all-research";
 import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
-import background from "../hero/research-program.png";
+import background from "../hero/research.jpg";
 
 const OverviewContent = () => {
   const tabs = [
@@ -112,7 +112,7 @@ const ResearchProjects = () => {
           background={background}
         />
         <div className="container mx-auto ">
-          <p className="py-6">
+          <p className="py-6 text-lg">
             At KAICT we pride ourselves with being the main research institute
             on peace studies and conflict transformation in Liberia. KAICT’s
             research – on peace, conflict, security, development and gender –
