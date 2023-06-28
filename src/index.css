@@ -4199,7 +4199,8 @@ section.filter {
 }
 
 .outreach-card-container.form {
-  justify-content: space-between;
+  justify-content: flex-start;
+
 }
 
 .outreach-card {
@@ -4210,6 +4211,7 @@ section.filter {
   background: #fcfcfc;
   border: 1px solid rgba(28, 27, 31, 0.05);
   box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);
+  margin-bottom: 20px;
 }
 
 .outreach-card img {

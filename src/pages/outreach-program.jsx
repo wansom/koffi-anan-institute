@@ -27,8 +27,8 @@ const OutreachProgram = () => {
             Liberians, national and international partners.{" "}
           </p>
         </div>
-        <section className="outreach-card-sec">
-          <div className="outreach-card-container container">
+        <section className="outreach-card-sec  container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="outreach-card">
               <img src="/images/outreach-program/p-3.png" alt="" />
               <div className="outreach-info">
@@ -93,10 +93,6 @@ const OutreachProgram = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="outreach-card-sec">
-          <div className="outreach-card-container form container">
             <div className="outreach-card">
               <img src="/images/outreach-program/p-4.png" alt="" />
               <div className="outreach-info">
@@ -126,38 +122,34 @@ const OutreachProgram = () => {
                 </a>
               </div>
             </div>
-            <div className="outreach-form">
-              <form className="outreach" action="">
-                <h2 className="out-title">Support our programs</h2>
-                <div className="control-group">
-                  <label for="intake">Outreach Programs</label>
-                  <br />
-                  <select id="intake" name="intake">
-                    <option value="intake1">Community Engagement</option>
-                    <option value="intake2">September 2023</option>
-                    <option value="intake3">Intake 3</option>
-                    <option value="intake4">Intake 4</option>
-                  </select>
-                </div>
-                <div className="control-group">
-                  <label for="company">Amount</label>
-                  <br />
-                  <input type="number" name="company" placeholder="USD 5.00" />
-                </div>
-                <div className="control-group checkbox">
-                  <label className="container-check">
-                    <input type="checkbox" />
-                    <span className="checkmark"></span>
-                  </label>
-                  <label for="">
-                    By clicking on “Send Message” you agree to our Terms &
-                    Conditions and Privacy Statement.
-                  </label>
-                </div>
-                <div className="control-group">
-                  <button type="submit">Attend Event</button>
-                </div>
-              </form>
+            <div className="outreach-card">
+              <img src="/images/outreach-program/p-4.png" alt="" />
+              <div className="outreach-info">
+                <h2>The Kofi Annan Dialogues</h2>
+                <p className="h-[210px] overflow-y-scroll">
+                  The Wednesday Seminar on Peace, Politics and Society takes
+                  place weekly during the lecture period. It is an
+                  extra-curricular information and discussion event for the
+                  student population and the interested public. It is flexible
+                  in format and can accommodate a broad range of topics on
+                  politics, economics and society. By regularly organizing the
+                  seminar, we aim to provide a space for informed and reasoned
+                  debate on issues and trends in Liberia and beyond. The event
+                  is open to diverse styles of knowledge transfer. Often,
+                  external experts or KAICT faculty present on current events or
+                  academic debates and discuss their insights with the audience.
+                  Panel discussions or student model debates are among the
+                  alternative formats. Screening and discussion of
+                  documentaries, movies or online lectures by third parties also
+                  take place within the seminar framework. The Wednesday Seminar
+                  takes place in the cozy atmosphere of the Graduate School’s
+                  grand lecture hall and attracts approximately 30 to 60
+                  visitors from the student population and the public.
+                </p>
+                <a href="outreachprogram/The Kofi Annan Dialogues">
+                  <button>Explore Program</button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
