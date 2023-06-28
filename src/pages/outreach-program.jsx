@@ -30,7 +30,7 @@ const OutreachProgram = () => {
         <section className="outreach-card-sec  container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="outreach-card">
-              <img src="/images/outreach-program/p-3.png" alt="" />
+              <img src="/images/outreach-program/p-8.jpeg" alt="" />
               <div className="outreach-info">
                 <h2>Community Engagement</h2>
                 <p className="h-[210px] overflow-y-scroll">
@@ -53,7 +53,7 @@ const OutreachProgram = () => {
               </div>
             </div>
             <div className="outreach-card">
-              <img src="/images/outreach-program/p-1.png" alt="" />
+              <img src="/images/outreach-program/p-1.jpg" alt="" />
               <div className="outreach-info">
                 <h2>Women Community Engagement</h2>
                 <p className="h-[210px] overflow-y-scroll">
@@ -94,28 +94,22 @@ const OutreachProgram = () => {
               </div>
             </div>
             <div className="outreach-card">
-              <img src="/images/outreach-program/p-4.png" alt="" />
+              <img src="/images/outreach-program/p-6.jpeg" alt="" />
               <div className="outreach-info">
-                <h2>The Kofi Annan Dialogues</h2>
+                <h2>KOFI ANNAN LIVING MEMORIAL (KALM)</h2>
                 <p className="h-[210px] overflow-y-scroll">
-                  The Wednesday Seminar on Peace, Politics and Society takes
-                  place weekly during the lecture period. It is an
-                  extra-curricular information and discussion event for the
-                  student population and the interested public. It is flexible
-                  in format and can accommodate a broad range of topics on
-                  politics, economics and society. By regularly organizing the
-                  seminar, we aim to provide a space for informed and reasoned
-                  debate on issues and trends in Liberia and beyond. The event
-                  is open to diverse styles of knowledge transfer. Often,
-                  external experts or KAICT faculty present on current events or
-                  academic debates and discuss their insights with the audience.
-                  Panel discussions or student model debates are among the
-                  alternative formats. Screening and discussion of
-                  documentaries, movies or online lectures by third parties also
-                  take place within the seminar framework. The Wednesday Seminar
-                  takes place in the cozy atmosphere of the Graduate School’s
-                  grand lecture hall and attracts approximately 30 to 60
-                  visitors from the student population and the public.
+                  The Kofi Annan Living Memorial (KALM) is a pan-African
+                  initiative to commemorate and sustain the legacy of the late
+                  UN Secretary-General. Rather than erecting a monument, the
+                  memorial consists in education initiatives seeking to promote
+                  peace and the Sustainable Development Goals. KAICT
+                  participates in the initiative through a course for Kofi Annan
+                  Young Diplomats for Conflict Prevention and the realization of
+                  the Sustainable Development Goals (SDGs). This consists in a
+                  46-hours certificate program. It targets an educated
+                  population segment, i.e. senior high school students,
+                  university students, professionals in the security sector,
+                  civil society, NGO, Government and private sector.
                 </p>
                 <a href="outreachprogram/The Kofi Annan Dialogues">
                   <button>Explore Program</button>

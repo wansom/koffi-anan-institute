@@ -75,7 +75,7 @@ const SecurityReforms=()=>{
                         </div>
                     </div>
                 </div>
-                <h2 className="think-head">Community Engagement</h2>
+                <h2 className="think-head">Training</h2>
                 <p className="think-p">At the Security Sector Reform Think Tank, we understand the importance of community
                     engagement in promoting security sector reform in Liberia. We believe that the security sector
                     should serve the interests of the community and the citizens it is meant to protect.</p>
@@ -110,7 +110,7 @@ const SecurityReforms=()=>{
                     participatory approach to security sector reform in Liberia. We believe that by working together
                     with communities, policymakers, and security sector officials, we can create a more effective and
                     accountable security sector that serves the needs of all Liberians.</p>
-                <h2 className="think-head">Public Lectures</h2>
+                <h2 className="think-head">Security Sector Reform Dialogues</h2>
                 <p className="think-p">Our public lectures cover a wide range of security-related topics, including security
                     sector reform, peacebuilding, conflict prevention, and post-conflict reconstruction. We invite
                     experts, policymakers, and practitioners from academia, government, civil society, and the private
