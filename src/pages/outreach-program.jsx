@@ -65,7 +65,7 @@ const OutreachProgram = () => {
                   gender-related interventions need to include both men and
                   women.
                 </p>
-                <a href="outreachprogram/Capacity Building">
+                <a href="outreachprogram/>Women Community Engagement">
                   {" "}
                   <button>Explore Program</button>
                 </a>

@@ -47,7 +47,7 @@ const SingleOutreachProgram=()=>{
                     building peace and promoting reconciliation. By working together with local partners and
                     stakeholders, the institute hopes to create a more peaceful and inclusive society in Liberia and
                     beyond.</p>
-                <div className="single-gallery-slider">
+                {/* <div className="single-gallery-slider">
                     <div className="top-gallery">
                         <div className="left-arrow">
                             <button>
@@ -99,10 +99,10 @@ const SingleOutreachProgram=()=>{
                             <div className="dot"></div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
-        <section className="banner single-support about">
+        {/* <section className="banner single-support about">
             <div className="banner-mask support">
                 <div className="single-support-container container">
                     <div className="support-form">
@@ -128,7 +128,7 @@ const SingleOutreachProgram=()=>{
                     <div className="empty"></div>
                 </div>
             </div>
-        </section>
+        </section> */}
         <section className="outreach-card-sec">
             <div className="outreach-card-container title container">
                 <h2 className="outreach-single-title text-center" >Outreach Programs</h2>
