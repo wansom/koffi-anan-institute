@@ -42,7 +42,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <section>
+    <section className="navbar">
       <header>
         <div className="header-container container">
           <div className="logo">
@@ -137,7 +137,7 @@ const Navbar = () => {
               </span>
             </div>
             {navitems.map((item, index) => (
-              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(item)}} >
+              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(item)}} onMouseLeave={()=>{closeSubMenu()}}>
                 {item.title}{" "}
                 {item.child_items && (
                   <i
