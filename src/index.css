@@ -155,7 +155,7 @@ nav {
   padding: 8px 16px;
   gap: 15px;
   position: absolute;
-  left: 55%;
+  left: 48%;
   animation-name: nav-dropdwon;
   animation-duration: 200ms;
   animation-timing-function: ease-in-out;

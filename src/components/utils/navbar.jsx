@@ -6,13 +6,28 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [click, setClick] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [childItems, setchildItems] = useState([]);
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-  const handleNavClick = () => setClick(!click);
-  const handleClick = (index) => {
+  const handleNavClick = (items) =>{
+    setchildItems(items)
+    setClick(!click)
+  };
+ const closeMenu=()=>{
+    setClick(!click)
+ }
+  const handleClick = (item) => {
     
-    if(index==5){
+    if(item.child_items){
+      setchildItems(item.child_items)
+        setClick(!click)   
+    }
+  };
+  const closeSubMenu = (item) => {
+    
+    if(item.child_items){
+      setchildItems([])
         setClick(!click)   
     }
   };
@@ -21,6 +36,7 @@ const Navbar = () => {
       (data) => {
         setNavItems(data.items);
         setLoading(false);
+        console.log(data.items)
       }
     );
   }, []);
@@ -121,20 +137,17 @@ const Navbar = () => {
               </span>
             </div>
             {navitems.map((item, index) => (
-              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(index)}}>
+              <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(item)}} onMouseLeave={()=>{closeSubMenu(item)}}>
                 {item.title}{" "}
-                {index == 5 && (
+                {item.child_items && (
                   <i
                     className="fa-solid fa-angle-down"
-                    onClick={handleNavClick}
+                    onClick={()=>{
+                      handleNavClick(item.child_items)
+                    }}
                   ></i>
                 )}
-                 {index == 4 && (
-                  <i
-                    className="fa-solid fa-angle-down"
-                    onClick={handleNavClick}
-                  ></i>
-                )}
+                
               </a>
             ))}
           </div>
@@ -149,10 +162,10 @@ const Navbar = () => {
         </div>
         <div
           className={classNames(click ? "hidden" : "block dropdown")}
-          onMouseLeave={handleNavClick}
+          onMouseLeave={closeMenu}
         >    
          <div> {loading?<p>Loading...</p>:<div className="flex flex-col gap-5">
-            {navitems[5]['child_items']?.map((i,index) => (
+            {childItems?.map((i,index) => (
             <NavLink
               exact
               to={i.url}
