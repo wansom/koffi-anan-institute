@@ -21,7 +21,7 @@ const SingleOutreachProgram=()=>{
                     dialogue and understanding among individuals and groups with diverse perspectives and experiences.
                     These include workshops, seminars, and training sessions on conflict resolution, peacebuilding, and
                     related topics.</p>
-                <div className="single-outreach-cards">
+                {/* <div className="single-outreach-cards">
                     <div className="singe-out-card">
                         <span>60+</span>
                         <br/>
@@ -37,7 +37,7 @@ const SingleOutreachProgram=()=>{
                         <br/>
                         <span>Workshops per year</span>
                     </div>
-                </div>
+                </div> */}
                 <p>The program also partners with local organizations and community leaders to address specific
                     challenges related to conflict and violence in the community. This includes working with youth
                     groups, women's organizations, and other community-based organizations to promote greater

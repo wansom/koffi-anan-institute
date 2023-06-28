@@ -20,7 +20,7 @@ const ResearchOne = () => {
           These include workshops, seminars, and training sessions on conflict
           resolution, peacebuilding, and related topics.
         </p>
-        <div className="grid gird-cols-1 md:grid-cols-3 my-12">
+        {/* <div className="grid gird-cols-1 md:grid-cols-3 my-12">
           <div className="stats space-y-2 flex flex-col justify-center items-center">
             <span>60+</span>
             <p>Seminars per year</p>
@@ -33,7 +33,7 @@ const ResearchOne = () => {
             <span>25+</span>
             <p>Workshops per year</p>
           </div>
-        </div>
+        </div> */}
         <p>
           The program also partners with local organizations and community
           leaders to address specific challenges related to conflict and
