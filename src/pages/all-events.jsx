@@ -141,8 +141,8 @@ const AllEvents = () => {
                   ))}
                 </div>
               </div>
-              {events.length>=6&&(
-                <div className="pagination">
+              {filteredEvents.length>=6&&(
+                <div className="pagination ">
                 <div className="page">
                   <svg
                     width="20"
