@@ -1,7 +1,7 @@
 import AboutHero from "../components/about/hero"
 import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
-import background from '../hero/security-reforms.png'
+import background from '../hero/ssr.jpg'
 
 const SecurityReforms=()=>{
     return(
