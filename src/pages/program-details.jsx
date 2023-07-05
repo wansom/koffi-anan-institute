@@ -248,19 +248,19 @@ const ProgramDetails = () => {
             <div className="prog-card">
               <div className="card-cont">
                 <span>96%</span> <br />
-                <span>Internship Rate</span>
+                <span>numbers of Students Enrolled </span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
                 <span>$ 25,000</span> <br />
-                <span>Program Cost</span>
+                <span>Gender Distribution (Male and Female Students)</span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
                 <span>85%</span> <br />
-                <span>Employment Rate</span>
+                <span>Degree Completed</span>
               </div>
             </div>
           </div>
