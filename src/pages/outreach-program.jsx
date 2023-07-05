@@ -111,7 +111,7 @@ const OutreachProgram = () => {
                   university students, professionals in the security sector,
                   civil society, NGO, Government and private sector.
                 </p>
-                <a href="outreachprogram/The Kofi Annan Dialogues">
+                <a href="outreachprogram/KOFI ANNAN LIVING MEMORIAL (KALM)">
                   <button>Explore Program</button>
                 </a>
               </div>
