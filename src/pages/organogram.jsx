@@ -12,7 +12,7 @@ const Organogram=()=>{
         title={"About Us"}
         background={backgound}
       />
-      <div className="bg-[#EFF1FB]">
+      <div className="bg-[#EFF1FB] lg:py-8">
 
       <div className="container mx-auto ">
         <div className="flex items-center flex-col justify-center psace-y-10 mt-10">
@@ -55,13 +55,13 @@ const Organogram=()=>{
           </div>
           <hr className="vertical-hr" />
           <div className="card py-6">
-            <h5>Deputy Director for Research</h5>
-            <p>Dr. Raphaela T. Kormoll</p>
+            <h5>Outreach Coordinator</h5>
+            <p>Bernard</p>
           </div>
           <hr className="vertical-hr" />
           <div className="card py-6">
-            <h5>Deputy Director for Teaching</h5>
-            <p>Vacant</p>
+            <h5>Logistician</h5>
+            <p>Padmore</p>
           </div>
           </div>
           <hr className="horizontal-hr mt-12" />
