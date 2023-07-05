@@ -671,7 +671,7 @@ section.banner {
   max-width: 200px;
   display: -webkit-box;
   -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 
   text-overflow: ellipsis;
@@ -1219,7 +1219,7 @@ section.about .banner-text p {
   color: #1c1b1f;
   margin: 10px 0px;
   text-align: justify;
-  
+
 }
 
 .why-checked {
@@ -4787,7 +4787,7 @@ h2.outreach-single-title {
 /* .research-information.one {
   background-image: url(../public//images/outreach-program/r-1.png);
 } */
-/* 
+/*
 .research-information.two {
   background-image: url(../public//images/outreach-program/r-2.png);
 }
@@ -5501,6 +5501,10 @@ p.think-p {
   line-height: 150%;
   text-align: center;
   color: #00000A;
+}
+
+.think-head {
+  color: #25518C;
 }
 
 .comm-engage {

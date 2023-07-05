@@ -18,17 +18,17 @@ const Navbar = () => {
     setClick(!click)
  }
   const handleClick = (item) => {
-    
+
     if(item.child_items){
       setchildItems(item.child_items)
-        setClick(!click)   
+        setClick(!click)
     }
   };
   const closeSubMenu = (item) => {
-    
+
     if(item.child_items){
       setchildItems([])
-        setClick(!click)   
+        setClick(!click)
     }
   };
   useEffect(() => {
@@ -45,7 +45,7 @@ const Navbar = () => {
     <section>
       <header>
         <div className="header-container container">
-          <div className="logo">
+          <div className="logo lg:ml-8">
             <img
               src="/images/home/logo.png"
               alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
@@ -107,7 +107,7 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <div className="right pad">
+              <div className="right pad lg:mr-8">
                 <p>Time:</p>
                 <p>Monday to Friday: 08:00 - 20:00</p>
               </div>
@@ -147,7 +147,7 @@ const Navbar = () => {
                     }}
                   ></i>
                 )}
-                
+
               </a>
             ))}
           </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
         <div
           className={classNames(click ? "hidden" : "block dropdown")}
           onMouseLeave={closeMenu}
-        >    
+        >
          <div> {loading?<p>Loading...</p>:<div className="flex flex-col gap-5">
             {childItems?.map((i,index) => (
             <NavLink
