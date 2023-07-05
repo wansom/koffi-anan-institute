@@ -92,6 +92,9 @@ const OrganogramSection = () => {
     </section>
   );
 };
+const TemproaryStaff=()=>{
+  
+}
 
 const AboutRoute = () => {
   const [staff, setstaff] = useState([]);

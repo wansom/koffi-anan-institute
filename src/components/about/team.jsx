@@ -210,6 +210,88 @@ const Team = ({ loading, staff }) => {
             </div>
           </div>
         </div>
+        <div className="team-head">
+          <h1>Temporary Staff</h1>
+        </div>
+        <div className="flex items-center w-full">
+          <div className="team-content flex items-center gap-3">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+               
+                className={`${!hasPreviousPage && 'hidden'} mb-3  h-6 w-6 `}
+                onClick={handlePrevPage}
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+            </div>
+          <div className={hasNextPage?'flex gap-6 overflow-x-hidden mb-3 w-4/5':'flex gap-10 overflow-x-hidden mb-3 w-full'}>
+          {currentPosts.map((i,index) => (
+              <div className="member" key={index}>
+                <img
+                  src={i.featured_image_url}
+                  alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"
+                />
+                <div className="member-info">
+                  <div className="h-[50px] overflow-hidden">
+                  <span>{i.acf.position}</span>
+                  </div>
+                  <div className="h-[55px] overflow-hidden">
+                  <h3>{i.acf.fullname}</h3>
+                  </div>
+                  
+                  <p>{i.acf.description?.slice(0, 100)}...</p>
+                  <a
+                    onClick={() => {
+                      handleOpenModal(i);
+                    }}
+                    className="cursor-pointer"
+                  >
+                    Read More{" "}
+                    <svg
+                      width="8"
+                      height="12"
+                      viewBox="0 0 8 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.4 12L0 10.6L4.6 6L0 1.4L1.4 0L7.4 6L1.4 12Z"
+                        fill="#25518C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              className={`${!hasNextPage && 'hidden'} mb-3  h-6 w-6 `}
+                onClick={handleNextPage}
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
 
         <a
           href="/organogram"
