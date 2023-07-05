@@ -188,7 +188,7 @@ const SecurityReforms=()=>{
                     training programs and how we can support your professional development in the field of SSR.</p>
             </div>
         </section>
-    </main>  
+    </main>
     <Footer/>
 </div>
     )

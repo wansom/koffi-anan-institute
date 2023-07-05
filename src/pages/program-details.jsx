@@ -39,13 +39,13 @@ const ProgramDetails = () => {
   return (
     <>
       <Navbar />
-     
+
       <AboutHero
       title={course?.acf.course_name??""}
       subtitle={"Learning & Teaching"}
       background={background}
     />
-      
+
       {/* {!course&&(
       <AboutHero
       title={course.acf.course_name??""}
@@ -70,11 +70,11 @@ const ProgramDetails = () => {
             <div className="prog-txt">
             {course&&(
               <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
-                
-              
+
+
               </p>
             )}
-              
+
 
               <p>
                 The program includes a range of courses such as conflict
@@ -248,19 +248,19 @@ const ProgramDetails = () => {
             <div className="prog-card">
               <div className="card-cont">
                 <span>96%</span> <br />
-                <span>Internship Rate</span>
+                <span>numbers of Students Enrolled </span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
                 <span>$ 25,000</span> <br />
-                <span>Program Cost</span>
+                <span>Gender Distribution (Male and Female Students)</span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
                 <span>85%</span> <br />
-                <span>Employment Rate</span>
+                <span>Degree Completed</span>
               </div>
             </div>
           </div>
@@ -398,7 +398,6 @@ const ProgramDetails = () => {
             </div>
           </div>
         </section>
-        <ProgramAppForm />
       </main>
       <Footer />
     </>

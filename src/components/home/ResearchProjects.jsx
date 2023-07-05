@@ -22,7 +22,7 @@ const ResearchProjects =()=>{
               return Promise.all(promises);
             })
             .then((courses) => {
-              setProjects(courses);    
+              setProjects(courses);
               setloading(false);
             })
             .catch((error) => console.error(error));
@@ -37,7 +37,7 @@ const ResearchProjects =()=>{
                 <p>Loading...</p>
             )}
             <div className="projects-content">
-                {projects?.slice(-2).map((project,index)=>(
+                {projects?.slice(-2).reverse().map((project,index)=>(
                 <div className="project" key={index}>
                 <img src={project.featured_image_url}></img>
                 <div className="project-info">
