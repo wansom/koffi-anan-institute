@@ -70,7 +70,7 @@ const EventSection=()=>{
                         </div>
                         <div className="bottom">
                             <h4 dangerouslySetInnerHTML={{ __html: i.title.rendered }}></h4>
-                            <p dangerouslySetInnerHTML={{ __html: i.content.rendered }}></p>
+                            <p className=" text-justify" dangerouslySetInnerHTML={{ __html: i.content.rendered }}></p>
                             
                         </div>
                     </div></a>
