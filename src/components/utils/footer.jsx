@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-container container">
+      <div className="footer-container container mx-auto">
         <div className="col one">
           <h4>Kofi Annan Institute for Conflict Transformation</h4>
           <p>
@@ -38,10 +38,13 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bottom-footer container">
+      <div className="bottom-footer container mx-auto flex justify-between items-center">
         <p>
           Kofi Annan Institute for Conflict Transformation. Rights Reserved.
           Copyright {new Date().getFullYear()}
+        </p>
+        <p>
+        Designed & Developed by <a href=" https://twafwane.com" className=" underline">Twafwane Innovations</a>
         </p>
       </div>
     </footer>
