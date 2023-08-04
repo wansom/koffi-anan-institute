@@ -2778,7 +2778,6 @@ section.courses {
 
 
 .train-course-card {
-  width: 640px;
   height: fit-content;
   background: #efecec;
   box-shadow: 0px 3px 20px rgba(2, 2, 2, 0.1);

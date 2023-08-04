@@ -32,7 +32,7 @@ const OverviewContent = () => {
   return (
     <div className="container mx-auto values-section">
       <h3 className="research-header">RESEARCH AREAS</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 my-16 px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 my-16 px-1 md:px-10">
         <div className="space-y-4">
           {tabs.map((tab, index) => (
             <div
