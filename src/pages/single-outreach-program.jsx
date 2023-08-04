@@ -135,29 +135,70 @@ const SingleOutreachProgram=()=>{
             </div>
             <div className="outreach-card-container container">
             <div className="outreach-card">
-                    <img src="/images/outreach-program/p-3.png" alt=""/>
-                    <div className="outreach-info">
-                        <h2>Community Engagement</h2>
-                        <p>The community engagement program offers a range of services and activities designed to foster dialogue and understanding among individuals and groups with diverse perspectives and experiences.</p>
-                        <a href="/outreachprogram/Community Engagement"><button>Explore Program</button></a>
-                    </div>
-                </div>
-                <div className="outreach-card">
-                    <img src="/images/outreach-program/p-1.png" alt=""/>
-                    <div className="outreach-info">
-                        <h2>Capacity Building</h2>
-                        <p>Through its capacity building program, the institute provides training, resources, and support to individuals and organizations working in the field of conflict transformation and peacebuilding.</p>
-                        <a href="/outreachprogram/Capacity Building"> <button>Explore Program</button></a>
-                    </div>
-                </div>
-                <div className="outreach-card">
-                    <img src="/images/outreach-program/p-2.png" alt=""/>
-                    <div className="outreach-info">
-                        <h2>Field Trips</h2>
-                        <p>These field trips are designed to complement the academic curriculum and provide opportunities for students to learn from real-world examples of conflict and peacebuilding initiatives.</p>
-                        <a href="/outreachprogram/Field Trips"><button>Explore Program</button></a>
-                    </div>
-                </div>
+              <img src="/images/outreach-program/p-8.jpeg" alt="" />
+              <div className="outreach-info">
+                <h2>Community Engagement</h2>
+                <p className="h-[210px] overflow-y-scroll">
+                  Dialogues, trainings and workshops with women and youth are a
+                  key part of the Kofi Annan Institute’s activities. We strongly
+                  believe that youth and women are crucial for Liberia’s
+                  reconstruction and development. To focus specifically on these
+                  two population groups is essential in a country where older
+                  men often take the front seat when it comes to public
+                  decision-making, thereby frequently underrepresenting the
+                  needs of women and future generations. The youth of today will
+                  be the leaders of tomorrow. Therefore, we need to make
+                  particular efforts to strengthen the skills of young people in
+                  the country. We do so through women’s community engagements
+                  and youth leadership trainings.{" "}
+                </p>
+                <a href="outreachprogram/Community Engagement">
+                  <button>Explore Program</button>
+                </a>
+              </div>
+            </div>
+            <div className="outreach-card">
+              <img src="/images/outreach-program/p-1.jpg" alt="" />
+              <div className="outreach-info">
+                <h2>Women Community Engagement</h2>
+                <p className="h-[210px] overflow-y-scroll">
+                  Our Women’s Community Engagements focus on a broad range of
+                  topics, from elections to peaceful conflict resolution. While
+                  most attendees of our events are women, we include some men in
+                  our sessions, as we believe that gender norms can only be
+                  changed in collaboration and not in isolation. Effective
+                  gender-related interventions need to include both men and
+                  women.
+                </p>
+                <a href="outreachprogram/>Women Community Engagement">
+                  {" "}
+                  <button>Explore Program</button>
+                </a>
+              </div>
+            </div>
+            <div className="outreach-card">
+              <img src="/images/outreach-program/p-6.jpeg" alt="" />
+              <div className="outreach-info">
+                <h2>KOFI ANNAN LIVING MEMORIAL (KALM)</h2>
+                <p className="h-[210px] overflow-y-scroll">
+                  The Kofi Annan Living Memorial (KALM) is a pan-African
+                  initiative to commemorate and sustain the legacy of the late
+                  UN Secretary-General. Rather than erecting a monument, the
+                  memorial consists in education initiatives seeking to promote
+                  peace and the Sustainable Development Goals. KAICT
+                  participates in the initiative through a course for Kofi Annan
+                  Young Diplomats for Conflict Prevention and the realization of
+                  the Sustainable Development Goals (SDGs). This consists in a
+                  46-hours certificate program. It targets an educated
+                  population segment, i.e. senior high school students,
+                  university students, professionals in the security sector,
+                  civil society, NGO, Government and private sector.
+                </p>
+                <a href="outreachprogram/KOFI ANNAN LIVING MEMORIAL (KALM)">
+                  <button>Explore Program</button>
+                </a>
+              </div>
+            </div>
             </div>
         </section>
             </main>
