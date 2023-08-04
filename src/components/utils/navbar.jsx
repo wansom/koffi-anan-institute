@@ -49,6 +49,7 @@ const Navbar = () => {
             <img
               src="/images/home/logo.png"
               alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
+              className="h-[80px] object-contain"
             ></img>
           </div>
           <div className="header-contacts">
