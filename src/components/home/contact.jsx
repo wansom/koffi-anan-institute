@@ -57,7 +57,7 @@ const ContactUs = () => {
           <div className="title">
             <h1>Contact Us</h1>
             <p>
-            Share your ideas. Introduce your organization. Join Us.
+              Share your ideas. Introduce your organization. Join Us.
             </p>
           </div>
           <div className="details">
@@ -163,14 +163,14 @@ const ContactUs = () => {
             </div>
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.800849560006!2d-10.7971845!3d6.3030638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf09f9fb1238df8f%3A0x5d5c4451b2a6c089!2sKofi%20Annan%20Institute%20for%20Conflict%20Transformation%20(KAICT)%2C%20University%20of%20Liberia!5e0!3m2!1sen!2ske!4v1685454826776!5m2!1sen!2ske"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7344501233483!2d-10.796255726742036!3d6.298583825739767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf09f94acaa3cf57%3A0x18bdf1482b6cfdd7!2sKofi%20Annan%20Institute%20for%20Conflict%20Transformation%20(KAICT)!5e0!3m2!1sen!2ske!4v1691151608937!5m2!1sen!2ske"
             width="600"
             height="450"
             allowFullScreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+         </div>
         <div className="contact-form">
           <form action="" onSubmit={handleSubmit}>
             <div className="names">
