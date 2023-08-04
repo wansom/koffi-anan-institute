@@ -2,7 +2,7 @@ const WhyUs = () => {
   return (
     <section className="why">
       <div className="why-container container mx-auto">
-        <div className="left">
+        <div className="left px-1 md:px-10">
           <p>About Us</p>
           <h1>Why the Kofi Annan Institute for Conflict Transformation</h1>
           <p>

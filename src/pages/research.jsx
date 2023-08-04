@@ -111,8 +111,8 @@ const ResearchProjects = () => {
           subtitle="Advancing Peace and Stability through Innovative Research"
           background={background}
         />
-        <div className="container mx-auto ">
-          <p className="py-6 text-lg">
+        <div className="container mx-auto">
+          <p className="py-6 text-lg md:mx-10 mx-1">
             At KAICT we pride ourselves with being the main research institute
             on peace studies and conflict transformation in Liberia. KAICT’s
             research – on peace, conflict, security, development and gender –

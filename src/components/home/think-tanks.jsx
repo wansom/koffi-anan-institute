@@ -27,7 +27,7 @@ const ThinkTanks = () => {
   }, []);
 
   return (
-    <section className="think-tanks">
+    <section className="think-tanks px-1 md:px-10">
       <div className="think-tanks-container container">
         <div className="think-head">
           <h1>Policy Engagement</h1>
