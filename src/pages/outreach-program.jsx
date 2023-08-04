@@ -28,7 +28,7 @@ const OutreachProgram = () => {
           </p>
         </div>
         <section className="outreach-card-sec  container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 px-4 md:px-10">
             <div className="outreach-card">
               <img src="/images/outreach-program/p-8.jpeg" alt="" />
               <div className="outreach-info">
@@ -71,7 +71,7 @@ const OutreachProgram = () => {
                 </a>
               </div>
             </div>
-            <div className="outreach-card">
+            {/* <div className="outreach-card">
               <img src="/images/outreach-program/p-2.png" alt="" />
               <div className="outreach-info">
                 <h2>YOUTH LEADERSHIP TRAINING PROGRAM </h2>
@@ -92,7 +92,7 @@ const OutreachProgram = () => {
                   <button>Explore Program</button>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="outreach-card">
               <img src="/images/outreach-program/p-6.jpeg" alt="" />
               <div className="outreach-info">
@@ -116,7 +116,7 @@ const OutreachProgram = () => {
                 </a>
               </div>
             </div>
-            <div className="outreach-card">
+            {/* <div className="outreach-card">
               <img src="/images/outreach-program/p-4.png" alt="" />
               <div className="outreach-info">
                 <h2>The Kofi Annan Dialogues</h2>
@@ -144,7 +144,7 @@ const OutreachProgram = () => {
                   <button>Explore Program</button>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

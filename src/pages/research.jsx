@@ -32,13 +32,13 @@ const OverviewContent = () => {
   return (
     <div className="container mx-auto values-section">
       <h3 className="research-header">RESEARCH AREAS</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 my-16 px-1 md:px-10">
-        <div className="space-y-4">
+      <div className="flex flex-col md:flex-row my-16 px-1 md:px-10">
+        <div className="space-y-4 basis-1/3">
           {tabs.map((tab, index) => (
             <div
               className={
                 index === active
-                  ? "tab pl-10 py-3 bg-[#25518C] text-[#FCFCFC]"
+                  ? "tab pl-10 py-3 bg-[#25518C] text-[#FCFCFC] "
                   : "tab pl-10 py-3 bg-[#EFF1FB] text-black"
               }
               onClick={() => {
@@ -49,7 +49,7 @@ const OverviewContent = () => {
             </div>
           ))}
         </div>
-        <div className="bg-[#25518C] p-10 text-[#FCFCFC] desc">
+        <div className="bg-[#25518C] p-10 text-[#FCFCFC] desc basis-2/3">
           { <p>{tabs[active].desc}</p>}
         </div>
       </div>
