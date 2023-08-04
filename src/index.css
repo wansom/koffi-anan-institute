@@ -808,34 +808,8 @@ section.banner {
   color: #1c1b1f;
 }
 
-/* .think-tank-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.think-tank-card {
-  display: flex;
-  height: fit-content;
-  width: 100%;
-  max-width: 584px;
-  min-width: 280px;
-  margin: 10px;
-} */
 .think-tank-card:nth-child(even) {
   flex-direction: row-reverse;
-}
-
-.think-tank-card img {
-  width: 40%;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-.think-tank-info {
-  padding: 100px 0px 50px;
-  max-width: 600px;
 }
 
 .think-tank-info h2 {

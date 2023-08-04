@@ -34,9 +34,9 @@ const ThinkTanks = () => {
         </div>
         <div className="think-tank-content">
             {posts.map((post,index)=>(
-            <div className="think-tank-card flex flex-col md:flex-row justify-evenly mb-10" key={index}>
-            <img src={post.featured_image_url} alt="Kofi Annan Institute for Conflict Transformation Think Tanks" className="basis-1/2"></img>
-            <div className="think-tank-info basis-1/2">
+            <div className="think-tank-card grid gird-cols-1 md:grid-cols-2 gap-10 mb-6" key={index}>
+            <img src={post.featured_image_url} alt="Kofi Annan Institute for Conflict Transformation Think Tanks" className="h-full object-contain md:h-[80%] w-full"></img>
+            <div className="think-tank-info">
                 <h2  dangerouslySetInnerHTML={{ __html: post.acf.title }}></h2>
                 <p dangerouslySetInnerHTML={{ __html: post.acf.overview }}></p>
                <a href={post.acf.link}> <button>Learn More</button></a>
