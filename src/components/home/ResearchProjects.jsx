@@ -38,7 +38,7 @@ const ResearchProjects =()=>{
             )}
             <div className="projects-content">
                 {projects?.slice(-2).reverse().map((project,index)=>(
-                <div className="project" key={index}>
+                <div className="project h-[834px] md:h-[694px]" key={index}>
                 <img src={project.featured_image_url}></img>
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>
