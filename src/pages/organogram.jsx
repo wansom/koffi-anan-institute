@@ -56,12 +56,12 @@ const Organogram=()=>{
           <hr className="vertical-hr" />
           <div className="card py-6">
             <h5>Outreach Coordinator</h5>
-            <p>Bernard</p>
+            <p>Ms. Lusu K. T. Bernard</p>
           </div>
           <hr className="vertical-hr" />
           <div className="card py-6">
             <h5>Logistician</h5>
-            <p>Padmore</p>
+            <p>Mr. Titus A. Padmore</p>
           </div>
           </div>
           <hr className="horizontal-hr mt-12" />
