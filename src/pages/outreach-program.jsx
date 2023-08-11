@@ -47,7 +47,7 @@ const OutreachProgram = () => {
                   the country. We do so through women’s community engagements
                   and youth leadership trainings.{" "}
                 </p>
-                <a href="outreachprogram/Community Engagement">
+                <a href="/outreachprogram/Community Engagement">
                   <button>Explore Program</button>
                 </a>
               </div>
@@ -65,7 +65,7 @@ const OutreachProgram = () => {
                   gender-related interventions need to include both men and
                   women.
                 </p>
-                <a href="outreachprogram/>Women Community Engagement">
+                <a href="/outreachprogram/>Women Community Engagement">
                   {" "}
                   <button>Explore Program</button>
                 </a>
@@ -111,7 +111,7 @@ const OutreachProgram = () => {
                   university students, professionals in the security sector,
                   civil society, NGO, Government and private sector.
                 </p>
-                <a href="outreachprogram/KOFI ANNAN LIVING MEMORIAL (KALM)">
+                <a href="/outreachprogram/KOFI ANNAN LIVING MEMORIAL (KALM)">
                   <button>Explore Program</button>
                 </a>
               </div>
