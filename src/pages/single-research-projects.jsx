@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 const SingleResearchProject=()=>{
     const [events, setEvents] = useState([]);
     const [activetab, setactivetab] = useState(0);
+    const [research,setResearch]=useState(null)
     const { id } = useParams();
     const monthNames = [
       "Jan",
@@ -31,6 +32,26 @@ const SingleResearchProject=()=>{
             setEvents(data.events);
           }
         );
+        fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
+        .then((response) => response.json())
+        .then((posts) => {
+          const promises = posts.map((post) => {
+            return fetch(
+              `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+            )
+              .then((response) => response.json())
+              .then((media) => {
+                post.featured_image_url = media.source_url;
+                return post;
+              });
+          });
+          return Promise.all(promises);
+        })
+        .then((posts) => {
+          const currentIndex = posts.find((item) => item.acf.project_title === id);
+          setResearch(currentIndex)
+        })
+        .catch((error) => console.error(error));
       }, []);
     return (
         <div>
@@ -43,9 +64,7 @@ const SingleResearchProject=()=>{
                     <h3>Overview</h3>
                 </div>
                 <div className="single-research-text">
-                    <p>The research project involves a comprehensive study of the experiences and perspectives of young people in Liberia, including their social, economic, political, and cultural contexts. The project uses a participatory approach, involving young people in all aspects of the research process, from design to implementation to analysis.</p>
-                    <p>Through this project, the Kofi Annan Institute for Conflict Transformation seeks to contribute to the development of evidence-based policy and programming on youth resilience in Liberia. The project will also provide opportunities for young people to share their experiences and perspectives, promoting their participation and engagement in decision-making processes.</p>
-                    <p>The research project is expected to generate new insights into the factors that contribute to the resilience of young people in Liberia, as well as the strategies that can be used to build collaborative resilience. The project is also expected to contribute to the development of a more comprehensive and integrated approach to youth programming in Liberia, addressing the complex challenges that young people face in a holistic and collaborative way.</p>
+                    <p>{research?.acf.overview}</p>
                 </div>
                 <div className="single-research-head">
                     <h3>Collaborators</h3>
