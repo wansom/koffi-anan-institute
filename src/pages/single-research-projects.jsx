@@ -5,10 +5,12 @@ import background from '../hero/research-program.png'
 import { useState, useEffect } from "react";
 import { getData } from "../services";
 import EventsCard from "../components/events/events-card";
+import { useParams } from 'react-router-dom';
 
 const SingleResearchProject=()=>{
     const [events, setEvents] = useState([]);
     const [activetab, setactivetab] = useState(0);
+    const { id } = useParams();
     const monthNames = [
       "Jan",
       "Feb",
@@ -34,7 +36,7 @@ const SingleResearchProject=()=>{
         <div>
             <Navbar/>
             <main>
-            <AboutHero title={'Hope for a Better Future: Building Collaborative Resilience for Youth in Liberia'} subtitle='Research Projects' background={background}/>
+            <AboutHero title={id} subtitle='Research Projects' background={background}/>
             <section className="single-research">
             <div className="single-research-container container">
                 <div className="single-research-head">

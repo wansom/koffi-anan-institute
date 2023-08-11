@@ -91,6 +91,7 @@ const ResearchProjects = () => {
         let consultancy = courses.filter(
           (course) => course.acf.project_status === "consultancy"
         );
+        console.log(completed,ongoing,consultancy)
         setcompleted(completed);
         setongoing(ongoing);
         setconsultancy(consultancy);
@@ -145,7 +146,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.slug}`}
+                        href={`/researchProject/${i.acf.project_title}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
@@ -195,7 +196,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.slug}`}
+                        href={`/researchProject/${i.acf.project_title}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
@@ -247,7 +248,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.slug}`}
+                        href={`/researchProject/${i.acf.project_title}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
