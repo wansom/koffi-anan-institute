@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-container container mx-auto">
+      <div className="footer-container container mx-auto flex flex-col md:flex-row justify-between items-start">
         <div className="col one">
           <h4>Kofi Annan Institute for Conflict Transformation</h4>
           <p>

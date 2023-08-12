@@ -1041,12 +1041,12 @@ footer {
   background: #25518c;
 }
 
-.footer-container {
+/* .footer-container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} */
 
 .col {
   width: 100%;
@@ -1062,7 +1062,7 @@ footer {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 610;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 36px;
   color: #fcfcfc;
   margin: 10px 0px;
