@@ -11,7 +11,7 @@ const SecurityReforms=()=>{
 
         <AboutHero title={'Security Reform Think Tank'} subtitle={'Think Tank'} background={background}></AboutHero>
         <section className="think-single">
-            <div className="think-single-container container">
+            <div className="think-single-container container mx-auto px-5">
                 <h2 className="think-head">Overview</h2>
                 <p className="think-p">Welcome to the Research section of the Security Sector Reform (SSR) Think Tank at the
                     Kofi Annan Institute for Conflict Transformation, University of Liberia. The SSR Think Tank is

@@ -14,7 +14,7 @@ const MaryAntoinnette = () => {
           background={background}
         ></AboutHero>
         <section className="think-single">
-          <div className="think-single-container container">
+          <div className="think-single-container container mx-auto px-5">
             <h2 className="think-head">Overview</h2>
             <p className="think-p">
               The Mary Antoinette Brown Sherman Think Tank (MABSTT) is the
