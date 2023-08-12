@@ -10,6 +10,7 @@ import backgound from "../hero/about.jpg";
 import { useState, useEffect } from "react";
 import { getData } from "../services";
 import KacitOverview from "../components/about/kacit-overview";
+import TemproaryStaff from "../components/about/temporary-staff";
 
 const ValuesContent = () => {
   const tabs = [
@@ -93,13 +94,11 @@ const OrganogramSection = () => {
     </section>
   );
 };
-const TemproaryStaff=()=>{
-  
-}
 
 const AboutRoute = () => {
   const [staff, setstaff] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [temproaryStaff,setTemporaryStaff]=useState([])
 
   useEffect(() => {
     fetch("https://kacit.twafwane.com/wp-json/wp/v2/staff")
@@ -121,6 +120,26 @@ const AboutRoute = () => {
         setstaff(posts);
       })
       .catch((error) => console.error(error));
+      fetch("https://kacit.twafwane.com/wp-json/wp/v2/temporary_staff")
+      .then((response) => response.json())
+      .then((posts) => {
+        const promises = posts.map((post) => {
+          return fetch(
+            `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
+          )
+            .then((response) => response.json())
+            .then((media) => {
+              post.featured_image_url = media.source_url;
+              return post;
+            });
+        });
+        return Promise.all(promises);
+      })
+      .then((posts) => {
+        console.log(posts)
+        setTemporaryStaff(posts);
+      })
+      .catch((error) => console.error(error));
   }, []);
   return (
     <div>
@@ -134,6 +153,7 @@ const AboutRoute = () => {
       <ValuesContent />
       <Choices />     
       <Team loading={loading} staff={staff} />
+      <TemproaryStaff loading={loading} staff={temproaryStaff}/>
       <KacitOverview/>
       <ContactUs />
       <Footer />

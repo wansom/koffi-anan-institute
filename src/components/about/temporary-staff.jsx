@@ -67,7 +67,7 @@ function Modal({ isOpen, onClose, children }) {
   );
 }
 
-const Team = ({ loading, staff }) => {
+const TemproaryStaff = ({ loading, staff }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeMember, setactiveMember] = useState(null);
 
@@ -128,8 +128,7 @@ const Team = ({ loading, staff }) => {
 
       <div className="team-container container mx-auto overflow-x-hidden">
         <div className="team-head">
-          <p>Staff</p>
-          <h1>Our Team</h1>
+          <h1>Temporary Staff</h1>
         </div>
         <div className="flex items-center w-full">
           <div className="team-content flex items-center gap-3">
@@ -210,8 +209,15 @@ const Team = ({ loading, staff }) => {
             </div>
           </div>
         </div>
+
+        <a
+          href="/organogram"
+          className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white cursor-pointer"
+        >
+          View Organogram
+        </a>
       </div>
     </section>
   );
 };
-export default Team;
+export default TemproaryStaff;
