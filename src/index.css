@@ -2900,13 +2900,6 @@ section.program-info.bottom {
   text-align: justify;
 }
 
-.curriculum {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .prog-txt.left,
 .prog-txt.right {
   width: 100%;

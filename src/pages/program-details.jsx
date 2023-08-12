@@ -56,18 +56,18 @@ const ProgramDetails = () => {
 
       <main>
         <section className="program-info top">
-          <div className="prog-info-container container">
-            <div className="prog-btn">
+          <div className="prog-info-container container mx-auto">
+            {/* <div className="prog-btn">
               <button>Course Details</button>
               <button>Curriculum</button>
               <button>Entry Requirements</button>
               <button>Fees & Funding</button>
               <button>How to Apply</button>
-            </div>
-            <div className="prog-head">
+            </div> */}
+            <div className="prog-head px-5 md:px-10">
               <h2>Course Details</h2>
             </div>
-            <div className="prog-txt">
+            <div className="prog-txt px-5 md:px-10 ">
             {course&&(
               <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
 
@@ -98,10 +98,10 @@ const ProgramDetails = () => {
               </p>
               <button className="btn-brochure">Download Brochure</button>
             </div>
-            <div className="prog-head">
+            <div className="prog-head px-5 md:px-10">
               <h2>Curriculum</h2>
             </div>
-            <div className="curriculum">
+            <div className="curriculum px-5 md:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
               <div className="left prog-txt">
                 <p>
                   Throughout the program, students may also have the opportunity
@@ -187,7 +187,7 @@ const ProgramDetails = () => {
                 </table>
               </div>
             </div>
-            <div className="prog-required">
+            <div className="prog-required px-5 md:px-10 ">
               <div className="prog-head">
                 <h2>Entry Requirements</h2>
               </div>
@@ -267,10 +267,10 @@ const ProgramDetails = () => {
         </section>
         <section className="program-info bottom">
           <div className="prog-info-container next container">
-            <div className="prog-head">
+            <div className="prog-head px-5 md:px-10">
               <h2>Fees & Funding</h2>
             </div>
-            <div className="curriculum">
+            <div className="curriculum flex flex-col md:flex-row items-start justify-between gap-10 px-5 md:px-10">
               <div className="left prog-txt">
                 <p>
                   The fees for the Master's Degree program in Conflict
@@ -307,10 +307,7 @@ const ProgramDetails = () => {
                   the Master's Degree program in Conflict Transformation and
                   Peacebuilding.
                 </p>
-                <div className="btn-curri">
-                  <button>Explore Scholarships</button>
-                  <button>Explore Financial Aid</button>
-                </div>
+                
               </div>
               <div className="right prog-txt">
                 <table>
@@ -337,14 +334,18 @@ const ProgramDetails = () => {
                     </tr>
                   </tbody>
                 </table>
+                <div className="btn-curri">
+                  <button>Explore Scholarships</button>
+                  <button>Explore Financial Aid</button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="prog-info-container next-to container">
-            <div className="prog-head">
-              <h2 className="right-text">Application Deadlines</h2>
+          <div className="prog-info-container next-to container mx-auto ">
+            <div className="prog-head px-5 lg:px-10">
+              <h2 className="text-start">Application Deadlines</h2>
             </div>
-            <div className="curriculum">
+            <div className="curriculum px-5 lg:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
               <div className="right prog-txt">
                 <table className="bottom">
                   <tbody>
