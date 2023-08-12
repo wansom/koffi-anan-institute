@@ -33,6 +33,7 @@ const ValuesContent = () => {
         <div className="space-y-4">
           {tabs.map((tab, index) => (
             <div
+            key={index}
               className={
                 index === active
                   ? "tab pl-10 py-3 bg-[#25518C] text-[#FCFCFC]"
