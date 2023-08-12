@@ -59,7 +59,7 @@ const SingleResearchProject=()=>{
             <main>
             <AboutHero title={id} subtitle='Research Projects' background={background}/>
             <section className="single-research">
-            <div className="single-research-container container">
+            <div className="single-research-container container mx-auto px-5">
                 <div className="single-research-head">
                     <h3>Overview</h3>
                 </div>
