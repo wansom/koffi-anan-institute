@@ -7,242 +7,268 @@ import { getData } from "../services";
 import EventsCard from "../components/events/events-card";
 import { useParams } from 'react-router-dom';
 
-const SingleResearchProject=()=>{
+const SingleResearchProject = () => {
     const [events, setEvents] = useState([]);
     const [activetab, setactivetab] = useState(0);
-    const [research,setResearch]=useState(null)
+    const [research, setResearch] = useState(null)
     const { id } = useParams();
     const monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "June",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
     ];
+    async function fetchData() {
+        fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
+            .then((response) => response.json())
+            .then((posts) => {
+                const mediaPromises = posts.map((post) => {
+                    return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
+                        .then((response) => response.json())
+                        .then((media) => {
+                            post.featured_image_url = media.source_url;
+                            return post;
+                        });
+                });
+
+                return Promise.all(mediaPromises);
+            })
+            .then((postsWithMedia) => {
+                const collaboratorPromises = postsWithMedia.map((post) => {
+                    if (post.acf.collaborators && post.acf.collaborators.length > 0) {
+                        return Promise.all(
+                            post.acf.collaborators.map((collabId) => {
+                                return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/collaborators/${collabId}`)
+                                    .then((response) => response.json())
+                                    .then((collaboratorData) => {
+                                        if (collaboratorData.acf?.logo) {
+                                            return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${collaboratorData.acf.logo}`)
+                                                .then((response) => response.json())
+                                                .then((media) => {
+                                                    collaboratorData.featured_image_url = media.source_url;
+                                                    return collaboratorData;
+                                                });
+                                        } else {
+                                            return collaboratorData;
+                                        }
+                                    });
+                            })
+                        ).then((collaboratorsForPost) => {
+                            post.collaborators = collaboratorsForPost;
+                            return post;
+                        });
+                    } else {
+                        return Promise.resolve(post);
+                    }
+                });
+
+                return Promise.all(collaboratorPromises);
+            })
+            .then((postsWithCollaborators) => {
+
+                const currentIndex = postsWithCollaborators.find((item) => item.acf.project_title === id);
+                setResearch(currentIndex);
+            })
+            .catch((error) => console.error(error));
+    }
+
+
+
+
     useEffect(() => {
         getData("https://kacit.twafwane.com/wp-json/tribe/events/v1/events").then(
-          (data) => {
-            setEvents(data.events);
-          }
+            (data) => {
+                setEvents(data.events);
+            }
         );
-        fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
-        .then((response) => response.json())
-        .then((posts) => {
-          const promises = posts.map((post) => {
-            return fetch(
-              `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
-            )
-              .then((response) => response.json())
-              .then((media) => {
-                post.featured_image_url = media.source_url;
-                return post;
-              });
-          });
-          return Promise.all(promises);
-        })
-        .then((posts) => {
-          const currentIndex = posts.find((item) => item.acf.project_title === id);
-          setResearch(currentIndex)
-        })
-        .catch((error) => console.error(error));
-      }, []);
+        fetchData();
+    }, []);
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <main>
-            <AboutHero title={id} subtitle='Research Projects' background={background}/>
-            <section className="single-research">
-            <div className="single-research-container container mx-auto px-5">
-                <div className="single-research-head">
-                    <h3>Overview</h3>
-                </div>
-                <div className="single-research-text">
-                    <p>{research?.acf.overview}</p>
-                </div>
-                <div className="single-research-head">
-                    <h3>Collaborators</h3>
-                </div>
-                <div className="team-container container">
-                    <div className="team-content research flex">
-                        <div className="member">
-                            <img src="/images/about/member-one.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div className="member-info">
-                                <span>Chancellor & Lecturer</span>
-                                <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
-                            </div>
-                        </div>
-                        <div className="member">
-                            <img src="/images/about/member-two.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div className="member-info">
-                                <span>Chancellor & Lecturer</span>
-                                <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
-                            </div>
-                        </div>
-                        <div className="member">
-                            <img src="/images/about/member-one.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div className="member-info">
-                                <span>Chancellor & Lecturer</span>
-                                <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
-                            </div>
-                        </div>
-                        <div className="member">
-                            <img src="/images/about/member-two.png" alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member"/>
-                            <div className="member-info">
-                                <span>Chancellor & Lecturer</span>
-                                <h3>Prof. Dr. Michael Simonds, Ph.D</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="single-research-head">
-                    <h3>Project Goals</h3>
-                </div>
-                <div className="single-research-text">
-                    <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p>
-                </div>
-                <div className="single-research-cards">
-                    <div className="single-research-card">
-                        <h1>1.</h1>
-                        <p>Examine the impact of conflict and violence on the lives of Liberian youth, including their physical and emotional well-being, social relationships, and access to education and employment opportunities.</p>
-                    </div>
-                    <div className="single-research-card">
-                        <h1>2.</h1>
-                        <p>Identify the factors that contribute to the resilience of Liberian youth in the face of conflict and violence, including individual coping strategies, community support systems, and access to resources and services.</p>
-                    </div>
-                    <div className="single-research-card">
-                        <h1>3.</h1>
-                        <p>Develop recommendations for policymakers, practitioners, and community leaders on strategies for building collaborative resilience among Liberian youth and promoting their participation in peacebuilding and development initiatives.</p>
-                    </div>
-                </div>
-                <div className="single-research-head">
-                    <h3>Research Meethods</h3>
-                </div>
-                <div className="single-research-text">
-                    <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
-                </div>
-                <div className="method-cards">
-                    <div className="methods">
-                        <div className="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                        <div className="method-height"></div>
-                    </div>
-                    <div className="methods">
-                        <div className="method-height"></div>
-                        <div className="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                    </div>
-                    <div className="methods">
-                        <div className="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                        <div className="method-height"></div>
-                    </div>
-                    <div className="methods">
-                        <div className="method-height"></div>
-                        <div className="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                    </div>
-                    <div className="methods">
-                        <div className="method-card">
-                            <h4>Literature Review</h4>
-                            <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                        </div>
-                        <div className="method-height"></div>
-                    </div>
-                </div>
-                <div className="single-outcome">
-                    <div className="left">
+                <AboutHero title={id} subtitle='Research Projects' background={background} />
+                <section className="single-research">
+                    <div className="single-research-container container mx-auto px-5">
                         <div className="single-research-head">
-                            <h3>Project Outcomes</h3>
+                            <h3>Overview</h3>
                         </div>
-                        <div className="single-research-text listing">
-                            <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
-                            <div className="outcome-listings">
-                                <div className="single-listing">
-                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_772_640)">
-                                        <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404"/>
-                                        </g>
-                                        </svg>
-                                        </span>
-                                    <p className="listing">Identify the challenges faced by Liberian youth in relation to conflict and violence, as well as their coping strategies and community support systems.</p>
+                        <div className="single-research-text">
+                            <p>{research?.acf.overview}</p>
+                        </div>
+                        {research?.collaborators && (
+                            <>
+                                <div className="single-research-head">
+                                    <h3>Collaborators</h3>
                                 </div>
-                                <div className="single-listing">
-                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_772_640)">
-                                        <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404"/>
-                                        </g>
-                                        </svg>
-                                        </span>
-                                    <p className="listing">Identify the factors that contribute to the resilience of Liberian youth and their participation in peacebuilding and development initiatives.</p>
+                                <div className="team-container container">
+                                    <div className="team-content research flex">
+                                        {research?.collaborators.map((i)=>(
+                                             <div className="member">
+                                             <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
+                                             <div className="member-info">
+                                                 <span>{i.acf.name}</span>
+                                                
+                                             </div>
+                                         </div>
+                                        ))}
+                                       
+                                    </div>
                                 </div>
-                                <div className="single-listing">
-                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_772_640)">
-                                        <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404"/>
-                                        </g>
-                                        </svg>
-                                        </span>
-                                    <p className="listing">Provide evidence-based recommendations for policymakers and practitioners on strategies for building the resilience of Liberian youth and promoting their active participation in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="single-listing">
-                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_772_640)">
-                                        <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404"/>
-                                        </g>
-                                        </svg>
-                                        </span>
-                                    <p className="listing">Increase awareness and understanding of the experiences and perspectives of Liberian youth in relation to conflict and violence, as well as the importance of their participation in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="single-listing">
-                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_772_640)">
-                                        <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404"/>
-                                        </g>
-                                        </svg>
-                                        </span>
-                                    <p className="listing">Establish partnerships and collaborations with stakeholders in Liberia, including policymakers, practitioners, and community leaders, to implement evidence-based policies and programs that promote the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
-                                </div>
+                            </>
+                        )}
+
+
+                        <div className="single-research-head">
+                            <h3>Project Goals</h3>
+                        </div>
+                        <div className="single-research-text">
+                            <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p>
+                        </div>
+                        <div className="single-research-cards">
+                            <div className="single-research-card">
+                                <h1>1.</h1>
+                                <p>Examine the impact of conflict and violence on the lives of Liberian youth, including their physical and emotional well-being, social relationships, and access to education and employment opportunities.</p>
+                            </div>
+                            <div className="single-research-card">
+                                <h1>2.</h1>
+                                <p>Identify the factors that contribute to the resilience of Liberian youth in the face of conflict and violence, including individual coping strategies, community support systems, and access to resources and services.</p>
+                            </div>
+                            <div className="single-research-card">
+                                <h1>3.</h1>
+                                <p>Develop recommendations for policymakers, practitioners, and community leaders on strategies for building collaborative resilience among Liberian youth and promoting their participation in peacebuilding and development initiatives.</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="right">
-                        <img src="/images/outreach-program/program-outcome.png" alt=""/>
-                    </div>
-                </div>
-                {/* <div className="single-research-head">
+                        <div className="single-research-head">
+                            <h3>Research Meethods</h3>
+                        </div>
+                        <div className="single-research-text">
+                            <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
+                        </div>
+                        <div className="method-cards">
+                            <div className="methods">
+                                <div className="method-card">
+                                    <h4>Literature Review</h4>
+                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                                </div>
+                                <div className="method-height"></div>
+                            </div>
+                            <div className="methods">
+                                <div className="method-height"></div>
+                                <div className="method-card">
+                                    <h4>Literature Review</h4>
+                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                                </div>
+                            </div>
+                            <div className="methods">
+                                <div className="method-card">
+                                    <h4>Literature Review</h4>
+                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                                </div>
+                                <div className="method-height"></div>
+                            </div>
+                            <div className="methods">
+                                <div className="method-height"></div>
+                                <div className="method-card">
+                                    <h4>Literature Review</h4>
+                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                                </div>
+                            </div>
+                            <div className="methods">
+                                <div className="method-card">
+                                    <h4>Literature Review</h4>
+                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
+                                </div>
+                                <div className="method-height"></div>
+                            </div>
+                        </div>
+                        <div className="single-outcome">
+                            <div className="left">
+                                <div className="single-research-head">
+                                    <h3>Project Outcomes</h3>
+                                </div>
+                                <div className="single-research-text listing">
+                                    <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
+                                    <div className="outcome-listings">
+                                        <div className="single-listing">
+                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_772_640)">
+                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                </g>
+                                            </svg>
+                                            </span>
+                                            <p className="listing">Identify the challenges faced by Liberian youth in relation to conflict and violence, as well as their coping strategies and community support systems.</p>
+                                        </div>
+                                        <div className="single-listing">
+                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_772_640)">
+                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                </g>
+                                            </svg>
+                                            </span>
+                                            <p className="listing">Identify the factors that contribute to the resilience of Liberian youth and their participation in peacebuilding and development initiatives.</p>
+                                        </div>
+                                        <div className="single-listing">
+                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_772_640)">
+                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                </g>
+                                            </svg>
+                                            </span>
+                                            <p className="listing">Provide evidence-based recommendations for policymakers and practitioners on strategies for building the resilience of Liberian youth and promoting their active participation in peacebuilding and development initiatives.</p>
+                                        </div>
+                                        <div className="single-listing">
+                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_772_640)">
+                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                </g>
+                                            </svg>
+                                            </span>
+                                            <p className="listing">Increase awareness and understanding of the experiences and perspectives of Liberian youth in relation to conflict and violence, as well as the importance of their participation in peacebuilding and development initiatives.</p>
+                                        </div>
+                                        <div className="single-listing">
+                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_772_640)">
+                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                </g>
+                                            </svg>
+                                            </span>
+                                            <p className="listing">Establish partnerships and collaborations with stakeholders in Liberia, including policymakers, practitioners, and community leaders, to implement evidence-based policies and programs that promote the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="right">
+                                <img src="/images/outreach-program/program-outcome.png" alt="" />
+                            </div>
+                        </div>
+                        {/* <div className="single-research-head">
                     <h3>Publications</h3>
                 </div> */}
-                {/* <div className="publications-research">
+                        {/* <div className="publications-research">
                     <div className="content-info">
                         <div className="year">
                             2016
@@ -475,19 +501,19 @@ const SingleResearchProject=()=>{
                         </div>
                     </div>
                 </div> */}
-                <div className="single-research-head">
-                    <h3>Events</h3>
-                </div>
-                <div className="black-events events">
-                    {events.map((i)=>(
-                 <EventsCard event={i}></EventsCard>
-                    ))}
+                        <div className="single-research-head">
+                            <h3>Events</h3>
+                        </div>
+                        <div className="black-events events">
+                            {events.map((i) => (
+                                <EventsCard event={i}></EventsCard>
+                            ))}
 
-                </div>
-            </div>
-        </section>
+                        </div>
+                    </div>
+                </section>
             </main>
-         <Footer/>
+            <Footer />
         </div>
     )
 }
