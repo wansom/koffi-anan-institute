@@ -117,7 +117,10 @@ const AboutRoute = () => {
         return Promise.all(promises);
       })
       .then((posts) => {
-        setstaff(posts);
+        const allStaff=posts
+        const firstStaff= allStaff.shift()
+        allStaff.push(firstStaff)
+        setstaff(allStaff);
       })
       .catch((error) => console.error(error));
       fetch("https://kacit.twafwane.com/wp-json/wp/v2/temporary_staff")
@@ -136,7 +139,6 @@ const AboutRoute = () => {
         return Promise.all(promises);
       })
       .then((posts) => {
-        console.log(posts)
         setTemporaryStaff(posts);
       })
       .catch((error) => console.error(error));
