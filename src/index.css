@@ -1489,7 +1489,7 @@ section.choices {
 
 section.team {
   background: #eff1fb;
-  padding: 60px 0px;
+  padding: 20px 0px;
 }
 
 .team-head {
@@ -1530,6 +1530,8 @@ section.team {
 
 .team-content .member img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .team-content .member-info {
