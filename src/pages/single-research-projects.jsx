@@ -6,11 +6,13 @@ import { useState, useEffect } from "react";
 import { getData } from "../services";
 import EventsCard from "../components/events/events-card";
 import { useParams } from 'react-router-dom';
+import DOMParser from 'dom-parser';
 
 const SingleResearchProject = () => {
     const [events, setEvents] = useState([]);
     const [activetab, setactivetab] = useState(0);
     const [research, setResearch] = useState(null)
+    const [projectgoals,setprojectgoals]=useState([])
     const { id } = useParams();
     const monthNames = [
         "Jan",
@@ -26,6 +28,13 @@ const SingleResearchProject = () => {
         "Nov",
         "Dec",
     ];
+    const htmlToListItems = (html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const listItems = doc.getElementsByTagName('li');
+    
+        return Array.from(listItems).map(li => li.textContent);
+    };
     async function fetchData() {
         fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
             .then((response) => response.json())
@@ -38,7 +47,6 @@ const SingleResearchProject = () => {
                             return post;
                         });
                 });
-
                 return Promise.all(mediaPromises);
             })
             .then((postsWithMedia) => {
@@ -75,6 +83,11 @@ const SingleResearchProject = () => {
             .then((postsWithCollaborators) => {
 
                 const currentIndex = postsWithCollaborators.find((item) => item.acf.project_title === id);
+                console.log(currentIndex)
+                const postContent = currentIndex.acf.project_; // Adjust this path as necessary based on the WordPress API response structure
+                const parsedItems = htmlToListItems(postContent);
+               
+                setprojectgoals(parsedItems)
                 setResearch(currentIndex);
             })
             .catch((error) => console.error(error));
@@ -116,7 +129,6 @@ const SingleResearchProject = () => {
                                              <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
                                              <div className="member-info">
                                                  <span>{i.acf.name}</span>
-                                                
                                              </div>
                                          </div>
                                         ))}
@@ -131,21 +143,17 @@ const SingleResearchProject = () => {
                             <h3>Project Goals</h3>
                         </div>
                         <div className="single-research-text">
-                            <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p>
+                            {/* <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p> */}
                         </div>
                         <div className="single-research-cards">
+                            {projectgoals&&(
+                           projectgoals.map((project,index)=>(
                             <div className="single-research-card">
-                                <h1>1.</h1>
-                                <p>Examine the impact of conflict and violence on the lives of Liberian youth, including their physical and emotional well-being, social relationships, and access to education and employment opportunities.</p>
-                            </div>
-                            <div className="single-research-card">
-                                <h1>2.</h1>
-                                <p>Identify the factors that contribute to the resilience of Liberian youth in the face of conflict and violence, including individual coping strategies, community support systems, and access to resources and services.</p>
-                            </div>
-                            <div className="single-research-card">
-                                <h1>3.</h1>
-                                <p>Develop recommendations for policymakers, practitioners, and community leaders on strategies for building collaborative resilience among Liberian youth and promoting their participation in peacebuilding and development initiatives.</p>
-                            </div>
+                            <h1>{index+1}.</h1>
+                            <p>{project}</p>
+                        </div>
+                           ))
+                            )}
                         </div>
                         <div className="single-research-head">
                             <h3>Research Meethods</h3>
