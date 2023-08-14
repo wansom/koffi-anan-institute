@@ -12,7 +12,9 @@ const SingleResearchProject = () => {
     const [events, setEvents] = useState([]);
     const [activetab, setactivetab] = useState(0);
     const [research, setResearch] = useState(null)
-    const [projectgoals,setprojectgoals]=useState([])
+    const [projectgoals, setprojectgoals] = useState([])
+    const [projectcomponents, setprojectcomponents] = useState([])
+    const [projectoutcomes, setprojectoutcomes] = useState([])
     const { id } = useParams();
     const monthNames = [
         "Jan",
@@ -32,7 +34,7 @@ const SingleResearchProject = () => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         const listItems = doc.getElementsByTagName('li');
-    
+
         return Array.from(listItems).map(li => li.textContent);
     };
     async function fetchData() {
@@ -86,8 +88,12 @@ const SingleResearchProject = () => {
                 console.log(currentIndex)
                 const postContent = currentIndex.acf.project_; // Adjust this path as necessary based on the WordPress API response structure
                 const parsedItems = htmlToListItems(postContent);
-               
+                const parsedComponents = htmlToListItems(currentIndex.acf.project_components)
+                const parsedoutcomes = htmlToListItems(currentIndex.acf.project_outcomes)
+
                 setprojectgoals(parsedItems)
+                setprojectcomponents(parsedComponents)
+                setprojectoutcomes(parsedoutcomes)
                 setResearch(currentIndex);
             })
             .catch((error) => console.error(error));
@@ -124,15 +130,15 @@ const SingleResearchProject = () => {
                                 </div>
                                 <div className="team-container container">
                                     <div className="team-content research flex">
-                                        {research?.collaborators.map((i)=>(
-                                             <div className="member">
-                                             <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
-                                             <div className="member-info">
-                                                 <span>{i.acf.name}</span>
-                                             </div>
-                                         </div>
+                                        {research?.collaborators.map((i) => (
+                                            <div className="member">
+                                                <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
+                                                <div className="member-info">
+                                                    <span>{i.acf.name}</span>
+                                                </div>
+                                            </div>
                                         ))}
-                                       
+
                                     </div>
                                 </div>
                             </>
@@ -146,13 +152,13 @@ const SingleResearchProject = () => {
                             {/* <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p> */}
                         </div>
                         <div className="single-research-cards">
-                            {projectgoals&&(
-                           projectgoals.map((project,index)=>(
-                            <div className="single-research-card">
-                            <h1>{index+1}.</h1>
-                            <p>{project}</p>
-                        </div>
-                           ))
+                            {projectgoals && (
+                                projectgoals.map((project, index) => (
+                                    <div className="single-research-card">
+                                        <h1>{index + 1}.</h1>
+                                        <p>{project}</p>
+                                    </div>
+                                ))
                             )}
                         </div>
                         <div className="single-research-head">
@@ -162,41 +168,30 @@ const SingleResearchProject = () => {
                             <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
                         </div>
                         <div className="method-cards">
-                            <div className="methods">
-                                <div className="method-card">
-                                    <h4>Literature Review</h4>
-                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="method-height"></div>
-                            </div>
-                            <div className="methods">
-                                <div className="method-height"></div>
-                                <div className="method-card">
-                                    <h4>Literature Review</h4>
-                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                                </div>
-                            </div>
-                            <div className="methods">
-                                <div className="method-card">
-                                    <h4>Literature Review</h4>
-                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="method-height"></div>
-                            </div>
-                            <div className="methods">
-                                <div className="method-height"></div>
-                                <div className="method-card">
-                                    <h4>Literature Review</h4>
-                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                                </div>
-                            </div>
-                            <div className="methods">
-                                <div className="method-card">
-                                    <h4>Literature Review</h4>
-                                    <p>A comprehensive review of existing literature on the impact of conflict and violence on youth in Liberia, as well as the factors that contribute to their resilience and participation in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="method-height"></div>
-                            </div>
+                            {projectcomponents && (
+                                projectcomponents.map((component, index) => (
+                                    <div className="methods" key={index}>
+                                        {index % 2 === 0 ?
+                                            <>
+                                                <div className="method-card">
+                                                    <h4>Literature Review</h4>
+                                                    <p>{component}</p>
+                                                </div>
+                                                <div className="method-height"></div>
+                                            </> : <>
+                                                <div className="method-height"></div>
+                                                <div className="method-card">
+                                                    <h4>Literature Review</h4>
+                                                    <p>{component}</p>
+                                                </div>
+                                            </>
+
+                                        }
+
+
+                                    </div>
+                                ))
+                            )}
                         </div>
                         <div className="single-outcome">
                             <div className="left">
@@ -206,66 +201,21 @@ const SingleResearchProject = () => {
                                 <div className="single-research-text listing">
                                     <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
                                     <div className="outcome-listings">
-                                        <div className="single-listing">
-                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                </mask>
-                                                <g mask="url(#mask0_772_640)">
-                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                </g>
-                                            </svg>
-                                            </span>
-                                            <p className="listing">Identify the challenges faced by Liberian youth in relation to conflict and violence, as well as their coping strategies and community support systems.</p>
-                                        </div>
-                                        <div className="single-listing">
-                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                </mask>
-                                                <g mask="url(#mask0_772_640)">
-                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                </g>
-                                            </svg>
-                                            </span>
-                                            <p className="listing">Identify the factors that contribute to the resilience of Liberian youth and their participation in peacebuilding and development initiatives.</p>
-                                        </div>
-                                        <div className="single-listing">
-                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                </mask>
-                                                <g mask="url(#mask0_772_640)">
-                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                </g>
-                                            </svg>
-                                            </span>
-                                            <p className="listing">Provide evidence-based recommendations for policymakers and practitioners on strategies for building the resilience of Liberian youth and promoting their active participation in peacebuilding and development initiatives.</p>
-                                        </div>
-                                        <div className="single-listing">
-                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                </mask>
-                                                <g mask="url(#mask0_772_640)">
-                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                </g>
-                                            </svg>
-                                            </span>
-                                            <p className="listing">Increase awareness and understanding of the experiences and perspectives of Liberian youth in relation to conflict and violence, as well as the importance of their participation in peacebuilding and development initiatives.</p>
-                                        </div>
-                                        <div className="single-listing">
-                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                </mask>
-                                                <g mask="url(#mask0_772_640)">
-                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                </g>
-                                            </svg>
-                                            </span>
-                                            <p className="listing">Establish partnerships and collaborations with stakeholders in Liberia, including policymakers, practitioners, and community leaders, to implement evidence-based policies and programs that promote the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
-                                        </div>
+                                        {projectoutcomes && (
+                                            projectoutcomes.map((outcome, index) => (
+                                                <div className="single-listing" key={index}>
+                                                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                            <rect width="24" height="24" fill="#D9D9D9" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_772_640)">
+                                                            <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                        </g>
+                                                    </svg>
+                                                    </span>
+                                                    <p className="listing">{outcome}</p>
+                                                </div>
+                                            )))}
                                     </div>
                                 </div>
                             </div>
