@@ -87,6 +87,7 @@ const ProgramDetails = () => {
       })
       .then((courses) => {
         const mycourse = courses.find((c) => c.slug === id)
+        console.log(mycourse)
         setcourses(mycourse);
         setloading(false);
       })
@@ -169,54 +170,7 @@ const ProgramDetails = () => {
               <div className="prog-head">
                 <h2>Entry Requirements</h2>
               </div>
-              <p className="elective">
-                To be eligible for the Master's Degree program in Conflict
-                Transformation and Peacebuilding at the Kofi Annan Institute for
-                Conflict Transformation University of Liberia, candidates must
-                meet the following entry requirements:
-              </p>
-              <ol>
-                <li>
-                  Bachelor's Degree: Applicants must have a Bachelor's Degree
-                  from an accredited institution in a relevant field such as
-                  Political Science, International Relations, Sociology, Law, or
-                  any other related field.
-                </li>
-                <li>
-                  Minimum GPA: Applicants must have a minimum cumulative Grade
-                  Point Average (GPA) of 2.5 or above on a 4.0 scale.
-                </li>
-                <li>
-                  English Language Proficiency: Applicants whose first language
-                  is not English must provide evidence of English language
-                  proficiency. This can be demonstrated by achieving a minimum
-                  score of 550 on the TOEFL exam or an equivalent score on other
-                  recognized English language proficiency tests.
-                </li>
-                <li>
-                  Professional Experience: Applicants are preferred to have some
-                  relevant professional experience in the field of conflict
-                  transformation and peacebuilding.
-                </li>
-                <li>
-                  Personal Statement: Applicants must submit a personal
-                  statement that outlines their reasons for pursuing the
-                  program, their relevant experience, and their future career
-                  goals.
-                </li>
-                <li>
-                  Letters of Recommendation: Applicants must provide two letters
-                  of recommendation from academic or professional referees who
-                  can attest to their academic and/or professional abilities.
-                </li>
-              </ol>
-              <p className="elective text-justify">
-                The admissions process for the Master's Degree program is
-                competitive, and meeting the above requirements does not
-                guarantee admission. Admissions decisions are based on a
-                comprehensive evaluation of all application materials, including
-                academic qualifications, professional experience, personal
-                statement, and letters of recommendation.
+              <p className="elective"  dangerouslySetInnerHTML={{ __html: course?.acf.entry_requirements }}>
               </p>
             </div>
           </div>
@@ -244,7 +198,7 @@ const ProgramDetails = () => {
           </div>
         </section>
         <section className="program-info bottom">
-          <div className="prog-info-container next container">
+          {/* <div className="prog-info-container next container">
             <div className="prog-head px-5 md:px-10">
               <h2>Fees & Funding</h2>
             </div>
@@ -318,10 +272,10 @@ const ProgramDetails = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="prog-info-container next-to container mx-auto ">
             <div className="prog-head px-5 lg:px-10">
-              <h2 className="text-start">Application Deadlines</h2>
+              <h2 className="text-start">How To Apply</h2>
             </div>
             <div className="curriculum px-5 lg:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
               <div className="right prog-txt">
@@ -359,20 +313,9 @@ const ProgramDetails = () => {
                 </table>
               </div>
               <div className="left prog-txt">
-                <p className="right-text">
-                  Prospective students are advised to visit the official website
-                  of the Kofi Annan Institute for Conflict Transformation
-                  University of Liberia for the most up-to-date information on
-                  application deadlines and requirements. Additionally,
-                  applicants are advised to submit their application materials
-                  well in advance of the deadline to ensure that their
-                  applications are complete and given full consideration by the
-                  admissions committee.
-                </p>
-                <p className="right-text">
-                  Apply as soon as possible for priority admissions and
-                  financial aid consideration.
-                </p>
+                <div className="right-text"  dangerouslySetInnerHTML={{ __html: course?.acf.application_deadlines }}>
+                  
+                </div>
               </div>
             </div>
           </div>
