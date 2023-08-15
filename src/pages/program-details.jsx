@@ -12,8 +12,9 @@ const Accordion = ({ title, content }) => {
   return (
     <table>
       <tbody>
-        <tr onClick={() => setIsOpen(!isOpen)}>
-          <td>{title}  <span>{isOpen ? '-' : '+'}</span></td>
+        <tr onClick={() => setIsOpen(!isOpen)} className="flex items-center justfiy-between">
+          <td >{title}  </td>
+          <span className="text-lg text-white">{isOpen ? '-' : '+'}</span>
         </tr>
         <tr>
           {isOpen && <td>{content}</td>}
