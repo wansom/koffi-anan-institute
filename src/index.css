@@ -2905,8 +2905,6 @@ section.program-info.bottom {
 .prog-txt.left,
 .prog-txt.right {
   width: 100%;
-  max-width: 600px;
-  min-width: 280px;
 }
 
 .prog-txt p.elective,
@@ -2951,11 +2949,13 @@ button.btn-brochure {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
+  width: 100%;
 }
 
 .prog-txt table tbody tr:nth-child(1) {
   background: #162f52;
   padding: 8px 20px;
+  width: 100%
 }
 
 .prog-txt table tbody tr:nth-child(1) td {
@@ -2963,6 +2963,7 @@ button.btn-brochure {
   padding: 8px 20px;
   color: #ffffff;
   font-weight: 600;
+  width: 100%
 }
 
 .prog-txt table tbody tr:nth-child(2) td,

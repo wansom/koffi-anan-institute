@@ -6,12 +6,67 @@ import Navbar from "../components/utils/navbar";
 import background from "../hero/master-banner.png";
 import { useParams } from 'react-router-dom';
 
+const Accordion = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <table>
+      <tbody>
+        <tr onClick={() => setIsOpen(!isOpen)}>
+          <td>{title}  <span>{isOpen ? '-' : '+'}</span></td>
+        </tr>
+        <tr>
+          {isOpen && <td>{content}</td>}
+
+        </tr>
+
+      </tbody>
+    </table>
+  );
+}
 const ProgramDetails = () => {
   const { id } = useParams();
-  const label="hrello"
+  const label = "hrello"
   const [course, setcourses] = useState(null);
   const [loading, setloading] = useState(false);
+  const curriculum=[
+  {
+    title:'PSCT 500: Introduction to Peace and Conflict Studies*',
+    content:'This course provides an in-depth overview of the origins, nature, and causes of conflict; multi-cultural view on conflict and the emerging patterns and trends of conflicts in Africa. Theories of the origins of violence and its historical roots are considered with specific reference to West-Africa and Liberia in particular. Theoretical explanation of conflicts will be examined as they relate to the emergence of the conflicts in the recent past.'
+  },
+  {
+    title:'PSCT 502: Statistics for Decision-Making',
+    content:'This course describes the role, nature, and application of statistics in business and economics; Statistical concepts, Data presentation, Measurements of central tendency and variability, Measures of relationships and associations, Curve fitting and application of non-parametric statistics and multi variance analysis such as factor, path analysis, etc. will be discussed.'
+  },
+  {
+    title:'PSCT 511: Introduction to Peacebuilding and Development',
+    content:'The course provides a framework for the study of the principles of peace building and sustainable development. It examines peace building strategies with a specific focus on Africa. The course also analyses structures and/or institutions of Peace and Security and Development at local, national, regional and international levels respectively and their roles in building and sustaining peace. It also examines the link between Leadership, conflict transformation and Development. Particular attention is given to the development of a strategic framework for peace building, primarily from the perspectives of non-governmental organization (NGO), civil society and community-based practitioners.'
+  },
+  {
+    title:'PSCT 516: Leadership and Governance',
+    content:'The course examines theories and/or models of leadership with particular reference to the African context. It identifies key issues in Leadership and analyses the dynamics and impact of Leadership within and between the public and private sectors and civil society in relation to ethical, gender and equitable development principles. The course also identifies effective leadership styles in a variety of contexts including institutional, community, national, regional and global contexts. Last but not the least, the course critically examines the link between Leadership, Conflict Transformation and Peace building.'
+  },
+  {
+    title:'PSCT 523: Language Studies I*',
+    content:'This course lays emphasis on the development of skills in listening, reading, and speaking through the presentation of situation relevant to everyday life and oral exercises.Courses marked with an asterisk are compulsory and a pass mark needs to be attained before the student can progress in the degree course. '
+  },
+  {
+    title:'PSCT 524: Language Studies II',
+    content:'This course reinforces the skills acquired in listening, reading, and speaking of additional language; emphasis is placed on grammar, vocabulary and composition.To progress to Language Studies II, students must have successfully completed Language Studies I.'
+  },
+  {
+    title:'PSCT 535: Defense and Security',
+    content:'This course will provide the various definitions of peace with the view to understand the nature and function of political definition of peace with particular interest to defense and security. The global regional and national real politik and international relations perspective will be discussed with focus on the Mano River Basin region as well as ECOWAS'
+  },
+  {
+    title:'PSCT 538: Non-Violence, Trauma Healing and Reconciliation',
+    content:'This course will focus on the experience of the theory, faith base and practice of non-violent actions of achieving peace; grapples with issues of Justice and Conflict; exposure in a variety of creative alternatives to violence; examines how non-violence relates to the field of conflict resolution, the theory and practice of third – party intervention based on the African experience; exploration of the socio-psychological process of responding to deep personal loss, communal trauma, general suffering in settings of protracted violent conflicts and restorative justice.'
+  },
+  {
+    title:'PSCT 601: Research Methodology*',
+    content:'This course is an introductory course for basics of academic work and research; separated in four parts: Part one introduces different formats of academic work with a focus on the APA format. It discusses in detail how to structure academic work, how to cite and quote and the way of producing a bibliography as well as how to conduct web based research; Part two deals with different approaches to research and gives initial insights on quantitative, qualitative and mixed approaches; Part three acquaints students with critical data banks and indexes for peace and conflict studies and enables them to interpret such data;  Part four gives first insights on how to write academic and non-academic proposals and highlights differences and similarities. On the overall, this course consistently is linked to the Liberian context and informs about domestic research resources such as the TRC and its archives, resources provided by the Governance Commission or the National Archives.'
+  }
+  ]
 
   useEffect(() => {
     fetch(`https://kacit.twafwane.com/wp-json/wp/v2/teaching`)
@@ -30,7 +85,7 @@ const ProgramDetails = () => {
         return Promise.all(promises);
       })
       .then((courses) => {
-        const mycourse =courses.find((c)=>c.slug===id)
+        const mycourse = courses.find((c) => c.slug === id)
         setcourses(mycourse);
         setloading(false);
       })
@@ -41,19 +96,10 @@ const ProgramDetails = () => {
       <Navbar />
 
       <AboutHero
-      title={course?.acf.course_name??""}
-      subtitle={"Learning & Teaching"}
-      background={background}
-    />
-
-      {/* {!course&&(
-      <AboutHero
-      title={course.acf.course_name??""}
-      subtitle={"Learning & Teaching"}
-      background={background}
-    />
-      )} */}
-
+        title={course?.acf.course_name ?? ""}
+        subtitle={"Learning & Teaching"}
+        background={background}
+      />
       <main>
         <section className="program-info top">
           <div className="prog-info-container container mx-auto">
@@ -68,125 +114,56 @@ const ProgramDetails = () => {
               <h2>Course Details</h2>
             </div>
             <div className="prog-txt px-5 md:px-10 ">
-            {course&&(
-              <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
+              {course && (
+                <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
 
 
-              </p>
-            )}
-
-
-              <p>
-                The program includes a range of courses such as conflict
-                analysis and resolution, peacebuilding, human rights,
-                transitional justice, gender and conflict, peacekeeping, and
-                development. Students are also required to complete a thesis or
-                capstone project on a topic related to conflict transformation.
-                Throughout the program, students have access to a variety of
-                resources and opportunities, including internships, research
-                opportunities, and participation in conferences and workshops
-                related to conflict transformation and peacebuilding.
-              </p>
-
-              <p>
-                Upon completion of the program, graduates are equipped to work
-                in a variety of fields related to conflict transformation and
-                peacebuilding, including government, non-governmental
-                organizations, and international organizations. They are also
-                prepared to pursue further education in related fields, such as
-                law, international relations, or public policy.
-              </p>
+                </p>
+              )}
               <button className="btn-brochure">Download Brochure</button>
             </div>
-            <div className="prog-head px-5 md:px-10">
-              <h2>Curriculum</h2>
-            </div>
-            <div className="curriculum px-5 md:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
-              <div className="left prog-txt">
-                <p>
-                  Throughout the program, students may also have the opportunity
-                  to participate in internships, research projects, and
-                  workshops related to conflict transformation and
-                  peacebuilding.
-                </p>
+            {
+              id == 'masters-program' && (
+                <>
+                  <div className="prog-head px-5 md:px-10">
+                    <h2>Curriculum</h2>
+                  </div>
+                  <div className="curriculum px-5 md:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
+                    <div className="left prog-txt">
+                      <p>
+                        By the end of the Master program, students will be able to:
+                      </p>
+                      <ul>
+                        <li>Understand the dilemmas, tradeoffs and potentials of conflict prevention and peace building</li>
+                        <li>Critically evaluate existing theories/conceptions of conflict and peace</li>
+                        <li>Explore and understand the various concepts relating to conflict and peace studies </li>
+                        <li>Understand the various meanings of conflict prevention, transformation and peace-building</li>
+                        <li>Learn to identify and examine approaches to peace</li>
+                        <li>Obtain tools for documenting and analyzing either ongoing or recent African conflicts that have been transformed by the employment of non-violent action.</li>
+                        <li>Consider the various meanings of the concepts of peace and security and practices that may enhance them.</li>
+                        <li>Develop their research skills, particularly their ability to analyze rather than simply describe and to be able to think and act creatively so as to transform conflict.</li>
+                        <li>Produce academic paper(s) of publishable quality to contribute to the development of an African literature and discourse on the subject.</li>
+                        <li>Make policy analyses and recommendations drawing on a sound interdisciplinary understanding of the dimensions of conflict prevention and peace-building.</li>
+                        <li>Apply their learning and skills practically in policy, field or academic work.</li>
+                        <li>Understand more deeply their own community and context, its dynamics and its specific requirements for building peace and preventing conflicts</li>
+                        <li>Use information technology and media to obtain and disseminate information on these subjects.</li>
+                      </ul>
+                    </div>
+                    <div className="right prog-txt">
+                      <p>
+                        The following courses are offered as part of the M.A. in Peace Studies and Conflict Transformation:
+                      </p>
+                      {curriculum.map((i,index)=>(
+                        <Accordion title={i.title} content={i.content} key={index}/>
+                      ))}
+                      
+                    
+                    </div>
+                  </div>
+                </>
+              )
+            }
 
-                <p>
-                  The program is designed to provide students with a
-                  comprehensive understanding of the theories, concepts, and
-                  skills necessary to address conflict and promote peace.
-                  Graduates of the program are prepared to work in a variety of
-                  fields related to conflict transformation and peacebuilding,
-                  including government, non-governmental organizations, and
-                  international organizations.
-                </p>
-                <p className="elective">
-                  Elective courses that may be offered include:
-                </p>
-                <ul>
-                  <li>Conflict Transformation and Security</li>
-                  <li>Environmental Conflicts and Peacebuilding</li>
-                  <li>Peace Education and Conflict </li>
-                  <li>Religion and Conflict Transformation</li>
-                  <li>Mediation and Negotiation</li>
-                </ul>
-              </div>
-              <div className="right prog-txt">
-                <p>
-                  The Master's Degree program in Conflict Transformation and
-                  Peacebuilding at the Kofi Annan Institute for Conflict
-                  Transformation University of Liberia has a curriculum that
-                  includes the following courses:
-                </p>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>Semester 1</td>
-                    </tr>
-                    <tr>
-                      <td>Conflict Analysis and Resolution</td>
-                    </tr>
-                    <tr>
-                      <td>Research Methods and Statistics for Peacebuilding</td>
-                    </tr>
-                    <tr>
-                      <td>Peacebuilding and Development</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>Semester 1</td>
-                    </tr>
-                    <tr>
-                      <td>Conflict Analysis and Resolution</td>
-                    </tr>
-                    <tr>
-                      <td>Research Methods and Statistics for Peacebuilding</td>
-                    </tr>
-                    <tr>
-                      <td>Peacebuilding and Development</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>Semester 1</td>
-                    </tr>
-                    <tr>
-                      <td>Conflict Analysis and Resolution</td>
-                    </tr>
-                    <tr>
-                      <td>Research Methods and Statistics for Peacebuilding</td>
-                    </tr>
-                    <tr>
-                      <td>Peacebuilding and Development</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
             <div className="prog-required px-5 md:px-10 ">
               <div className="prog-head">
                 <h2>Entry Requirements</h2>
@@ -307,7 +284,7 @@ const ProgramDetails = () => {
                   the Master's Degree program in Conflict Transformation and
                   Peacebuilding.
                 </p>
-                
+
               </div>
               <div className="right prog-txt">
                 <table>
