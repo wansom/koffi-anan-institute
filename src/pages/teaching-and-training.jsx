@@ -24,6 +24,7 @@ const Teachingandtraining = () => {
         return Promise.all(promises);
       })
       .then((courses) => {
+        console.log(courses)
         setcourses(courses);
         setloading(false);
       })
