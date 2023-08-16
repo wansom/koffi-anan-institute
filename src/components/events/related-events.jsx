@@ -9,7 +9,7 @@ const RelatedEvents = ({events,loading}) => {
         </div>
         <div className="black-events">
           <div>
-            {loading?<p>Loading...</p>:<div className="grid grid-cols-3">
+            {loading?<p>Loading...</p>:<div className="grid grid-cols-1 lg:grid-cols-3">
               {events.map((i)=>(
                 <EventsCard event={i}/>
               ))}
