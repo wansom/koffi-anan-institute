@@ -119,7 +119,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-container container">
           <div className="nav logo">
-            <a href="index.html" className="nav-logo">
+            <a href="/" className="nav-logo">
               <img
                 src="images/home/logo.png"
                 alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
