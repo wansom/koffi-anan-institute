@@ -61,7 +61,7 @@ const AllEvents = () => {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         <AboutHero
           title={"Events"}
           subtitle={"Let’s Network"}
