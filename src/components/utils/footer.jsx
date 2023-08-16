@@ -10,30 +10,30 @@ const Footer = () => {
           </p>
         </div>
         <div className="col two">
-          <h4>Support</h4>
+          <h4>Programs</h4>
           <ul>
             <li>
-              <a href="#">My Account</a>
+              <a href="/research">Research</a>
             </li>
             <li>
-              <a href="#">Help & Support</a>
+              <a href="/outreachprograms">Outreach Programs</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/securitySectorReforms">Policy Engagement</a>
             </li>
           </ul>
         </div>
         <div className="col three">
-          <h4>Company</h4>
+          <h4>Organization</h4>
           <ul>
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="/aboutus">About us</a>
             </li>
             <li>
-              <a href="#">Terms of Service</a>
+              <a href="/organogram">Team</a>
             </li>
             <li>
-              <a href="#">Code of Conduct</a>
+              <a href="/allevents">Events</a>
             </li>
           </ul>
         </div>
