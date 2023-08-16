@@ -46,11 +46,13 @@ const Navbar = () => {
       <header>
         <div className="header-container container">
           <div className="logo lg:ml-8">
-            <img
+           <a href="/">
+           <img
               src="/images/home/logo.png"
               alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
               className="h-[80px] object-contain"
             ></img>
+           </a>
           </div>
           <div className="header-contacts">
             <div className="contact contact-one">
@@ -121,7 +123,7 @@ const Navbar = () => {
           <div className="nav logo">
             <a href="/" className="nav-logo">
               <img
-                src="images/home/logo.png"
+                src="/images/home/logo.png"
                 alt="Kofi Annan  Annan Institute for Conflict Transformation Logo"
                 width="80px"
               ></img>{" "}
