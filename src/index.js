@@ -24,6 +24,7 @@ import Publications from "./pages/publications";
 import MaryAntoinnette from "./pages/mary-antionnete";
 import PartnershipsCollaborations from "./pages/partnerships-collaborations";
 import PolicyEngagement from "./pages/policy-engagement";
+import AboutOverview from "./components/about/about-overview";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -53,6 +54,7 @@ root.render(
       />
       <Route path="/researchproject/:id" element={<SingleResearchProject />} />
       <Route path="/policyEngagement" element={<PolicyEngagement />} />
+      <Route path="/kacitOverview" element={<AboutOverview />} />
       <Route path="*" element={<ComingSoon />} />
     </Routes>
   </BrowserRouter>

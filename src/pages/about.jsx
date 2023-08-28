@@ -156,7 +156,6 @@ const AboutRoute = () => {
       <Choices />     
       <Team loading={loading} staff={staff} />
       <TemproaryStaff loading={loading} staff={temproaryStaff}/>
-      <KacitOverview/>
       <ContactUs />
       <Footer />
     </div>

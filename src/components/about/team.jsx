@@ -127,6 +127,7 @@ const Team = ({ loading, staff }) => {
       </Modal>
 
       <div className="team-container container mx-auto overflow-x-hidden">
+        
         <div className="team-head">
           <p>Staff</p>
           <h1>Our Team</h1>

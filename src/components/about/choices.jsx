@@ -77,6 +77,12 @@ const Choices = () => {
               <div className="column"></div>
             </div>
           </div>
+          <a
+          href="/kacitOverview"
+          className="w-full bg-[#25518C] py-4 flex items-center justify-center text-white cursor-pointer"
+        >
+          Check Our Overview
+        </a>
         </div>
       </div>
     </section>
