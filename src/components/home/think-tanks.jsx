@@ -50,7 +50,7 @@ const ThinkTanks = () => {
                     <p dangerouslySetInnerHTML={{ __html: post.acf.overview }}></p>
                     <a href={post.acf.link}> <button>Learn More</button></a>
                   </div>
-                  <img src={post.featured_image_url} alt="Kofi Annan Institute for Conflict Transformation Think Tanks" className="h-full object-cover md:h-[320px] w-full"></img>
+                  <img src={post.featured_image_url} alt="Kofi Annan Institute for Conflict Transformation Think Tanks" className="h-full object-cover md:h-[320px] w-full "></img>
 
                 </div>}
 
