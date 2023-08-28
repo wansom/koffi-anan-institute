@@ -129,7 +129,7 @@ const SingleResearchProject = () => {
                                     <h3>Collaborators</h3>
                                 </div>
                                 <div className="team-container container">
-                                    <div className="team-content research flex">
+                                    <div className="team-content research flex gap-5 flex-wrap">
                                         {research?.collaborators.map((i) => (
                                             <div className="member">
                                                 <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
