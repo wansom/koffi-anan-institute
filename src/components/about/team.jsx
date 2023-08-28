@@ -26,15 +26,15 @@ function Modal({ isOpen, onClose, children }) {
 
   const modalContentStyles = {
     position: "absolute",
-    top: "50%",
+    top: "65%",
     left: "50%",
     width: "1240px",
-    height: "697px",
+    height: "500px",
     transform: "translate(-50%, -50%)",
     background:
       "linear-gradient(0deg, #FCFCFC, #FCFCFC), url(background-nairobi.png)",
     padding: "2rem",
-    zIndex: 2,
+    zIndex: 20,
   };
 
   return (
@@ -112,13 +112,13 @@ const Team = ({ loading, staff }) => {
             <img
               src={activeMember?.featured_image_url}
               alt=""
-              className=" w-full object-cover"
+              className=" w-full object-contain  h-52"
             />
             <h3 className="mx-10">{activeMember?.acf.fullname}</h3>
             <span>{activeMember?.acf.position}</span>
           </div>
           <div className="flex flex-col team-modal basis-2/3">
-            <div className="bg-[#25518C] mb-5 py-5">
+            <div className="bg-[#25518C] mb-5 py-2">
               <h2>Expertise Areas</h2>
             </div>
             <p>{activeMember?.acf.description}</p>
