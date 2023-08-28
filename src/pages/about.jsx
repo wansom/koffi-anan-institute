@@ -30,8 +30,8 @@ const ValuesContent = () => {
   const [active, setactvive] = useState(0);
   return (
     <div className="container mx-auto values-section">
-      <div className="grid grid-cols-1 md:grid-cols-2 my-16 px-1 md:px-10">
-        <div className="space-y-4">
+      <div className="flex flex-col md:flex-row  my-16 px-1 md:px-10">
+        <div className="space-y-4 md:basis-1/3">
           {tabs.map((tab, index) => (
             <div
             key={index}
@@ -48,7 +48,7 @@ const ValuesContent = () => {
             </div>
           ))}
         </div>
-        <div className="bg-[#25518C] p-10 text-[#FCFCFC] desc">
+        <div className="bg-[#25518C] p-10 text-[#FCFCFC] desc md:basis-2/3">
           {active === 0 && <p>{tabs[active].desc}</p>}
           {active == 1 && (
             <p>

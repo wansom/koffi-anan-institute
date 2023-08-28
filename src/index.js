@@ -23,6 +23,7 @@ import Organogram from "./pages/organogram";
 import Publications from "./pages/publications";
 import MaryAntoinnette from "./pages/mary-antionnete";
 import PartnershipsCollaborations from "./pages/partnerships-collaborations";
+import PolicyEngagement from "./pages/policy-engagement";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -51,6 +52,7 @@ root.render(
         element={<PartnershipsCollaborations />}
       />
       <Route path="/researchproject/:id" element={<SingleResearchProject />} />
+      <Route path="/policyEngagement" element={<PolicyEngagement />} />
       <Route path="*" element={<ComingSoon />} />
     </Routes>
   </BrowserRouter>

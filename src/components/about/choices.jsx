@@ -9,6 +9,7 @@ const Choices = () => {
           </div>
           <div className="choice-content">
             <div className="row">
+              <a href="/research">
               <div className="column choice">
                 <h3>Research</h3>
                 <p>
@@ -20,6 +21,8 @@ const Choices = () => {
                   conflict issues.
                 </p>
               </div>
+              </a>
+          
               <a href="/teachingandtraining">
                 <div className="column choice">
                   <h3>Teaching & Training</h3>
