@@ -114,7 +114,7 @@ const SingleResearchProject = () => {
         <div>
             <Navbar />
             <main>
-                <AboutHero title={id} subtitle='Research Projects' background={background} />
+                <AboutHero title={id} subtitle='Research Projects' background={research?.featured_image_url} />
                 <section className="single-research">
                     <div className="single-research-container container mx-auto px-5">
                         <div className="single-research-head">
@@ -151,13 +151,13 @@ const SingleResearchProject = () => {
                             <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
                         </div>
                         <div className="method-cards">
+                            
                             {projectcomponents && (
                                 projectcomponents.map((component, index) => (
                                     <div className="methods" key={index}>
                                         {index % 2 === 0 ?
                                             <>
                                                 <div className="method-card">
-                                                    {/* <h4>Literature Review</h4> */}
                                                     <p>{component}</p>
                                                 </div>
                                                 <div className="method-height"></div>
@@ -207,7 +207,7 @@ const SingleResearchProject = () => {
                                 </div>
                             </div>
                             <div className="right">
-                                <img src="/images/outreach-program/program-outcome.png" alt="" />
+                                <img src="/images/research-bottom.jpeg" alt="research projects" />
                             </div>
                         </div>
                         )
@@ -223,7 +223,7 @@ const SingleResearchProject = () => {
                             <>
                               {research?.collaborators.map((i) => (
                                 <div className="member">
-                                    <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" />
+                                    <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" className=" object-contain"/>
                                     <div className="member-info">
                                         <span>{i.acf.name}</span>
                                     </div>

@@ -1531,7 +1531,8 @@ section.team {
 .team-content .member img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #9a9a9a;
 }
 
 .team-content .member-info {
@@ -4923,7 +4924,9 @@ section.single-research {
 .method-cards {
   padding: 20px 0px;
 }
-
+.my-ol-list ol{
+  list-style: disc !important;
+}
 .methods {
   display: flex;
   align-items: center;
