@@ -349,6 +349,7 @@ const SingleEvent = () => {
                     </ul>
                     <button className="btn-attend">{new Date(event.start_date)>new Date()?'Attend Event':'Past Event'}</button>
                     <button className="btn-download">Download Brochure</button>
+                   
                   </div>
                 </div>
                 <div className="side-socials">

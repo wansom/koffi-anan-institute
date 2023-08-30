@@ -122,7 +122,8 @@ const ProgramDetails = () => {
 
                 </p>
               )}
-              <button className="btn-brochure">Download Brochure</button>
+               <a href="http://kacit.twafwane.com/wp-content/uploads/2023/08/MA-Course-Brochure.pdf" target="blank"> <button className="btn-brochure">Download Brochure</button></a>
+              
             </div>
             {
               id == 'masters-program' && (
@@ -179,19 +180,19 @@ const ProgramDetails = () => {
           <div className="prog-carding-container container">
             <div className="prog-card">
               <div className="card-cont">
-                <span>96%</span> <br />
-                <span>numbers of Students Enrolled </span>
+                <span>96</span> <br />
+                <span>Number of Students Enrolled </span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
-                <span>$ 25,000</span> <br />
+                <span> 25,000</span> <br />
                 <span>Gender Distribution (Male and Female Students)</span>
               </div>
             </div>
             <div className="prog-card">
               <div className="card-cont">
-                <span>85%</span> <br />
+                <span>85</span> <br />
                 <span>Degree Completed</span>
               </div>
             </div>
@@ -278,7 +279,7 @@ const ProgramDetails = () => {
               <h2 className="text-start">How To Apply</h2>
             </div>
             <div className="curriculum px-5 lg:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
-              <div className="right prog-txt">
+              {/* <div className="right prog-txt">
                 <table className="bottom">
                   <tbody>
                     <tr>
@@ -311,7 +312,7 @@ const ProgramDetails = () => {
                     </tr>
                   </tbody>
                 </table>
-              </div>
+              </div> */}
               <div className="left prog-txt">
                 <div className="right-text"  dangerouslySetInnerHTML={{ __html: course?.acf.application_deadlines }}>
                   
