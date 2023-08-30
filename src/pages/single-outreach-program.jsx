@@ -1,207 +1,70 @@
 import AboutHero from "../components/about/hero"
+import ProgramsGrid from "../components/outreachprograms/programs-grid";
 import Footer from "../components/utils/footer"
 import Navbar from "../components/utils/navbar"
-import  background from '../hero/single-program.png'
+import background from '../hero/single-program.png'
 import { useParams } from 'react-router-dom';
-const SingleOutreachProgram=()=>{
+const SingleOutreachProgram = () => {
     const { id } = useParams();
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <main>
-                <AboutHero title={id} subtitle='Outreach Programs' background={background}/>
+                <AboutHero title={id} subtitle='Outreach Programs' background={background} />
                 <section className="single">
-            <div className="single-outreach-container container">
-                <p>The Kofi Annan Institute for Conflict Transformation at the University of Liberia is committed to
-                    engaging with the community to promote peace and reconciliation. Through its outreach programs, the
-                    institute works with local communities to develop sustainable solutions to conflict and build
-                    lasting peace. </p>
-                <p>The community engagement program offers a range of services and activities designed to foster
-                    dialogue and understanding among individuals and groups with diverse perspectives and experiences.
-                    These include workshops, seminars, and training sessions on conflict resolution, peacebuilding, and
-                    related topics.</p>
-                {/* <div className="single-outreach-cards">
-                    <div className="singe-out-card">
-                        <span>60+</span>
-                        <br/>
-                        <span>Seminars per year</span>
-                    </div>
-                    <div className="singe-out-card">
-                        <span>711</span>
-                        <br/>
-                        <span>Desks donated to schools</span>
-                    </div>
-                    <div className="singe-out-card">
-                        <span>25+</span>
-                        <br/>
-                        <span>Workshops per year</span>
-                    </div>
-                </div> */}
-                <p>The program also partners with local organizations and community leaders to address specific
-                    challenges related to conflict and violence in the community. This includes working with youth
-                    groups, women's organizations, and other community-based organizations to promote greater
-                    participation and inclusion in peacebuilding initiatives.</p>
-                <p>Through its community engagement program, the Kofi Annan Institute for Conflict Transformation
-                    University of Liberia seeks to empower individuals and communities to take an active role in
-                    building peace and promoting reconciliation. By working together with local partners and
-                    stakeholders, the institute hopes to create a more peaceful and inclusive society in Liberia and
-                    beyond.</p>
-                {/* <div className="single-gallery-slider">
-                    <div className="top-gallery">
-                        <div className="left-arrow">
-                            <button>
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_732_249" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0"
-                                        width="25" height="25">
-                                        <rect width="25" height="25" fill="#D9D9D9" />
-                                    </mask>
-                                    <g mask="url(#mask0_732_249)">
-                                        <path
-                                            d="M10.4167 22.9166L0 12.4999L10.4167 2.08325L12.2656 3.93221L3.69792 12.4999L12.2656 21.0676L10.4167 22.9166Z"
-                                            fill="#333333" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="slides">
-                            <div className="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
+                    <div className="single-outreach-container container">
+                        {id === 'Community Engagement' && (
+                            <p>Dialogues, trainings and workshops with women and youth are a key part of the Kofi Annan Institute’s activities. We strongly believe that youth and women are crucial for Liberia’s reconstruction and development. To focus specifically on these two population groups is essential in a country where older men often take the front seat when it comes to public decision-making, thereby frequently underrepresenting the needs of women and future generations. The youth of today will be the leaders of tomorrow. Therefore, we need to make particular efforts to strengthen the skills of young people in the country. We do so through women’s community engagements and youth leadership trainings.  </p>
+                        )}
+                        {id === 'KOFI ANNAN LIVING MEMORIAL (KALM)' && (
+                            <p>The Kofi Annan Living Memorial (KALM) is a pan-African initiative to commemorate and sustain the legacy of the late UN Secretary-General. Rather than erecting a monument, the memorial consists in education initiatives seeking to promote peace and the Sustainable Development Goals. KAICT participates in the initiative through a course for Kofi Annan Young Diplomats for Conflict Prevention and the realization of the Sustainable Development Goals (SDGs). This consists in a 46-hours certificate program. It targets an educated population segment, i.e. senior high school students, university students, professionals in the security sector, civil society, NGO, Government and private sector. </p>
+                        )}
+                        {id === 'The Kofi Annan Dialogues' && (
+                            <>
+                                <p>The Wednesday Seminar on Peace, Politics and Society takes place weekly during the lecture period. It is an extra-curricular information and discussion event for the student population and the interested public. It is flexible in format and can accommodate a broad range of topics on politics, economics and society. By regularly organizing the seminar, we aim to provide a space for informed and reasoned debate on issues and trends in Liberia and beyond. The event is open to diverse styles of knowledge transfer. Often, external experts or KAICT faculty present on current events or academic debates and discuss their insights with the audience. Panel discussions or student model debates are among the alternative formats. Screening and discussion of documentaries, movies or online lectures by third parties also take place within the seminar framework. The Wednesday Seminar takes place in the cozy atmosphere of the Graduate School’s grand lecture hall and attracts approximately 30 to 60 visitors from the student population and the public.</p>
+
+                            </>
+
+
+                        )}
+
+                        {id === 'Community Engagement' && (
+                            <div className="grid gird-cols-1 md:grid-cols-3">
+                                <div className="single-research-card">
+                                    <h1>WOMEN COMMUNITY ENGAGEMENT</h1>
+                                    <div className=" h-52 overflow-y-scroll">
+                                        <p>Our Women’s Community Engagements focus on a broad range of topics, from elections to peaceful conflict resolution. While most attendees of our events are women, we include some men in our sessions, as we believe that gender norms can only be changed in collaboration and not in isolation. Effective gender-related interventions need to include both men and women.
+                                            Past activities include:
+                                            •	2022, November 22 & 23: KAICT educated a mixed group of men and women in Bensonville and Brewerville about political and electoral processes and encourage people to engage in elections peacefully.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div className="single-research-card">
+                                    <h1>YOUTH LEADERSHIP TRAINING PROGRAM </h1>
+                                    <div className=" h-52 overflow-y-scroll">
+                                        <p>
+                                            KAICT offers a leadership program for motivated and talented young professionals to-be. The program is developed based on the conviction that there is a need for a new breed of young leaders dedicated to the promotion of participatory, enabling, transparent and integer leadership in all sectors of Liberia, oriented towards a more stable country.
+                                            The young leadership program aims to fill the vacuum of young leaders in the age bracket of 18 to 35 years, who will foster democracy that engenders social justice, transparency, integrity, gender equity and responsibility and human social capital development in Liberia.
+
+                                        </p>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div className="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
-                            </div>
-                            <div className="single-out-slide">
-                                <img src="/images/outreach-program/p-3.png" alt="Children In className"/>
-                            </div>
-                        </div>
-                        <div className="right-arrow">
-                            <button>
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_732_246" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0"
-                                        width="25" height="25">
-                                        <rect width="25" height="25" fill="#D9D9D9" />
-                                    </mask>
-                                    <g mask="url(#mask0_732_246)">
-                                        <path
-                                            d="M8.35677 22.9168L6.50781 21.0679L15.0755 12.5002L6.50781 3.93245L8.35677 2.0835L18.7734 12.5002L8.35677 22.9168Z"
-                                            fill="#333333" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
+                        )}
+
                     </div>
-                    <div className="bottom-gallery">
-                        <div className="dots">
-                            <div className="dot active"></div>
-                            <div className="dot"></div>
-                        </div>
+                </section>
+
+                <section className="outreach-card-sec">
+                    <div className="outreach-card-container title container">
+                        <h2 className="outreach-single-title text-center" >Outreach Programs</h2>
                     </div>
-                </div> */}
-            </div>
-        </section>
-        {/* <section className="banner single-support about">
-            <div className="banner-mask support">
-                <div className="single-support-container container">
-                    <div className="support-form">
-                        <form  className="support" action="">
-                            <h3 className="support-title ">Support the program</h3>
-                            <div className="control-group">
-                                <label for="how">Amount</label><br/>
-                                <input type="text" name="how" placeholder="USD 5.00"/>
-                            </div>
-                            <div className="control-group checkbox">
-                                <label className="container-check">
-                                    <input type="checkbox"/>
-                                    <span className="checkmark"></span>
-                                </label>
-                                <label for="">By clicking on “Send Message” you agree to our Terms & Conditions and Privacy
-                                    Statement.</label>
-                            </div>
-                            <div className="control-group">
-                                <button type="submit">Attend Event</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="empty"></div>
-                </div>
-            </div>
-        </section> */}
-        <section className="outreach-card-sec">
-            <div className="outreach-card-container title container">
-                <h2 className="outreach-single-title text-center" >Outreach Programs</h2>
-            </div>
-            <div className="outreach-card-container container">
-            <div className="outreach-card">
-              <img src="/images/outreach-program/p-8.jpeg" alt="" />
-              <div className="outreach-info">
-                <h2>Community Engagement</h2>
-                <p className="h-[210px] overflow-y-scroll">
-                  Dialogues, trainings and workshops with women and youth are a
-                  key part of the Kofi Annan Institute’s activities. We strongly
-                  believe that youth and women are crucial for Liberia’s
-                  reconstruction and development. To focus specifically on these
-                  two population groups is essential in a country where older
-                  men often take the front seat when it comes to public
-                  decision-making, thereby frequently underrepresenting the
-                  needs of women and future generations. The youth of today will
-                  be the leaders of tomorrow. Therefore, we need to make
-                  particular efforts to strengthen the skills of young people in
-                  the country. We do so through women’s community engagements
-                  and youth leadership trainings.{" "}
-                </p>
-                <a href="outreachprogram/Community Engagement">
-                  <button>Explore Program</button>
-                </a>
-              </div>
-            </div>
-            <div className="outreach-card">
-              <img src="/images/outreach-program/p-1.jpg" alt="" />
-              <div className="outreach-info">
-                <h2>Women Community Engagement</h2>
-                <p className="h-[210px] overflow-y-scroll">
-                  Our Women’s Community Engagements focus on a broad range of
-                  topics, from elections to peaceful conflict resolution. While
-                  most attendees of our events are women, we include some men in
-                  our sessions, as we believe that gender norms can only be
-                  changed in collaboration and not in isolation. Effective
-                  gender-related interventions need to include both men and
-                  women.
-                </p>
-                <a href="outreachprogram/>Women Community Engagement">
-                  {" "}
-                  <button>Explore Program</button>
-                </a>
-              </div>
-            </div>
-            <div className="outreach-card">
-              <img src="/images/outreach-program/p-6.jpeg" alt="" />
-              <div className="outreach-info">
-                <h2>KOFI ANNAN LIVING MEMORIAL (KALM)</h2>
-                <p className="h-[210px] overflow-y-scroll">
-                  The Kofi Annan Living Memorial (KALM) is a pan-African
-                  initiative to commemorate and sustain the legacy of the late
-                  UN Secretary-General. Rather than erecting a monument, the
-                  memorial consists in education initiatives seeking to promote
-                  peace and the Sustainable Development Goals. KAICT
-                  participates in the initiative through a course for Kofi Annan
-                  Young Diplomats for Conflict Prevention and the realization of
-                  the Sustainable Development Goals (SDGs). This consists in a
-                  46-hours certificate program. It targets an educated
-                  population segment, i.e. senior high school students,
-                  university students, professionals in the security sector,
-                  civil society, NGO, Government and private sector.
-                </p>
-                <a href="outreachprogram/KOFI ANNAN LIVING MEMORIAL (KALM)">
-                  <button>Explore Program</button>
-                </a>
-              </div>
-            </div>
-            </div>
-        </section>
+                    <ProgramsGrid />
+                </section>
             </main>
-            <Footer/>
+            <Footer />
 
         </div>
     )

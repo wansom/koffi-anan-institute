@@ -4,7 +4,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  list-style: none;
   text-decoration: none;
   outline: none;
   border: 0px;
@@ -4165,7 +4164,7 @@ section.filter {
 } */
 
 .outreach-card-sec {
-  padding: 60px 0px;
+  padding: 5px 0px;
   background: #fcfcfc;
 }
 
@@ -4433,7 +4432,7 @@ section.single {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
-  margin: 20px 0px;
+  margin: 5px 0px;
 }
 
 .single-outreach-cards {
@@ -5413,7 +5412,7 @@ color: #1C1B1F;
 
 /* == THINK TANK SINGLE == */
 .think-single {
-  padding: 80px 0px;
+  padding: 10px 0px;
 }
 
 h2.think-head {
@@ -5445,16 +5444,16 @@ p.think-p {
 }
 
 .takeaway-card {
-  height: 380px;
-  width: 380px;
+  height: 400px;
+  width: 400px;
   border-radius: 50% !important;
   background: #EFF1FB;
   text-align: center;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 60px;
-  margin: 15px 10px;
+  padding: 10px 60px;
+
 }
 
 .card-center h2 {
@@ -5472,11 +5471,10 @@ p.think-p {
 
 .card-center p {
   width: 100%;
-  max-width: 280px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   text-align: center;
   color: #00000A;
