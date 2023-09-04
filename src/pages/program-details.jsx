@@ -138,7 +138,11 @@ const ProgramDetails = () => {
 
                 </p>
               )}
-              <a href="http://kacit.twafwane.com/wp-content/uploads/2023/08/MA-Course-Brochure.pdf" target="blank"> <button className="btn-brochure">Download Brochure</button></a>
+                {
+              id == 'masters-program' && (
+                <a href="http://kacit.twafwane.com/wp-content/uploads/2023/08/MA-Course-Brochure.pdf" target="blank"> <button className="btn-brochure">Download Brochure</button></a>
+              )}
+             
 
             </div>
             {
