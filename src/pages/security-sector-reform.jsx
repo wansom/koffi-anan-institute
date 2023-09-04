@@ -37,11 +37,15 @@ const SecurityReforms = () => {
                             <div className="comm-row">
                                 <div className="comm-card">
                                     <h2>3.</h2>
-                                    <p>Security Sector Reform [link to publication by Gerdes & Sayndee on Post-War Security Sector Reform in Liberia; in Library folder]</p>
+                                    <p>Security Sector Reform </p>
                                 </div>
+                                
                                 <div className="comm-card">
-                                    <h2>4.</h2>
-                                    <p>Women’s Participation in UN Peace Operations: [link to MOWIP project description]</p>
+                                <a href="/researchProject/MOWIP-project">
+                                <h2>4.</h2>
+                                    <p>Women’s Participation in UN Peace Operations:</p>
+                                </a>
+                             
                                 </div>
                             </div>
                         </div>

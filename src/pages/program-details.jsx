@@ -197,7 +197,7 @@ const ProgramDetails = () => {
             </div>
           </div>
         </section>
-        <section className="prog-carding">
+        {/* <section className="prog-carding">
           <div className="prog-carding-container container">
             <div className="prog-card">
               <div className="card-cont">
@@ -218,7 +218,7 @@ const ProgramDetails = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="program-info bottom">
           {/* <div className="prog-info-container next container">
             <div className="prog-head px-5 md:px-10">
