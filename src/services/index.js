@@ -38,7 +38,7 @@ export const submitForm = async (data) => {
   const token = localStorage.getItem("jwtToken");
 
   return axios
-    .post("https://kacit.twafwane.com/wp-json/wp/v2/messages", data,  {
+    .post("https://kacit.twafwane.com/wp-json/wp/v2/messages", data, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -146,7 +146,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.acf.project_title}`}
+                        href={`/researchProject/${i.acf.link}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
@@ -196,7 +196,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.acf.project_title}`}
+                        href={`/researchProject/${i.acf.link}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
@@ -248,7 +248,7 @@ const ResearchProjects = () => {
                       <h3>{i.acf.project_title}</h3>
                       <p>{i?.acf.overview?.slice(0, 280)}...</p>
                       <a
-                        href={`/researchProject/${i.acf.project_title}`}
+                        href={`/researchProject/${i.acf.link}`}
                         className="flex items-center gap-1"
                       >
                         Read More{" "}
