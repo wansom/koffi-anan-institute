@@ -114,7 +114,7 @@ const SingleResearchProject = () => {
         <div>
             <Navbar />
             <main>
-                <AboutHero title={id} subtitle='Research Projects' background={research?.featured_image_url} />
+                <AboutHero title={research?.acf.project_title} subtitle='Research Projects' background={research?.featured_image_url} />
                 <section className="single-research">
                     <div className="single-research-container container mx-auto px-5">
                         <div className="single-research-head">
@@ -275,25 +275,33 @@ const SingleResearchProject = () => {
                                 </div>
                             )
                         }
+                        {projectgoals.length>0 && (
+                            <>
+                                <div className="single-research-head">
+                                   {research?.acf.link !=='Conflict-Mediation-consultancy'&&(
+                                     <h3>Project Goals</h3>
+                                   )}
+                                    {research?.acf.link ==='Conflict-Mediation-consultancy'&&(
+                                     <h3>Project Milestones</h3>
+                                   )}
+                                </div>
 
-                        <div className="single-research-head">
-                            <h3>Project Goals</h3>
-                        </div>
-                        <div className="single-research-text">
-                            {/* <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p> */}
-                        </div>
-                        
-                        <div className="single-research-cards">
-                            {projectgoals && (
-                                projectgoals.map((project, index) => (
-                                    <div className="single-research-card">
-                                        <h1>{index + 1}.</h1>
-                                        <p>{project}</p>
-                                    </div>
-                                ))
-                            )}
-                        </div>
-                        {projectcomponents && (
+
+                                <div className="single-research-cards">
+
+                                    {projectgoals.map((project, index) => (
+                                        <div className="single-research-card">
+                                            <h1>{index + 1}.</h1>
+                                            <p>{project}</p>
+                                        </div>
+                                    ))}
+
+                                </div>
+                            </>
+
+
+                        )}
+                        {projectcomponents.length>0 && (
                             <>
                                 <div className="single-research-head">
                                     <h3>Project Components</h3>
@@ -331,14 +339,14 @@ const SingleResearchProject = () => {
                         )}
 
                         {
-                            research?.acf.link==='MOWIP-project'&&(
+                            research?.acf.link === 'MOWIP-project' && (
                                 <div>
-                                                                    </div>
+                                </div>
 
                             )
                         }
                         {
-                            projectoutcomes && (
+                            projectoutcomes.length>0 && (
                                 <div className="single-outcome">
                                     <div className="left">
                                         <div className="single-research-head">
@@ -371,7 +379,7 @@ const SingleResearchProject = () => {
                                 </div>
                             )
                         }
-                        
+
                         {research?.collaborators && (
                             <>
                                 <div className="single-research-head">
@@ -385,7 +393,7 @@ const SingleResearchProject = () => {
                                 }
 
                                 <div className="team-container container">
-                                    <div className="team-content research flex gap-5 flex-wrap">
+                                    <div className="team-content research flex gap-5 flex-wrap justify-start">
                                         {research.collaborators && (
                                             <>
                                                 {research?.collaborators.map((i) => (
@@ -403,7 +411,7 @@ const SingleResearchProject = () => {
                                 </div>
                             </>
                         )}
-                       
+
                         <div className="single-research-head">
                             <h3>Events</h3>
                         </div>
