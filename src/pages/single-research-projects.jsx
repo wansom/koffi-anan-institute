@@ -124,125 +124,6 @@ const SingleResearchProject = () => {
                             <p>{research?.acf.overview}</p>
                         </div>
 
-
-
-                        <div className="single-research-head">
-                            <h3>Project Goals</h3>
-                        </div>
-                        <div className="single-research-text">
-                            {/* <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p> */}
-                        </div>
-                        <div className="single-research-cards">
-                            {projectgoals && (
-                                projectgoals.map((project, index) => (
-                                    <div className="single-research-card">
-                                        <h1>{index + 1}.</h1>
-                                        <p>{project}</p>
-                                    </div>
-                                ))
-                            )}
-                        </div>
-                        {projectcomponents && (
-                            <>
-                                <div className="single-research-head">
-                                    <h3>Project Components</h3>
-                                </div>
-                                <div className="single-research-text">
-                                    <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
-                                </div>
-                                <div className="method-cards">
-
-                                    {projectcomponents && (
-                                        projectcomponents.map((component, index) => (
-                                            <div className="methods" key={index}>
-                                                {index % 2 === 0 ?
-                                                    <>
-                                                        <div className="method-card">
-                                                            <p>{component}</p>
-                                                        </div>
-                                                        <div className="method-height"></div>
-                                                    </> : <>
-                                                        <div className="method-height"></div>
-                                                        <div className="method-card">
-                                                            {/* <h4>Literature Review</h4> */}
-                                                            <p>{component}</p>
-                                                        </div>
-                                                    </>
-
-                                                }
-
-
-                                            </div>
-                                        ))
-                                    )}
-                                </div>
-                            </>
-                        )}
-                        {
-                            projectoutcomes && (
-                                <div className="single-outcome">
-                                    <div className="left">
-                                        <div className="single-research-head">
-                                            <h3>Project Outcomes</h3>
-                                        </div>
-                                        <div className="single-research-text listing">
-                                            <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
-                                            <div className="outcome-listings">
-                                                {projectoutcomes && (
-                                                    projectoutcomes.map((outcome, index) => (
-                                                        <div className="single-listing" key={index}>
-                                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                                                    <rect width="24" height="24" fill="#D9D9D9" />
-                                                                </mask>
-                                                                <g mask="url(#mask0_772_640)">
-                                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
-                                                                </g>
-                                                            </svg>
-                                                            </span>
-                                                            <p className="listing">{outcome}</p>
-                                                        </div>
-                                                    )))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="right">
-                                        <img src="/images/research-bottom.jpeg" alt="research projects" />
-                                    </div>
-                                </div>
-                            )
-                        }
-                        {research?.collaborators && (
-                            <>
-                                <div className="single-research-head">
-                                    <h3>Collaborators</h3>
-                                </div>
-                                {
-                                    research.acf.link === 'MOWIP-project' && (
-                                        <p className="px-5  my-2"> The MOWIP methodology was implemented with the Armed Forces of Liberia with support from UN Women, KAICT, the Gender and Security Sector Lab (GSS Lab) and the DCAF Helpdesk, and funded by the Elsie Initiative Fund.
-                                        </p>
-                                    )
-                                }
-
-                                <div className="team-container container">
-                                    <div className="team-content research flex gap-5 flex-wrap">
-                                        {research.collaborators && (
-                                            <>
-                                                {research?.collaborators.map((i) => (
-                                                    <div className="member">
-                                                        <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" className=" object-contain" />
-                                                        <div className="member-info">
-                                                            <span>{i.acf.name}</span>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </>
-                                        )}
-
-                                    </div>
-                                </div>
-                            </>
-                        )}
                         {
                             research?.acf.link === 'MOWIP-project' && (
 
@@ -394,6 +275,135 @@ const SingleResearchProject = () => {
                                 </div>
                             )
                         }
+
+                        <div className="single-research-head">
+                            <h3>Project Goals</h3>
+                        </div>
+                        <div className="single-research-text">
+                            {/* <p>Overall, the research project seeks to contribute to the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives. By building the resilience of youth in Liberia, the project aims to support the country's ongoing efforts to rebuild and promote sustainable peace and development.</p> */}
+                        </div>
+                        
+                        <div className="single-research-cards">
+                            {projectgoals && (
+                                projectgoals.map((project, index) => (
+                                    <div className="single-research-card">
+                                        <h1>{index + 1}.</h1>
+                                        <p>{project}</p>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                        {projectcomponents && (
+                            <>
+                                <div className="single-research-head">
+                                    <h3>Project Components</h3>
+                                </div>
+                                <div className="single-research-text">
+                                    <p>Overall, the mixed-methods approach will allow for a comprehensive understanding of the experiences and perceptions of Liberian youth in relation to conflict and violence, as well as their resilience and participation in peacebuilding and development initiatives. The findings of the research project will inform the development of evidence-based policies and programs aimed at promoting the well-being and active participation of Liberian youth in peacebuilding and development initiatives.</p>
+                                </div>
+                                <div className="method-cards">
+
+                                    {projectcomponents && (
+                                        projectcomponents.map((component, index) => (
+                                            <div className="methods" key={index}>
+                                                {index % 2 === 0 ?
+                                                    <>
+                                                        <div className="method-card">
+                                                            <p>{component}</p>
+                                                        </div>
+                                                        <div className="method-height"></div>
+                                                    </> : <>
+                                                        <div className="method-height"></div>
+                                                        <div className="method-card">
+                                                            {/* <h4>Literature Review</h4> */}
+                                                            <p>{component}</p>
+                                                        </div>
+                                                    </>
+
+                                                }
+
+
+                                            </div>
+                                        ))
+                                    )}
+                                </div>
+                            </>
+                        )}
+
+                        {
+                            research?.acf.link==='MOWIP-project'&&(
+                                <div>
+                                                                    </div>
+
+                            )
+                        }
+                        {
+                            projectoutcomes && (
+                                <div className="single-outcome">
+                                    <div className="left">
+                                        <div className="single-research-head">
+                                            <h3>Project Outcomes</h3>
+                                        </div>
+                                        <div className="single-research-text listing">
+                                            <p>The project outcomes will contribute to the promotion of sustainable peace and development in Liberia, by addressing the challenges faced by Liberian youth and promoting their active participation in building a better future for themselves and their communities.</p>
+                                            <div className="outcome-listings">
+                                                {projectoutcomes && (
+                                                    projectoutcomes.map((outcome, index) => (
+                                                        <div className="single-listing" key={index}>
+                                                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <mask id="mask0_772_640" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                                </mask>
+                                                                <g mask="url(#mask0_772_640)">
+                                                                    <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z" fill="#DE4404" />
+                                                                </g>
+                                                            </svg>
+                                                            </span>
+                                                            <p className="listing">{outcome}</p>
+                                                        </div>
+                                                    )))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="right">
+                                        <img src="/images/research-bottom.jpeg" alt="research projects" />
+                                    </div>
+                                </div>
+                            )
+                        }
+                        
+                        {research?.collaborators && (
+                            <>
+                                <div className="single-research-head">
+                                    <h3>Collaborators</h3>
+                                </div>
+                                {
+                                    research.acf.link === 'MOWIP-project' && (
+                                        <p className="px-5  my-2"> The MOWIP methodology was implemented with the Armed Forces of Liberia with support from UN Women, KAICT, the Gender and Security Sector Lab (GSS Lab) and the DCAF Helpdesk, and funded by the Elsie Initiative Fund.
+                                        </p>
+                                    )
+                                }
+
+                                <div className="team-container container">
+                                    <div className="team-content research flex gap-5 flex-wrap">
+                                        {research.collaborators && (
+                                            <>
+                                                {research?.collaborators.map((i) => (
+                                                    <div className="member">
+                                                        <img src={i.featured_image_url} alt="Kofi Annan  Annan Institute for Conflict Transformation Team Member" className=" object-contain" />
+                                                        <div className="member-info">
+                                                            <span>{i.acf.name}</span>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </>
+                                        )}
+
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                       
                         <div className="single-research-head">
                             <h3>Events</h3>
                         </div>
