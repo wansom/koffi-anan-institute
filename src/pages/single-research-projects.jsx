@@ -137,7 +137,7 @@ const SingleResearchProject = () => {
                                         </thead>
                                         <tbody>
                                             <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 md:whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
                                                     <p> <span className="font-bold">Eligible Pool</span> <br />
                                                         Are there enough women in national institutions?
                                                     </p>
@@ -319,9 +319,9 @@ const SingleResearchProject = () => {
                                                         <div className="method-card">
                                                             <p>{component}</p>
                                                         </div>
-                                                        <div className="method-height"></div>
+                                                        <div className="method-height hidden md:block"></div>
                                                     </> : <>
-                                                        <div className="method-height"></div>
+                                                        <div className="method-height hidden md:block"></div>
                                                         <div className="method-card">
                                                             {/* <h4>Literature Review</h4> */}
                                                             <p>{component}</p>
