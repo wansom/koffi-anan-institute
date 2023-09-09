@@ -144,7 +144,7 @@ const AboutRoute = () => {
       .catch((error) => console.error(error));
   }, []);
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       <Navbar />
       <AboutHero
         subtitle={"Know Us Better"}

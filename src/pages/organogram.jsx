@@ -22,7 +22,7 @@ const Organogram=()=>{
           </div>
           <hr className="vertical-hr" />
         </div>
-        <div className="flex items-center justify-center gap-0">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0">
           <div className="card py-6">
             <h5>Record Officer</h5>
             <p>Ms. Josephine W. Capehart</p>

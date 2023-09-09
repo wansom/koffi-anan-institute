@@ -10,7 +10,7 @@ import ResearchProjects from './components/home/ResearchProjects';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App overflow-x-hidden">
       <Navbar/>
       <main>
       <Hero/>

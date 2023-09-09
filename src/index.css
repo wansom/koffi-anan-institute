@@ -1521,9 +1521,7 @@ section.team {
 
 .team-content .member {
   height: fit-content;
-  width: 100%;
-  max-width: 290px;
-  min-width: 280px;
+  width: 80%;
   margin: 10px 0px;
 }
 
@@ -5870,6 +5868,11 @@ section.pub-pagination {
 
   .tab-slide {
       justify-content: space-evenly !important;
+  }
+  .team-content .member {
+    height: fit-content;
+    width: 350px;
+    margin: 10px 0px;
   }
 }
 

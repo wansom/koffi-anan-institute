@@ -53,10 +53,6 @@ const SecurityReforms = () => {
                         <h2 className="think-head">TRAINING</h2>
                         <p className="think-p">The SSR Think Tank also offers training courses, in particular for security sector personnel and civil society activists. The trainings focus on strengthening democratic attitudes, respect for human rights, and sensitivity to gender disparities.
                         </p>
-                       
-
-                       
-    
                     </div>
                 </section>
             </main>

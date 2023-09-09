@@ -150,7 +150,7 @@ const TemproaryStaff = ({ loading, staff }) => {
                 />
               </svg>
             </div>
-          <div className={hasNextPage?'flex gap-6 overflow-x-hidden mb-3 w-4/5':'flex gap-10 overflow-x-hidden mb-3 w-full'}>
+          <div className={hasNextPage?'flex flex-col md:flex-row gap-6 overflow-x-hidden mb-3 w-full':'flex flex-col md:flex-row gap-10 overflow-x-hidden mb-3 w-full'}>
           {currentPosts.map((i,index) => (
               <div className="member" key={index}>
                 <img
