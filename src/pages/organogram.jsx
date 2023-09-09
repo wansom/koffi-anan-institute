@@ -46,7 +46,7 @@ const Organogram=()=>{
           </div>
           <hr className="vertical-hr" />
         </div>
-        <div className="flex items-center justify-center gap-0 mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 mb-10">
         <div className="flex">
           <div className="flex flex-col items-center justify-center">
           <div className="card py-4">
@@ -59,14 +59,14 @@ const Organogram=()=>{
             <p>Ms. Lusu K. T. Bernard</p>
           </div>
           <hr className="vertical-hr" />
-          <div className="card py-6">
+          <div className="card py-6 mb-4 md:mb-0">
             <h5>Logistician</h5>
             <p>Mr. Titus A. Padmore</p>
           </div>
           </div>
-          <hr className="horizontal-hr mt-12" />
+          <hr className="horizontal-hr mt-12 hidden md:block" />
           </div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
           <div className="flex flex-col items-center justify-center">
           <div className="card py-4">
             <h5>Deputy Director for Research</h5>
@@ -78,12 +78,16 @@ const Organogram=()=>{
             <p>Permanent & Visiting</p>
           </div>
           <hr className="vertical-hr" />
-          <div className="card py-6">
+          <div className="card py-6 mb-4 md:mb-0">
             <h5>Research Assistants</h5>
             <p>Temporary</p>
           </div>
           </div>
-          <hr className="horizontal-hr mt-12" />
+          <hr className="horizontal-hr hidden md:block md:mt-12" />
+          <div className="flex  justify-center items-center md:hidden">
+          <hr className="  vertical-hr  " />
+          </div>
+          
           </div>
 
 
