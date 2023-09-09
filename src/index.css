@@ -4966,7 +4966,6 @@ section.single-research {
   justify-content: space-between !important;
 }
 .single-outcome {
-  display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 60px 0px;
@@ -5873,6 +5872,14 @@ section.pub-pagination {
     height: fit-content;
     width: 350px;
     margin: 10px 0px;
+  }
+  .method-card {
+    width: 100%;
+    min-width: 280px;
+    height: fit-content;
+    padding: 20px;
+    background: #fcfcfc;
+    margin-bottom: 10px;
   }
 }
 

@@ -111,7 +111,7 @@ const SingleResearchProject = () => {
         fetchData();
     }, []);
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Navbar />
             <main>
                 <AboutHero title={research?.acf.project_title} subtitle='Research Projects' background={research?.featured_image_url} />
@@ -347,7 +347,7 @@ const SingleResearchProject = () => {
                         }
                         {
                             projectoutcomes.length>0 && (
-                                <div className="single-outcome">
+                                <div className="single-outcome flex flex-col-reverse md:flex-row">
                                     <div className="left">
                                         <div className="single-research-head">
                                             <h3>Project Outcomes</h3>
@@ -393,7 +393,7 @@ const SingleResearchProject = () => {
                                 }
 
                                 <div className="team-container container">
-                                    <div className="team-content research flex gap-5 flex-wrap justify-start">
+                                    <div className="team-content research grid grid-cols-1 md:grid-cols-3">
                                         {research.collaborators && (
                                             <>
                                                 {research?.collaborators.map((i) => (
