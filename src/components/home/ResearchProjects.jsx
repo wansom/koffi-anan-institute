@@ -45,7 +45,7 @@ const ResearchProjects =()=>{
                 <div className="project-info">
                     <h2 dangerouslySetInnerHTML={{ __html: project.title.rendered }}></h2>
                     <p>{project.acf.overview?.slice(0,280)}...</p>
-                    <a href={`/researchProject/${project.acf.project_title}`}><button>Learn More</button></a>
+                    <a href={`/researchProject/${project.acf.link}`}><button>Learn More</button></a>
                 </div>
             </div>
                 ))}

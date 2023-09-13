@@ -41,6 +41,7 @@ const SingleResearchProject = () => {
         fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
             .then((response) => response.json())
             .then((posts) => {
+              
                 const mediaPromises = posts.map((post) => {
                     return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
                         .then((response) => response.json())
@@ -53,7 +54,7 @@ const SingleResearchProject = () => {
             })
             .then((postsWithMedia) => {
                 const collaboratorPromises = postsWithMedia.map((post) => {
-                    if (post.acf.collaborators && post.acf.collaborators.length > 0) {
+                    if (post?.acf.collaborators && post.acf.collaborators.length > 0) {
                         return Promise.all(
                             post.acf.collaborators.map((collabId) => {
                                 return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/collaborators/${collabId}`)
@@ -85,6 +86,7 @@ const SingleResearchProject = () => {
             .then((postsWithCollaborators) => {
 
                 const currentIndex = postsWithCollaborators.find((item) => item.acf.link === id);
+                
                 console.log(currentIndex)
                 const postContent = currentIndex.acf.project_; // Adjust this path as necessary based on the WordPress API response structure
                 const parsedItems = htmlToListItems(postContent);
@@ -126,160 +128,14 @@ const SingleResearchProject = () => {
 
                         {
                             research?.acf.link === 'MOWIP-project' && (
-
-                                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
-                                            <tr>
-                                                <p className=" text-black font-bold my-4">Pre-deployment stage: including factors that affect force generation</p>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 md:whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Eligible Pool</span> <br />
-                                                        Are there enough women in national institutions?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The eligible pool issue area explores whether there are enough women in the AFL to meet the UN Uniformed Gender Parity Strategy targets for 2028: 15% of troops and 20% of military observers and staff to be women.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Deployment Criteria </span> <br />
-                                                        Do criteria match the skills needed in operation?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The deployment criteria issue area examines whether women can meet the requirements for deployment to the same extent as men.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Deployment Selection</span> <br />
-                                                        Does everyone have a fair chance to deploy?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The deployment selection issue area explores whether women are prevented or not from deploying through a lack of information, a lack of connections to influential decision makers and/or because their superiors decide that it is too dangerous for them to deploy.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Household Constraints</span> <br />
-                                                        Are there arrangements for families of deployed women?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The household constraints issue area explores the impact of having young children, elderly parents or other family obligations on women’s ability to deploy to peace operations, as compared to men. It also assesses whether there is social pressure towards women who might deploy.
-                                                </td>
-
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
-                                            <tr>
-                                                <p className=" text-black font-bold my-4">Deployment stage: including difficulties for women during operations</p>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Peace Operations Infrastructure</span> <br />
-                                                        Is accommodation and equipment designed to meet women’s needs?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The peace operations infrastructure issue area assesses whether the lack of adequate equipment, infrastructure  and services prevent women from deploying to peace operations.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Peace Operations Experiences</span> <br />
-                                                        Do positive and negative experiences in operations affect women’s deployment decisions?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The peace operations experiences issue area assesses the impact of (positive and negative) experiences during deployment, including experiences of meaningful participation, on women’s decision to redeploy or not, and to encourage or discourage others from deploying.
-                                                </td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
-                                            <tr>
-                                                <p className=" text-black font-bold my-4">Post-deployment stage: including factors that affect redeployment</p>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Career Value</span> <br />
-                                                        Do deployments advance women’s careers?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The career value issue area measures whether peace operations help the careers of military personnel. This, in turn, affects whether or not men and women are likely to deploy and redeploy. Women who have deployed may choose not to redeploy if it is not advantageous to their career prospects.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Top-down Leadership</span> <br />
-                                                        Do leaders at all levels support women’s deployment?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The top-down leadership issue area explores the impact of political will among those in influential positions (or lack thereof) on women’s deployment and meaningful participation in peace operations.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Gender Roles</span> <br />
-                                                        Do preconceived attitudes about women preclude their ability to deploy?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The gender roles issue area explores whether the prevalence of gender stereotypes and discriminatory attitudes influences the number of women deploying and their ability to meaningfully participate in peace operations. We assess this by looking at the degree to which women and men hold traditional roles and views about the roles that men and women play in society. We also assess the degree to which a gender protection norm exists in the institution. This means we assess whether men and women continue to feel that women must be protected from danger.
-                                                </td>
-
-                                            </tr>
-                                            <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                                    <p> <span className="font-bold">Social Exclusion</span> <br />
-                                                        Are women treated as equal members of the team?
-                                                    </p>
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    The social exclusion issue area explores whether in-group / out-group mentalities cause women to be marginalized, ostracized, denigrated, harassed or attacked thus preventing them from deploying or participating meaningfully in peace operations. It also explores the ways in which male group cohesion forms. We assess this by looking at the levels of harassment and violence in the institutions and sanctions against them, as well as healthy and unhealthy ways of creating cohesion.
-                                                </td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <img src="/images/mowip-table.jpg" alt="" />
                             )
                         }
                         {projectgoals.length>0 && (
                             <>
                                 <div className="single-research-head">
                                    {research?.acf.link !=='Conflict-Mediation-consultancy'&&(
-                                     <h3>Project Goals</h3>
+                                     <h3 className="mb-4">Project Goals</h3>
                                    )}
                                     {research?.acf.link ==='Conflict-Mediation-consultancy'&&(
                                      <h3>Project Milestones</h3>

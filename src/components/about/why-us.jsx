@@ -2,9 +2,9 @@ const WhyUs = () => {
   return (
     <section className="why">
       <div className="why-container container mx-auto">
-        <div className="left px-1 md:px-10">
+        <div className="left">
           <p>About Us</p>
-          <h1>Why the Kofi Annan Institute for Conflict Transformation</h1>
+          <h1 className="">Why the Kofi Annan Institute for Conflict Transformation</h1>
           <p>
             The Kofi Annan Institute for Conflict Transformation (KAICT) was set
             up in 2006, and named after Kofi Atta Annan to honor the
@@ -21,8 +21,8 @@ const WhyUs = () => {
         <div className="right">
           <img src="images/about/team.png" alt="Why Kofi Annan Institute" />
         </div>
-        <div className="my-10 px-1 md:px-10">
-        <p className=" text-justify">KAICT is a center of excellence for research,
+        <div className="my-6 px-1 md:px-12">
+        <p className="text-justify">KAICT is a center of excellence for research,
             teaching, policy dialogue and community engagement on peace,
             conflict, security, gender and development that aims to contribute
             to Liberia’s national recovery, development, peace and gender

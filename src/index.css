@@ -818,7 +818,7 @@ section.banner {
   font-size: 22px;
   line-height: 36px;
   color: #1c1b1f;
-  margin: 10px 0px;
+  margin: 0px 0px;
 }
 
 .think-tank-info p {
@@ -1186,7 +1186,7 @@ section.about .banner-text p {
   font-size: 32px;
   line-height: 60px;
   color: #25518c;
-  margin: 5px 0px 10px;
+  margin: 0px 0px 10px 0px;
 }
 
 .why-container .left p:nth-child(3) {
@@ -1196,7 +1196,7 @@ section.about .banner-text p {
   font-size: 16px;
   line-height: 24px;
   color: #1c1b1f;
-  margin: 10px 0px;
+  margin-top: 20px;
   text-align: justify;
 
 }
@@ -1234,7 +1234,7 @@ section.about .banner-text p {
 }
 
 .why-container .right {
-  padding: 0px 10px;
+  padding: 0px 0px;
 }
  .desc span{
   font-family: 'Montserrat';
@@ -4892,7 +4892,7 @@ section.single-research {
   width: 100%;
   max-width: 390px;
   min-width: 280px;
-  min-height: 340px;
+  min-height: 300px;
   margin: 10px;
   padding: 40px;
   background-color: #25518c;

@@ -108,7 +108,7 @@ const ResearchProjects = () => {
       <Navbar />
       <main>
         <AboutHero
-          title={"Research Projects"}
+          title={"Research"}
           subtitle="Advancing Peace and Stability through Innovative Research"
           background={background}
         />

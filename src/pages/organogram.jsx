@@ -25,7 +25,7 @@ const Organogram=()=>{
         <div className="flex flex-col md:flex-row items-center justify-center gap-0">
           <div className="card py-6">
             <h5>Record Officer</h5>
-            <p>Ms. Josephine W. Capehart</p>
+            <p> Mr. Titus A. Padmore</p>
           </div>
           <hr className="horizontal-hr" />
           <div className="card py-6">
@@ -61,7 +61,7 @@ const Organogram=()=>{
           <hr className="vertical-hr" />
           <div className="card py-6 mb-4 md:mb-0">
             <h5>Logistician</h5>
-            <p>Mr. Titus A. Padmore</p>
+            <p>Vacant</p>
           </div>
           </div>
           <hr className="horizontal-hr mt-12 hidden md:block" />
@@ -80,7 +80,7 @@ const Organogram=()=>{
           <hr className="vertical-hr" />
           <div className="card py-6 mb-4 md:mb-0">
             <h5>Research Assistants</h5>
-            <p>Temporary</p>
+            <p>Mrs. Josephine W. Capehart</p>
           </div>
           </div>
           <hr className="horizontal-hr hidden md:block md:mt-12" />
