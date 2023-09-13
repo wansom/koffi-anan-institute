@@ -41,7 +41,7 @@ const SingleResearchProject = () => {
         fetch("https://kacit.twafwane.com/wp-json/wp/v2/research")
             .then((response) => response.json())
             .then((posts) => {
-              
+
                 const mediaPromises = posts.map((post) => {
                     return fetch(`https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`)
                         .then((response) => response.json())
@@ -86,7 +86,7 @@ const SingleResearchProject = () => {
             .then((postsWithCollaborators) => {
 
                 const currentIndex = postsWithCollaborators.find((item) => item.acf.link === id);
-                
+
                 console.log(currentIndex)
                 const postContent = currentIndex.acf.project_; // Adjust this path as necessary based on the WordPress API response structure
                 const parsedItems = htmlToListItems(postContent);
@@ -118,28 +118,33 @@ const SingleResearchProject = () => {
             <main>
                 <AboutHero title={research?.acf.project_title} subtitle='Research Projects' background={research?.featured_image_url} />
                 <section className="single-research">
-                    <div className="single-research-container container mx-auto px-5">
+                    <div className="single-research-container container mx-auto px-5 md:px-10">
                         <div className="single-research-head">
                             <h3>Overview</h3>
                         </div>
                         <div className="single-research-text">
                             <p>{research?.acf.overview}</p>
                         </div>
-
                         {
                             research?.acf.link === 'MOWIP-project' && (
-                                <img src="/images/mowip-table.jpg" alt="" />
+                                <div className="flex flex-col lg:flex-row">
+                                    <img src="/images/mowip-1.jpg" alt="" className="w-full h-screen object-contain" />
+                                    <img src="/images/mowip-2.jpg" alt="" className="w-full h-screen object-contain" />
+
+                                </div>
                             )
                         }
-                        {projectgoals.length>0 && (
+
+
+                        {projectgoals.length > 0 && (
                             <>
                                 <div className="single-research-head">
-                                   {research?.acf.link !=='Conflict-Mediation-consultancy'&&(
-                                     <h3 className="mb-4">Project Goals</h3>
-                                   )}
-                                    {research?.acf.link ==='Conflict-Mediation-consultancy'&&(
-                                     <h3>Project Milestones</h3>
-                                   )}
+                                    {research?.acf.link !== 'Conflict-Mediation-consultancy' && (
+                                        <h3 className="mb-4">Project Goals</h3>
+                                    )}
+                                    {research?.acf.link === 'Conflict-Mediation-consultancy' && (
+                                        <h3>Project Milestones</h3>
+                                    )}
                                 </div>
 
 
@@ -157,7 +162,29 @@ const SingleResearchProject = () => {
 
 
                         )}
-                        {projectcomponents.length>0 && (
+                        {
+                            research?.acf.link === 'MOWIP-project' && (
+                                <div>
+                                    <div className="single-research-head">
+                                        <h3>Research Methodology</h3>
+                                    </div>
+                                    <div className="single-research-text">
+                                        <p>The MOWIP methodology is a unique tool to assess and improve women’s meaningful participation in peace operations. It provides a systematic and comprehensive framework for identifying both a security institution’s existing good practices and possible improvements in each of ten issue areas identified as central to women’s meaningful participation. Many relevant factors are not limited, however, to the specific context of women’s participation in UN deployments. Rather, they reflect how women and men are treated in the security institution more broadly.
+                                            This project uses three data collection tools: a fact-finding form (FFF), key decision-maker interviews and a survey. The fact-finding form contains approximately 200 questions designed to collect qualitative and quantitative data from official sources about deployment to UN peace operations from the country and institution being assessed. The
+                                            The Kofi Annan Institute for Conflict Transformation team undertook the data collection for this project from October 14, 2021 through April 25, 2022. In this process, KAICT:
+                                        </p>
+                                        <ul className=" list-inside list-disc">
+                                            <li>Completed the fact-finding form</li>
+                                            <li>Interviewed 28 key decision-makers from within the institution as well as relevant </li>
+                                            <li>Conducted a survey with 600 members from all batches of the AFL, including 61% of the women in the forces</li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            )
+                        }
+                        {projectcomponents.length > 0 && research?.acf.link !== 'MOWIP-project' && (
                             <>
                                 <div className="single-research-head">
                                     <h3>Project Components</h3>
@@ -202,7 +229,22 @@ const SingleResearchProject = () => {
                             )
                         }
                         {
-                            projectoutcomes.length>0 && (
+                            research?.acf.link === 'MOWIP-project' && (
+                                <> <div className="single-research-head my-3">
+                                    <h3 className="my-4">Project Outcomes</h3>
+                                    <p>Effective participation is not just about the number or proportion of women deployed, but also about ensuring first, that women’s needs are met when participating in the institution and on operations; second, that women have access to the same opportunities, roles, and resources as men; and third, that women’s skills and competencies match their responsibilities and the expectations they face. As such, addressing the barriers identified will require an integrated and holistic approach, incorporating four complementary types of intervention: policies, training and professional development, practices, and organizational culture.
+                                        This study shows that the three main barriers to women’s meaningful participation in peace operations are Issue Area 3 deployment selection, Issue Area 5 peace operation infrastructure and Issue Area 10 social exclusion.
+                                    </p>
+
+                                </div>
+
+                                    <img src="/images/mowip-table.jpg" alt="" />
+                                </>
+                            )
+                        }
+                        {
+                            projectoutcomes.length > 0 && research?.acf.link !== 'MOWIP-project' &&
+                            (
                                 <div className="single-outcome flex flex-col-reverse md:flex-row">
                                     <div className="left">
                                         <div className="single-research-head">
