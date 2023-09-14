@@ -14,7 +14,7 @@ const MaryAntoinnette = () => {
           background={background}
         ></AboutHero>
         <section className="think-single">
-          <div className="think-single-container container mx-auto px-5">
+          <div className="think-single-container container mx-auto px-5 lg:px-10">
             <h2 className="think-head">Overview</h2>
             <p className="think-p">
               The Mary Antoinette Brown Sherman Think Tank (MABS Think Tank) is the flagship program on gender of the Kofi Annan Institute.
@@ -29,7 +29,7 @@ const MaryAntoinnette = () => {
             {/* Research section */}
             <div>
               
-              <div className="takeaway-cards">
+              <div className="takeaway-cards py-10">
                 <div className="takeaway-card">
                   <div className="card-center">
                     <h2>Lecture Series</h2>

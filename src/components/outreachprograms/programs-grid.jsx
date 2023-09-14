@@ -5,7 +5,7 @@ const ProgramsGrid = () => {
         <div className="outreach-card">
           <img src="/images/outreach-program/p-8.jpeg" alt="" />
           <div className="outreach-info">
-            <h2>Community Engagement</h2>
+            <h2 className="capitalize">Community Engagement</h2>
             <p className="h-[210px] overflow-y-scroll">
               Dialogues, trainings and workshops with women and youth are a
               key part of the Kofi Annan Institute’s activities. We strongly
@@ -28,7 +28,7 @@ const ProgramsGrid = () => {
         <div className="outreach-card">
           <img src="/images/outreach-program/p-1.jpg" alt="" />
           <div className="outreach-info">
-            <h2>KOFI ANNAN DIALOGUES – Wednesday Seminars</h2>
+            <h2 className="capitalize">Kofi Annan Dialogues – Wednesday Seminars</h2>
             <p className="h-[210px] overflow-y-scroll">
               The Wednesday Seminar on Peace, Politics and Society takes place weekly during the lecture period. It is an extra-curricular information and discussion event for the student population and the interested public. It is flexible in format and can accommodate a broad range of topics on politics, economics and society. By regularly organizing the seminar, we aim to provide a space for informed and reasoned debate on issues and trends in Liberia and beyond. The event is open to diverse styles of knowledge transfer. Often, external experts or KAICT faculty present on current events or academic debates and discuss their insights with the audience. Panel discussions or student model debates are among the alternative formats. Screening and discussion of documentaries, movies or online lectures by third parties also take place within the seminar framework. The Wednesday Seminar takes place in the cozy atmosphere of the Graduate School’s grand lecture hall and attracts approximately 30 to 60 visitors from the student population and the public.
             </p>
@@ -41,7 +41,7 @@ const ProgramsGrid = () => {
         <div className="outreach-card">
           <img src="/images/outreach-program/p-6.jpeg" alt="" />
           <div className="outreach-info">
-            <h2>KOFI ANNAN LIVING MEMORIAL (KALM)</h2>
+            <h2 className=" capitalize">Kofi Annan Living Memorial (KALM)</h2>
             <p className="h-[210px] overflow-y-scroll">
               The Kofi Annan Living Memorial (KALM) is a pan-African
               initiative to commemorate and sustain the legacy of the late

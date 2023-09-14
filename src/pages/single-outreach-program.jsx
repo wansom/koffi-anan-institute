@@ -10,9 +10,18 @@ const SingleOutreachProgram = () => {
         <div>
             <Navbar />
             <main>
-                <AboutHero title={id} subtitle='Outreach Programs' background={background} />
+            {id === 'community-engagement' && (
+                <AboutHero title={'Community Engagement'} subtitle='Outreach Programs' background={background} />
+
+            )}
+            {id === 'KALM' && (
+            <AboutHero title={'Kofi Annan Living Memorial (KALM)'} subtitle='Outreach Programs' background={background} />
+            )}
+            {id === 'kofi-annan-dialogues' && (
+                 <AboutHero title={'Kofi Annan Dialogues – Wednesday Seminars'} subtitle='Outreach Programs' background={background} />
+            )}
                 <section className="single">
-                    <div className="single-outreach-container container">
+                    <div className="single-outreach-container container px-5 md:px-10">
                         {id === 'community-engagement' && (
                             <p>Dialogues, trainings and workshops with women and youth are a key part of the Kofi Annan Institute’s activities. We strongly believe that youth and women are crucial for Liberia’s reconstruction and development. To focus specifically on these two population groups is essential in a country where older men often take the front seat when it comes to public decision-making, thereby frequently underrepresenting the needs of women and future generations. The youth of today will be the leaders of tomorrow. Therefore, we need to make particular efforts to strengthen the skills of young people in the country. We do so through women’s community engagements and youth leadership trainings.  </p>
                         )}
@@ -29,20 +38,20 @@ const SingleOutreachProgram = () => {
                         )}
 
                         {id === 'community-engagement' && (
-                            <div className="grid gird-cols-1 md:grid-cols-3">
-                                <div className="single-research-card">
-                                    <h1>WOMEN COMMUNITY ENGAGEMENT</h1>
-                                    <div className=" h-52 overflow-y-scroll">
+                            
+                            <div className="">
+                                <div className="mb-4">
+                                    <h1 className="py-2 font-bold">WOMEN COMMUNITY ENGAGEMENT</h1>
+                                    <div>
                                         <p>Our Women’s Community Engagements focus on a broad range of topics, from elections to peaceful conflict resolution. While most attendees of our events are women, we include some men in our sessions, as we believe that gender norms can only be changed in collaboration and not in isolation. Effective gender-related interventions need to include both men and women.
-                                            Past activities include:
-                                            •	2022, November 22 & 23: KAICT educated a mixed group of men and women in Bensonville and Brewerville about political and electoral processes and encourage people to engage in elections peacefully.
+                                            
                                         </p>
                                     </div>
 
                                 </div>
-                                <div className="single-research-card">
-                                    <h1>YOUTH LEADERSHIP TRAINING PROGRAM </h1>
-                                    <div className=" h-52 overflow-y-scroll">
+                                <div className="">
+                                    <h1 className="font-bold">YOUTH LEADERSHIP TRAINING PROGRAM </h1>
+                                    <div>
                                         <p>
                                             KAICT offers a leadership program for motivated and talented young professionals to-be. The program is developed based on the conviction that there is a need for a new breed of young leaders dedicated to the promotion of participatory, enabling, transparent and integer leadership in all sectors of Liberia, oriented towards a more stable country.
                                             The young leadership program aims to fill the vacuum of young leaders in the age bracket of 18 to 35 years, who will foster democracy that engenders social justice, transparency, integrity, gender equity and responsibility and human social capital development in Liberia.
@@ -58,7 +67,7 @@ const SingleOutreachProgram = () => {
                 </section>
 
                 <section className="outreach-card-sec">
-                    <div className="outreach-card-container title container">
+                    <div className="outreach-card-container title container mx-auto px-5 md:px-10">
                         <h2 className="outreach-single-title text-center" >Outreach Programs</h2>
                     </div>
                     <ProgramsGrid />

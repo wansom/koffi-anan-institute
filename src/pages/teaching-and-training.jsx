@@ -41,13 +41,13 @@ const Teachingandtraining = () => {
       />
       <main>
         <section className="courses">
-          <div className="px-5 pb-5">
+          <div className="px-5 md:px-10 pb-5">
           <p>There is a need to strengthen training and education around conflict, peace, security, gender, and development in Liberia to develop the human capital in the country and to contribute to Liberia’s recovery. To achieve this critically important objective, KAICT launched a 3-month certificate and a 6-month diploma program in Peace Studies and Conflict Transformation in September 2007, followed by a Master’s degree course in Peace Studies and Conflict Transformation in September 2009.
             KAICT accomplishes student success by developing well-informed and creative scholars capable of contributing research-based knowledge to social progress. The institution is committed to fostering a learning-centered community that celebrates diversity and inclusion by empowering and engaging students, faculty, and staff.
           </p>
           </div>
          
-          <div className="training-courses-container container">
+          <div className="training-courses-container container mx-auto px-5 md:px-10">
             {courses.map((course, index) => (
               <div className={index % 2 === 0 ? 'train-course flex  flex-col md:flex-row items-center justify-evenly relative' : ' train-course relative flex flex-col md:flex-row-reverse items-center justify-evenly px-0 py-5'} key={index}>
                 <div className="right">

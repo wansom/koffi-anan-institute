@@ -92,7 +92,7 @@ const Navbar = () => {
               </div>
               <div className="right pad">
                 <p>Email Us:</p>
-                <p>kofiannaninstitute.ul@gmail.com</p>
+                <p>kofiannaninstitute@ul.edu.lr</p>
               </div>
             </div>
             <div className="contact contact-one">

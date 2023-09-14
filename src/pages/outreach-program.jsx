@@ -15,7 +15,7 @@ const OutreachProgram = () => {
           subtitle="Building Peaceful Communities Together."
           background={background}
         />
-        <div className="container mx-auto">
+        <div className="container mx-auto px-5 md:px-10">
           <p className="text-lg my-6">
             The Kofi Annan Institute is committed to making research and
             education available to everyone. Through a range of outreach and

@@ -81,7 +81,7 @@ const ContactUs = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>+231 77 627 7932</span>
+              <span>+231 77 627 7932 |+231 88 617 1990</span>
             </div>
             <div className="detail">
               <svg

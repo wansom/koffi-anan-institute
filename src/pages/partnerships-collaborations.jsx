@@ -9,7 +9,7 @@ function PartnershipsCollaborations() {
   return (
     <div>
         <Navbar />
-        <AboutHero title={'Partnership & Collaboration'} subtitle={'Partnership'} background={backgound}/>
+        <AboutHero title={'Partnerships & Collaborations'} subtitle={'Partnership'} background={backgound}/>
 
         <section className="think-single">
             <div className="think-single-container container">

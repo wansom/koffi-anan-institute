@@ -32,7 +32,11 @@ const PolicyEngagement = () => {
                 Mary Antoinette Brown Sherman Think Thank
                 .
             </p>
+            <a href="/partnershipsandcollaborations"> <button className="btn-brochure">View All Partnerships and Collaborations</button></a>
             <ThinkTanks/>
+            <p>
+
+            </p>
          </div>
          <Footer/>
         </div>

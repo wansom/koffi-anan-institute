@@ -116,7 +116,7 @@ const ProgramDetails = () => {
       <AboutHero
         title={course?.acf.course_name ?? ""}
         subtitle={"Learning & Teaching"}
-        background={background}
+        background={course?.featured_image_url}
       />
       <main>
         <section className="program-info top">
@@ -133,14 +133,14 @@ const ProgramDetails = () => {
             </div>
             <div className="prog-txt px-5 md:px-10 ">
               {course && (
-                <p dangerouslySetInnerHTML={{ __html: course.acf.course_details }}>
+                <div dangerouslySetInnerHTML={{ __html: course.content.rendered }}>
 
 
-                </p>
+                </div>
               )}
                 {
               id == 'masters-program' && (
-                <a href="http://kacit.twafwane.com/wp-content/uploads/2023/08/MA-Course-Brochure.pdf" target="blank"> <button className="btn-brochure">Download Brochure</button></a>
+                <a href="http://kacit.twafwane.com/wp-content/uploads/2023/09/MA-Course-Brochure-1.pdf" target="blank"> <button className="btn-brochure">Download Brochure</button></a>
               )}
              
 
@@ -171,12 +171,13 @@ const ProgramDetails = () => {
                         <li>Understand more deeply their own community and context, its dynamics and its specific requirements for building peace and preventing conflicts</li>
                         <li>Use information technology and media to obtain and disseminate information on these subjects.</li>
                       </ul>
-                    </div>
-                    <div className="right prog-txt">
                       <p>
-                        Prior to the course listing, please change the text to the following: The following courses are offered as part of the M.A. in Peace Studies and Conflict Transformation. Courses marked with an asterisk (*) are compulsory first semester/ year courses and a pass mark needs to be attained before the student can progress in the degree course.
+                        The following courses are offered as part of the M.A. in Peace Studies and Conflict Transformation. Courses marked with an asterisk (*) are compulsory first semester/ year courses and a pass mark needs to be attained before the student can progress in the degree course.
 
                       </p>
+                    </div>
+                    <div className="right prog-txt">
+                     
                       {curriculum.map((i, index) => (
                         <Accordion title={i.title} content={i.content} key={index} />
                       ))}
@@ -192,154 +193,17 @@ const ProgramDetails = () => {
               <div className="prog-head">
                 <h2>Entry Requirements</h2>
               </div>
-              <p className="elective" dangerouslySetInnerHTML={{ __html: course?.acf.entry_requirements }}>
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* <section className="prog-carding">
-          <div className="prog-carding-container container">
-            <div className="prog-card">
-              <div className="card-cont">
-                <span>96</span> <br />
-                <span>Number of Students Enrolled </span>
+              <div  dangerouslySetInnerHTML={{ __html: course?.acf.entry_requirements }}>
               </div>
             </div>
-            <div className="prog-card">
-              <div className="card-cont">
-                <span> 25,000</span> <br />
-                <span>Gender Distribution (Male and Female Students)</span>
-              </div>
-            </div>
-            <div className="prog-card">
-              <div className="card-cont">
-                <span>85</span> <br />
-                <span>Degree Completed</span>
-              </div>
-            </div>
-          </div>
-        </section> */}
-        <section className="program-info bottom">
-          {/* <div className="prog-info-container next container">
-            <div className="prog-head px-5 md:px-10">
-              <h2>Fees & Funding</h2>
-            </div>
-            <div className="curriculum flex flex-col md:flex-row items-start justify-between gap-10 px-5 md:px-10">
-              <div className="left prog-txt">
-                <p>
-                  The fees for the Master's Degree program in Conflict
-                  Transformation and Peacebuilding at the Kofi Annan Institute
-                  for Conflict Transformation University of Liberia vary
-                  depending on the program and the nationality of the student.
-                  However, the fees generally include tuition, registration
-                  fees, and other academic fees. Additional fees may apply for
-                  other services such as accommodation, transportation, and
-                  health insurance.{" "}
-                </p>
-
-                <p>
-                  As for funding, the Kofi Annan Institute for Conflict
-                  Transformation University of Liberia offers a limited number
-                  of scholarships and financial aid packages to eligible
-                  students. These scholarships and financial aid packages may
-                  cover some or all of the tuition fees and other expenses
-                  related to the program.
-                </p>
-
-                <p>
-                  In addition, students are encouraged to seek external funding
-                  opportunities such as scholarships, grants, and loans from
-                  national and international organizations, foundations, and
-                  governments that support education and peacebuilding
-                  initiatives.
-                </p>
-
-                <p>
-                  Prospective students are advised to contact the Kofi Annan
-                  Institute for Conflict Transformation University of Liberia
-                  for more information about fees and funding opportunities for
-                  the Master's Degree program in Conflict Transformation and
-                  Peacebuilding.
-                </p>
-
-              </div>
-              <div className="right prog-txt">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>Fees</td>
-                      <td>USD $</td>
-                    </tr>
-                    <tr>
-                      <td>Application Fee (Domestic)</td>
-                      <td>$70</td>
-                    </tr>
-                    <tr>
-                      <td>Application Fee (International)</td>
-                      <td>$115</td>
-                    </tr>
-                    <tr>
-                      <td>Program Deposit</td>
-                      <td>$500</td>
-                    </tr>
-                    <tr>
-                      <td>Program Cost (1 Year)</td>
-                      <td>$25,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div className="btn-curri">
-                  <button>Explore Scholarships</button>
-                  <button>Explore Financial Aid</button>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          <div className="prog-info-container next-to container mx-auto ">
-            <div className="prog-head px-5 lg:px-10">
+            <div className="prog-head mx-5 lg:mx-10">
               <h2 className="text-start">How To Apply</h2>
             </div>
-            <div className="curriculum px-5 lg:px-10 flex flex-col md:flex-row items-start justify-between gap-10">
-              {/* <div className="right prog-txt">
-                <table className="bottom">
-                  <tbody>
-                    <tr>
-                      <td>Deadlines</td>
-                      <td>Dates</td>
-                    </tr>
-                    <tr>
-                      <td>August Start</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Early Consideration</td>
-                      <td>30 October</td>
-                    </tr>
-                    <tr>
-                      <td>First - Round</td>
-                      <td>30 November</td>
-                    </tr>
-                    <tr>
-                      <td>Second - Round</td>
-                      <td>30 January</td>
-                    </tr>
-                    <tr>
-                      <td>Third - Round & International Student Deadline</td>
-                      <td>30 March</td>
-                    </tr>
-                    <tr>
-                      <td>Final Deadline</td>
-                      <td>30 June</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div> */}
-              <div className="left prog-txt">
+            <div className="left prog-txt px-5 md:px-10 mb-10">
                 <div className="right-text" dangerouslySetInnerHTML={{ __html: course?.acf.application_deadlines }}>
 
                 </div>
               </div>
-            </div>
           </div>
         </section>
       </main>

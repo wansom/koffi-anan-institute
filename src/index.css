@@ -2888,6 +2888,16 @@ section.program-info.bottom {
   line-height: 37px;
   color: #25518c;
 }
+.prog-head p{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c1b1f;
+  margin: 20px 0px;
+  text-align: justify;
+}
 
 .prog-txt p {
   font-family: "Montserrat";
@@ -4430,7 +4440,7 @@ section.single {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
-  margin: 5px 0px;
+  margin: 0px 0px;
 }
 
 .single-outreach-cards {
@@ -5485,10 +5495,8 @@ p.think-p {
 }
 
 .comm-row {
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin: 20px 0px;
 }
 
@@ -5515,7 +5523,7 @@ p.think-p {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 150%;
   color: #1C1B1F;
 }
