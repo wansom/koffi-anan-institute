@@ -10,7 +10,7 @@ const Library = () => {
             <AboutHero title={'Library'} subtitle='Learning Resources' background={background} />
             <main>
                 <section className="lib-search">
-                    <div className="library-container container mx-auto px-5 Md:px-10">
+                    <div className="library-container container mx-auto px-5 md:px-10">
                         {/* <form action="" className="search">
                     <div className="search-input">
                         <div className="form-control">
