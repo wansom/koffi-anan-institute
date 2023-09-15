@@ -128,7 +128,7 @@ const ResearchProjects = () => {
         <OverviewContent />
         <main>
           <section className="research-content">
-            <div className="research-container container">
+            <div className="research-container container mx-auto">
               <div className="research-item">
                 <div className="research-head">
                   <h1>Ongoing Projects</h1>
