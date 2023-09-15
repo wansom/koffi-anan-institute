@@ -1,8 +1,8 @@
 const WhyUs = () => {
   return (
-    <section className="why">
-      <div className="why-container container mx-auto">
-        <div className="left">
+    <section className="why container mx-auto px-5 md:px-10 ">
+      <div className="why-container flex flex-col md:flex-row gap-10">
+        <div className="left basis-1/2">
           <p>About Us</p>
           <h1 className="">Why the Kofi Annan Institute for Conflict Transformation</h1>
           <p>
@@ -18,10 +18,12 @@ const WhyUs = () => {
           </p>
           
         </div>
-        <div className="right">
+        <div className="right basis-1/2">
           <img src="images/about/team.png" alt="Why Kofi Annan Institute" />
         </div>
-        <div className="my-6 px-1 md:px-12">
+
+      </div>
+      <div className="my-6">
         <p className="text-justify">KAICT is a center of excellence for research,
             teaching, policy dialogue and community engagement on peace,
             conflict, security, gender and development that aims to contribute
@@ -44,7 +46,6 @@ const WhyUs = () => {
             in Liberia. We thereby bridge the gap between policy-making,
             research and community engagement. <br /></p>
         </div>
-      </div>
     </section>
   );
 };

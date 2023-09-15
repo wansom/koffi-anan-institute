@@ -1156,16 +1156,12 @@ section.about .banner-text p {
 }
 
 .why-container {
-  display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .why-container .left {
   width: 100%;
-  max-width: 640px;
-  min-width: 280px;
 }
 
 .why-container .left p:nth-child(1) {
@@ -1175,7 +1171,6 @@ section.about .banner-text p {
   font-size: 20px;
   line-height: 30px;
   color: #1c1b1f;
-  margin: 0px 0px 5px;
   text-align: justify;
 }
 
@@ -1186,7 +1181,6 @@ section.about .banner-text p {
   font-size: 32px;
   line-height: 60px;
   color: #25518c;
-  margin: 0px 0px 10px 0px;
 }
 
 .why-container .left p:nth-child(3) {
@@ -1196,7 +1190,6 @@ section.about .banner-text p {
   font-size: 16px;
   line-height: 24px;
   color: #1c1b1f;
-  margin-top: 20px;
   text-align: justify;
 
 }
