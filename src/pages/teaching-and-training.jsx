@@ -47,9 +47,9 @@ const Teachingandtraining = () => {
           </p>
           </div>
          
-          <div className="training-courses-container">
+          <div className="training-courses-container py-10">
             {courses.map((course, index) => (
-              <div className={index % 2 === 0 ? 'train-course flex  flex-col md:flex-row items-center justify-evenly relative' : ' train-course relative flex flex-col md:flex-row-reverse items-center justify-evenly px-0 py-5'} key={index}>
+              <div className={index % 2 === 0 ? 'train-course flex  flex-col md:flex-row items-center justify-evenly relative' : ' train-course relative flex flex-col md:flex-row-reverse items-center justify-evenly  py-5'} key={index}>
                 <div className="right">
                   <div className={index % 2 === 0 ? 'train-course-card w-full lg:w-[640px] md:-mr-[80px]' : 'train-course-card w-full lg:w-[640px] md:-ml-[80px]'}>
                     <h2>{course.acf.course_name}</h2>
