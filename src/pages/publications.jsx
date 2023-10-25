@@ -66,6 +66,13 @@ const Publications = () => {
       doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
     },
   ]
+  const policyBriefs=[
+    {
+      title:"Liberia between Reconciliation Commission and Roadmap – Steps Forward in a Halted Process?",
+      author:"KAICT Policy Brief No. 1 – June 2013",
+      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Sayndee-2013-Liberia-between-Reconciliation-Commission-and-Roadmap-–-Steps-Forward-in-a-Halted-Process-1.pdf"
+    },
+  ]
   return (
     <>
       <Navbar />
@@ -102,6 +109,26 @@ const Publications = () => {
                   <div className="prog-head ">
                     <h2>OTHER PUBLICATIONS</h2>
                    {policyPapers.map((i)=>(
+                    <div className="pub-info">
+                    <div className="flex justify-between gap-3">
+                   <div>
+                   <h3>
+                    {i.title}
+                    </h3>
+                    <span>
+                      by <u>{i.author} </u>
+                    </span>
+                   </div>
+                   <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                    </div>
+                    <hr className="w-full h-[1px] bg-black"/>
+                  </div>
+                   ))}
+              
+                  </div>
+                  <div className="prog-head ">
+                    <h2>POLICY BRIEFS</h2>
+                   {policyBriefs.map((i)=>(
                     <div className="pub-info">
                     <div className="flex justify-between gap-3">
                    <div>
