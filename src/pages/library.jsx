@@ -65,14 +65,14 @@ const Library = () => {
                             </div>
                         </div>
                         <div className="content-card">
-                            <img src="images/library-3.jpg" alt="" />
+                            <img src="images/policy-papers.jpg" alt="" />
                             <div className="content-info">
                                 <div className="year px-3">
                                     POLICY PAPERS
                                 </div>
 
                                 <div className="bottom">
-                                    <p>Government of Liberia (2013 [updated 2018]). Towards a Reconciled, Peaceful and Prosperous Liberia: A Strategic Roadmap for National Healing, Peacebuilding, and Reconciliation.</p>
+                                    <p>Here you find Policy Papers on peace, conflict, security, gender, and development in Liberia.</p>
 
                                 </div>
                             </div>
