@@ -38,8 +38,8 @@ return (
     <>
         <Navbar />
         <AboutHero
-            title={"Publications"}
-            subtitle={"Learn about our research"}
+            title={"Policy Papers"}
+            subtitle={""}
             background={backgound}
         />
         <main>
