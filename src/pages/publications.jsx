@@ -4,6 +4,13 @@ import Navbar from "../components/utils/navbar";
 import backgound from "../hero/publications.png";
 
 const Publications = () => {
+  const reports=[
+{
+  title:"KAICT (2021). Activity Report 2018-20. Kofi Annan Institute for Conflict Transformation, University of Liberia.",
+  author:"",
+  doc:'/publications/p-1.pdf'
+}
+  ]
   const academic=[
     {
       title:"A Prescription for Prolonged Fragility in Liberia, In Bangura, Ibrahim (eds.) Disarmament, Demobilisation and Reintegration of Ex-Combatants in Africa, Routledge.",
@@ -68,9 +75,14 @@ const Publications = () => {
   ]
   const policyBriefs=[
     {
-      title:"Liberia between Reconciliation Commission and Roadmap – Steps Forward in a Halted Process?",
-      author:"KAICT Policy Brief No. 1 – June 2013",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Sayndee-2013-Liberia-between-Reconciliation-Commission-and-Roadmap-–-Steps-Forward-in-a-Halted-Process-1.pdf"
+      title:"KAICT (2014). Voices on the Liberian Security Sector and UNMIL's Withdrawal. KAICT Policy Brief, 2, 1-8. ",
+      author:"",
+      doc:"/publications/p-2.pdf"
+    },
+    {
+      title:"Liberia between Reconciliation Commission and Roadmap – Steps Forward in a Halted Process? KAICT Policy Brief, 1, 1-7.",
+      author:"Sayndee, T. D. & Pietsch, S. (2013).",
+      doc:"/publications/p-3.pdf"
     },
   ]
   return (
@@ -85,6 +97,46 @@ const Publications = () => {
 
         <section>
           <div className="published-container container mx-auto px-5 md:px-10">
+          <div className="prog-head ">
+                    <h2>KAICT Reports</h2>
+                   {reports.map((i)=>(
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.title}
+                     </h3>
+                     <span>
+                       {i.author&&(<>by <u>{i.author} </u></>)}
+                     </span>
+                    </div>
+                    <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                   ))}
+              
+                  </div>
+                  <div className="prog-head ">
+                    <h2>KAICT Policy Brief</h2>
+                   {policyBriefs.map((i)=>(
+                    <div className="pub-info">
+                    <div className="flex justify-between gap-3">
+                   <div>
+                   <h3>
+                    {i.title}
+                    </h3>
+                    <span>
+                      by <u>{i.author} </u>
+                    </span>
+                   </div>
+                   <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                    </div>
+                    <hr className="w-full h-[1px] bg-black"/>
+                  </div>
+                   ))}
+              
+                  </div>
           <div className="prog-head ">
                     <h2>ACADEMIC PUBLICATIONS</h2>
                    {academic.map((i)=>(
@@ -126,26 +178,7 @@ const Publications = () => {
                    ))}
               
                   </div>
-                  <div className="prog-head ">
-                    <h2>POLICY BRIEFS</h2>
-                   {policyBriefs.map((i)=>(
-                    <div className="pub-info">
-                    <div className="flex justify-between gap-3">
-                   <div>
-                   <h3>
-                    {i.title}
-                    </h3>
-                    <span>
-                      by <u>{i.author} </u>
-                    </span>
-                   </div>
-                   <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
-                    </div>
-                    <hr className="w-full h-[1px] bg-black"/>
-                  </div>
-                   ))}
-              
-                  </div>
+                 
           </div>
         </section>
       </main>
