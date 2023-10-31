@@ -31,7 +31,7 @@ const Library = () => {
                         <button>Search</button>
                     </div>
                 </form> */}
-                        <p>The library of the Kofi Annan Institute for Conflict Transformation was established in 2008 by KAICT staff. Initial external support came from the Natural Resource Governance section of GIZ, the German Development Corporation. The library has expanded since and found a new home on the ground floor of the Graduate School building on the Capitol Hill Campus, University of Liberia, in 2018, through the support of the German Civil Peace Service, which has become the biggest donor to the library. Support has also been received from Books For Africa, and various private donors. </p>
+                        <p>The library of the Kofi Annan Institute for Conflict Transformation was established in 2008 by KAICT staff. Initial external support came from the Natural Resource Governance section of GIZ, the German Development Corporation. The library has expanded since and found a new home on the ground floor of the Graduate School building on the Capitol Hill Campus, University of Liberia, in 2018, with the support of AGIAMONDO and the German Civil Peace Service, which has become the biggest donor to the library. Support has also been received from Books For Africa, and various private donors. </p>
                     </div>
                 </section>
                 <section className="container mx-auto px-5 md:px-10 py-10">
