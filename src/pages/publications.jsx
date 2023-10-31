@@ -1,90 +1,55 @@
+import { useEffect, useState } from "react";
 import AboutHero from "../components/about/hero";
 import Footer from "../components/utils/footer";
 import Navbar from "../components/utils/navbar";
 import backgound from "../hero/publications.png";
+import { getData } from "../services";
 
 const Publications = () => {
-  const reports=[
-{
-  title:"KAICT (2021). Activity Report 2018-20. Kofi Annan Institute for Conflict Transformation, University of Liberia.",
-  author:"",
-  doc:'/publications/p-1.pdf'
-}
-  ]
-  const academic=[
-    {
-      title:"A Prescription for Prolonged Fragility in Liberia, In Bangura, Ibrahim (eds.) Disarmament, Demobilisation and Reintegration of Ex-Combatants in Africa, Routledge.",
-      author:"Kormoll, Raphaela T. & Sayndee, T. Debey (2023). Incomplete DDRR",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“The Task of Rebuilding Liberia.” In Kenneth Omeje (ed.), Peacebuilding in Contemporary Africa – In Search of Alternative Strategies, Routledge: Oxford: 111-124.",
-      author:"Sayndee, T. Debey (2019).",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“Social Mobilization and the Ebola Virus Disease in Liberia.” Lanham: Lexington Books.   ",
-      author:"Perry, John and Sayndee T. Debey (2017). ",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“African Truth Commissions and Transitional Justice.” Lanham: Lexington Books. ",
-      author:"Perry, John and Sayndee T. Debey (2015). ",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“The Role of Civil Society in Post-Conflict Reconstruction of Liberia – A Policy Approach.” In Kenneth Omeje (ed.), War to Peace Transition: Conflict Intervention and Peacebuilding in Liberia, University Press of America",
-      author:"Sayndee, T. Debey (2009).",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“Liberia: Long and Rocky Journey to Peace.” In Consolidating the Democracy Project in Africa: Cases from South Africa, Nigeria, Liberia, Sierra Leone and Somalia, African Renaissance 4 (3&4): 51-61.",
-      author:"Sayndee, T. Debey (2009).",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"Thugs’ Paradise, Agencies’ Guinea Pig and the Natural Resources Intrigue.” In Kenneth Omeje (ed.), Extractive Economies and Conflicts in the Global South: Multi-Regional Perspectives on Rentier Politics, Ashgate: Aldershot: 149-160.",
-      author:"Sayndee, T. Debey (2009).",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
 
+const [publications,setPublications]=useState([])
+const [policy, setPolicy]=useState([])
+const [reports,setReports]=useState([])
+const [newsletter,setNewsLetter] =useState([])
+const [books, setBooks]=useState([])
+const [chapter,setChapters]=useState([])
+const [articles,setArticles]=useState([])
 
-
-  ]
-  const policyPapers=[
-    {
-      title:"“Security Sector and Trust in Community Relations.” In Engendering Collective Action for Advancing Liberia’s Development, Liberia Development Conference Anthology, 372-392. ",
-      author:"Sayndee, T. Debey (2018). ",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“Security Sector Governance in West Africa – Learning from Experience (Case Study of Liberia: Developments in Norms of Legislative Oversight)” DCAF.",
-      author:"Sayndee, T. Debey (2016). ",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"Legacy of The Slave Trade in Sierra Leone and Liberia.” Occasional Papers, Centre for Democracy and Development (CDD), London.",
-      author:"Centre for Democracy and Development (2007). ",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-    {
-      title:"“Mainstreaming Conflict Transformation Strategies in Development Programming and Planning.” UNDP Development Dialogue Series, unpublished.",
-      author:"UNDP Development Dialogue Series (2007)",
-      doc:"http://kacit.twafwane.com/wp-content/uploads/2023/10/Centre-for-Democracy-Development-2007-Legacy-of-the-Slave-Trade-in-Sierra-Leone-and-Liberia-Summary-of-Discussion.pdf"
-    },
-  ]
-  const policyBriefs=[
-    {
-      title:"KAICT (2014). Voices on the Liberian Security Sector and UNMIL's Withdrawal. KAICT Policy Brief, 2, 1-8. ",
-      author:"",
-      doc:"/publications/p-2.pdf"
-    },
-    {
-      title:"Liberia between Reconciliation Commission and Roadmap – Steps Forward in a Halted Process? KAICT Policy Brief, 1, 1-7.",
-      author:"Sayndee, T. D. & Pietsch, S. (2013).",
-      doc:"/publications/p-3.pdf"
-    },
-  ]
+useEffect(() => {
+  fetch("https://kacit.twafwane.com/wp-json/wp/v2/publications")
+    .then((response) => response.json())
+    .then((posts) => {
+      const promises = posts.map((post) => {
+        return fetch(
+          `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.acf.document}`
+        )
+          .then((response) => response.json())
+          .then((media) => {
+            post.document = media.source_url;
+            return post;
+          });
+      });
+      return Promise.all(promises);
+    })
+    .then((posts) => {
+      let policy = posts.filter((i)=>i.acf.type=='KAICT Policy Brief')
+      setPolicy(policy)
+      let reports = posts.filter((i)=>i.acf.type=='KAICT Reports')
+      let newsletter = posts.filter((i)=>i.acf.type=='KAICT Liberian Security Sector Reform Newsletter')
+      let books = posts.filter((i)=>i.acf.type=='Books')
+      let chapters=posts.filter((i)=>i.acf.type=='Book Chapters')
+      let articles=posts.filter((i)=>i.acf.type=='Articles')
+      let others=posts.filter((i)=>i.acf.type=='Other Publications')
+      setReports(reports)
+      setPublications(others);
+      setNewsLetter(newsletter);
+      setBooks(books);
+      setChapters(chapters)
+      setArticles(articles)
+  
+    })
+    .catch((error) => console.error(error));
+}, []);
   return (
     <>
       <Navbar />
@@ -98,87 +63,166 @@ const Publications = () => {
         <section>
           <div className="published-container container mx-auto px-5 md:px-10">
           <div className="prog-head ">
-                    <h2>KAICT Reports</h2>
+          <h2>KAICT Reports</h2> 
                    {reports.map((i)=>(
+                     <>
+                    
                      <div className="pub-info">
                      <div className="flex justify-between gap-3">
                     <div>
                     <h3>
-                     {i.title}
+                     {i.acf.title}
                      </h3>
                      <span>
-                       {i.author&&(<>by <u>{i.author} </u></>)}
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
                      </span>
                     </div>
-                    <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
                      </div>
                      <hr className="w-full h-[1px] bg-black"/>
                    </div>
+                     </>
                    ))}
               
-                  </div>
+                  </div>  
                   <div className="prog-head ">
-                    <h2>KAICT Policy Brief</h2>
-                   {policyBriefs.map((i)=>(
-                    <div className="pub-info">
-                    <div className="flex justify-between gap-3">
-                   <div>
-                   <h3>
-                    {i.title}
-                    </h3>
-                    <span>
-                      by <u>{i.author} </u>
-                    </span>
-                   </div>
-                   <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
-                    </div>
-                    <hr className="w-full h-[1px] bg-black"/>
-                  </div>
-                   ))}
-              
-                  </div>
-          <div className="prog-head ">
-                    <h2>ACADEMIC PUBLICATIONS</h2>
-                   {academic.map((i)=>(
+          <h2>KAICT Policy Brief</h2> 
+                   {policy.map((i)=>(
+                     <>
+                    
                      <div className="pub-info">
                      <div className="flex justify-between gap-3">
                     <div>
                     <h3>
-                     {i.title}
+                     {i.acf.title}
                      </h3>
                      <span>
-                       by <u>{i.author} </u>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
                      </span>
                     </div>
-                    <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
                      </div>
                      <hr className="w-full h-[1px] bg-black"/>
                    </div>
+                     </>
                    ))}
               
-                  </div>
-                  
+                  </div>  
                   <div className="prog-head ">
-                    <h2>OTHER PUBLICATIONS</h2>
-                   {policyPapers.map((i)=>(
-                    <div className="pub-info">
-                    <div className="flex justify-between gap-3">
-                   <div>
-                   <h3>
-                    {i.title}
-                    </h3>
-                    <span>
-                      by <u>{i.author} </u>
-                    </span>
-                   </div>
-                   <a href={i.doc} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+          <h2>KAICT Liberian Security Sector Reform Newsletter</h2> 
+                   {newsletter.map((i)=>(
+                     <>
+                    
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.acf.title}
+                     </h3>
+                     <span>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
+                     </span>
                     </div>
-                    <hr className="w-full h-[1px] bg-black"/>
-                  </div>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                     </>
+                   ))}
+              
+                  </div>  
+                  <div className="prog-head ">
+          <h2>Books</h2> 
+                   {books.map((i)=>(
+                     <>
+                    
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.acf.title}
+                     </h3>
+                     <span>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
+                     </span>
+                    </div>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                     </>
                    ))}
               
                   </div>
-                 
+                  <div className="prog-head ">
+          <h2>Book Chapters</h2> 
+                   {chapter.map((i)=>(
+                     <>
+                    
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.acf.title}
+                     </h3>
+                     <span>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
+                     </span>
+                    </div>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                     </>
+                   ))}
+              
+                  </div> 
+                  <div className="prog-head ">
+          <h2>Articles</h2> 
+                   {articles.map((i)=>(
+                     <>
+                    
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.acf.title}
+                     </h3>
+                     <span>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
+                     </span>
+                    </div>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                     </>
+                   ))}
+              
+                  </div>  
+                  <div className="prog-head ">
+          <h2>Other Publications</h2> 
+                   {publications.map((i)=>(
+                     <>
+                    
+                     <div className="pub-info">
+                     <div className="flex justify-between gap-3">
+                    <div>
+                    <h3>
+                     {i.acf.title}
+                     </h3>
+                     <span>
+                       {i.acf.author&&(<>by <u>{i.acf.author} </u></>)}
+                     </span>
+                    </div>
+                    <a href={i.acf.document} className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center">Download</a>
+                     </div>
+                     <hr className="w-full h-[1px] bg-black"/>
+                   </div>
+                     </>
+                   ))}
+              
+                  </div>                                                                                    
           </div>
         </section>
       </main>

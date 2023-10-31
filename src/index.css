@@ -17,6 +17,12 @@
   transition: all 400ms ease-in-out;
 }
 
+.login-bg{
+  background-image: url('https://beta.autoworks.africa/storage/car-parts-1-1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 html {
   scroll-behavior: smooth;
 }
