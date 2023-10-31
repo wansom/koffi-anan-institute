@@ -4887,17 +4887,13 @@ section.single-research {
   color: #1c1b1f;
 }
 
-.single-research-cards {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
+
 
 .single-research-card {
   width: 100%;
   max-width: 390px;
   min-width: 280px;
-  min-height: 300px;
+  height: 300px;
   margin: 10px;
   padding: 40px;
   background-color: #25518c;

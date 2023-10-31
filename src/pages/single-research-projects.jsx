@@ -148,7 +148,7 @@ const SingleResearchProject = () => {
                                 </div>
 
 
-                                <div className="single-research-cards">
+                                <div className="single-research-cards flex items-start flex-col md:flex-row">
 
                                     {projectgoals.map((project, index) => (
                                         <div className="single-research-card">
