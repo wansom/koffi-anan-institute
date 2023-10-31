@@ -61,7 +61,7 @@ function PartnershipsCollaborations() {
 
                     <div className="flex flex-col p-4">
                         <div className="card mb-4">
-                            <h4 className="text-xl font-bold mb-4 think-head">Former Collaborating Partners include:</h4>
+                            <h2 className="text-xl font-bold mb-4 think-head">Former Collaborating Partners include:</h2>
                             <h3 className="text-lg font-bold">Academic Institutes:</h3>
                             <ul className="list-disc ml-6 mb-4">
                             <li>African Centre for Peace and Conflict Studies (Africa Centre; now The John & Elnora Ferguson Centre for African Studies, JEFCAS, Department of Peace Studies, University of Bradford, United Kingdom)</li>
