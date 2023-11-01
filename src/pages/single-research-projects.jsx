@@ -124,6 +124,16 @@ const SingleResearchProject = () => {
                         </div>
                         <div className="single-research-text">
                             <p>{research?.acf.overview}</p>
+                            {research?.acf.link === 'Hope-project' && (
+                                <>
+                                    <div className="single-research-head">
+                                        <h3>THEORY OF CHANGE</h3>
+                                    </div>
+                                    <p>IF Liberians suffering from prolonged social trauma develop psychosocial and conflict resolution skills (individual resilience) and negotiation and group decision-making skills (collaborative resilience), THEN they, and their communities, will build resilience as they experience increased feelings of safety and trust in social interactions, reduced violence-related attitudes, and increased levels of hope about their personal future and the future of their community.</p>
+                                </>
+
+
+                            )}
                         </div>
                         {
                             research?.acf.link === 'MOWIP-project' && (
