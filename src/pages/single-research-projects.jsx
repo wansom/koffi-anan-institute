@@ -7,6 +7,8 @@ import { getData } from "../services";
 import EventsCard from "../components/events/events-card";
 import { useParams } from 'react-router-dom';
 import DOMParser from 'dom-parser';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const SingleResearchProject = () => {
     const [events, setEvents] = useState([]);
@@ -16,20 +18,6 @@ const SingleResearchProject = () => {
     const [projectcomponents, setprojectcomponents] = useState([])
     const [projectoutcomes, setprojectoutcomes] = useState([])
     const { id } = useParams();
-    const monthNames = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "June",
-        "Jul",
-        "Aug",
-        "Sept",
-        "Oct",
-        "Nov",
-        "Dec",
-    ];
     const htmlToListItems = (html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
@@ -101,7 +89,18 @@ const SingleResearchProject = () => {
             .catch((error) => console.error(error));
     }
 
-
+    const items = [
+        <img src="/images/library.jpg"role="presentation" className="h-96 mx-10"/>,
+        <img src="/images/library.jpg" role="presentation" className="h-96 mx-10"/>,
+        <img src="/images/library.jpg" role="presentation" className="h-96 mx-10"/>,
+        <img src="/images/library-3.jpg" role="presentation" className="h-96 mx-10"/>,
+        <img src="/images/library-2.jpg" role="presentation" className="h-96 mx-10"/>,
+      ];
+      const responsive = {
+        0: { items: 1 }, 
+        600: { items: 2 }, 
+        900: { items: 4 }, 
+      };
 
 
     useEffect(() => {
@@ -319,6 +318,15 @@ const SingleResearchProject = () => {
                                 </div>
                             </>
                         )}
+
+<div className="">
+<AliceCarousel mouseTracking items={items}
+      responsive={responsive}
+      autoPlay
+      autoPlayInterval={3000}
+      buttonsDisabled={true}/>
+    </div>
+
 
                         <div className="single-research-head">
                             <h3>Events</h3>

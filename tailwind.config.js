@@ -1,9 +1,12 @@
+
+
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     container: {
@@ -22,5 +25,6 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    require('flowbite/plugin')
   ],
 }
