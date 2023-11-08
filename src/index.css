@@ -16,6 +16,18 @@
   -o-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
+.file-name {
+  visibility: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: black;
+  padding: 5px;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  text-align: center;
+  transition: visibility 0.2s;
+}
 
 .login-bg{
   background-image: url('https://beta.autoworks.africa/storage/car-parts-1-1.jpg');
