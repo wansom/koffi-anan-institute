@@ -526,6 +526,20 @@ const SingleResearchProject = () => {
                 </div>
               </>
             )}
+            {research?.acf.link === "Hope-project" && (
+            <div className="">
+            <div className="single-research-head mb-4">
+              <h3>Documents</h3>
+            </div>
+           <div>
+            <div className="flex items-center justify-between mb-2">
+            <p>USAID 2023 Hope Facet Sheet</p>
+            <a href="/fact-sheet.pdf" className="border-solid border-2 border-red-500 rounded-lg px-2 h-10 flex items-center" target="blank">Download</a>
+            </div>
+            <hr  className="h-0.5 w-full bg-black"/>
+           </div>
+          </div>
+)}
 {research?.acf.link === "Hope-project" && (
             <div className="">
             <div className="single-research-head mb-4">
