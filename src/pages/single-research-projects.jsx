@@ -43,6 +43,16 @@ function Gallery() {
     "26 - Saclepea Map Making, Monrovia (June 2023).jpg",
     "18 - Community Pump in Suo Community, Karnplay (March 2023).jpg",
   ];
+  const [images, setImages] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+  useEffect(() => {
+    setImages(imageFileNames)
+  }, []);
+  const indexOfLastImage = currentPage * itemsPerPage;
+  const indexOfFirstImage = indexOfLastImage - itemsPerPage;
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
+
   const [hoveredFileName, setHoveredFileName] = useState(null);
   const removeWords = (str) => {
     const words = str.split(" ");
@@ -53,7 +63,7 @@ function Gallery() {
   return (
     <div>
       <div className="gallery grid grid-cols-2 md:grid-cols-4">
-        {imageFileNames.map((fileName, index) => (
+        {currentImages.map((fileName, index) => (
           <div
             key={index}
             className={`image-card h-[200px] relative ${
@@ -70,7 +80,7 @@ function Gallery() {
             <p
               className={`text-black absolute top-[50%] left-0 ${
                 hoveredFileName === fileName
-                  ? "block bg-white h-full text-center"
+                  ? "block bg-white h-[50%] w-full text-center"
                   : "hidden"
               }`}
             >
@@ -79,6 +89,22 @@ function Gallery() {
           </div>
         ))}
       </div>
+      <div className="flex justify-center mt-4">
+  <button
+    onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
+    disabled={currentPage === 1}
+    className="mr-2 px-4 py-2 rounded bg-[#25518c] text-white"
+  >
+    Previous
+  </button>
+  <button
+    onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
+    disabled={indexOfLastImage >= images.length}
+    className="px-4 py-2 rounded bg-[#25518c] text-white"
+  >
+    Next
+  </button>
+</div>
     </div>
   );
 }
@@ -500,7 +526,7 @@ const SingleResearchProject = () => {
                 </div>
               </>
             )}
-{research.acf.link === "Hope-project" && (
+{research?.acf.link === "Hope-project" && (
             <div className="">
             <div className="single-research-head mb-4">
               <h3>Picture Gallery</h3>
