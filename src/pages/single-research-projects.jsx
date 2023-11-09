@@ -42,6 +42,21 @@ function Gallery() {
     "25 - Safe Spaces Training, Karnplay (July 2023).png",
     "26 - Saclepea Map Making, Monrovia (June 2023).jpg",
     "18 - Community Pump in Suo Community, Karnplay (March 2023).jpg",
+    "19 - Community Pump in Karn Community, Karnplay (March 2023).jpg",
+    "20 - Palava Hut in Karn Community, Karnplay (March 2023).jpg",
+    "21 - Market Day in Karnplay (March 2023).jpg",
+    "22 - The Road is Shared by Motorists and Cattle (March 2023).jpg",
+    "23 - A Colorful Photostudio in Karnplay (March 2023).jpg",
+    "24 - Safe Spaces Participants, Karnplay (July 2023).JPG",
+    "25 - Safe Spaces Training, Karnplay (July 2023).png",
+    "26 - Saclepea Map Making, Monrovia (June 2023).jpg",
+    "27 - Saclepea Map for Rolling Out the CBA (June 2023).jpg",
+    "28 - Prime Actor Interview, Saclepea (July 2023).jpg",
+    "29 - CBA Research Team, Saclepea (July 2023).jpg",
+    "30 - Saclepea Market (July 2023).jpg",
+    "31 - Community Water Well, Saclepea (July 2023).jpg",
+    "32 - Airfield Community, Saclepea (July 2023).jpg",
+    "33 - Prime Actor Interview, Saclepea (July 2023).jpg"
   ];
   const [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
