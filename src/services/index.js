@@ -2,8 +2,7 @@
 
 import axios from "axios";
 
-
-const generateToken = async () => {
+export const generateToken = async () => {
   const username = "webuser";
   const password = "J*(Kx6ev8Zm4x@L)^CY05cgr";
 
@@ -20,19 +19,40 @@ const generateToken = async () => {
     return token;
   } catch (error) {
     console.error(error);
+    throw error; // Rethrow the error to handle it in the calling code
   }
 };
+
 export const getData = async (url) => {
-  generateToken()
-  const token = localStorage.getItem("jwtToken");
-  return fetch(url,  {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  }).then((response) => {
+  let token = localStorage.getItem("jwtToken");
+
+  // Check if the token is not available or expired
+  if (!token) {
+    try {
+      // Generate a new token
+      token = await generateToken();
+    } catch (error) {
+      console.error("Failed to generate token:", error);
+      // Handle the error, perhaps by showing an error message to the user
+      return;
+    }
+  }
+
+  try {
+    // Now that we have the token, fetch the data
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
     return response.json();
-  });
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    // Handle the error, perhaps by showing an error message to the user
+  }
 };
+
 export const submitForm = async (data) => {
   generateToken()
   const token = localStorage.getItem("jwtToken");
