@@ -3,8 +3,8 @@
 import axios from "axios";
 
 export const generateToken = async () => {
-  const username = "webuser";
-  const password = "J*(Kx6ev8Zm4x@L)^CY05cgr";
+  const username = "admin";
+  const password = "w5JuGaDmaXa@D$KFQ8";
 
   try {
     const response = await axios.post(
@@ -15,6 +15,7 @@ export const generateToken = async () => {
       }
     );
     const token = response.data.data.token;
+    
     localStorage.setItem("jwtToken", token);
     return token;
   } catch (error) {
@@ -25,7 +26,7 @@ export const generateToken = async () => {
 
 export const getData = async (url) => {
   let token = localStorage.getItem("jwtToken");
-
+  console.log(token,"found this token");
   // Check if the token is not available or expired
   if (!token) {
     try {
