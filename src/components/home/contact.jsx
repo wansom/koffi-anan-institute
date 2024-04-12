@@ -51,7 +51,7 @@ const ContactUs = () => {
     });
   };
   const handleChange=(e)=>{
-    console.log(e)
+
   }
   return (
     <section className="contact">

@@ -103,7 +103,6 @@ const ProgramDetails = () => {
       })
       .then((courses) => {
         const mycourse = courses.find((c) => c.slug === id)
-        console.log(mycourse)
         setcourses(mycourse);
         setloading(false);
       })

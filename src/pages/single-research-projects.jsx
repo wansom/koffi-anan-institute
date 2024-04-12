@@ -195,8 +195,6 @@ const SingleResearchProject = () => {
         const currentIndex = postsWithCollaborators.find(
           (item) => item.acf.link === id
         );
-
-        console.log(currentIndex);
         const postContent = currentIndex.acf.project_; // Adjust this path as necessary based on the WordPress API response structure
         const parsedItems = htmlToListItems(postContent);
         const parsedComponents = htmlToListItems(

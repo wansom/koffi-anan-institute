@@ -6,7 +6,6 @@ const EventSection=()=>{
     const [news,setNews]=useState([])
     const [events,setEvents]=useState([])
     const [loading, setloading] = useState(true);
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     useEffect(() => {
         fetch("https://kacit.twafwane.com/wp-json/wp/v2/news")
         .then((response) => response.json())
@@ -44,7 +43,7 @@ const EventSection=()=>{
                 <div className="bottom">
                     {loading?<p>Loading...</p>:<div className=" grid grid-cols-1 md:grid-cols-2">
                     {events.map((event)=>(
-                     <EventsCard event={event}/>
+                     <EventsCard event={event} key={event.id}/>
                   ))}
                         </div>}
                     

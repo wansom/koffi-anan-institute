@@ -36,7 +36,6 @@ const Navbar = () => {
       (data) => {
         setNavItems(data.items);
         setLoading(false);
-        console.log(data,'we fetched navbar items')
       }
     );
   }, []);

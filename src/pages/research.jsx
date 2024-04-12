@@ -91,7 +91,6 @@ const ResearchProjects = () => {
         let consultancy = courses.filter(
           (course) => course.acf.project_status === "consultancy"
         );
-        console.log(completed,ongoing,consultancy)
         setcompleted(completed);
         setongoing(ongoing);
         setconsultancy(consultancy);

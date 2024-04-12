@@ -22,7 +22,6 @@ const ResearchProjects =()=>{
               return Promise.all(promises);
             })
             .then((courses) => {
-              console.log(courses)
               const newprojects =[courses[0],courses[2]]
               setProjects(newprojects);
               setloading(false);
