@@ -10,7 +10,6 @@ const EventSection=()=>{
         fetch("https://kacit.twafwane.com/wp-json/wp/v2/news")
         .then((response) => response.json())
         .then((posts) => {
-          console.log('posts news',posts);
           const promises = posts.map((post) => {
             return fetch(
               `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
