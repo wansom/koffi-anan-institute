@@ -29,32 +29,23 @@ export const getData = async (url) => {
   console.log("found this token");
   // Check if the token is not available or expired
   if (!token) {
-    try {
     console.log('we have a token');
-      // Generate a new token
-      token = await generateToken();
-    } catch (error) {
-      console.error("Failed to generate token:", error);
-      // Handle the error, perhaps by showing an error message to the user
-      return;
-    }
-  }else{
-    try {
-      // Now that we have the token, fetch the data
-      const response = await fetch(url, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-  
-      return response.json();
-    } catch (error) {
-      console.error("Failed to fetch data:", error);
-      // Handle the error, perhaps by showing an error message to the user
-    }
+    token = await generateToken();
   }
 
+  try {
+    // Now that we have the token, fetch the data
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
+    return response.json();
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    // Handle the error, perhaps by showing an error message to the user
+  }
 };
 
 export const submitForm = async (data) => {
