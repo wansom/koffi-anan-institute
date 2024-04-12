@@ -1,38 +1,15 @@
-import { useState, useEffect } from "react";
-import { getData } from '../../services';
+import {  useContext } from "react";
 import EventsCard from "../events/events-card";
+import { WordPressContext } from "../../services/WordpressContext";
 
 const EventSection=()=>{
-    const [news,setNews]=useState([])
-    const [events,setEvents]=useState([])
-    const [loading, setloading] = useState(true);
-    useEffect(() => {
-        fetch("https://kacit.twafwane.com/wp-json/wp/v2/news")
-        .then((response) => response.json())
-        .then((posts) => {
-          const promises = posts.map((post) => {
-            return fetch(
-              `https://kacit.twafwane.com/wp-json/wp/v2/media/${post.featured_media}`
-            )
-              .then((response) => response.json())
-              .then((media) => {
-                post.featured_image_url = media.source_url;
-                return post;
-              });
-          });
-          return Promise.all(promises);
-        })
-        .then((posts) => {
-          setNews(posts.slice(-2));
-          setloading(false);
-        })
-        .catch((error) => console.error(error));
-        getData('https://kacit.twafwane.com/wp-json/tribe/events/v1/events/?start_date=2023-02-01').then((data)=>{
-          const upcomingevents=data.events.filter((e)=>new Date(e.start_date) >new Date())
-          setEvents(data.events?.slice(-2))
-          setloading(false)
-        })
-      }, []);
+    
+
+  const {news,loading,events} = useContext(WordPressContext);
+
+  if (!news) {
+    return <div>Loading...</div>;
+  }
     return(
         <section className="upcoming-events">
         <div className="upcoming-container container">

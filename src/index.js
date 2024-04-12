@@ -26,39 +26,48 @@ import PartnershipsCollaborations from "./pages/partnerships-collaborations";
 import PolicyEngagement from "./pages/policy-engagement";
 import AboutOverview from "./components/about/about-overview";
 import PolicyDocuments from "./pages/policy-documents";
+import { WordPressProvider } from "./services/WordpressContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/aboutus" element={<AboutRoute />} />
-      <Route path="/organogram" element={<Organogram />} />
-      <Route path="/contactus" element={<ContactUsRoute />} />
-      <Route path="/allnews" element={<AllNews />} />
-      <Route path="/news/:id" element={<SinglePost />} />
-      <Route path="/allevents" element={<AllEvents />} />
-      <Route path="/event/:id" element={<SingleEvent />} />
-      <Route path="/teachingandtraining" element={<Teachingandtraining />} />
-      <Route path="/programdetails/:id" element={<ProgramDetails />} />
-      <Route path="/library" element={<Library />} />
-      <Route path="/publications" element={<Publications />} />
-      <Route path="/comingsoon" element={<ComingSoon />} />
-      <Route path="/outreachprograms" element={<OutreachProgram />} />
-      <Route path="/outreachprogram/:id" element={<SingleOutreachProgram />} />
-      <Route path="/research" element={<ResearchProjects />} />
-      <Route path="/securitySectorReforms" element={<SecurityReforms />} />
-      <Route path="/maryAntoinette" element={<MaryAntoinnette />} />
-      <Route
-        path="/partnershipsandcollaborations"
-        element={<PartnershipsCollaborations />}
-      />
-      <Route path="/researchproject/:id" element={<SingleResearchProject />} />
-      <Route path="/policyEngagement" element={<PolicyEngagement />} />
-      <Route path="/kacitOverview" element={<AboutOverview />} />
-      <Route path="/policyPapers" element={<PolicyDocuments />} />
-      <Route path="*" element={<ComingSoon />} />
-    </Routes>
+    <WordPressProvider>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/aboutus" element={<AboutRoute />} />
+        <Route path="/organogram" element={<Organogram />} />
+        <Route path="/contactus" element={<ContactUsRoute />} />
+        <Route path="/allnews" element={<AllNews />} />
+        <Route path="/news/:id" element={<SinglePost />} />
+        <Route path="/allevents" element={<AllEvents />} />
+        <Route path="/event/:id" element={<SingleEvent />} />
+        <Route path="/teachingandtraining" element={<Teachingandtraining />} />
+        <Route path="/programdetails/:id" element={<ProgramDetails />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/comingsoon" element={<ComingSoon />} />
+        <Route path="/outreachprograms" element={<OutreachProgram />} />
+        <Route
+          path="/outreachprogram/:id"
+          element={<SingleOutreachProgram />}
+        />
+        <Route path="/research" element={<ResearchProjects />} />
+        <Route path="/securitySectorReforms" element={<SecurityReforms />} />
+        <Route path="/maryAntoinette" element={<MaryAntoinnette />} />
+        <Route
+          path="/partnershipsandcollaborations"
+          element={<PartnershipsCollaborations />}
+        />
+        <Route
+          path="/researchproject/:id"
+          element={<SingleResearchProject />}
+        />
+        <Route path="/policyEngagement" element={<PolicyEngagement />} />
+        <Route path="/kacitOverview" element={<AboutOverview />} />
+        <Route path="/policyPapers" element={<PolicyDocuments />} />
+        <Route path="*" element={<ComingSoon />} />
+      </Routes>
+    </WordPressProvider>
   </BrowserRouter>
 );
 
