@@ -1,6 +1,7 @@
 import {  useContext } from "react";
 import EventsCard from "../events/events-card";
 import { WordPressContext } from "../../services/WordpressContext";
+import ButtonLoader from "../utils/Loader";
 
 const EventSection=()=>{
     
@@ -8,7 +9,7 @@ const EventSection=()=>{
   const {news,loading,events} = useContext(WordPressContext);
 
   if (!news) {
-    return <div>Loading...</div>;
+    return <ButtonLoader/>;
   }
     return(
         <section className="upcoming-events">

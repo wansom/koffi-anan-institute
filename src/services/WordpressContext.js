@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react';
-import { getData } from '.';
 import axios from "axios";
 
 const WordPressContext = createContext();
@@ -63,6 +62,7 @@ const WordPressProvider = ({ children }) => {
       })
       .then((response) => response.json())
       .then((data) => {
+        console.log(data,'events found events');
         setEvents(data.events?.slice(-2))
         setLoading(false)
       })
