@@ -36,7 +36,7 @@ const Navbar = () => {
       (data) => {
         setNavItems(data.items);
         setLoading(false);
-        console.log(data.items)
+        console.log(data,'we fetched navbar items')
       }
     );
   }, []);
@@ -139,7 +139,7 @@ const Navbar = () => {
                 <i className="fas fa-times"></i>
               </span>
             </div>
-            {navitems.map((item, index) => (
+            {navitems?.map((item, index) => (
               <a href={item.url} className="active" key={index} onMouseEnter={()=>{handleClick(item)}} onMouseLeave={()=>{closeSubMenu()}}>
                 {item.title}{" "}
                 {item.child_items && (
